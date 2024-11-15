@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://webmam.dothome.co.kr/common/css/reset.css">
+  <script src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+
+
+<style>
+    * {box-sizing: border-box}
+    body, html { height: 100%; margin: 0; font-family: Arial; } 
+    /* Style tab links */
+    .tablink { background-color: #555; color: white; float: left; border: none; /*  outline: none; */ cursor: pointer; padding: 14px 16px; font-size: 17px; width: 25%; }
+    .tablink:hover { background-color: #777; }
+    /* Style the tab content (and add height:100% for full page content) */
+    .tabcontent { color: white; display: none; padding: 100px 20px; height: 100%; cursor: pointer; width: 100%; position: fixed; top: 49px; }
+    .tabcontent:focus {border:2px solid #fff}
+    #Home {background-color: red;}
+    #News {background-color: green;}
+    #Contact {background-color: blue;}
+    #About {background-color: orange;}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'red')" tabindex="1" id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('News', this, 'green')" tabindex="3">News</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')" tabindex="5">Contact</button>
+<button class="tablink" onclick="openPage('About', this, 'orange')" tabindex="7">About</button>
+
+<div id="Home" class="tabcontent" tabindex="2">
+  <h3>Home</h3>
+  <p>Home is where the heart is..</p>
+</div>
+
+<div id="News" class="tabcontent" tabindex="4">
+  <h3>News</h3>
+  <p>Some news this fine day!</p> 
+</div>
+
+<div id="Contact" class="tabcontent" tabindex="6">
+  <h3>Contact</h3>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="About" class="tabcontent" tabindex="8">
+  <h3>About</h3>
+  <p>Who we are and what we do.</p>
+</div>
+
+<script>
+    function openPage(pageName,elmnt,color) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+        }
+        document.getElementById(pageName).style.display = "block";
+        elmnt.style.backgroundColor = color;
+
+    }
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+</script>
+     
+</body>
+</html> 
