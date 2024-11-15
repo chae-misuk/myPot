@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+		<title>jQuery Zoomer Plugin Examples</title>
+
+
+
+		<!--[if LTE IE 8]>
+			<link href="http://formstone.it/css/demo.ie.css" rel="stylesheet" type="text/css" media="all">
+		<![endif]-->
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+		<link href="../jquery.fs.zoomer.css" rel="stylesheet" type="text/css" media="all">
+		<script src="../jquery.fs.zoomer.js"></script>
+
+		<!--[DEMO:START-RESOURCES]-->
+
+		<script src="ie/jquery.fs.zoetrope.min.js"></script>
+
+		<style>
+			.demo .zoomer_wrapper { border: 1px solid #ddd; border-radius: 3px; height: 500px; margin: 10px 0; overflow: hidden; width: 100%; }
+
+			.demo .zoomer.dark_zoomer { background: #333 url(zoomer-bg-dark.png) repeat center; }
+			.demo .zoomer.dark_zoomer img { box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
+		</style>
+
+		<script>
+			$(document).ready(function() {
+				$(".demo .zoomer_basic").zoomer();
+
+				$(".demo .zoomer_custom").zoomer({
+					controls: {
+						zoomIn: ".zoomer_custom_zoom_in",
+						zoomOut: ".zoomer_custom_zoom_out"
+					},
+					customClass: "dark_zoomer",
+					increment: 0.03,
+					interval: 0.1,
+					marginMax: 50
+				});
+
+			
+
+				$(window).on("resize", function(e) {
+					$(".demo .zoomer_wrapper").zoomer("resize");
+				});
+
+				$(window).one("pronto.load", function() {
+					$(".demo .zoomer_basic").zoomer("destroy");
+					$(".demo .zoomer_custom").zoomer("destroy");
+					$(".demo .zoomer_tiled").zoomer("destroy");
+					$(".demo .load_zoomer_tiled").off("click");
+				});
+			});
+		</script>
+
+		<!--[DEMO:END-RESOURCES]-->
+
+	</head>
+	<body class="gridlock demo">
+		<article class="row page">
+			<div class="mobile-full tablet-full desktop-8 desktop-push-2">
+				<header class="header">
+					<h1>jQuery Zoomer Plugin Examples</h1>
+					<div class="jquery-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+				</header>
+
+				<!--[DEMO:START-CONTENT]-->
+
+				<!-- Basic -->
+				<h2>Basic</h2>
+				<p>Create a new Zoomer by simply including an image inside the target wrapper. The target wrapper should have a predefined height and width as the new markup will fill all available space:</p>
+
+				<pre class="example"><code class="language-javascript">$(".viewer").zoomer();</code></pre>
+				<pre class="example"><code class="language-css">.viewer { height: 500px; width: 500px; }</code></pre>
+				<pre class="example"><code class="language-markup">&lt;div class="viewer"&gt;
+    &lt;img src="/path/to/image.jpg"&gt;
+&lt;/div&gt;</code></pre>
+
+				<h5>Demo</h5>
+				<div class="zoomer_wrapper zoomer_basic">
+					<img src="nasa-bw-1.jpg">
+				</div>
+
+				<!-- GALLERY -->
+				<h2>Gallery</h2>
+				<p>Zoomer will auto detect multiple image and build a gallery:</p>
+
+				<pre class="example"><code class="language-javascript">$(".viewer").zoomer();</code></pre>
+				<pre class="example"><code class="language-markup">&lt;div class="viewer"&gt;
+    &lt;img src="/path/to/image-1.jpg"&gt;
+    &lt;img src="/path/to/image-2.jpg"&gt;
+    &lt;img src="/path/to/image-3.jpg"&gt;
+&lt;/div&gt;</code></pre>
+
+				<h5>Demo</h5>
+				<div class="zoomer_wrapper zoomer_basic">
+					<img src="nasa-bw-2.jpg">
+					<img src="nasa-bw-1.jpg">
+					<img src="nasa-bw-3.jpg">
+				</div>
+
+				<br>
+
+				<!-- ADVANCED -->
+				<h2>Advanced</h2>
+				<p>Customize a specific Zoomer instance:</p>
+
+				
+				
+
+				
+                
+             
+
+
+
+                
+                
+                
+			
+
+				
+	
+				
+		  </div>
+		</article>
+		<footer id="footer" class="row">
+			<div class="all-full copyright">
+				Made with &hearts; in Hampden
+			</div>
+		</footer><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+	</body>
+</html>
