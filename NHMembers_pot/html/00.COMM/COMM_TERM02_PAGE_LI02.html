@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<title>[P] 개인정보 제3자 제공 동의</title>
+</head>
+<body>
+	<!-- [바닥페이지] -->
+	<div id="wrap"></div>
+	<!--// -->
+
+	<!-- ####################################################### -->
+	<!-- [POPUP] 개인정보 제3자 제공 동의 약관 -->
+	<!-- ####################################################### -->
+	<div class="layer_pop type_full" id="uiCOMMTERM02P01" role="dialog" aria-modal="true" aria-labelledby="uiCOMMTERM02P01TIT">
+		<div class="pop_inner">
+			<!-- ------------------------------- -->
+			<!-- [POPUP HEADER] -->
+			<!-- ------------------------------- -->
+			<div class="pop_header">
+				<button type="button" class="btn_back">뒤로가기</button><!-- [M 2023-05-03] 클래스 btn_close 삭제 -->
+			</div>
+			<p class="pop_tit" id="uiCOMMTERM02P01TIT">개인정보 제3자 제공 동의</p>
+
+			<!-- ------------------------------- -->
+			<!-- [POPUP CONTENTS] -->
+			<!-- ------------------------------- -->
+			<div class="pop_con">
+				<div class="con_terms">
+					<p class="txt">농협은행주식회사(이하 “은행”이라 함)는 NH멤버스 서비스를 제공함에 있어 개인정보 보호법, 정보통신망 이용촉진 및 정보보호 등에 관한 법률 등 관련 법령상의 개인정보 보호규정을 준수합니다. 은행은 NH멤버스 회원(이하 “회원”이라 함)의 개인정보 보호를 가장 중요시하며, 회원의 권익을 보호하고 개인정보와 관련한 회원의 고충을 원활하게 처리할 수 있도록 다음과 같이 개인정보 처리방침을 두고 공개합니다.</p>
+					<dl>
+						<dt>제1조(개인정보의 처리 목적)</dt>
+						<dd>
+							<div>① 은행은 다음 각 호의 목적을 위해 필요한 최소한의 개인정보를 처리합니다. 수집한 개인정보는 다음의 목적 이외의 용도로는 사용되지 않으며 이용 목적이 변경될 경우에는 별도의 동의를 받는 등 필요한 조치를 구할 예정입니다. </div>
+							<ul>
+								<li>회원가입 및 관리 : 회원 가입의사 확인, 회원제 서비스 제공에 따른 본인 식별&middot;인증, 회원자격 유지&middot;관리, 서비스 부정이용 방지 및 비인가 사용방지, 만 14세 미만 개인정보 수집 시 법정대리인 동의 여부 확인, 사고조사, 분쟁해결, 민원처리, 고지사항 전달 등</li>
+								<li>NH멤버스 서비스 제공에 관한 계약 이행 및 정산 : 포인트 적립&middot;사용에 대한 승인 및 정산, 카드 발급 및 관리, 각종 편의 서비스 및 혜택 제공, 고객센터 운영, 법령상 의무이행 등</li>
+								<li>마케팅 및 광고에의 활용 : 최신 정보 및 맞춤 서비스 제공, 이벤트 정보 제공 및 참여기회 제공, 중복 마케팅 방지 등</li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+			</div>
+
+			<!-- ------------------------------- -->
+			<!-- [POPUP FOOTER BTN] -->
+			<!-- ------------------------------- -->
+			<div class="wrap_action">
+				<button type="button" class="btn_action ty01 btn_close">취소</button><!-- class="btn_close" 사용시 레이어 닫힘  --> <!-- 05.18 문구 수정 -->
+				<button type="button" class="btn_action">약관동의</button>
+			</div>
+			<!-- ------------------------------- -->
+		</div>
+	</div>
+	<!-- ####################################################### -->
+
+	<script>
+		$(function(){
+			openlayer('uiCOMMTERM02P01'); //풀팝업 호출
+		})
+	</script>
+</body>
+</html>

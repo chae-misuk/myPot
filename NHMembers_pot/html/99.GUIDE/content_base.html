@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<title>PUBLISHING GUIDE</title>
+	<link rel="stylesheet" href="../../resources/css/ui_publish.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/ui_publish.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<script>
+	hljs.initHighlightingOnLoad();
+	$(function(){
+		$('.img_wah').css({'padding' : '1rem 0'}).hide();
+		$('.btn_wah').on('click', function(){
+			$('.img_wah').toggle();
+		});
+		$('.img_wah').on('click', function(){
+			$('.img_wah').hide();
+		});
+	})
+	</script>
+</head>
+<body>
+	<div class="guide-wrap" id="wrapper">
+		<!-- ####################################################### -->
+		<!-- ### [HEADER] ### -->
+		<!-- ####################################################### -->
+		<header class="guide-header">
+			<h1><span>NHmembers pot</span><strong>HTML GUIDE RULE</strong></h1>
+			<nav>
+				<ul>
+					<li><a href="../99.WORK/coding_list01.html">작업목록</a></li>
+					<li><a href="../99.WORK/coding_list02.html" aria-current="page">작업가이드</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- ####################################################### -->
+		<!-- ### [CONTAINER] ### -->
+		<!-- ####################################################### -->
+		<div class="guide-container">
+			<!-- ### 기본정책 ### -->
+			<section class="guide-section">
+				<h2 class="guide-tit1">기본정책</h2>
+
+				<h3 class="guide-tit2">디바이스 및 OS기준</h3>
+				<div class="guide-cont">
+					<div class="guide-table1">
+						<table>
+							<caption>디바이스 및 OS기준</caption>
+							<thead>
+								<tr>
+									<th scope="col">OS</th>
+									<th scope="col">브라우저</th>
+									<th scope="col">해상도</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">Android</th>
+									<td>Chrome</td>
+									<td rowspan="2">
+										- 디자인 최적화 : 360 * 720<br>
+										- 최저 해상도 : 280 (Galaxy Fold)
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">iOS</th>
+									<td>Safari</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<h3 class="guide-tit2">웹표준</h3>
+				<p class="guide-txt">HTML은 HTML5 DTD의 명세에 맞게 작성하며, w3c html5 문법에 준하여 표준 문법을 사용한다.</p>
+
+				<h3 class="guide-tit2">접근성</h3>
+				<ul class="guide-txt">
+					<li><span class="point">접근성 준수</span> : Chrome 확장프로그램 Accessibility Insights for Web 자체 체크 및 K-WAH 4.4 웹접근성 자동평가도구 체크 완료 후 파일 전달 한다.
+						<button type="button" class="btn_wah btn_sub3 ty01">K-WAH 4.4 점검결과 보기</button>
+						<div class="img_wah">
+							<img src="../../resources/images/k-wah.png" alt="">
+							<img src="../../resources/images/k-wah02.png" style="position: absolute; bottom:10px; left:545px;" alt="">
+						</div>
+					</li>
+					<li>모바일 애플리케이션 접근성지침 2.0을 따른다.</li>
+					<li>동적 마크업, 상태 변경등 HTML 명세 만으로 충분하지 않은 부분은 WAI-ARIA(Web Accessibility Initiative - Accessible Rich Internet Applications)를 활용하여 보완한다.</li>
+				</ul>
+			</section>
+
+			<!-- ### 폴더 및 파일 구조 ### -->
+			<section class="guide-section">
+				<h2 class="guide-tit1">폴더 및 파일 구조</h2>
+				<div class="guide-cont">
+					<div class="guide-table1">
+						<table>
+							<caption>폴더 및 파일 구조</caption>
+							<thead>
+								<tr>
+									<th scope="col" colspan="3">구조</th>
+									<th scope="col">내용</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>resources</td>
+									<td>css</td>
+									<td>common.css</td>
+									<td>초기화 스타일</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>nhm_newch.css</td>
+									<td>레이아웃 및 컨텐츠 스타일</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>swiper-min.css</td>
+									<td>swiper 플러그인 스타일</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>ui_publish.css</td>
+									<td>퍼블리싱 가이드 스타일 (서버 업로드 제한)</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>fonts</td>
+									<td>NotoSans</td>
+									<td>한글/영문 사용</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>Roboto</td>
+									<td>숫자 사용</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>images</td>
+									<td>/bank/</td>
+									<td>은행로고</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>/logo/</td>
+									<td>제휴사로고</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>/nhpoint/</td>
+									<td>사용방법/적립방법 이미지</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>/upload/</td>
+									<td>관리자 등록 이미지 (서버 업로드 제한)</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>js</td>
+									<td>jquery-3.6.4.min.js</td>
+									<td>제이쿼리 버전</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>nhm_newch.js</td>
+									<td>컨텐츠 스크립트</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>swiper-min.js</td>
+									<td>swiper 플러그인</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>ui_publish.js</td>
+									<td>퍼블리싱 가이드 스크립트 (서버 업로드 제한)</td>
+								</tr>
+								<tr>
+									<td>HTML</td>
+									<td>0X.XXX</td>
+									<td>화면ID.html</td>
+									<td>컨텐츠 파일</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>99.GUIDE</td>
+									<td></td>
+									<td>퍼블리싱 가이드 페이지 (서버 업로드 제한)</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>99.WORK</td>
+									<td></td>
+									<td>퍼블리싱 작업 목록 (서버 업로드 제한)</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</section>
+
+			<!-- ### HTML/CSS 정의 ### -->
+			<section class="guide-section">
+				<h2 class="guide-tit1">HTML/CSS 정의</h2>
+
+				<h3 class="guide-tit2">HTML 마크업 구조</h3>
+<pre><code class="html">&lt;a id="skipnavi" href="#contents" class="skipnav"&gt;컨텐츠바로가기&lt;/a&gt;
+
+&lt;!-- ####################################################### --&gt;
+&lt;!-- [POPUP] 전체팝업(FULL POPUP) --&gt;
+&lt;!-- ####################################################### --&gt;
+&lt;div class="layer_pop type_full" id="팝업ID" role="dialog" aria-modal="true" aria-labelledby="타이틀ID"&gt;
+  &lt;div class="pop_inner"&gt;
+    &lt;div class="pop_header"&gt;
+      &lt;button type="button" class="btn_back btn_close"&gt;뒤로가기&lt;/button&gt;
+      &lt;button type="button" class="pop_close"&gt;팝업닫기&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;p id="타이틀ID" class="pop_tit"&gt;팝업타이틀&lt;/p&gt;
+    &lt;div class="pop_con"&gt;
+      팝업내용
+    &lt;/div&gt;
+    &lt;div class="wrap_action"&gt;
+      &lt;button type="button" class="btn_action"&gt;목록&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- ####################################################### --&gt;
+&lt;!-- [PAGE] 메인 --&gt;
+&lt;!-- ####################################################### --&gt;
+&lt;div id="wrap"&gt;
+  &lt;header id="header"&gt;&lt;!-- [HEADER AREA] --&gt;&lt;/header&gt;
+
+  &lt;div id="contents"&gt;
+    &lt;div id="content"&gt;&lt;!-- [CONTENTS AREA] --&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;footer id="footer"&gt;&lt;!-- [FOOTER AREA] --&gt;&lt;/footer&gt;
+
+  &lt;a href="#wrap" title="맨위로" id="btnTop"&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!-- ####################################################### --&gt;
+&lt;!-- [PAGE] 서브 --&gt;
+&lt;!-- ####################################################### --&gt;
+&lt;div id="wrap"&gt;
+  &lt;div id="sub_header"&gt;
+    &lt;h1&gt;NHmembers pot&lt;/h1&gt;
+    &lt;h2 class="hidden"&gt;카테고리&lt;/h2&gt;
+    &lt;h3&gt;타이틀&lt;/h3&gt;
+    &lt;a href="#none" class="btn_back"&gt;뒤로가기&lt;/a&gt;
+  &lt;/div&gt;
+
+  &lt;div id="contents"&gt;
+    &lt;div id="sub_content"&gt;&lt;!-- [CONTENTS AREA] --&gt;&lt;/div&gt;
+
+    &lt;div class="wrap_action"&gt;
+      &lt;button type="button" class="btn_action"&gt;고정버튼&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- ####################################################### --&gt;
+&lt;!-- [POPUP] 레이어팝업 --&gt;
+&lt;!-- ####################################################### --&gt;
+&lt;div class="layer_pop type_btm" id="팝업ID" role="dialog" aria-modal="true" aria-labelledby="타이틀ID"&gt;
+  &lt;div class="pop_inner"&gt;
+    &lt;p id="타이틀ID" class="pop_tit"&gt;팝업타이틀&lt;/p&gt;
+    &lt;button type="button" class="pop_close"&gt;팝업닫기&lt;/button&gt;
+    &lt;div class="pop_con"&gt;
+      &lt;p&gt;팝업내용&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="wrap_action"&gt;
+      &lt;button type="button" class="btn_action ty01 btn_close"&gt;취소&lt;/button&gt;
+      &lt;button type="button" class="btn_action btn_layer"&gt;확인&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h3 class="guide-tit2">폰트 정의</h3>
+<pre><code class="css">/* 웹폰트 */
+@font-face {
+ font-display: swap;
+ font-family: "NotoSansKR";
+ font-style: normal;
+ font-weight: 400;
+ src: local("?"),url('../fonts/NotoSans-Regular.woff') format("woff");
+}
+
+@font-face {
+ font-display: swap;
+ font-family: "NotoSansKR";
+ font-style: normal;
+ font-weight: 500;
+ src: local("?"),url('../fonts/NotoSans-Medium.woff') format("woff");
+}
+
+@font-face {
+ font-display: swap;
+ font-family: "NotoSansKR";
+ font-style: normal;
+ font-weight: 700;
+ src: local("?"),url('../fonts/NotoSans-Bold.woff') format("woff");
+}
+
+@font-face {
+ font-display: swap;
+ font-family: "Roboto";
+ font-style: normal;
+ font-weight: 400;
+ src: local("?"),url('../fonts/Roboto.woff') format("woff");
+}
+
+@font-face {
+ font-display: swap;
+ font-family: "Roboto";
+ font-style: normal;
+ font-weight: 700;
+ src: local("?"),url('../fonts/Roboto-Bold.woff') format("woff");
+}
+</code></pre>
+<pre><code class="css">/* 본문 */
+body, button, input, select, table, textarea {
+  font-size:10px;
+  line-height:1.5;
+  color:var(--color2);
+  font-family:"NotoSansKR",apple-system,system-ui,Roboto,sans-serif;
+  font-weight:400;
+}
+</code></pre>
+				<div class="guide-cont">
+					<div class="guide-table1">
+						<table>
+							<caption>사이즈별 폰트</caption>
+							<colgroup>
+								<col style="width:15%">
+								<col style="width:15%">
+								<col style="width:15%">
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col" colspan="2">구분</th>
+									<th scope="col">사이즈</th>
+									<th scope="col">내용</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td rowspan="3">한글/영문</td>
+									<td rowspan="3">NotoSans</td>
+									<td>Regular(기본)</td>
+									<td>font-weight:400;<div style="font-weight:400;font-size:1.6rem">가나다ABC</div></td>
+								</tr>
+								<tr>
+									<td>Medium</td>
+									<td>font-weight:500;<div style="font-weight:500;font-size:1.6rem">가나다ABC</div></td>
+								</tr>
+								<tr>
+									<td>Bold</td>
+									<td>font-weight:700;<div style="font-weight:700;font-size:1.6rem">가나다ABC</div></td>
+								</tr>
+								<tr>
+									<td rowspan="2">숫자</td>
+									<td rowspan="2">Roboto</td>
+									<td>Regular</td>
+									<td>font-weight:400;<div style="font-family:'Roboto';font-weight:400;font-size:1.8rem">123,000</div></td>
+								</tr>
+								<tr>
+									<td>Bold</td>
+									<td>font-weight:700;<div style="font-family:'Roboto';font-weight:700;font-size:1.8rem">123,000</div></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<h3 class="guide-tit2">CSS 변수 정의</h3>
+				<p class="guide-txt">CSS 변수는 사이트 전체 디자인 가이드에 공통적으로 사용되는 속성에 한하여 사용한다.</p>
+				<div class="guide-cont">
+					<div class="guide-table1">
+						<table>
+							<caption>CSS 변수</caption>
+							<colgroup>
+								<col style="width:15%">
+								<col style="width:30%">
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">구분</th>
+									<th scope="col">변수</th>
+									<th scope="col">내용</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>배경색상</td>
+									<td>--bg1</td>
+									<td><span class="guide-var" style="--el:var(--bg1)">#f7f7f7</span></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>--bg2</td>
+									<td><span class="guide-var" style="--el:var(--bg2)">#03A4B7</span></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>--bg3</td>
+									<td><span class="guide-var" style="--el:var(--bg3)">#1DC6C9</span></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>--bg4</td>
+									<td><span class="guide-var" style="--el:var(--bg5)">#00CC99</span></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>--bg5</td>
+									<td><span class="guide-var" style="--el:var(--bg5)">#999999</span></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>--bg-disable</td>
+									<td><span class="guide-var" style="--el:var(--bg-disable)">#B4B4B4 (DISABLE)</span></td>
+								</tr>
+
+								<tr>
+									<td>라인색상</td>
+									<td>--line1</td>
+									<td><span class="guide-var" style="--el:var(--line1)">#CCCCCC</span></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>--line2</td>
+									<td><span class="guide-var" style="--el:var(--line2)">#E2E2E2</span></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>--line3</td>
+									<td><span class="guide-var" style="--el:var(--line3)">#EBEBEB</span></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>--line4</td>
+									<td><span class="guide-var" style="--el:var(--line4)">#666666</span></td>
+								</tr>
+
+								<tr>
+									<td>폰트색상</td>
+									<td>--color1</td>
+									<td><span class="guide-var" style="--el:var(--color1)">#111111</span></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>--color2</td>
+									<td><span class="guide-var" style="--el:var(--color2)">#333333</span></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>--color3</td>
+									<td><span class="guide-var" style="--el:var(--color3)">#666666</span></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>--color4</td>
+									<td><span class="guide-var" style="--el:var(--color4)">#888888</span></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>--color5</td>
+									<td><span class="guide-var" style="--el:var(--color5)">#B4B4B4 (DISABLE)</span></td>
+								</tr>
+
+								<tr>
+									<td>포인트 색상</td>
+									<td>--point1</td>
+									<td><span class="guide-var" style="--el:var(--point1)">#03A4B7</span></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>--point2</td>
+									<td><span class="guide-var" style="--el:var(--point2)">#1DC6C9</span></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>--point3</td>
+									<td><span class="guide-var" style="--el:var(--point3)">#FF456B</span></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>--point4</td>
+									<td><span class="guide-var" style="--el:var(--point4)">#FD8B00</span></td>
+								</tr>
+
+								<tr>
+									<td>폰트 정의</td>
+									<td>--font_b_26</td>
+									<td>
+										<span class="guide-font" style="--el-font:var(--font_b_26)">가나다라</span>
+										<div>26px/32px 700;</div>
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>--font_b_18</td>
+									<td>
+										<span class="guide-font" style="--el-font:var(--font_b_18)">가나다라</span>
+										<div>18px/26px 700;</div>
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>--font_b_17</td>
+									<td>
+										<span class="guide-font" style="--el-font:var(--font_b_17)">가나다라</span>
+										<div>17px/24px 700;</div>
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>--font_b_16</td>
+									<td>
+										<span class="guide-font" style="--el-font:var(--font_b_16)">가나다라</span>
+										<div>16px/23px 700;</div>
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>--font_b_13</td>
+									<td>
+										<span class="guide-font" style="--el-font:var(--font_b_13)">가나다라</span>
+										<div>13px/19px 700;</div>
+									</td>
+								</tr>
+
+								<tr>
+									<td></td>
+									<td>--font_m_18</td>
+									<td>
+										<span class="guide-font" style="--el-font:var(--font_m_18)">가나다라</span>
+										<div>18px/26px 500;</div>
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>--font_m_15</td>
+									<td>
+										<span class="guide-font" style="--el-font:var(--font_m_15)">가나다라</span>
+										<div>15px/22px 500;</div>
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>--font_m_14</td>
+									<td>
+										<span class="guide-font" style="--el-font:var(--font_m_14)">가나다라</span>
+										<div>14px/20px 500;</div>
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>--font_m_12</td>
+									<td>
+										<span class="guide-font" style="--el-font:var(--font_m_12)">가나다라</span>
+										<div>12px/16px 500;</div>
+									</td>
+								</tr>
+
+								<tr>
+									<td></td>
+									<td>--font_r_26</td>
+									<td>
+										<span class="guide-font" style="--el-font:var(--font_r_26)">가나다라</span>
+										<div>26px/32px 400;</div>
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>--font_r_16</td>
+									<td>
+										<span class="guide-font" style="--el-font:var(--font_r_16)">가나다라</span>
+										<div>16px/23px 400;</div>
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>--font_r_14</td>
+									<td>
+										<span class="guide-font" style="--el-font:var(--font_r_14)">가나다라</span>
+										<div>14px/20px 400;</div>
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>--font_r_13</td>
+									<td>
+										<span class="guide-font" style="--el-font:var(--font_r_13)">가나다라</span>
+										<div>13px/19px 400;</div>
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>--font_roboto_35</td>
+									<td>
+										<span class="guide-font" style="--el-font:var(--font_roboto_35)">123456</span>
+										<div>35px/41px 700 Roboto;</div>
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>--font_roboto_27</td>
+									<td>
+										<span class="guide-font" style="--el-font:var(--font_roboto_27)">123456</span>
+										<div>27px/33px 700 Roboto;</div>
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>--font_roboto_18</td>
+									<td>
+										<span class="guide-font" style="--el-font:var(--font_roboto_18)">123456</span>
+										<div>18px/24px 700 Roboto;</div>
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>--font_roboto_15</td>
+									<td>
+										<span class="guide-font" style="--el-font:var(--font_roboto_15)">123456</span>
+										<div>15px/21px 700 Roboto;</div>
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>--font_roboto_14</td>
+									<td>
+										<span class="guide-font" style="--el-font:var(--font_roboto_14)">123456</span>
+										<div>14px/20px 700 Roboto;</div>
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>--font_roboto_11</td>
+									<td>
+										<span class="guide-font" style="--el-font:var(--font_roboto_11)">123456</span>
+										<div>11px/17px 700 Roboto;</div>
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>--font_roboto_13</td>
+									<td>
+										<span class="guide-font" style="--el-font:var(--font_roboto_13)">123456</span>
+										<div>13px/19px 400 Roboto;</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<h3 class="guide-tit2">기타</h3>
+				<p class="guide-txt">하단 클래스는 기본 선언은 되어 있으나 개별 사용은 지양하며, 부모 클래스를 통해 스타이르 선언 하되 예외 사항에서 사용한다.</p>
+				<div class="guide-cont">
+					<div class="guide-table1">
+						<table>
+							<caption>공통 클래스</caption>
+							<colgroup>
+								<col style="width:15%">
+								<col style="width:15%">
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">클래스명</th>
+									<th scope="col">내용</th>
+									<th scope="col">기타</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>.hidden</td>
+									<td>숨김요소</td>
+									<td>시각적으로 숨김처리되며, 보조기기를 통해서는 정보제공 되는 대상에 적용</td>
+								</tr>
+								<tr>
+									<td>.none</td>
+									<td>숨김요소</td>
+									<td>시각, 청각 모두 숨김처리대상에 적용 (UI 동적관련 하여 필요시 사용)</td>
+								</tr>
+								<tr>
+									<td>.nodata</td>
+									<td>데이터 없음</td>
+									<td>상위 클래스 상속 스타일</td>
+								</tr>
+								<tr>
+									<td>.sub_con1</td>
+									<td>상단 여백 40px</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>.sub_con2</td>
+									<td>상단 여백 30px</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>.sub_con3</td>
+									<td>상단 여백 20px</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>.txt_c1</td>
+									<td>포인트 색상</td>
+									<td><span class="txt_c1">#FF456B</span></td>
+								</tr>
+								<tr>
+									<td>.txt_c2</td>
+									<td>포인트 색상</td>
+									<td><span class="txt_c2">#03A4B7</span></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</section>
+			<!-- ### // ### -->
+		</div>
+		<!-- ####################################################### -->
+	</div>
+</body>
+</html>

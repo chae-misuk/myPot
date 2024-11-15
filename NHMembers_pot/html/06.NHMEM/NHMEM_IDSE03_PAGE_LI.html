@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<title>[P] 아이디 찾기</title>
+</head>
+<body>
+	<!-- [바닥페이지] -->
+	<div id="wrap"></div>
+	<!--// -->
+
+	<!-- ####################################################### -->
+	<!-- [POPUP] 아이디 찾기 -->
+	<!-- ####################################################### -->
+	<div class="layer_pop type_full" id="uiNHMEMIDSE01" role="dialog" aria-modal="true" aria-labelledby="uiNHMEMIDSE01TIT">
+		<div class="pop_inner">
+			<!-- ------------------------------- -->
+			<!-- [POPUP HEADER] -->
+			<!-- ------------------------------- -->
+			<div class="pop_header">
+				<button type="button" class="btn_back">뒤로가기</button>
+			</div>
+			<p class="pop_tit top" id="uiNHMEMIDSE01TIT">아이디 찾기</p>
+
+			<!-- ------------------------------- -->
+			<!-- [POPUP CONTENTS] -->
+			<!-- ------------------------------- -->
+			<div class="pop_con">
+				<div class="mes_result2 ic5">
+					<p><strong>입력정보와 일치하는<br>회원이 없어요.</strong></p>
+				</div>
+			</div>
+
+			<!-- ------------------------------- -->
+			<!-- [POPUP FOOTER BTN] -->
+			<!-- ------------------------------- -->
+			<div class="wrap_action">
+				<button type="button" class="btn_action btn_close">확인</button> <!-- class="btn_close" 사용시 레이어 닫힘  -->
+			</div>
+			<!-- ------------------------------- -->
+		</div>
+	</div>
+	<!-- ####################################################### -->
+
+	<script>
+		$(function(){
+			openlayer('uiNHMEMIDSE01'); //풀팝업 호출
+		})
+	</script>
+</body>
+</html>

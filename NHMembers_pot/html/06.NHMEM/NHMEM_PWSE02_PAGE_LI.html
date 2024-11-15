@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<title>[P] 비밀번호 찾기</title>
+</head>
+<body>
+	<!-- [바닥페이지] -->
+	<div id="wrap"></div>
+	<!--// -->
+
+	<!-- ####################################################### -->
+	<!-- [POPUP] 비밀번호 찾기 -->
+	<!-- ####################################################### -->
+	<div class="layer_pop type_full" id="uiNHMEMPWSE01" role="dialog" aria-modal="true" aria-labelledby="uiNHMEMPWSE01TIT">
+		<div class="pop_inner">
+			<!-- ------------------------------- -->
+			<!-- [POPUP HEADER] -->
+			<!-- ------------------------------- -->
+			<div class="pop_header">
+				<button type="button" class="btn_back">뒤로가기</button>
+			</div>
+			<p class="pop_tit top" id="uiNHMEMPWSE01TIT">비밀번호 찾기</p>
+
+			<!-- ------------------------------- -->
+			<!-- [POPUP CONTENTS] -->
+			<!-- ------------------------------- -->
+			<div class="pop_con">
+				<p class="con_tit">가입정보 또는 본인인증을 통해<br>비밀번호를 찾을 수 있어요.</p>
+
+				<!-- ### [입력영역] 가입정보인증 ### -->
+				<div class="form_wrap">
+					<fieldset>
+						<legend>가입정보인증 (모든항목 필수입력)</legend>
+
+						<!-- 이름 : 오류 샘플 : data-mode="invalid" /  aria-invalid="true" -->
+						<dl class="form" data-mode="invalid">
+							<dt>이름</dt>
+							<dd>
+								<div class="inp_txt">
+									<input type="text" id="mbNm" name="MB_NM" aria-label="이름" placeholder="이름을 입력해 주세요." maxlength="30" aria-invalid="true">
+									<button type="button" class="btn_del">입력 내용 삭제</button>
+								</div>
+								<div class="validation" aria-live="assertive" role="alert">이름을 입력해 주세요.</div>
+							</dd>
+						</dl>
+
+						<!-- 생년월일 -->
+						<dl class="form">
+							<dt>생년월일</dt>
+							<dd>
+								<div class="inp_txt">
+									<input type="tel" id="birthMdDt" name="BIRTH_MD_DT" aria-label="생년월일 ex) 19900101" placeholder="생년월일을 입력해 주세요. ex)19900101" maxlength="8">
+									<button type="button" class="btn_del">입력 내용 삭제</button>
+								</div>
+								<div class="validation" aria-live="assertive" role="alert">생년월일을 입력해 주세요.</div>
+							</dd>
+						</dl>
+
+						<!-- 휴대폰 번호 : 오류 샘플 : data-mode="invalid" /  aria-invalid="true" -->
+						<dl class="form" data-mode="invalid">
+							<dt>휴대폰 번호</dt>
+							<dd>
+								<div class="inp_btn" data-col="3">
+									<label>
+										<input type="radio" name="formRadio3" aria-label="휴대폰 번호 통신사(SKT)" checked>
+										<span aria-hidden="true">SKT</span>
+									</label>
+									<label>
+										<input type="radio" name="formRadio3" aria-label="휴대폰 번호 통신사(KT)">
+										<span aria-hidden="true">KT</span>
+									</label>
+									<label>
+										<input type="radio" name="formRadio3" aria-label="휴대폰 번호 통신사(LG U+)">
+										<span aria-hidden="true">LG U+</span>
+									</label>
+									<label>
+										<input type="radio" name="formRadio3" aria-label="휴대폰 번호 통신사(SKT 알뜰폰)">
+										<span aria-hidden="true">SKT 알뜰폰</span>
+									</label>
+									<label>
+										<input type="radio" name="formRadio3" aria-label="휴대폰 번호 통신사(KT 알뜰폰)">
+										<span aria-hidden="true">KT 알뜰폰</span>
+									</label>
+									<label>
+										<input type="radio" name="formRadio3" aria-label="휴대폰 번호 통신사(LG U+ 알뜰폰)">
+										<span aria-hidden="true">LG U+ 알뜰폰</span>
+									</label>
+								</div>
+								<div class="inp_area">
+									<select class="selectbox" title="휴대폰 번호 앞자리">
+										<option>010</option>
+										<option>011</option>
+									</select>
+									<div class="inp_txt">
+										<input type="tel" id="fullNo" aria-label="휴대폰 번호 뒷자리 (숫자만입력)"  placeholder="뒷자리를 입력해 주세요." maxlength="8" aria-invalid="true">
+										<button type="button" class="btn_del">입력 내용 삭제</button>
+									</div>
+								</div>
+								<div class="validation" aria-live="assertive" role="alert">휴대폰 번호를 입력해 주세요.</div>
+							</dd>
+						</dl>
+
+						<!-- 인증번호 -->
+						<dl class="form">
+							<dt>인증번호 입력</dt>
+							<dd>
+								<div class="inp_txt">
+									<input type="tel" aria-label="인증번호" placeholder="인증번호를 입력해 주세요.">
+									<span class="util2">03:00</span>
+									<button type="button" class="link_t1">재전송</button>
+								</div>
+								<div class="validation" aria-live="assertive" role="alert">오류문구 노출 영역</div>
+							</dd>
+							<dd class="mes">3분 이내에 인증번호를 입력해 주세요.</dd>
+							<dd class="mes">입력시간 초과 시 ‘재전송’버튼을 눌러주세요.</dd>
+						</dl>
+						<!-- // -->
+					</fieldset>
+				</div>
+
+				<!-- ### [버튼영역] ### -->
+				<div class="wrap_btn4">
+					<button type="button" class="btn_txt1 ic1 btn_layer">비밀번호 찾기에 문제가 있으신가요?</button> <!-- [D] 팝업내용 : NHMEM_PWSE02_PAGE_LI02.html 참고 -->
+				</div>
+				<!-- ### // ### -->
+			</div>
+
+			<!-- ------------------------------- -->
+			<!-- [POPUP FOOTER BTN] -->
+			<!-- ------------------------------- -->
+			<div class="wrap_action">
+				<button type="button" class="btn_action">인증요청</button>
+				<!-- <button type="button" class="btn_action">인증완료</button> [CASE] 인증완료시 -->
+			</div>
+			<!-- ------------------------------- -->
+		</div>
+	</div>
+	<!-- ####################################################### -->
+
+	<script>
+		$(function(){
+			openlayer('uiNHMEMPWSE01'); //풀팝업 호출
+		})
+	</script>
+</body>
+</html>

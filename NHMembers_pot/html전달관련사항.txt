@@ -1,0 +1,12 @@
+﻿****** html 전달 관련 참고 부탁 드립니다.******
+
+1. html 파일목록 경로 : \html\99.WORK\coding_list01.html 
+
+2. 해당 페이지에 작업 목록 및 작업가이드로 구분되어 있습니다. (우측 상단)
+
+3. 상세 퍼블가이드는 작업가이드(파일명 : coding_list02.html) > CONTENT 참고 하시면 됩니다.
+
+4. 접근성 관련 검사기 내용은 CONTENT > content_base(파일명 : content_base.html)에 포함되어 있습니다. 
+
+5. html 중 인터렉션 관련 파일들은(예 : layout_lottie.html) json 파일이라 html에서 확인이 안됩니다. 
+   서버상에서 확인 가능합니다. (live-server 또는 localhost 확인)

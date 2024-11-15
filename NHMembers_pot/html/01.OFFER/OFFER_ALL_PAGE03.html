@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<title>혜택</title>
+	<script>
+		$(function(){
+			openlayer('uiSORT02');
+		})
+	</script>
+</head>
+<body>
+	<a id="skipnavi" href="#contents" class="skipnav">컨텐츠바로가기</a>
+    <!-- wrap -->
+    <div id="wrap">
+    </div>
+    <!--// wrap -->
+
+    <!-- popup -->
+	<div class="layer_pop type_btm" id="uiSORT02" role="dialog" aria-modal="true" aria-labelledby="uiSORT02TIT">
+		<div class="pop_inner">
+			<p class="pop_tit" id="uiSORT02TIT">제휴사 별 보기 설정</p> <!-- 07.26 수정. 문구 수정 -->
+            <button type="button" class="pop_close">팝업닫기</button>
+
+			<div class="pop_con">
+				<div>
+                    <span class="inp_chk3"><label for="uiFormChkAll">제휴사 전체</label><input type="checkbox" id="uiFormChkAll" class="chk_all"></span>
+                </div>
+                <div>
+                    <span class="inp_chk3"><input type="checkbox" id="uiFormChk01"><label for="uiFormChk01">NH PAY</label></span>
+                    <span class="inp_chk3"><input type="checkbox" id="uiFormChk02"><label for="uiFormChk02">콕뱅크</label></span>
+                    <span class="inp_chk3"><input type="checkbox" id="uiFormChk03"><label for="uiFormChk03">NH농협캐피탈</label></span>
+                    <span class="inp_chk3"><input type="checkbox" id="uiFormChk04"><label for="uiFormChk04">NH농협생명보험</label></span>
+                    <span class="inp_chk3"><input type="checkbox" id="uiFormChk05"><label for="uiFormChk05">NH농협손해보험</label></span>
+                    <span class="inp_chk3"><input type="checkbox" id="uiFormChk06"><label for="uiFormChk06">NH저축은행</label></span>
+                    <span class="inp_chk3"><input type="checkbox" id="uiFormChk07"><label for="uiFormChk07">NH투자증권QV</label></span>
+                    <span class="inp_chk3"><input type="checkbox" id="uiFormChk08"><label for="uiFormChk08">NH멤버스</label></span>
+                    <span class="inp_chk3"><input type="checkbox" id="uiFormChk09"><label for="uiFormChk09">스마트뱅킹</label></span>
+                </div>
+			</div>
+
+			<div class="wrap_action">
+				<button type="button" class="btn_action ty01 btn_close">취소</button><!-- class="btn_close" 사용시 레이어 닫힘  -->
+				<button type="button" class="btn_action">확인</button>
+			</div>
+			<!-- ------------------------------- -->
+		</div>
+	</div>
+</body>
+</html>

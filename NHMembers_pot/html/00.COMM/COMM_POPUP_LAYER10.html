@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<title>[P] 은행선택</title>
+</head>
+<body>
+	<!-- [바닥페이지] -->
+	<div id="wrap"></div>
+	<!--// -->
+
+	<!-- ####################################################### -->
+	<!-- [POPUP] 은행선택 -->
+	<!-- ####################################################### -->
+	<div class="layer_pop type_full" id="uiCOMBANKSELECT" role="dialog" aria-modal="true" aria-labelledby="uiCOMBANKSELECTTIT">
+		<div class="pop_inner">
+			<!-- ------------------------------- -->
+			<!-- [POPUP HEADER] -->
+			<!-- ------------------------------- -->
+			<div class="pop_header">
+				<button type="button" class="pop_close">팝업닫기</button>
+			</div>
+			<p class="pop_tit top" id="uiCOMBANKSELECTTIT">은행선택</p>
+
+			<!-- ------------------------------- -->
+			<!-- [POPUP CONTENTS] -->
+			<!-- ------------------------------- -->
+			<div class="pop_con">
+				<div class="list_t1">
+					<ul>
+						<li><button type="button" data-value="011" title="선택됨" class="active"><img src="../../resources/images/bank/011.png" alt="">농협</button></li><!-- [D] 선택됨 : title="선택됨" class="active" 추가 -->
+						<li><button type="button" data-value="247"><img src="../../resources/images/bank/247.png" alt="">NH투자증권</button></li>
+						<li><button type="button" data-value="002"><img src="../../resources/images/bank/002.png" alt="">KDB산업은행</button></li>
+						<li><button type="button" data-value="003"><img src="../../resources/images/bank/003.png" alt="">IBK기업은행</button></li>
+						<li><button type="button" data-value="004"><img src="../../resources/images/bank/004.png" alt="">KB국민은행</button></li>
+						<li><button type="button" data-value="007"><img src="../../resources/images/bank/007.png" alt="">수협은행</button></li>
+						<li><button type="button" data-value="008"><img src="../../resources/images/bank/008.png" alt="">한국수출입은행</button></li>
+						<li><button type="button" data-value="020"><img src="../../resources/images/bank/020.png" alt="">우리은행</button></li>
+						<li><button type="button" data-value="023"><img src="../../resources/images/bank/023.png" alt="">SC제일은행</button></li>
+						<li><button type="button" data-value="027"><img src="../../resources/images/bank/027.png" alt="">한국씨티은행</button></li>
+						<li><button type="button" data-value="031"><img src="../../resources/images/bank/031.png" alt="">대구은행</button></li>
+						<li><button type="button" data-value="032"><img src="../../resources/images/bank/032.png" alt="">부산은행</button></li>
+						<li><button type="button" data-value="034"><img src="../../resources/images/bank/034.png" alt="">광주은행</button></li>
+						<li><button type="button" data-value="035"><img src="../../resources/images/bank/035.png" alt="">제주은행</button></li>
+						<li><button type="button" data-value="037"><img src="../../resources/images/bank/037.png" alt="">전북은행</button></li>
+						<li><button type="button" data-value="039"><img src="../../resources/images/bank/039.png" alt="">BNK경남은행</button></li>
+						<li><button type="button" data-value="045"><img src="../../resources/images/bank/045.png" alt="">새마을금고중앙회</button></li>
+						<li><button type="button" data-value="048"><img src="../../resources/images/bank/048.png" alt="">신용협동조합</button></li>
+						<li><button type="button" data-value="050"><img src="../../resources/images/bank/050.png" alt="">상호저축은행</button></li>
+						<li><button type="button" data-value="054"><img src="../../resources/images/bank/054.png" alt="">HSBC은행</button></li>
+						<li><button type="button" data-value="055"><img src="../../resources/images/bank/055.png" alt="">도이치은행</button></li>
+						<li><button type="button" data-value="056"><img src="../../resources/images/bank/056.png" alt="">ABN암로은행</button></li>
+						<li><button type="button" data-value="058"><img src="../../resources/images/bank/058.png" alt="">미즈호<br>코퍼레이트은행</button></li>
+						<li><button type="button" data-value="059"><img src="../../resources/images/bank/059.png" alt="">미쓰비시도쿄<br>UFJ은행</button></li>
+						<li><button type="button" data-value="060"><img src="../../resources/images/bank/060.png" alt="">뱅크오브아메리카</button></li>
+						<li><button type="button" data-value="064"><img src="../../resources/images/bank/064.png" alt="">산림조합중앙회</button></li>
+						<li><button type="button" data-value="071"><img src="../../resources/images/bank/071.png" alt="">우체국</button></li>
+						<li><button type="button" data-value="081"><img src="../../resources/images/bank/081.png" alt="">KEB하나은행</button></li>
+						<li><button type="button" data-value="088"><img src="../../resources/images/bank/088.png" alt="">신한은행</button></li>
+						<li><button type="button" data-value="089"><img src="../../resources/images/bank/089.png" alt="">케이뱅크</button></li>
+						<li><button type="button" data-value="090"><img src="../../resources/images/bank/090.png" alt="">카카오뱅크</button></li>
+						<li><button type="button" data-value="092"><img src="../../resources/images/bank/092.png" alt="">토스뱅크</button></li>
+						<li><button type="button" data-value="068"><img src="../../resources/images/bank/068.png" alt="">IBK투자증권</button></li>
+						<li><button type="button" data-value="209"><img src="../../resources/images/bank/209.png" alt="">유안타증권</button></li>
+						<li><button type="button" data-value="218"><img src="../../resources/images/bank/218.png" alt="">KB증권</button></li>
+						<li><button type="button" data-value="238"><img src="../../resources/images/bank/238.png" alt="">미래에셋대우</button></li>
+						<li><button type="button" data-value="240"><img src="../../resources/images/bank/240.png" alt="">삼성증권</button></li>
+						<li><button type="button" data-value="243"><img src="../../resources/images/bank/243.png" alt="">한국투자증권</button></li>
+						<li><button type="button" data-value="261"><img src="../../resources/images/bank/261.png" alt="">교보증권</button></li>
+						<li><button type="button" data-value="262"><img src="../../resources/images/bank/262.png" alt="">하이투자증권</button></li>
+						<li><button type="button" data-value="263"><img src="../../resources/images/bank/263.png" alt="">현대차투자증권</button></li>
+						<li><button type="button" data-value="264"><img src="../../resources/images/bank/264.png" alt="">키움증권</button></li>
+						<li><button type="button" data-value="265"><img src="../../resources/images/bank/265.png" alt="">이베스트투자증권</button></li>
+						<li><button type="button" data-value="266"><img src="../../resources/images/bank/266.png" alt="">SK증권</button></li>
+						<li><button type="button" data-value="267"><img src="../../resources/images/bank/267.png" alt="">대신증권</button></li>
+						<li><button type="button" data-value="269"><img src="../../resources/images/bank/269.png" alt="">한화투자증권</button></li>
+						<li><button type="button" data-value="270"><img src="../../resources/images/bank/270.png" alt="">하나금융투자</button></li>
+						<li><button type="button" data-value="278"><img src="../../resources/images/bank/278.png" alt="">신한금융투자</button></li>
+						<li><button type="button" data-value="279"><img src="../../resources/images/bank/279.png" alt="">DB금융투자</button></li>
+						<li><button type="button" data-value="280"><img src="../../resources/images/bank/280.png" alt="">유진투자증권</button></li>
+						<li><button type="button" data-value="287"><img src="../../resources/images/bank/287.png" alt="">메리츠<br>종합금융증권</button></li>
+						<li><button type="button" data-value="290"><img src="../../resources/images/bank/290.png" alt="">부국증권</button></li>
+						<li><button type="button" data-value="291"><img src="../../resources/images/bank/291.png" alt="">신영증권</button></li>
+						<li><button type="button" data-value="292"><img src="../../resources/images/bank/292.png" alt="">케이프투자증권</button></li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- ------------------------------- -->
+			<!-- [POPUP FOOTER BTN] -->
+			<!-- ------------------------------- -->
+			<div class="wrap_action">
+				<button type="button" class="btn_action">확인</button>
+			</div>
+			<!-- ------------------------------- -->
+		</div>
+	</div>
+	<!-- ####################################################### -->
+
+	<script>
+		$(function(){
+			openlayer('uiCOMBANKSELECT'); //풀팝업 호출
+		})
+	</script>
+</body>
+</html>

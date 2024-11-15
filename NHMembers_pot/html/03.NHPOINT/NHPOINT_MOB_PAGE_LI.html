@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<title>모바일 상품권 전환 | 전환하기 | NH포인트</title>
+</head>
+<body>
+	<a href="#contents" class="skipnav">컨텐츠바로가기</a>
+
+	<!-- wrap -->
+	<div id="wrap">
+		<div id="sub_header">
+			<h1>NHmembers pot</h1>
+			<h2 class="hidden">NH포인트</h2>
+			<h3>모바일 상품권 전환</h3>
+			<a href="#none" class="btn_back">뒤로가기</a>
+		</div>
+
+		<!-- ####################################################### -->
+		<!-- [CONTENTS] NH포인트 : 전환하기 | 모바일 상품권 전환 -->
+		<!-- ####################################################### -->
+		<div id="contents">
+			<div id="sub_content">
+				<!-- ------------------------------- -->
+				<!-- [정보영역] -->
+				<!-- [M 2023-07-03] 개발팀 요청 : 이미지 하나로 변경 -->
+				<!-- ------------------------------- -->
+				<div class="info_summary3 t3">
+					<h5 class="tit">
+						<span class="img"><img src="../../resources/images/logo/bi_moneycon02.png" alt="머니콘 NH포인트 교환권 에서 NHpoint로 전환"></span>
+					</h5>
+
+					<h5 class="tit">
+						<span class="img"><img src="../../resources/images/logo/bi_happymoney02.png" alt="해피머니 에서 NHpoint로 전환"></span>
+					</h5>
+
+					<h5 class="tit">
+						<span class="img"><img src="../../resources/images/logo/bi_booklife02.png" alt="북앤라이프 캐시 에서 NHpoint로 전환"></span>
+					</h5>
+
+					<h5 class="tit">
+						<span class="img"><img src="../../resources/images/logo/bi_ifarmlove02.png" alt="농촌사랑 모바일 상품권 에서 NHpoint로 전환"></span>
+					</h5>
+
+					<h5 class="tit">
+						<span class="img"><img src="../../resources/images/logo/bi_booknlifepays02.png" alt="북앤라이프 도서문화상품권 에서 NHpoint로 전환"></span>
+					</h5>
+
+					<h5 class="tit">
+						<span class="img"><img src="../../resources/images/logo/bi_coop02.png" alt="쿠프마케팅 NH포인트 교환권 에서 NHpoint로 전환"></span>
+					</h5>
+				</div>
+				<!-- // [M 2023-07-03] 개발팀 요청 -->
+
+				<!-- ------------------------------- -->
+				<!-- [입력영역]  -->
+				<!-- ------------------------------- -->
+				<div class="form_wrap">
+					<fieldset>
+						<legend>모바일 상품권 전환 입력(모든항목 필수입력)</legend>
+
+						<!-- 항목하나 [M 2023-06-30] 삭제
+						<dl class="form">
+							<dt>모바일 상품권</dt>
+							<dd><button type="button" class="selectbox btn_layer" title="모바일 상품권 선택">머니콘NH포인트 교환권</button></dd>
+						</dl>
+						-->
+
+						<!-- 항목하나 : 입력 전 -->
+						<dl class="form">
+							<dt>모바일 상품권 번호 입력</dt>
+							<dd>
+								<div class="inp_txt">
+									<input type="tel" aria-label="모바일 상품권 번호" placeholder="상품권 번호를 입력해 주세요">
+									<button type="button" class="btn_del">입력내용삭제</button>
+								</div>
+								<div class="validation" aria-live="assertive" role="alert">상품권 번호를 확인 후 다시 시도해 주세요.</div>
+							</dd>
+						</dl>
+						<!-- 항목하나 : 입력 후 : 오류 : data-mode="invalid" / aria-invalid="true" -->
+						<dl class="form" data-mode="invalid">
+							<dt>모바일 상품권 번호 입력</dt>
+							<dd>
+								<div class="inp_txt">
+									<input type="tel" aria-label="모바일 상품권 번호" placeholder="상품권 번호를 입력해 주세요" value="1234-5678-1234-5678" aria-invalid="true">
+									<button type="button" class="btn_del">입력내용삭제</button>
+								</div>
+								<div class="validation" aria-live="assertive" role="alert">상품권 번호를 확인 후 다시 시도해 주세요.</div>
+								<!--
+									[CASE] 농촌사랑 모바일 상품권 : 5만원 이상 권종 입력시 오류 메세지 변경
+									<div class="validation" aria-live="assertive" role="alert">5만원 이하 권종만 전환이 가능합니다.</div>
+								 -->
+							</dd>
+						</dl>
+
+						<!-- [CASE] 북앤라이프 도서문화상품권 -->
+						<!-- 항목하나 : 입력 전  -->
+						<dl class="form">
+							<dt>인증 번호 입력</dt>
+							<dd>
+								<div class="inp_txt">
+									<input type="text" aria-label="인증 번호" maxlength="4" placeholder="인증 번호 4자리를 입력해 주세요">
+									<button type="button" class="btn_del">입력내용삭제</button>
+								</div>
+								<div class="validation" aria-live="assertive" role="alert">인증 번호 4자리 확인 후 다시 시도해 주세요.</div>
+							</dd>
+							<dd class="mes">NH포인트 전환 시 8% 수수료가 발생됩니다.</dd>
+						</dl>
+						<!-- 항목하나 : 입력 후 : 오류 : data-mode="invalid" / aria-invalid="true"  -->
+						<dl class="form" data-mode="invalid">
+							<dt>인증 번호 입력</dt>
+							<dd>
+								<div class="inp_txt">
+									<input type="text" aria-label="인증 번호 4자리" maxlength="4" placeholder="인증 번호 4자리를 입력해 주세요" value="1234" aria-invalid="true">
+									<button type="button" class="btn_del">입력내용삭제</button>
+								</div>
+								<div class="validation" aria-live="assertive" role="alert">인증 번호 4자리를 확인 후 다시 시도해 주세요.</div>
+							</dd>
+							<dd class="mes">NH포인트 전환 시 8% 수수료가 발생됩니다.</dd>
+						</dl>
+						<!-- // -->
+
+						<!-- [CASE] 해피캐시, 북앤라이프 -->
+						<!-- 항목하나 -->
+						<div class="area_info3">
+							<dl>
+								<dt>보유 캐시</dt> <!-- [M 2023-06-02] 기획 v1.4 : 문구변경 -->
+								<dd class="data_num1"><strong>59,607</strong><span>캐시</span></dd>
+							</dl>
+							<dl>
+								<dt>전환 가능 한도</dt>
+								<dd class="data_num1"><strong>10,000</strong><span>P</span></dd>
+							</dl>
+						</div>
+
+						<!-- 항목하나 : 입력 전 -->
+						<dl class="form">
+							<dt>전환 신청 포인트</dt>
+							<dd>
+								<!-- 07.26 수정. 버튼순서변경 -->
+								<!-- [M 2023-06-02] 기획 v1.4 : 버튼 추가 -->
+								<div class="btn_set2 area" data-order="2">
+									<button type="button" title="전환 신청 포인트">전액사용</button>
+									<button type="button" title="전환 신청 포인트">1,000P</button>
+									<button type="button" title="전환 신청 포인트">5,000P</button>
+									<button type="button" title="전환 신청 포인트">10,000P</button>
+								</div>
+								<!-- // [M 2023-06-02] -->
+								<!--// 07.26 수정. 버튼순서변경 -->
+
+								<div class="inp_txt">
+									<input type="tel" aria-label="전환 신청 포인트" placeholder="전환할 포인트를 입력해 주세요">
+									<span class="util">P</span>
+								</div>
+								<div class="validation">최소 1,000포인트 이상 전환 가능합니다.</div> <!-- [M 2023-06-02] 기획 v1.4 : 오류메세지 추가 -->
+							</dd>
+							<!-- <dd class="mes">전환 수수료 8%가 차감되어 전환됩니다.</dd> [M 2023-06-02] 내용 삭제 -->
+						</dl>
+
+
+						<!-- 항목하나 : 입력 후 : 오류 : data-mode="invalid" / aria-invalid="true" -->
+						<dl class="form" data-mode="invalid">
+							<dt>전환 신청 포인트</dt>
+							<dd>
+								<!-- 07.26 수정. 버튼순서변경 -->
+								<div class="btn_set2 area" data-order="2">
+									<button type="button" title="전환 신청 포인트">전액사용</button>
+									<button type="button" title="전환 신청 포인트">1,000P</button>
+									<button type="button" title="전환 신청 포인트">5,000P</button>
+									<button type="button" title="전환 신청 포인트">10,000P</button>
+								</div>
+								<!--// 07.26 수정. 버튼순서변경 -->
+
+								<div class="inp_txt">
+									<input type="tel" aria-label="전환 신청 포인트" value="500" placeholder="전환할 포인트를 입력해 주세요" aria-invalid="true">
+									<span class="util">P</span>
+								</div>
+								<div class="validation">최소 1,000포인트 이상 전환 가능합니다.</div>
+							</dd>
+						</dl>
+						<!-- // -->
+
+						<!-- 항목하나 : [M 2023-06-02] 기획 v1.4 : 전환 수수료 영역 추가  -->
+						<dl class="form">
+							<dt>전환 수수료</dt>
+							<dd>
+								<!-- 07.19 수정 -->
+								<div class="inp_txt" data-label="0">
+									<span>500</span>
+									<span class="util ty02">P</span>
+								</div>
+								<!--// 07.19 수정 -->
+							</dd>
+							<dd class="mes">전환 수수료 8%가 차감되어 전환됩니다.</dd>
+						</dl>
+						<!-- // [M 2023-06-02]  -->
+					</fieldset>
+				</div>
+
+				<!-- 08.16 삭제 -->
+				<!-- <div class="wrap_btn3"><button type="button" class="btn_txt1 ic1 btn_layer">유의사항</button></div> -->
+
+				<!-- 08.16 추가 -->
+				<div class="info_area">
+					<article class="con_t3">
+						<div class="box">
+							<h4 class="h4_titlety mt25">모바일 상품권 전환 유의사항</h4>
+							<ul>
+								<li><strong>NH멤버스 모바일상품권 전환 서비스는 통합 한도 내에서 운영됩니다.</strong><br>(통합 한도 운영 : 1회 10만 포인트, 1일 30만 포인트, 월간 최대 50만 포인트)</li>
+								<li>상품권의 경우 기재된 전액을 전환합니다(부분 전환 불가)</li>
+								<li>특정 제휴사의 경우 전환 서비스 이용 시, 고객 부담 수수료가 부과될 수 있습니다.</li>
+								<li>전환된 포인트는 취소가 불가능 합니다.</li>
+								<li>전환된 포인트는 충전포인트와 같이 유효기간이 없으며, 포인트 사용 시 소멸일자가 빠른 포인트부터 차감 후 전환 포인트가 사용됩니다(포인트 사용 우선 순위를 지정할 수 없습니다)</li>
+								<li><strong>전환된 포인트는 선물하기 및 캐시백(계좌이체) 서비스가 제한되며, 일부 제휴사 및 환금성 상품의 포인트 사용, 포인트 재전환이 제한됩니다.</strong></li>
+								<li>농촌사랑 모바일 상품권, 머니콘 NH포인트 교환권, 북앤라이프 도서문화상품권, 문화상품권의 경우 전환 건당 포인트의 60% 이상(1만원 이하는 80%) 사용한 경우에 멤버스 앱/웹에서 모바일 상품권 전환 내역 조회 후 ‘환불신청하기’를 통해 전환 포인트를 환불 받으실 수 있습니다.</li>
+							</ul>
+						</div>
+					</article>
+				</div>
+				<!--// 08.16 추가 -->
+				<!-- ------------------------------- -->
+			</div>
+
+			<!-- [M 2023-06-14] 확인버튼 추가 -->
+            <div class="wrap_action">
+                <button type="button" class="btn_action">전환 신청</button> <!-- 08.16 수정 -->
+            </div>
+			<!-- // -->
+		</div>
+		<!-- ####################################################### -->
+	</div>
+	<!--// wrap -->
+</body>
+</html>

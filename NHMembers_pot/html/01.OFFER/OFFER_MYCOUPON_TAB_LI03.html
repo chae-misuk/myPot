@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<title>[P] 쿠폰상세</title>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<div id="sub_header">
+			<h1>NHmembers pot</h1>
+			<h2 class="hidden">쿠폰함</h2>
+			<h3 class="hidden">상세</h3>
+			<a href="#none" class="btn_back">뒤로가기</a>
+		</div>
+		<!-- ####################################################### -->
+		<!-- [CONTENTS] 쿠폰함 : 상세 -->
+		<!-- ####################################################### -->
+		<div id="contents">
+			<div id="sub_content">
+				<!-- ------------------------------- -->
+				<!-- [요약정보] -->
+				<!-- ------------------------------- -->
+				<!-- [CASE] 기본구조 -->
+				<div class="info_summary2">
+					<dl>
+						<dt>
+							<span>참여사명</span>
+							<strong>제목</strong>
+						</dt>
+						<dd class="data_num1"><strong>000,000</strong><span>P</span></dd>
+						<dd class="sub">
+							<time>0000.00.00</time>
+							<span>까지 사용 가능</span>
+						</dd>
+					</dl>
+				</div>
+
+				<!-- [CASE] 사용완료 -->
+				<div class="info_summary2">
+					<dl>
+						<dt>
+							<span>하나로마트</span>
+							<strong>하나로마트 10할인 쿠폰</strong>
+						</dt>
+						<dd class="data_num1"><strong>10%</strong><span>할인</span></dd>
+						<dd class="sub">
+							<strong class="state">사용완료</strong>
+							<span>사용일</span>
+							<time>0000.00.00</time>
+						</dd>
+					</dl>
+				</div>
+
+				<!-- [CASE] 기간만료 -->
+				<div class="info_summary2">
+					<dl>
+						<dt>
+							<span>NH멤버스</span>
+							<strong>우수회원 감사 포인트 쿠폰</strong>
+						</dt>
+						<dd class="data_num1"><strong>5,000</strong><span>P</span></dd>
+						<dd class="sub">
+							<strong class="state">기간만료</strong>
+							<span>만료일</span>
+							<time>0000.00.00</time>
+						</dd>
+					</dl>
+				</div>
+
+				<!-- ------------------------------- -->
+				<!-- [쿠폰번호] -->
+				<!-- ------------------------------- -->
+				<div class="area_info2">
+					<dl id="uiCouponNum">
+						<dt>쿠폰번호</dt>
+						<dd class="data_num1"><strong>1234-5678-9102</strong></dd>
+					</dl>
+
+					<!-- [D] 사용 및 기간만료 시 비노출 -->
+					<div>
+						<div class="side"><button type="button" class="btn_sub2" aria-labelledby="uiCouponNum" aria-controls="uiCouponAlert">복사</button></div>
+						<div class="info" id="uiCouponAlert" role="alert" aria-live="assertive"><p>복사 성공</p></div><!-- [D] 복사버튼 클릭 시 노출 (load) : 1초후 사라짐 : 하단 샘플 확인 -->
+					</div>
+					<!-- // -->
+				</div>
+
+				<!-- ------------------------------- -->
+				<!-- [등록된 내용] -->
+				<!-- ------------------------------- -->
+				<div class="info_con2">
+					<!-- // -->
+					<dl>
+						<dt>쿠폰유형</dt>
+						<dd>할인쿠폰</dd>
+					</dl>
+					<!-- // -->
+					<dl>
+						<dt>사용처</dt>
+						<dd>전국 농협하나로마트</dd>
+					</dl>
+					<!-- // -->
+					<dl>
+						<dt>혜택</dt>
+						<dd>2만원 이상 구매 시 결제금액 10%할인</dd>
+					</dl>
+					<!-- // -->
+					<dl>
+						<dt>사용기간</dt>
+						<dd>2023.04.01 ~ 06.25까지</dd>
+					</dl>
+					<!-- 사용방법 -->
+					<dl class="data2">
+						<dt>사용방법</dt>
+						<dd>
+							<ol>
+								<li>쿠폰 저장(다운로드)</li>
+								<li>쿠폰 화면에서 사용하기 버튼 터치</li>
+								<li>화면에 표시된 사용 처리 비밀번호 매장 직원에게 제출</li>
+								<li>비밀번호 제출 완료 후 사용 처리 버튼 터치</li>
+							</ol>
+						</dd>
+					</dl>
+					<!-- 유의사항 -->
+					<dl class="data1">
+						<dt>유의사항</dt>
+						<dd>본 쿠폰은 유효기간 연장이 불가합니다.</dd>
+						<dd>1회에 한해 사용 가능합니다.</dd>
+						<dd>사용 처리된 쿠폰은 재사용이 불가합니다.</dd>
+					</dl>
+					<!-- // -->
+				</div>
+
+				<!-- ------------------------------- -->
+				<!-- [이미지 영역] -->
+				<!-- ------------------------------- -->
+				<div class="area_img"><img src="../../resources/images/upload/@img_coupon_vw.png" alt="img 대체텍스트 적용"></div>
+
+				<!-- ------------------------------- -->
+				<!-- [바코드 버튼] -->
+				<!-- [D] 바코드 설정이 포함된 쿠폰일 경우 노출 -->
+				<!-- ------------------------------- -->
+				<div class="wrap_btn3 fix">
+					<button type="button" class="btn_barcode btn_layer">바코드보기</button>
+				</div>
+				<!-- ------------------------------- -->
+			</div>
+
+			<!-- ------------------------------- -->
+			<!-- [하단버튼] 사용/종료일 경우 비노출  -->
+			<!-- ------------------------------- -->
+			<div class="wrap_action">
+				<!-- 05.18 문구 수정 -->
+				<!--
+					<button type="button" class="btn_action btn_layer">쿠폰 저장</button>
+					<button type="button" class="btn_action">쿠폰 사용</button>
+					<button type="button" class="btn_action btn_layer">포인트 전환</button>
+				-->
+				<!--// 05.18 문구 수정 -->
+				<button type="button" class="btn_action">쿠폰 확인 하러가기</button> <!-- 07.19 문구 수정 -->
+			</div>
+			<!-- ------------------------------- -->
+		</div>
+	</div>
+	<!--// wrap -->
+</body>
+</html>

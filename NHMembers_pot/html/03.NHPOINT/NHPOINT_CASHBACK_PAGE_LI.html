@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<title>캐시백 | NH포인트</title>
+</head>
+<body>
+	<a href="#contents" class="skipnav">컨텐츠바로가기</a>
+
+	<!-- wrap -->
+	<div id="wrap">
+		<div id="sub_header">
+			<h1>NHmembers pot</h1>
+			<h2 class="hidden">NH포인트</h2>
+			<h3>캐시백</h3>
+			<a href="#none" class="btn_back">뒤로가기</a>
+		</div>
+
+		<!-- ####################################################### -->
+		<!-- [CONTENTS] NH포인트 : 캐시백 -->
+		<!-- ####################################################### -->
+		<div id="contents">
+			<div id="sub_content">
+				<!-- ------------------------------- -->
+				<!-- [SECTION] 포인트 정보 -->
+				<!-- ------------------------------- -->
+				<div class="info_summary3">
+					<dl>
+						<dt>내 보유 포인트</dt>
+						<dd class="data_num1"><strong data-mode="count">123,456,789</strong><span>P</span></dd> <!-- 06.29 수정. data-mode="count" 추가 -->
+					</dl>
+					<dl>
+						<dt>캐시백 가능 포인트</dt>
+						<dd class="data_num1"><strong>59</strong><span>P</span></dd>
+					</dl>
+					<div class="wrap_btn1"><a href="#none" class="btn_com1">캐시백 내역</a></div>
+				</div>
+
+				<!-- ------------------------------- -->
+				<!-- [입력영역] -->
+				<!-- ------------------------------- -->
+				<div class="form_wrap">
+					<!-- ### 본인 명의 계좌 정보 ### -->
+					<fieldset>
+						<legend class="tit">본인 명의 계좌 정보</legend>
+
+						<!-- 항목하나 -->
+						<dl class="form">
+							<dt>은행명</dt>
+							<dd>
+								<!-- 은행선택전 -->
+								<div class="inp_area">
+									<data class="inp_txt" data-label="은행을 선택해 주세요."></data>
+									<button type="button" class="btn_sub1">은행선택</button>
+								</div>
+
+								<!-- 은행선택후 -->
+								<div class="inp_area">
+									<data class="inp_txt" data-label="은행을 선택해 주세요." value="KB국민은행">KB국민은행</data>
+									<button type="button" class="btn_sub1">은행선택</button>
+								</div>
+								<!-- // -->
+							</dd>
+						</dl>
+
+						<!-- 항목하나 : 입력 전 -->
+						<dl class="form">
+							<dt>계좌번호</dt>
+							<dd>
+								<div class="inp_area">
+									<div class="inp_txt">
+										<input type="tel" data-tk-kbdtype="number" aria-label="계좌번호" placeholder="계좌번호를 입력해 주세요." readonly disabled>
+										<button type="button" class="btn_del">입력내용삭제</button>
+									</div>
+									<button type="button" class="btn_sub1">계좌인증</button>
+								</div>
+								<div class="validation" aria-live="assertive" role="alert">계좌번호를 확인 후 다시 시도해 주세요.</div> <!-- [D] 오류메세지 -->
+							</dd>
+							<dd class="mes">입력된 정보는 본인 확인을 위한 정보이며 저장되지 않습니다.</dd>
+						</dl>
+
+						<!-- 항목하나 : 입력 후 : 오류 (인증오류) : data-mode="invalid" / aria-invalid="true" 추가 -->
+						<dl class="form" data-mode="invalid">
+							<dt>계좌번호</dt>
+							<dd>
+								<div class="inp_area">
+									<div class="inp_txt">
+										<input type="tel" aria-label="계좌번호" placeholder="계좌번호를 입력해 주세요." value="13222523332" aria-invalid="true">
+										<button type="button" class="btn_del">입력내용삭제</button>
+									</div>
+									<button type="button" class="btn_sub1">계좌인증</button>
+								</div>
+								<div class="validation" aria-live="assertive" role="alert">계좌번호를 확인 후 다시 시도해 주세요.</div> <!-- [D] 오류메세지 -->
+							</dd>
+							<dd class="mes">입력된 정보는 본인 확인을 위한 정보이며 저장되지 않습니다.</dd>
+						</dl>
+						<!-- // -->
+					</fieldset>
+
+					<!-- ### 캐시백 신청 포인트 입력 : 계좌인증 완료 후 노출 ### -->
+					<fieldset>
+						<legend class="tit">캐시백 신청 포인트 입력</legend>
+
+						<!-- 항목하나 : 입력 전 -->
+						<dl class="form">
+							<dt>포인트</dt>
+							<dd>
+								<div class="inp_area">
+									<div class="inp_txt">
+										<input type="tel" aria-label="포인트" placeholder="포인트를 입력해 주세요.">
+										<span class="util">P</span>
+									</div>
+									<button type="button" class="btn_sub1">전액입력</button>
+								</div>
+								<div class="validation" aria-live="assertive" role="alert">캐시백 가능 포인트를 초과하였습니다.</div> <!-- [D] 오류메세지 -->
+							</dd>
+						</dl>
+
+						<!-- 항목하나 : 입력 후 : 오류 : data-mode="invalid" / aria-invalid="true" 추가 -->
+						<dl class="form" data-mode="invalid">
+							<dt>포인트</dt>
+							<dd>
+								<div class="inp_area">
+									<div class="inp_txt">
+										<input type="tel" aria-label="포인트" placeholder="포인트를 입력해 주세요." value="10,000" aria-invalid="true">
+										<span class="util">P</span>
+									</div>
+									<button type="button" class="btn_sub1">전액입력</button>
+								</div>
+								<div class="validation" aria-live="assertive" role="alert">캐시백 가능 포인트를 초과하였습니다.</div> <!-- [D] 오류메세지 -->
+							</dd>
+						</dl>
+						<!-- // -->
+					</fieldset>
+				</div>
+
+				<!-- 08.16 삭제 -->
+				<!-- <div class="wrap_btn3"><button type="button" class="btn_txt1 ic1 btn_layer">유의사항</button></div> -->
+
+				<!-- 08.16 추가 -->
+				<div class="info_area">
+					<article class="con_t3">
+						<div class="box">
+							<h4 class="h4_titlety mt25">캐시백 유의사항</h4>
+							<ul>
+								<li>캐시백이 가능한 최소 포인트는 1포인트이며 본인 명의 계좌로 계좌이체가 가능합니다.</li>
+								<li>캐시백 서비스는 04시 01분부터 23시 45분까지만 이용 가능하며 캐시백 된 포인트는 취소가 불가능합니다.</li>
+								<li>
+								모바일 상품권으로 전환된 포인트나 신용카드 결제로 충전된 포인트는 캐시백 서비스가 불가능합니다.<br>
+								※ 단 동전 충전으로 충전된 포인트는 캐시백 서비스가 가능합니다.
+								</li>
+								<li>캐시백 내역은 포인트 내역에서 확인하실 수 있습니다.</li>
+							</ul>
+						</div>
+					</article>
+				</div>
+				<!--// 08.16 추가 -->
+				<!-- ------------------------------- -->
+			</div>
+
+			<div class="wrap_action">
+				<!-- [D] 은행선택 , 계좌인증 완료 후 확인버튼 활성화 : disabled 삭제 -->
+				<!-- [D] 전환 실패 시 : 00.COMM/COMM_POPUP_LAYER11.html 참고 -->
+				<button type="button" class="btn_action" disabled>캐시백 신청</button> <!-- 08.16 수정 -->
+			</div>
+		</div>
+		<!-- ####################################################### -->
+	</div>
+	<!--// wrap -->
+</body>
+</html>

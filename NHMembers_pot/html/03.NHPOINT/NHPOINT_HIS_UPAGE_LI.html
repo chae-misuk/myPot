@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<title>적립/사용 내역 조회 | 나의포인트 | NH포인트</title>
+</head>
+<body>
+	<a href="#contents" class="skipnav">컨텐츠바로가기</a>
+
+	<!-- wrap -->
+	<div id="wrap">
+		<div id="sub_header">
+			<h1>NHmembers pot</h1>
+			<h2 class="hidden">NH포인트</h2>
+			<h3>적립/사용 내역 조회</h3>
+			<a href="#none" class="btn_back">뒤로가기</a>
+		</div>
+
+		<!-- ####################################################### -->
+		<!-- [CONTENTS] NH포인트 : 적립/사용 내역 조회 -->
+		<!-- ####################################################### -->
+		<div id="contents">
+			<div id="sub_content">
+				<!-- ------------------------------- -->
+				<!-- [SECTION] 포인트정보 -->
+				<!-- ------------------------------- -->
+				<div class="info_summary3">
+					<dl>
+						<dt>충전</dt>
+						<dd class="data_num1"><strong data-mode="count">1,000,000,000</strong><span>P</span></dd> <!-- 06.29 수정. data-mode="count" 추가 -->
+					</dl>
+					<dl>
+						<dt>적립</dt>
+						<dd class="data_num1"><strong>1,000,000,000</strong><span>P</span></dd>
+					</dl>
+					<dl>
+						<dt>4월 소멸예정</dt>
+						<dd class="data_num1">
+							<button type="button" data-label="tooltip" class="btn_txt1 ic2 btn_layer" aria-controls="tooltip01">소멸예정 포인트안내</button> <!-- 06.22 class="btn_layer" 추가. -->
+							<strong>1,000,000,000</strong><span>P</span>
+							<div id="tooltip01" class="tooltip" role="tooltip">
+								<button type="button" class="close">툴팁닫기</button> <!-- 06.12 추가. -->
+								<ul>
+									<li>- 당월 말일 자정을 기준으로 소멸될 예정인 포인트 입니다</li>
+									<li>- 소멸된 포인트는 복구되지 않으며, 포인트 적립/사용 내역에서 조회 가능합니다</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+				</div>
+
+				<!-- ------------------------------- -->
+				<!-- [SECTION] 내역 -->
+				<!-- ------------------------------- -->
+				<div class="area_info1">
+					<button type="button" class="selectbox btn_layer" title="유형 선택">전체</button> <!-- [D] 유형 선택 : /00.COMM/COMM_POPUP_LAYER06.html 참고 -->
+					<button type="button" class="selectbox w100 btn_layer" title="조회 기간 선택">1개월</button> <!-- [D] 조회 기간 : /00.COMM/COMM_POPUP_LAYER07.html 참고 -->
+				</div>
+
+				<!-- ### [CASE] 사용 내역 있을 경우 ### -->
+				<div class="list_data4">
+					<ul>
+						<li>
+							<strong>사용처 및 사용 내용</strong>
+							<!-- [유형]
+								<em data-label="적립">적립</em>
+								<em data-label="충전">충전</em>
+								<em data-label="사용">사용</em>
+								<em data-label="선물">선물</em>
+								<em data-label="소멸">소멸</em>
+								<em data-label="적립취소">적립취소</em>
+								<em data-label="사용취소">사용취소</em>
+							-->
+							<em data-label="유형">유형</em>
+							<div class="data1"><time>0000.00.00 00:00</time></div>
+							<div class="data_num1"><strong>1,000,000,000</strong><span>P</span></div>
+						</li>
+						<li>
+							<strong>출석체크 2023년 03월</strong>
+							<em data-label="적립">적립</em>
+							<div class="data1"><time>2023.05.17 05:52</time></div>
+							<div class="data_num1"><strong>50</strong><span>P</span></div>
+						</li>
+						<li>
+							<strong>상품권충전(북앤라이프 도서문화상품권)</strong>
+							<em data-label="충전">충전</em>
+							<div class="data1"><time>2023.05.17 05:52</time></div>
+							<div class="data_num1"><strong>4,600</strong><span>P</span></div>
+						</li>
+						<li>
+							<strong>NH농협은행 계좌충전환불캐시백사용</strong>
+							<em data-label="사용">사용</em>
+							<div class="data1"><time>2023.05.17 05:52</time></div>
+							<div class="data_num1"><strong>10,000</strong><span>P</span></div>
+						</li>
+						<li>
+							<strong>김농협 회원에게 선물하기</strong>
+							<em data-label="보낸선물">선물</em> <!-- 07.14 수정. data-label 변경 -->
+							<div class="data1"><time>2023.05.17 05:52</time></div>
+							<div class="data_num1"><strong>100,000</strong><span>P</span></div>
+						</li>
+						<!-- 07.14 추가 -->
+						<li>
+							<strong>김농협 회원으로부터 선물</strong>
+							<em data-label="받은선물">선물</em>
+							<div class="data1"><time>2023.05.17 05:52</time></div>
+							<div class="data_num1"><strong>100,000</strong><span>P</span></div>
+						</li>
+						<!--// 07.14 추가 -->
+						<li>
+							<strong>출석이벤트 기간만료 소멸</strong>
+							<em data-label="소멸">소멸</em>
+							<div class="data1"><time>2023.05.17 05:52</time></div>
+							<div class="data_num1"><strong>100</strong><span>P</span></div>
+						</li>
+						<li>
+							<strong>CMA 계좌 개설 취소</strong>
+							<em data-label="적립취소">적립취소</em>
+							<div class="data1"><time>2023.05.17 05:52</time></div>
+							<div class="data_num1"><strong>500</strong><span>P</span></div>
+						</li>
+						<li>
+							<strong>김농협 회원 선물취소</strong>
+							<em data-label="사용취소">사용취소</em>
+							<div class="data1"><time>2023.05.17 05:52</time></div>
+							<div class="data_num1"><strong>100,000</strong><span>P</span></div>
+						</li>
+					</ul>
+				</div>
+
+				<!-- ### [CASE] 사용 내역 없을 경우 ### -->
+				<div class="mes_result1 t1">
+					<p>포인트 적립/사용 내역이 없습니다.</p>
+				</div>
+				<!-- ### // ### -->
+				<!-- ------------------------------- -->
+			</div>
+		</div>
+		<!-- ####################################################### -->
+	</div>
+	<!--// wrap -->
+</body>
+</html>

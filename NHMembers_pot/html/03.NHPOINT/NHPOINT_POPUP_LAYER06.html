@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<title>[L] 알림 | NH포인트</title>
+</head>
+<body>
+	<!-- 바닥페이지 -->
+	<div id="wrap"></div>
+	<!-- // -->
+
+	<!-- ####################################################### -->
+	<!-- [POPUP] 제휴사 비회원 안내 문구 -->
+	<!-- ####################################################### -->
+	<div class="layer_pop type_ctr" id="uiPOPUPALERT01" role="dialog" aria-modal="true" aria-labelledby="uiPOPUPALERT02TIT">
+		<div class="pop_inner">
+			<p id="uiPOPUPALERT02TIT" class="pop_tit">알림</p>
+			<div class="pop_con">
+				<p>{제휴사} 회원가입 후 이용해 주세요.<br>({제휴사} 고객센터 : {0000-0000})</p>
+			</div>
+			<div class="wrap_btn1">
+				<button type="button" class="btn_com1 ty01 btn_close">취소</button> <!-- class="btn_close" 사용시 레이어 닫힘  -->
+				<a href="#none" class="btn_com1" target="_blank" title="새창열림({제휴사} 페이지 이동)">확인</a>
+			</div>
+		</div>
+	</div>
+	<!-- ####################################################### -->
+
+	<script>
+		$(function(){
+			openlayer('uiPOPUPALERT01');
+		})
+	</script>
+</body>
+</html>

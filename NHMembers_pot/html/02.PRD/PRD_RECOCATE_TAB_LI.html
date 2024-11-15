@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+    <script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+    <title>추천</title>
+</head>
+<body>
+    <a id="skipnavi" href="#contents" class="skipnav">컨텐츠바로가기</a>
+    <!-- wrap -->
+    <div id="wrap">
+        <header id="header">
+            <div class="top">
+                <a href="#none" class="ico" title="참여사 이동"><img src="../../resources/images/logo/ci_logo13.png" alt="NHpay"></a>
+                <h1><a href="#none" class="logo" title="홈으로">NHmembers pot</a></h1>
+            </div>
+            <div class="gnb">
+                <a href="#none">혜택</a>
+                <a href="#none" class="on">추천</a>
+                <button type="button" aria-label="전체메뉴 열기" id="btn_menu" class="btn_menu" aria-haspopup="true"></button>
+            </div>
+        </header>
+
+        <div id="contents">
+            <div id="content">
+                <h2 class="hidden">추천</h2>
+
+                <div class="tab_sub2" data-fixed="top" data-mode="tablist"> <!-- 05.25 수정. data-fixed="top" 추가 / [M 2023-05-26] data-mode="tablist" 추가 -->
+					<ul>
+						<li class="active"><a href="#uiTABCON01">추천상품</a></li> <!-- [M 2023-05-30] aria-current="page" 삭제 -->
+						<li><a href="#uiTABCON02">금융상품</a></li>
+						<li><a href="#uiTABCON03">쇼핑몰</a></li>
+					</ul>
+				</div>
+
+				<div id="uiTABCON01" class="ui_cont active"> <!-- [M 2023-05-26] div 추가 -->
+					<h3 class="con_tit"><span class="col01">회원님,</span><br>생활 패턴을 분석한 맞춤 상품을 추천해 드려요!</h3> <!-- 07.28 수정. 문구 및 클래스 추가 수정 -->
+					<div class="list_data1">
+						<ul>
+							<li data-mode="load" style="background-color:#e9eafc;">
+								<a href="#none" target="_blank" title="NH농협은행 새창 열림"><!-- 05.18 수정. --> <!-- 상품 관계사명 title명으로 적용  -->
+									<!-- 05.18 수정. 뱃지 타입 변경 -->
+									<div class="label">
+										<i class="icon_txt1" style="color:#FF456B">HOT</i>
+										<i class="icon_txt1" style="color:#844DFF">BEST</i>
+										<i class="icon_txt1" style="color:#008DF9">NEW</i>
+									</div>
+									<!--// 05.18 수정. 뱃지 타입 변경 -->
+									<em class="icon_link">NH농협은행</em>
+									<strong>NH주거래우대통장</strong>
+									<!-- 혜택(포인트 / 할인 / 원)
+										포인트 : <div class="data_num1"><span>+</span><strong>000,000</strong><span>P</span></div>
+										할인 : <div class="data_num1"><strong>00%</strong><span>할인</span></div>
+										원 : <div class="data_num1"><strong>120,000</strong><span>원</span></div>
+									-->
+									<div class="data_num1"><span>+</span><strong>200,000</strong><span>P</span></div>
+									<div class="data1">은행 거래실적에 따라 우대금리, 수수료 면제 등 서비스를 제공하는 입출식 상품(금리 최고 연 2%)</div>
+									<!-- 이미지 -->
+									<!-- 07.28 추가. 계좌개설/적금가입/예금가입 인 경우 -->
+									<span class="img type03"><img src="../../resources/images/img_recom01_account.png" alt=""></span>
+								</a>
+							</li>
+							<!-- BG설정없음 -->
+							<li data-mode="load">
+								<a href="#none" target="_blank" title="농협스마트뱅킹 새창 열림"><!-- 05.18 수정. --> <!-- 상품 관계사명 title명으로 적용  -->
+									<!-- 05.18 수정. 뱃지 타입 변경 -->
+									<div class="label">
+										<i class="icon_txt1" style="color:#2970FF">POINT</i>
+										<i class="icon_txt1" style="color:#844DFF">BEST</i>
+										<i class="icon_txt1" style="color:#FD8B00">EVENT</i>
+									</div>
+									<!--// 05.18 수정. 뱃지 타입 변경 -->
+									<em class="icon_link">농협스마트뱅킹</em>
+									<strong>NH고향사랑기부적금</strong>
+									<!-- 혜택(포인트 / 할인 / 원)
+										포인트 : <div class="data_num1"><span>+</span><strong>000,000</strong><span>P</span></div>
+										할인 : <div class="data_num1"><strong>00%</strong><span>할인</span></div>
+										원 : <div class="data_num1"><strong>120,000</strong><span>원</span></div>
+									-->
+									<div class="data_num1"><span>+</span><strong>200,000</strong><span>P</span></div>
+									<div class="data1">고향사랑을 실천하는 지역사회공헌 상품</div>
+									<div class="data1">금리 최고 연4.3%, 가입기간 12개월~36개월, 가입가능금액 1백만원</div>
+									<!-- 날짜 있는 경우 -->
+									<div class="data2">
+										<time>2023.03.01 ~ 2023.07.31</time>
+									</div>
+									<!-- 07.28 추가. 카드신청 인 경우 -->
+									<span class="img type03"><img src="../../resources/images/img_recom02_card.png" alt=""></span>
+								</a>
+							</li>
+							<li data-mode="load" style="background-color:#ffeeee;">
+								<a href="#none" target="_blank" title="NH농협손해보험 새창 열림"><!-- 05.18 수정. --> <!-- 상품 관계사명 title명으로 적용  -->
+									<!-- 05.18 수정. 뱃지 타입 변경 -->
+									<div class="label">
+										<i class="icon_txt1" style="color:#03A124">COUPON</i>
+										<i class="icon_txt1" style="color:#008DF9">NEW</i>
+									</div>
+									<!--// 05.18 수정. 뱃지 타입 변경 -->
+									<em class="icon_link">NH농협손해보험</em>
+									<strong>ON-OFF 해외여행보험</strong>
+									<!-- 혜택(포인트 / 할인 / 원)
+										포인트 : <div class="data_num1"><span>+</span><strong>000,000</strong><span>P</span></div>
+										할인 : <div class="data_num1"><strong>00%</strong><span>할인</span></div>
+										원 : <div class="data_num1"><strong>120,000</strong><span>원</span></div>
+									-->
+									<div class="data_num1"><span>+</span><strong>200,000</strong><span>P</span></div>
+									<div class="data1">국내 최초 금융위원회 혁신금융서비스 지정 on-off 해외 여행보험</div>
+									<div class="data1">해외여행보험 한 번 가입하면 가입 기간동안 여행 기간 입력과 보험료 결제만으로 보장 개시</div>
+									<!-- 07.28 추가. 주식거래 인 경우 -->
+									<span class="img type03"><img src="../../resources/images/img_recom03_stock.png" alt=""></span>
+								</a>
+							</li>
+							<li data-mode="load" style="background-color:#e1f8f3;">
+								<a href="#none" target="_blank" title="농협스마트뱅킹 새창 열림"><!-- 05.18 수정. --> <!-- 상품 관계사명 title명으로 적용  -->
+									<!-- 05.18 수정. 뱃지 타입 변경 -->
+									<div class="label">
+										<i class="icon_txt1" style="color:#FF456B">HOT</i>
+										<i class="icon_txt1" style="color:#008DF9">NEW</i>
+										<i class="icon_txt1" style="color:#FD8B00">EVENT</i>
+									</div>
+									<!--// 05.18 수정. 뱃지 타입 변경 -->
+									<em class="icon_link">농협스마트뱅킹</em>
+									<strong>NH고향사랑기부예금</strong>
+									<!-- 혜택(포인트 / 할인 / 원)
+										포인트 : <div class="data_num1"><span>+</span><strong>000,000</strong><span>P</span></div>
+										할인 : <div class="data_num1"><strong>00%</strong><span>할인</span></div>
+										원 : <div class="data_num1"><strong>120,000</strong><span>원</span></div>
+									-->
+									<div class="data_num1"><span>+</span><strong>200,000</strong><span>P</span></div>
+									<div class="data1">고향사랑을 실천하는 지역사회공헌 상품</div>
+									<div class="data1">금리 최고 연3.8%, 가입기간 12개월, 납입한도 월50만원 이내</div>
+									<!-- 날짜 있는 경우 -->
+									<div class="data2">
+										<time>2023.03.01 ~ 2023.07.31</time>
+									</div>
+									<!-- 07.28 추가. 외화환전 인 경우 -->
+									<span class="img type03"><img src="../../resources/images/img_recom04_exchange.png" alt=""></span>
+								</a>
+							</li>
+							<li data-mode="load" style="background-color:#e4f7fc;">
+								<a href="#none" target="_blank" title="NH카드 새창 열림"><!-- 05.18 수정. --> <!-- 상품 관계사명 title명으로 적용  -->
+									<!-- 05.18 수정. 뱃지 타입 변경 -->
+									<div class="label">
+										<i class="icon_txt1" style="color:#844DFF">BEST</i>
+										<i class="icon_txt1" style="color:#03A124">COUPON</i>
+										<i class="icon_txt1" style="color:#008DF9">NEW</i>
+									</div>
+									<!--// 05.18 수정. 뱃지 타입 변경 -->
+									<em class="icon_link">NH카드</em>
+									<strong>Zgm.휴가중</strong>
+									<!-- 혜택(포인트 / 할인 / 원)
+										포인트 : <div class="data_num1"><span>+</span><strong>000,000</strong><span>P</span></div>
+										할인 : <div class="data_num1"><strong>00%</strong><span>할인</span></div>
+										원 : <div class="data_num1"><strong>120,000</strong><span>원</span></div>
+									-->
+									<div class="data_num1"><span>+</span><strong>200,000</strong><span>P</span></div>
+									<div class="data1">해외가맹점2~5% 적립, 전가맹점0.5%적립, 여행20% 할인</div>
+									<div class="data1">전 세계 공항 라운지 무료이용, 여행자 보험 무료 가입</div>
+									<div class="data1">연회비 기본 6,000원+제휴 19,000원, 총 25,000원</div>
+									<!-- 07.28 추가. 보험가입 인 경우 -->
+									<span class="img type03"><img src="../../resources/images/img_recom05_insure.png" alt=""></span>
+								</a>
+							</li>
+							<!-- BG통일 -->
+							<li data-mode="load">
+								<a href="#none" target="_blank" title="농협스마트뱅킹 새창 열림"><!-- 05.18 수정. --> <!-- 상품 관계사명 title명으로 적용  -->
+									<!-- 05.18 수정. 뱃지 타입 변경 -->
+									<div class="label">
+										<i class="icon_txt1" style="color:#03A124">COUPON</i>
+										<i class="icon_txt1" style="color:#008DF9">NEW</i>
+									</div>
+									<!--// 05.18 수정. 뱃지 타입 변경 -->
+									<em class="icon_link">농협스마트뱅킹</em>
+									<strong>NH고향사랑기부적금</strong>
+									<!-- 혜택(포인트 / 할인 / 원)
+										포인트 : <div class="data_num1"><span>+</span><strong>000,000</strong><span>P</span></div>
+										할인 : <div class="data_num1"><strong>00%</strong><span>할인</span></div>
+										원 : <div class="data_num1"><strong>120,000</strong><span>원</span></div>
+									-->
+									<div class="data_num1"><span>+</span><strong>200,000</strong><span>P</span></div>
+									<div class="data1">고향사랑을 실천하는 지역사회공헌 상품</div>
+									<div class="data1">금리 최고 연4.3%, 가입기간 12개월~36개월, 가입가능금액 1백만원</div>
+									<!-- 날짜 있는 경우 -->
+									<div class="data2">
+										<time>2023.03.01 ~ 2023.07.31</time>
+									</div>
+									<!-- 07.28 추가. 대출 인 경우 -->
+									<span class="img type03"><img src="../../resources/images/img_recom06_loan.png" alt=""></span>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<h3 class="con_tit" data-mode="load">뜨끈뜨끈! 신.상.출.시.</h3>
+					<div class="list_data1">
+						<ul>
+							<li class="txt_col" data-mode="load" style="background-color:#5b50f1;">
+								<a href="#none" target="_blank" title="농협스마트뱅킹 새창 열림"><!-- 05.18 수정. --> <!-- 상품 관계사명 title명으로 적용  -->
+									<!-- 05.18 수정. 뱃지 타입 변경 -->
+									<div class="label">
+										<i class="icon_txt1" style="color:#FF456B">HOT</i>
+										<i class="icon_txt1" style="color:#844DFF">BEST</i>
+										<i class="icon_txt1" style="color:#008DF9">NEW</i>
+									</div>
+									<!--// 05.18 수정. 뱃지 타입 변경 -->
+									<em class="icon_link">농협스마트뱅킹</em>
+									<strong>NH고향사랑기부적금</strong>
+									<!-- 혜택(포인트 / 할인 / 원)
+										포인트 : <div class="data_num1"><span>+</span><strong>000,000</strong><span>P</span></div>
+										할인 : <div class="data_num1"><strong>00%</strong><span>할인</span></div>
+										원 : <div class="data_num1"><strong>120,000</strong><span>원</span></div>
+									-->
+									<div class="data_num1"><span>+</span><strong>200,000</strong><span>P</span></div>
+									<div class="data1">고향사랑을 실천하는 지역사회공헌 상품</div>
+									<div class="data1">금리 최고 연4.3%, 가입기간 12개월~36개월, 가입가능금액 1백만원</div>
+									<!-- 날짜 있는 경우 -->
+									<div class="data2">
+										<time>2023.03.01 ~ 2023.03.31</time>
+									</div>
+									<!-- 이미지 -->
+									<span class="img type02"><img src="../../resources/images/upload/@img_event05.png" alt=""></span>
+								</a>
+							</li>
+							<li data-mode="load" style="background-color:#ffeeee;">
+								<a href="#none" target="_blank" title="NH농협손해보험 새창 열림"><!-- 05.18 수정. --> <!-- 상품 관계사명 title명으로 적용  -->
+									<!-- 05.18 수정. 뱃지 타입 변경 -->
+									<div class="label">
+										<i class="icon_txt1" style="color:#03A124">COUPON</i>
+										<i class="icon_txt1" style="color:#008DF9">NEW</i>
+									</div>
+									<!--// 05.18 수정. 뱃지 타입 변경 -->
+									<em class="icon_link">NH농협손해보험</em>
+									<strong>ON-OFF 해외여행보험</strong>
+									<!-- 혜택(포인트 / 할인 / 원)
+										포인트 : <div class="data_num1"><span>+</span><strong>000,000</strong><span>P</span></div>
+										할인 : <div class="data_num1"><strong>00%</strong><span>할인</span></div>
+										원 : <div class="data_num1"><strong>120,000</strong><span>원</span></div>
+									-->
+									<div class="data_num1"><span>+</span><strong>200,000</strong><span>P</span></div>
+									<div class="data1">국내 최초 금융위원회 혁신금융서비스 지정 on-off 해외 여행보험</div>
+									<div class="data1">해외여행보험 한 번 가입하면 가입 기간동안 여행 기간 입력과 보험료 결제만으로 보장 개시</div>
+								</a>
+							</li>
+							<li data-mode="load" style="background-color:#e1f8f3;">
+								<a href="#none" target="_blank" title="농협스마트뱅킹 새창 열림"><!-- 05.18 수정. --> <!-- 상품 관계사명 title명으로 적용  -->
+									<!-- 05.18 수정. 뱃지 타입 변경 -->
+									<div class="label">
+										<i class="icon_txt1" style="color:#FF456B">HOT</i>
+										<i class="icon_txt1" style="color:#008DF9">NEW</i>
+										<i class="icon_txt1" style="color:#FD8B00">EVENT</i>
+									</div>
+									<!--// 05.18 수정. 뱃지 타입 변경 -->
+									<em class="icon_link">농협스마트뱅킹</em>
+									<strong>NH고향사랑기부예금</strong>
+									<!-- 혜택(포인트 / 할인 / 원)
+										포인트 : <div class="data_num1"><span>+</span><strong>000,000</strong><span>P</span></div>
+										할인 : <div class="data_num1"><strong>00%</strong><span>할인</span></div>
+										원 : <div class="data_num1"><strong>120,000</strong><span>원</span></div>
+									-->
+									<div class="data_num1"><span>+</span><strong>200,000</strong><span>P</span></div>
+									<div class="data1">고향사랑을 실천하는 지역사회공헌 상품</div>
+									<div class="data1">금리 최고 연3.8%, 가입기간 12개월, 납입한도 월50만원 이내</div>
+									<!-- 날짜 있는 경우 -->
+									<div class="data2">
+										<time>2023.03.01 ~ 2023.07.31</time>
+									</div>
+								</a>
+							</li>
+							<li data-mode="load" style="background-color:#e4f7fc;">
+								<a href="#none" target="_blank" title="NH카드 새창 열림"><!-- 05.18 수정. --> <!-- 상품 관계사명 title명으로 적용  -->
+									<!-- 05.18 수정. 뱃지 타입 변경 -->
+									<div class="label">
+										<i class="icon_txt1" style="color:#844DFF">BEST</i>
+										<i class="icon_txt1" style="color:#03A124">COUPON</i>
+										<i class="icon_txt1" style="color:#008DF9">NEW</i>
+									</div>
+									<!--// 05.18 수정. 뱃지 타입 변경 -->
+									<em class="icon_link">NH카드</em>
+									<strong>Zgm.휴가중</strong>
+									<!-- 혜택(포인트 / 할인 / 원)
+										포인트 : <div class="data_num1"><span>+</span><strong>000,000</strong><span>P</span></div>
+										할인 : <div class="data_num1"><strong>00%</strong><span>할인</span></div>
+										원 : <div class="data_num1"><strong>120,000</strong><span>원</span></div>
+									-->
+									<div class="data_num1"><span>+</span><strong>200,000</strong><span>P</span></div>
+									<div class="data1">해외가맹점2~5% 적립, 전가맹점0.5%적립, 여행20% 할인</div>
+									<div class="data1">전 세계 공항 라운지 무료이용, 여행자 보험 무료 가입</div>
+									<div class="data1">연회비 기본 6,000원+제휴 19,000원, 총 25,000원</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div><!-- [M 2023-05-26] div 추가 -->
+
+				<!-- [M 2023-05-26] 금융상품 및 쇼핑몰 내용 추가 -->
+				<div id="uiTABCON02" class="ui_cont">
+					<h3 class="hidden">금융상품</h3>
+					<ul class="product_list">
+						<li>
+							<div class="badge">
+								<!-- 23.05.18 수정. 뱃지 형식 변경. -->
+								<i class="icon_txt1" style="color:#FF456B">HOT</i>
+								<i class="icon_txt1" style="color:#2970FF">POINT</i>
+								<i class="icon_txt1" style="color:#844DFF">BEST</i>
+								<i class="icon_txt1" style="color:#03A124">COUPON</i>
+								<i class="icon_txt1" style="color:#008DF9">NEW</i>
+								<i class="icon_txt1" style="color:#FD8B00">EVENT</i>
+								<i class="icon_txt1" style="color:#FD00DB">OPEN</i>
+								<!--// 23.05.18 수정. 뱃지 형식 변경. -->
+							</div>
+							<a href="#none" class="btn_layer">
+								<strong>계좌개설</strong>
+								<span class="num">999</span>
+							</a>
+						</li>
+						<li>
+							<div class="badge">
+							</div>
+							<a href="#none" class="btn_layer">
+								<strong>적금가입</strong>
+								<span class="num">7</span>
+							</a>
+						</li>
+						<li>
+							<div class="badge">
+							</div>
+							<a href="#none" class="btn_layer">
+								<strong>예금가입</strong>
+								<span class="num">51</span>
+							</a>
+						</li>
+						<li>
+							<div class="badge">
+								<i class="icon_txt1" style="color:#FD8B00">EVENT</i>
+							</div>
+							<a href="#none" class="btn_layer">
+								<strong>카드신청</strong>
+								<span class="num">100</span>
+							</a>
+						</li>
+						<li>
+							<div class="badge">
+								<i class="icon_txt1" style="color:#03A124">COUPON</i>
+								<i class="icon_txt1" style="color:#008DF9">NEW</i>
+							</div>
+							<a href="#none" class="btn_layer">
+								<strong>주식거래</strong>
+								<span class="num">99</span>
+							</a>
+						</li>
+						<li>
+							<div class="badge">
+							</div>
+							<a href="#none" class="btn_layer">
+								<strong>외화환전</strong>
+								<span class="num">1</span>
+							</a>
+						</li>
+						<li>
+							<div class="badge">
+							</div>
+							<a href="#none" class="btn_layer">
+								<strong>보험가입</strong>
+								<span class="num">12</span>
+							</a>
+						</li>
+						<li>
+							<div class="badge">
+							</div>
+							<a href="#none" class="btn_layer">
+								<strong>대출</strong>
+								<span class="num">9</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div id="uiTABCON03" class="ui_cont">
+					<h3 class="hidden">쇼핑몰</h3>
+					<div class="list_data1">
+						<ul>
+							<li data-mode="load" style="background-color:#e9eafc;">
+								<a href="#none" target="_blank" title="농협몰 새창 열림"><!-- 05.18 수정. --> <!-- 상품 관계사명 title명으로 적용  -->
+									<!-- 05.18 수정. 뱃지 타입 변경 -->
+									<div class="label">
+										<i class="icon_txt1" style="color:#008DF9">NEW</i>
+										<i class="icon_txt1" style="color:#FD8B00">EVENT</i>
+										<i class="icon_txt1" style="color:#FF456B">sale</i>
+									</div>
+									<!--// 05.18 수정. 뱃지 타입 변경 -->
+									<em class="icon_link">농협몰</em>
+									<strong>화이트 와인 파스타 소스</strong>
+									<!-- 혜택(포인트 / 할인 / 원)
+										포인트 : <div class="data_num1"><span>+</span><strong>000,000</strong><span>P</span></div>
+										할인 : <div class="data_num1"><strong>00%</strong><span>할인</span></div>
+										원 : <div class="data_num1"><strong>120,000</strong><span>원</span></div>
+										1+1 : <div class="data_num1"><strong>1+1</strong></div>
+									-->
+									<div class="data_num1"><strong>20%</strong><span>할인</span></div>
+									<div class="data1">조개 & 화이트 와인과 어울리는 봉골레 파스타 소스 360g</div>
+									<!-- 이미지 -->
+									<span class="img type02"><img src="../../resources/images/upload/@img_event07.png" alt=""></span>
+								</a>
+							</li>
+							<!-- BG설정없음 -->
+							<li data-mode="load" style="background-color:#ffeeee;">
+								<a href="#none" target="_blank" title="농협몰 새창 열림">
+									<div class="label">
+										<i class="icon_txt1" style="color:#008DF9">NEW</i>
+										<i class="icon_txt1" style="color:#FD8B00">EVENT</i>
+										<i class="icon_txt1" style="color:#FF456B">SALE</i>
+									</div>
+									<em class="icon_link">농협몰</em>
+									<strong>청정원 쌈장</strong>
+									<div class="data_num1"><strong>1+1</strong></div>
+									<div class="data1">고소하고 맛있는 양념듬뿍 쌈장 1kgX3</div>
+									<span class="img type02"><img src="../../resources/images/upload/@img_event07.png" alt=""></span>
+								</a>
+							</li>
+							<li data-mode="load" style="background-color:#e1f8f3;">
+								<a href="#none" target="_blank" title="농협몰 새창 열림">
+									<div class="label">
+										<i class="icon_txt1" style="color:#844DFF">BEST</i>
+										<i class="icon_txt1" style="color:#03A124">COUPON</i>
+									</div>
+									<em class="icon_link">농협몰</em>
+									<strong>호밍스 부산식 곱창전골</strong>
+									<div class="data_num1"><span>+</span><strong>2,000</strong><span>P</span></div>
+									<div class="data1">곱창, 야채, 우동면 등 다양한 재료들이 듬뿍 1kgX3</div>
+									<span class="img type02"><img src="../../resources/images/upload/@img_event07.png" alt=""></span>
+								</a>
+							</li>
+							<li data-mode="load" style="background-color:#fcf6d7;">
+								<a href="#none" target="_blank" title="농협몰 새창 열림">
+									<div class="label">
+										<i class="icon_txt1" style="color:#008DF9">NEW</i>
+										<i class="icon_txt1" style="color:#844DFF">BEST</i>
+										<i class="icon_txt1" style="color:#03A124">COUPON</i>
+									</div>
+									<em class="icon_link">농협몰</em>
+									<strong>논현동 포차 청정원 안주야</strong>
+									<div class="data_num1"><span>+</span><strong>12,000</strong><span>P</span></div>
+									<div class="data1">오븐에 초벌한 돈막창 260gX3</div>
+									<span class="img type02"><img src="../../resources/images/upload/@img_event07.png" alt=""></span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- // [M 2023-05-26] 금융상품 및 쇼핑몰 내용 추가 -->
+            </div>
+        </div>
+
+        <footer id="footer" style="display:none">
+            <a href="#none">이용약관</a>
+            <a href="#none">개인정보처리방침</a>
+
+            <button type="button" aria-expanded="true" aria-controls="address">NH멤버스팟</button>
+            <div id="address">
+                <address>서울시 중구 통일로 120(중구 충정로 1가)</address>
+                <p>사업자등록번호 : 104-86-39742</p>
+            </div>
+        </footer>
+
+        <a href="#wrap" title="맨위로" id="btnTop"></a>
+    </div>
+    <!--// wrap -->
+</body>
+</html>

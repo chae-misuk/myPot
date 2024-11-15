@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+    <script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+    <script type="text/javascript" src="../../resources/js/lottie.js"></script>
+    <title>풍선이벤트</title>
+</head>
+<body>
+    <a id="skipnavi" href="#contents" class="skipnav">컨텐츠바로가기</a>
+    <!-- wrap -->
+    <div id="wrap">
+      <div id="header"></div>
+    </div>
+    <!--// wrap -->
+
+    <!-- 풍선 -->
+  <div class="balloons">
+    <a href="#none" role="button" class="type01 btn_layer">
+      풍선이벤트 참여
+      <span>참여 횟수</span><span class="num">누적 3개</span>
+      <div id="motionArea2" style="position:absolute;top:0;left:0;width:60px;height:60px;"></div>
+    </a>
+  </div>
+  <!-- <div class="balloons">
+    <a href="#none" role="button" class="type02 btn_layer">풍선이벤트 참여
+      <span>참여 횟수</span><span class="num">누적 3개</span>
+    </a>
+  </div>
+  <div class="balloons">
+    <a href="#none" role="button" class="type03 btn_layer">풍선이벤트 참여
+      <span>참여 횟수</span><span class="num">누적 3개</span>
+    </a>
+  </div> -->
+    <script>
+      $(".balloons a").each(function () {
+        var vheight = $(window).height() - 130;
+        $(this).css({
+          left: Math.random() * ($(window).width() - $(this).width()),
+          top: 130 + Math.random() * (vheight - $(this).height() * 2)
+        });
+        
+        var vheight2 = $(this).offset().top * 15;
+        var AniProperties = {
+            duration: vheight2,
+            specialEasing: {
+            top: "linear"
+            },
+            complete: function() {
+              $(this).addClass('mov_balloons');
+            }
+          }
+        if($('#header').is(':visible')){
+          $(this).delay(3000).animate({
+            top : 130
+          }, AniProperties);
+        } else if($('#sub_header').is(':visible')){
+          $(this).delay(3000).animate({
+            top : 80
+          }, AniProperties);
+        }
+      });
+      </script>
+</body>
+</html>

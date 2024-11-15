@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<title>[P] NHonePASS 인증</title>
+</head>
+<body>
+	<!-- [바닥페이지] -->
+	<div id="wrap"></div>
+	<!--// -->
+
+	<!-- ####################################################### -->
+	<!-- [POPUP] NHonePASS 인증 -->
+	<!-- ####################################################### -->
+	<div class="layer_pop type_full" id="uiNHMEMCERTONE01" role="dialog" aria-modal="true" aria-labelledby="uiNHMEMCERTONE01TIT">
+		<div class="pop_inner">
+			<!-- ------------------------------- -->
+			<!-- [POPUP HEADER] -->
+			<!-- ------------------------------- -->
+			<div class="pop_header">
+				<button type="button" class="btn_back">뒤로가기</button>
+			</div>
+			<p class="pop_tit top" id="uiNHMEMCERTONE01TIT">NHonePASS 인증</p>
+
+			<!-- ------------------------------- -->
+			<!-- [POPUP CONTENTS] -->
+			<!-- ------------------------------- -->
+			<div class="pop_con">
+				<p class="con_tit">NH스마트뱅킹 간편 로그인 Push 발송을 위한 정보 입력이 필요해요.</p>
+
+				<!-- ### [입력영역] 정보입력 ### -->
+				<div class="form_wrap">
+					<fieldset>
+						<legend>정보입력 (모든항목 필수입력)</legend>
+
+						<!-- 이름 : 오류 샘플 : data-mode="invalid" /  aria-invalid="true" -->
+						<dl class="form" data-mode="invalid">
+							<dt>이름</dt>
+							<dd>
+								<div class="inp_txt">
+									<input type="text" name="IO_CUS_NAME" id="ioCusName" placeholder="이름을 입력해 주세요." aria-label="이름" aria-invalid="true">
+									<button type="button" class="btn_del">입력 내용 삭제</button>
+								</div>
+								<div class="validation" aria-live="assertive" role="alert">이름을 입력해 주세요.</div>
+							</dd>
+						</dl>
+
+						<!-- 생년월일 -->
+						<dl class="form">
+							<dt>생년월일</dt>
+							<dd>
+								<div class="inp_txt">
+									<input type="tel" id="ioCusBirth" name="IO_CUS_BIRTH" aria-label="생년월일(6자리) ex)860727" placeholder="생년월일을 입력해 주세요 ex)860727" maxlength="6">
+									<button type="button" class="btn_del">입력 내용 삭제</button>
+								</div>
+								<div class="validation" aria-live="assertive" role="alert">생년월일을 입력해 주세요.</div>
+							</dd>
+						</dl>
+
+						<!-- 휴대폰 번호 : 오류 샘플 : data-mode="invalid" /  aria-invalid="true" -->
+						<dl class="form" data-mode="invalid">
+							<dt>휴대폰 번호</dt>
+							<dd>
+								<div class="inp_area">
+									<select class="selectbox" title="휴대폰 번호 앞자리">
+										<option>010</option>
+										<option>011</option>
+									</select>
+									<div class="inp_txt">
+										<input type="tel" id="fullNo" aria-label="휴대폰 번호 뒷자리 (숫자만입력)"  placeholder="뒷자리를 입력해 주세요." maxlength="8" aria-invalid="true">
+										<button type="button" class="btn_del">입력 내용 삭제</button>
+									</div>
+								</div>
+								<div class="validation" aria-live="assertive" role="alert">휴대폰 번호를 입력해 주세요.</div>
+							</dd>
+						</dl>
+						<!-- // -->
+					</fieldset>
+				</div>
+
+				<!-- ### [안내문구] ### -->
+				<ul class="txt_bul1">
+					<li>NH스마트뱅킹 Push 수신 동의를 해야 합니다.</li>
+					<li>NH스마트뱅킹 앱 로그인 &gt; 전체메뉴 &gt; 고객센터 &gt; 환경설정 &gt; PUSH수신 동의</li>
+				</ul>
+				<!-- ### // ### -->
+			</div>
+
+			<!-- ------------------------------- -->
+			<!-- [POPUP FOOTER BTN] -->
+			<!-- ------------------------------- -->
+			<div class="wrap_action">
+				<button type="button" class="btn_action">확인</button>
+			</div>
+			<!-- ------------------------------- -->
+		</div>
+	</div>
+	<!-- ####################################################### -->
+
+	<script>
+		$(function(){
+			openlayer('uiNHMEMCERTONE01'); //풀팝업 호출
+		})
+	</script>
+</body>
+</html>

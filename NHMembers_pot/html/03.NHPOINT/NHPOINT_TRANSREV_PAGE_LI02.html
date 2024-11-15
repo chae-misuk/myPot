@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<title>[L] 동의 철회 안내</title>
+</head>
+<body>
+	<!-- [바닥페이지] -->
+	<div id="wrap"></div>
+	<!--// -->
+
+	<!-- ####################################################### -->
+	<!-- [POPUP] 동의 철회 안내 -->
+	<!-- ####################################################### -->
+	<div class="layer_pop type_btm" id="uiPOPUPPOINTTRANSREV" role="dialog" aria-modal="true" aria-labelledby="uiPOPUPPOINTTRANSREVTIT">
+		<div class="pop_inner">
+			<!-- ------------------------------- -->
+			<!-- [POPUP HEADER] -->
+			<!-- ------------------------------- -->
+			<p class="pop_tit" id="uiPOPUPPOINTTRANSREVTIT">동의 철회 안내</p>
+
+			<!-- ------------------------------- -->
+			<!-- [POPUP CONTENTS] -->
+			<!-- ------------------------------- -->
+			<div class="pop_con">
+				<dl class="txt_bul1 t1">
+					<dt>동의 철회시</dt>
+					<dd><em>PAYCO, Rail, MONEYTREE</em> 포인트 전환 서비스를 이용할 수 없습니다.</dd>
+					<dd>다시 서비스 이용을 원하실 경우 개인정보 제3자 제공동의가 필요합니다.</dd>
+				</dl>
+			</div>
+
+			<!-- ------------------------------- -->
+			<!-- [POPUP FOOTER BTN] -->
+			<!-- ------------------------------- -->
+			<div class="wrap_action">
+				<button type="button" class="btn_action ty01 btn_close">취소</button><!-- class="btn_close" 사용시 레이어 닫힘  -->
+				<button type="button" class="btn_action">확인</button>
+			</div>
+			<!-- ------------------------------- -->
+		</div>
+	</div>
+	<!-- ####################################################### -->
+
+	<script>
+		$(function(){
+			openlayer('uiPOPUPPOINTTRANSREV'); //레이어팝업 호출 샘플
+		})
+	</script>
+</body>
+</html>

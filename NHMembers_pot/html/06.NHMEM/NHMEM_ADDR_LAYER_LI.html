@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<title>[L] 주소검색</title>
+</head>
+<body>
+	<!-- [바닥페이지] -->
+	<div id="wrap">
+		<div class="inp_area">
+			<input type="tel" aria-label="우편번호" placeholder="우편번호를 검색해 주세요." readonly>
+			<button type="button" class="btn_sub1 btn_layer" title="우편번호 검색" aria-controls="uiADDRPOPUP">검색하기</button> <!-- [D] 팝업호출 샘플 -->
+		</div>
+	</div>
+	<!--// -->
+
+	<!-- ####################################################### -->
+	<!-- [POPUP] 주소검색 -->
+	<!-- ####################################################### -->
+	<div class="layer_pop type_btm" id="uiADDRPOPUP" role="dialog" aria-modal="true" aria-label="주소검색">
+		<div class="pop_inner">
+			<!-- ------------------------------- -->
+			<!-- [POPUP CONTENTS] -->
+			<!-- ------------------------------- -->
+			<div class="pop_con">
+				<!-- ### 주소검색 ### -->
+				<fieldset class="form_search2">
+					<legend>주소(도로명, 건물명, 지번) 입력</legend>
+
+					<dl class="form">
+						<dt>주소검색</dt>
+						<dd>
+							<div class="inp_area">
+								<div class="inp_txt">
+									<input type="tel" aria-label="주소(도로명, 건물명, 지번)" placeholder="주소를 검색해 주세요.">
+									<button type="button" class="btn_del">입력 내용 삭제</button>
+								</div>
+								<button type="button" class="btn_sub1 btn_layer">검색하기</button> <!-- 07.14 수정. class="btn_layer" 추가 -->
+							</div>
+						</dd>
+					</dl>
+				</fieldset>
+
+				<!-- ### 안내문구 ### -->
+				<ul class="txt_bul1">
+					<li>도로명 + 건물번호 <em class="txt_c1">ex) 새문안로 16</em></li>
+					<li>동(읍/면/리) + 번지수 <em class="txt_c1">ex) 충정로1가 75-1</em></li>
+					<li>동(읍/면/리) + 건물명 <em class="txt_c1">ex) 충정로1가 농협 본부</em></li>
+				</ul>
+
+				<!-- ### 목록 ### -->
+				<div class="list_data6">
+					<ul>
+						<!-- // -->
+						<li>
+							<a href="#none" role="button">
+								<span>00000</span>
+								<strong title="도로명">도로명</strong>
+								<em title="지번">지번</em>
+							</a>
+						</li>
+						<!-- // -->
+						<li>
+							<a href="#none" role="button">
+								<span>04948</span>
+								<strong title="도로명">경기 성남시 분당구 중앙공원로 35 (서현동, 한양아파트)</strong>
+								<em title="지번">경기도 성남시 분당구 서현동 90</em>
+							</a>
+						</li>
+						<!-- // -->
+						<li>
+							<a href="#none" role="button">
+								<span>04948</span>
+								<strong title="도로명">경기 의왕시 갈미1로 18 (내손동 , 의왕내손주공아파트)</strong>
+								<em title="지번">경기 의왕시 내손동 791 의왕내손주공아파트</em>
+							</a>
+						</li>
+						<!-- // -->
+						<li>
+							<a href="#none" role="button">
+								<span>04948</span>
+								<strong title="도로명">경기 군포시 봉성로 64-1 (당정동 , 의왕현대공업사)</strong>
+								<em title="지번">경기 군포시 부곡동 1098 의왕역센트럴시티</em>
+							</a>
+						</li>
+						<!-- // -->
+						<li>
+							<a href="#none" role="button">
+								<span>04948</span>
+								<strong title="도로명">경기 성남시 분당구 중앙공원로 35 (서현동, 한양아파트)</strong>
+								<em title="지번">경기도 성남시 분당구 서현동 90</em>
+							</a>
+						</li>
+						<!-- [CASE] 검색결과없음 -->
+						<li class="nodata">검색어를 확인 후 다시 검색해 주세요.</li>
+						<!-- // -->
+					</ul>
+				</div>
+			</div>
+
+			<!-- ------------------------------- -->
+			<!-- [POPUP FOOTER BTN] -->
+			<!-- ------------------------------- -->
+			<div class="wrap_action">
+				<button type="button" class="btn_action btn_close">닫기</button> <!-- class="btn_close" 사용시 레이어 닫힘  -->
+			</div>
+			<!-- ------------------------------- -->
+		</div>
+	</div>
+	<!-- ####################################################### -->
+
+	<script>
+		$(function(){
+			openlayer('uiADDRPOPUP') //레이어팝업 호출 샘플
+
+			$('[aria-controls]').on('click',function(){
+				var _btn = $(this).attr('aria-controls');
+				openlayer(_btn) //레이어팝업 호출 샘플
+			});
+		})
+	</script>
+</body>
+</html>

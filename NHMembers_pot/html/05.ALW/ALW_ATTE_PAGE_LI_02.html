@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+    <script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+    <title>출석체크이벤트</title>
+</head>
+<body>
+    <a id="skipnavi" href="#contents" class="skipnav">컨텐츠바로가기</a>
+    <!-- wrap -->
+    <div id="wrap">
+        <header id="header">
+            <div class="top">
+                <a href="#none" class="ico" title="참여사 이동"><img src="../../resources/images/logo/ci_logo13.png" alt="NHpay"></a>
+                <h1><a href="#none" class="logo" title="홈으로">NHmembers pot</a></h1>
+            </div>
+            <div class="gnb">
+                <a href="#none">혜택</a>
+                <a href="#none">추천</a>
+                <button type="button" aria-label="전체메뉴 열기" id="btn_menu" class="btn_menu" aria-haspopup="true"></button>
+            </div>
+        </header>
+
+        <div id="contents">
+            <div id="content">
+                <h2 class="hidden">포인트쌓기</h2>
+                <h3 class="hidden">출석체크</h3>
+
+				<div class="event_wr">
+					<!-- 출석체크 -->
+					<div class="event_info">
+						<span class="info">DAILY EVENT</span>
+						<strong class="tit">매일매일 출석체크!</strong>
+						<p class="txt">출첵 미션을 완료하시면 <br>추가 혜택을 드려요!</p>
+						<button type="button" class="btn_com1 btn_layer" onclick="openlayer('uiPOPUPPOINT01')">출석체크</button>
+						<!-- 클릭 후 버튼 : disabled추가 [M 2023-05-26] 클래스명 삭제 후 disabled 추가
+						<button type="button" class="btn_com1 btn_layer" disabled>출석완료</button>
+						-->
+					</div>
+
+					<!-- 출석일 -->
+					<div class="attend_box">
+						내 출석일
+						<div class="date"><span class="chart_val">3</span><span class="chart_date">일</span></div>
+						<div class="chart_wr">
+							<div class="inner" style="width:3%"></div> <!-- width:% 로 조절 -->
+						</div>
+					</div>
+
+					<!-- 출첵미션 -->
+					<div class="attend_mission">
+						<div class="tit">
+							<strong>출첵미션</strong>
+							<span>STEP 03</span>
+						</div>
+						<ul class="list_detail">
+							<li class="on"> <!-- 미션 성공시 class="on" -->
+								<em><span>15</span> 회</em>
+								<p>상품 보고 포인트 받기</p>
+								<div class="num"><span>+</span><strong>50</strong><span>P</span></div>
+							</li>
+							<li>
+								<em><span>20</span> 회</em>
+								<p>상품 구매하고 포인트 추가 받기</p>
+								<div class="num"><span>+</span><strong>2천</strong><span>P</span></div> <!-- 05.18 수정 -->
+							</li>
+							<li>
+								<em><span>25</span> 회</em>
+								<p>상품 보고 포인트 받기</p>
+								<div class="num"><span>+</span><strong>100</strong><span>P</span></div>
+							</li>
+						</ul>
+					</div>
+
+					<!-- 달력 -->
+					<div class="attend_cal">
+						<div class="month"><em>08</em><span>월</span></div>
+						<table>
+							<caption>출석체크 달력</caption>
+							<thead>
+								<tr>
+									<th scope="col">일</th>
+									<th scope="col">월</th>
+									<th scope="col">화</th>
+									<th scope="col">수</th>
+									<th scope="col">목</th>
+									<th scope="col">금</th>
+									<th scope="col">토</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><span class="pass"></span></td><!-- 지나간 경우 class="pass" -->
+									<td><span class="pass"></span></td>
+									<td><span class="on">1</span></td><!-- 출석체크 한 경우 class="on" -->
+									<td><span class="pass">2</span></td>
+									<td><span class="pass">3</span></td>
+									<td><span class="pass">4</span></td>
+									<td><span class="pass">5</span></td>
+								</tr>
+								<tr>
+									<td><span class="pass">6</span></td>
+									<td><span class="pass">7</span></td>
+									<td><span class="pass">8</span></td>
+									<td><span class="on">9</span></td>
+									<td><span class="on">10</span></td>
+									<td><span class="pass">11</span></td>
+									<td><span class="pass">12</span></td>
+								</tr>
+								<tr>
+									<td><span class="pass">13</span></td>
+									<td><span class="pass">14</span></td>
+									<td><span class="pass">15</span></td>
+									<td><span class="today">16</span></td><!-- 오늘 class="today" -->
+									<td><span>17</span></td>
+									<td><span>18</span></td>
+									<td><span>19</span></td>
+								</tr>
+								<tr>
+									<td><span>20</span></td>
+									<td><span>21</span></td>
+									<td><span>22</span></td>
+									<td><span>23</span></td>
+									<td><span>24</span></td>
+									<td><span>25</span></td>
+									<td><span>26</span></td>
+								</tr>
+								<tr>
+									<td><span>27</span></td>
+									<td><span class="on">28</span></td>
+									<td><span>29</span></td>
+									<td><span>30</span></td>
+									<td><span></span></td>
+									<td><span></span></td>
+									<td><span></span></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+                    <!-- 관련상품 -->
+                    <div class="attend_prd">
+                        <p class="con_tit"><span class="thin">추천 상품에 가입하시면</span><br>포인트를 추가로 팟팟 드려요~!</p> <!-- 05.18 문구 수정 -->
+                        <div class="list_data1">
+                            <ul>
+                                <li style="background-color:#e4f7fc;">
+                                    <a href="#none" target="_blank" title="NH카드 새창 열림"><!-- 상품 관계사명 title명으로 적용  -->
+                                        <div class="label">
+                                            <i class="icon_txt1" style="color:#844DFF">BEST</i>
+                                            <i class="icon_txt1" style="color:#03A124">COUPON</i>
+                                            <i class="icon_txt1" style="color:#008DF9">NEW</i>
+                                        </div>
+                                        <em class="icon_link">NH카드</em>
+                                        <strong>Zgm.휴가중</strong>
+                                        <!-- 혜택(포인트 / 할인 / 원)
+                                            포인트 : <div class="data_num1"><span>+</span><strong>000,000</strong><span>P</span></div>
+                                            할인 : <div class="data_num1"><strong>00%</strong><span>할인</span></div>
+                                            원 : <div class="data_num1"><strong>120,000</strong><span>원</span></div>
+                                        -->
+                                        <!-- <div class="data_num1"><span>+</span><strong>200,000</strong><span>P</span></div> -->
+                                        <div class="data1">해외가맹점2~5% 적립, 전가맹점0.5%적립, 여행20% 할인</div>
+                                    </a>
+                                </li>
+                                <li style="background-color:#ffeeee;">
+                                    <a href="#none" target="_blank" title="NH농협손해보험 새창 열림"><!-- 상품 관계사명 title명으로 적용  -->
+                                        <div class="label">
+                                            <i class="icon_txt1" style="color:#03A124">COUPON</i>
+                                            <i class="icon_txt1" style="color:#008DF9">NEW</i>
+                                        </div>
+                                        <em class="icon_link">NH농협손해보험</em>
+                                        <strong>ON-OFF 해외여행보험</strong>
+                                        <!-- 혜택(포인트 / 할인 / 원)
+                                            포인트 : <div class="data_num1"><span>+</span><strong>000,000</strong><span>P</span></div>
+                                            할인 : <div class="data_num1"><strong>00%</strong><span>할인</span></div>
+                                            원 : <div class="data_num1"><strong>120,000</strong><span>원</span></div>
+                                        -->
+                                        <!-- <div class="data_num1"><span>+</span><strong>200,000</strong><span>P</span></div> -->
+                                        <div class="data1">국내 최초 금융위원회 혁신금융서비스 지정 on-off 해외 여행보험</div>
+                                        <div class="data1">해외여행보험 한 번 가입하면 가입 기간동안 여행 기간 입력과 보험료 결제만으로 보장 개시</div>
+                                    </a>
+                                </li>
+                                <li style="background-color:#f7f8fa;">
+                                    <a href="#none" target="_blank" title="NH농협은행 새창 열림"><!-- 상품 관계사명 title명으로 적용  -->
+                                        <div class="label">
+                                            <i class="icon_txt1" style="color:#844DFF">BEST</i>
+                                            <i class="icon_txt1" style="color:#03A124">COUPON</i>
+                                            <i class="icon_txt1" style="color:#008DF9">NEW</i>
+                                        </div>
+                                        <em class="icon_link">NH농협은행</em>
+                                        <strong>NH주거래우대통장</strong>
+                                        <!-- 혜택(포인트 / 할인 / 원)
+                                            포인트 : <div class="data_num1"><span>+</span><strong>000,000</strong><span>P</span></div>
+                                            할인 : <div class="data_num1"><strong>00%</strong><span>할인</span></div>
+                                            원 : <div class="data_num1"><strong>120,000</strong><span>원</span></div>
+                                        -->
+                                        <!-- <div class="data_num1"><span>+</span><strong>200,000</strong><span>P</span></div> -->
+                                        <div class="data1">은행 거래실적에 따라 우대금리, 수수료 면제 등 서비스를 제공하는 입출식 상품(금리 최고 연 2%)</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+   					<!-- [M 2023-05-25] div태그 삭제 및 클래스명 변경 -->
+					<dl class="txt_bul1">
+						<dt>참여 안내</dt>
+						<dd>출석체크와 관련된 이벤트 내용은 사전 예고 없이 변경될 수 있습니다.</dd>
+						<dd>상품가입확인 후 다음달 15일 이내 추가 포인트가 지급됩니다. </dd>
+						<dd>타 이벤트 내 동일상품가입시 포인트 는 중복지급이 되지 않습니다.</dd>
+						<dd>상품 가입 전 해당 상품의 약관 및 상품 설명서를 자세히 확인하시기 바랍니다.</dd>
+					</dl>
+					<!-- // [M 2023-05-25] -->
+				</div>
+
+                <div class="wrap_action">
+                    <button type="button" class="btn_action btn_layer" onclick="openlayer('uiCOMSHARE01')">공유</button> <!-- 05.18 수정 -->
+                </div>
+            </div>
+        </div>
+
+        <a href="#wrap" title="맨위로" id="btnTop"></a>
+    </div>
+    <!--// wrap -->
+
+    <!-- popup -->
+    <div class="layer_pop type_btm" id="uiCOMSHARE01" role="dialog" aria-modal="true" aria-labelledby="uiCOMSHARE01TIT">
+		<div class="pop_inner">
+			<p class="pop_tit" id="uiCOMSHARE01TIT">공유</p>
+			<div class="pop_con">
+				<p>좋은 건 널리 널리 알려주세요~!<br><br></p>
+				<div class="btn_set1">
+					<button type="button" class="ic1">카카오톡</button>
+					<button type="button" class="ic2">문자메세지</button>
+					<button type="button" class="ic3">링크복사</button>
+				</div>
+			</div>
+			<div class="wrap_action">
+				<button type="button" class="btn_action ty01 btn_close">취소</button> <!-- class="btn_close" 사용시 레이어 닫힘  -->
+			</div>
+		</div>
+	</div>
+	<div class="layer_pop type_pit" id="uiPOPUPPOINT01" role="dialog" aria-modal="true" aria-label="출석체크 완료">
+		<div class="pop_inner">
+			<div class="pop_con">
+				<p class="data_num1"><strong>2</strong><span>P</span></p>
+				<dl>
+					<dt>출석체크 완료</dt>
+					<dd>2P가 적립되었어요!</dd>
+				</dl>
+			</div>
+
+			<div class="wrap_btn1">
+				<button type="button" class="btn_com1 btn_close">확인</button> <!-- class="btn_close" 사용시 레이어 닫힘  -->
+			</div>
+		</div>
+	</div>
+</body>
+</html>

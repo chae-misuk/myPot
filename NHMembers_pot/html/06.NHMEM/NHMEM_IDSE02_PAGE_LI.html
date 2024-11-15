@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<title>[P] 아이디 찾기</title>
+</head>
+<body>
+	<!-- [바닥페이지] -->
+	<div id="wrap"></div>
+	<!--// -->
+
+	<!-- ####################################################### -->
+	<!-- [POPUP] 아이디 찾기 -->
+	<!-- ####################################################### -->
+	<div class="layer_pop type_full" id="uiNHMEMIDSE01" role="dialog" aria-modal="true" aria-labelledby="uiNHMEMIDSE01TIT">
+		<div class="pop_inner">
+			<!-- ------------------------------- -->
+			<!-- [POPUP HEADER] -->
+			<!-- ------------------------------- -->
+			<div class="pop_header">
+				<button type="button" class="btn_back">뒤로가기</button>
+			</div>
+			<p class="pop_tit top" id="uiNHMEMIDSE01TIT">아이디 찾기</p>
+
+			<!-- ------------------------------- -->
+			<!-- [POPUP CONTENTS] -->
+			<!-- ------------------------------- -->
+			<div class="pop_con">
+				<p class="con_tit">입력하신 정보와<br>일치하는 아이디에요.</p>
+
+				<!-- ### [정보영역] 가입정보 ### -->
+				<!-- [CASE1] 가입정보인증으로 찾기 했을 경우 -->
+				<div class="info_con3">
+					<dl>
+						<dt>가입정보</dt>
+						<dd>
+							<strong>lala*****</strong>
+							<span>2019년 09월 23일 가입</span>
+						</dd>
+						<dd>개인정보 보호를 위해 앞 3자리를 제외한<br>나머지 부분은 *로 표기됩니다.</dd>
+					</dl>
+				</div>
+
+				<!-- [CASE2] 본인인증으로 찾기 했을 경우 -->
+				<div class="info_con3">
+					<dl>
+						<dt>가입정보</dt>
+						<dd>
+							<strong>lalapipo</strong>
+							<span>2019년 09월 23일 가입</span>
+						</dd>
+						<dd>비밀번호 재설정을 통해 새로운 비밀번호를<br>설정할 수 있어요.</dd>
+					</dl>
+				</div>
+
+				<!-- ### [링크영역] 아이디 전체 확인하기 ### -->
+				<p class="con_tit2">아이디 전체 확인하기</p>
+				<div class="list_t2 t2">
+					<ul>
+						<li class="ic1">
+							<a href="#none">NHOnePASS</a>
+							<button type="button" data-label="tooltip" class="btn_txt1 ic2 btn_layer" aria-controls="tooltip01">NHOnePASS 안내</button>
+							<div id="tooltip01" class="tooltip" role="tooltip">
+								<button type="button" class="close">툴팁닫기</button>
+								<p>NH스마트뱅킹에 등록한 간편비밀번호, 지문(FaceID), 인증서를 통해 편리하게 본인확인 및 로그인 할 수 있는 서비스</p>
+								<p>* NH스마트뱅킹 앱이 설치된 디바이스에서만 이용가능</p>
+							</div>
+						</li>
+						<li class="ic2">
+							<a href="#none">NH농협카드</a>
+							<button type="button" data-label="tooltip" class="btn_txt1 ic2 btn_layer" aria-controls="tooltip02">NHOnePASS 안내</button>
+							<div id="tooltip02" class="tooltip" role="tooltip">
+								<button type="button" class="close">툴팁닫기</button>
+								<p>본인 명의의 NH농협 신용카드 또는 체크카드를 통해 본인임을 확인하는 서비스(법인카드, 가족카드, 선불카드 이용불가)</p>
+								<p>인증방식 : 간편인증(올원페이 인증), 일반인증(ARS 인증), 홈페이지 인증 총 3가지 방식 제공</p>
+							</div>
+						</li>
+						<li class="ic3"><a href="#none">통신사</a></li>
+					</ul>
+				</div>
+				<!-- ### // ### -->
+			</div>
+
+			<!-- ------------------------------- -->
+			<!-- [POPUP FOOTER BTN] -->
+			<!-- ------------------------------- -->
+			<div class="wrap_action">
+				<a href="#none" class="btn_action ty02">로그인</a>
+				<a href="#none" class="btn_action">비밀번호 찾기</a> <!-- [CASE1] 가입정보인증으로 찾기 했을 경우 -->
+				<!-- <a href="#none" class="btn_action">비밀번호 재설정</a>  [CASE2] 본인인증으로 찾기 했을 경우 -->
+			</div>
+			<!-- ------------------------------- -->
+		</div>
+	</div>
+	<!-- ####################################################### -->
+
+	<script>
+		$(function(){
+			openlayer('uiNHMEMIDSE01'); //풀팝업 호출
+		})
+	</script>
+</body>
+</html>

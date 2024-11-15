@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<title>[L] 비밀번호 찾기 문제해결</title>
+</head>
+<body>
+	<!-- 바닥페이지 -->
+	<div id="wrap">
+		<div class="wrap_btn4">
+			<button type="button" class="btn_txt1 ic1 btn_layer" aria-controls="uiNHMEMPWSEL01">비밀번호 찾기에 문제가 있으신가요?</button> <!-- 팝업 호출 샘플 -->
+		</div>
+	</div>
+	<!-- // -->
+
+	<!-- ####################################################### -->
+	<!-- [POPUP] 비밀번호 찾기 문제해결 -->
+	<!-- ####################################################### -->
+	<div class="layer_pop type_ctr03" id="uiNHMEMPWSEL01" role="dialog" aria-modal="true" aria-labelledby="uiNHMEMPWSEL01TIT">
+		<div class="pop_inner">
+			<p id="uiNHMEMPWSEL01TIT" class="pop_tit">비밀번호 찾기에 문제가 있으신가요?</p>
+			<div class="pop_con">
+				<p>회원정보가 변경된 경우 본인인증을 통해<br>비밀번호를 재설정하실 수 있습니다.</p>
+				<p class="txt_bul1">회원정보 변경은 NH멤버스앱으로 접속 &gt; 로그인 &gt; 설정 &gt; 회원정보 변경에서 가능합니다.</p>
+
+				<div class="list_t2 t2">
+					<ul>
+						<li class="ic1"><a href="#none">NHOnePASS</a></li>
+						<li class="ic2"><a href="#none">NH농협카드</a></li>
+						<li class="ic3"><a href="#none">통신사</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="wrap_btn1">
+				<button type="button" class="btn_com1 btn_close">닫기</button> <!-- class="btn_close" 사용시 레이어 닫힘  -->
+			</div>
+		</div>
+	</div>
+	<!-- ####################################################### -->
+
+	<script>
+		$(function(){
+			openlayer('uiNHMEMPWSEL01');
+			$('[aria-controls="uiNHMEMPWSEL01"]').on('click',function(){
+				openlayer('uiNHMEMPWSEL01');
+			})
+		})
+	</script>
+</body>
+</html>

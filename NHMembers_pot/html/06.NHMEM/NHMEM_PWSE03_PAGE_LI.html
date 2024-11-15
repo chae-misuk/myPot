@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<title>[P] 비밀번호 재설정</title>
+</head>
+<body>
+	<!-- [바닥페이지] -->
+	<div id="wrap"></div>
+	<!--// -->
+
+	<!-- ####################################################### -->
+	<!-- [POPUP] 비밀번호 재설정 -->
+	<!-- ####################################################### -->
+	<div class="layer_pop type_full" id="uiNHMEMPWSE03" role="dialog" aria-modal="true" aria-labelledby="uiNHMEMPWSE03TIT">
+		<div class="pop_inner">
+			<!-- ------------------------------- -->
+			<!-- [POPUP HEADER] -->
+			<!-- ------------------------------- -->
+			<div class="pop_header">
+				<button type="button" class="btn_back">뒤로가기</button>
+			</div>
+			<p class="pop_tit top" id="uiNHMEMPWSE03TIT">비밀번호 재설정</p>
+
+			<!-- ------------------------------- -->
+			<!-- [POPUP CONTENTS] -->
+			<!-- ------------------------------- -->
+			<div class="pop_con">
+				<p class="con_tit">새로운 비밀번호를<br>입력해 주세요.</p>
+
+				<!-- ### [입력영역] 변경할 비밀번호 ### -->
+				<div class="form_wrap">
+					<fieldset>
+						<legend>변경할 비밀번호 입력 (모든항목 필수입력)</legend>
+
+						<!-- 비밀번호 : 오류 샘플 : data-mode="invalid" /  aria-invalid="true" -->
+						<dl class="form" data-mode="invalid">
+							<dt>비밀번호</dt>
+							<dd>
+								<div class="inp_txt">
+									<input type="password" id="intgMbPw" name="INTG_MB_PW" aria-label="변경할 비밀번호 입력" placeholder="변경할 비밀번호를 입력해 주세요." aria-invalid="true">
+									<button type="button" class="btn_del">입력 내용 삭제</button>
+								</div>
+								<div class="validation" aria-live="assertive" role="alert">변경할 비밀번호를 입력해 주세요.</div>
+							</dd>
+						</dl>
+
+						<!-- 비밀번호 확인 -->
+						<dl class="form">
+							<dt>비밀번호 확인</dt>
+							<dd>
+								<div class="inp_txt">
+									<input type="password" id="intgMbPwConfirm" aria-label="변경할 비밀번호를 재입력" placeholder="변경할 비밀번호를 재입력해 주세요.">
+									<button type="button" class="btn_del">입력 내용 삭제</button>
+								</div>
+								<div class="validation" aria-live="assertive" role="alert">변경할 비밀번호를 다시 한번 입력해 주세요.</div>
+							</dd>
+						</dl>
+
+						<!-- 안내문구 -->
+						<ul class="txt_bul1">
+							<li>영문자, 숫자, 특수문자를 모두 포함하여 8~16자리로 입력해 주세요.</li>
+							<li>일부 특수문자는 입력제한(&lt;&gt;’”)</li>
+						</ul>
+						<!-- // -->
+					</fieldset>
+				</div>
+				<!-- ### // ### -->
+			</div>
+
+			<!-- ------------------------------- -->
+			<!-- [POPUP FOOTER BTN] -->
+			<!-- ------------------------------- -->
+			<div class="wrap_action">
+				<button type="button" class="btn_action">확인</button>
+			</div>
+			<!-- ------------------------------- -->
+		</div>
+	</div>
+	<!-- ####################################################### -->
+
+	<script>
+		$(function(){
+			openlayer('uiNHMEMPWSE03'); //풀팝업 호출
+		})
+	</script>
+</body>
+</html>

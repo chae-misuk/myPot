@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<link rel="stylesheet" href="../../resources/css/swiper-min.css">
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<script type="text/javascript" src="../../resources/js/swiper-min.js"></script>
+	<title>오픈이벤트</title>
+    <script>
+        $(function(){
+			var swiper1 = new Swiper('.mySwiper1', {
+				slidesPerView: 1,
+                loop: true,
+				pagination: {
+					el: '.swiper-pagination',
+				},
+				a11y: {
+					slideLabelMessage: '총 {{slidesLength}} 개의 알림내용 중 {{index}}번 입니다.',
+				},
+			});
+
+            $('.info03 li .btn_use').each(function(){
+                var tarCl = $(this).closest('li').index();
+                $(this).on('click', function(){
+                    openlayer('event_pop02');
+
+                    $('.info03_detail li').hide();
+                    $('.info03_detail li').eq(tarCl).show();
+                    $('.info03 li').find('.tar_focus').removeClass('tar_focus');
+                    $(this).addClass('tar_focus');
+                })
+            });
+        })
+    </script>
+</head>
+<body>
+    <div class="open_event">
+        <div class="info01">
+            <div class="top"><img src="../../resources/images/upload/@open_event01.png" alt="혜택이 팟팟!! 농협의 모든 혜택을 담은 NHmembers pot"></div>
+            <div class="swiper mySwiper1">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="../../resources/images/upload/@open_event02.png" alt="다 주고 더 주고 싶은 마음 가득 담아놓은 '혜택'. NH멤버스 회원의 특혜를 누려보세요.">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../../resources/images/upload/@open_event03.png" alt="다양한 이벤트와 쿠폰. 다양한 이벤트와 풍성한 쿠폰이 기다리고 있어요.">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../../resources/images/upload/@open_event04.png" alt="상품 가입 + 포인트 추가 적립. NH멤버스팟에서 편리하게 가입하고 추가 포인트도 받으세요!">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../../resources/images/upload/@open_event05.png" alt="유용한 포인트 서비스. 나의 포인트 현황과 포인트로 기부, 전환도 할 수 있어요.">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="info02">
+            <p class="info_txt">
+                <strong>NH멤버스팟 오픈런 이벤트를</strong><br>만나보세요.
+            </p>
+            <div>
+                <img src="../../resources/images/upload/@open_event06.png" alt="NH멤버스팟 오픈런 이벤트 딱 한달만! 23.08.01~23.08.31">
+            </div>
+            <div class="wrap_btn1">
+                <button type="button" class="btn_com1 btn_layer" onclick="openlayer('event_pop01');"><span>이벤트 알아보기</span></button>
+            </div>
+        </div>
+        <div class="info03">
+            <p class="info_txt">
+                고객님이 자주 사용하시는<br>농협계열사에서<br><strong>이벤트에 참여해보세요.</strong>
+            </p>
+            <ul>
+                <li>
+                    <img src="../../resources/images/logo/img_logo05.png" alt="NH콕뱅크">
+                    <button type="button" class="btn_use btn_layer">이용방법안내</button>
+                    <button type="button"><span><em class="hidden">NH콕뱅크</em>바로가기</span></button>
+                </li>
+                <li>
+                    <img src="../../resources/images/logo/img_logo06.png" alt="농협몰">
+                    <button type="button" class="btn_use btn_layer">이용방법안내</button>
+                    <button type="button"><span><em class="hidden">농협몰</em>바로가기</span></button>
+                </li>
+                <li>
+                    <img src="../../resources/images/logo/img_logo03.png" alt="NH올원뱅크">
+                    <button type="button" class="btn_use btn_layer">이용방법안내</button>
+                    <button type="button"><span><em class="hidden">NH올원뱅크</em>바로가기</span></button>
+                </li>
+                <li>
+                    <img src="../../resources/images/logo/img_logo02.png" alt="NH스마트뱅킹">
+                    <button type="button" class="btn_use btn_layer">이용방법안내</button>
+                    <button type="button"><span><em class="hidden">NH스마트뱅킹</em>바로가기</span></button>
+                </li>
+                <li>
+                    <img src="../../resources/images/logo/img_logo10.png" alt="NH농협생명">
+                    <button type="button" class="btn_use btn_layer">이용방법안내</button>
+                    <button type="button"><span><em class="hidden">NH농협생명</em>바로가기</span></button>
+                </li>
+                <li>
+                    <img src="../../resources/images/logo/img_logo01.png" alt="NHpay">
+                    <button type="button" class="btn_use btn_layer">이용방법안내</button>
+                    <button type="button"><span><em class="hidden">NHpay</em>바로가기</span></button>
+                </li>
+                <li>
+                    <img src="../../resources/images/logo/img_logo09.png" alt="농협손해보험">
+                    <button type="button" class="btn_use btn_layer">이용방법안내</button>
+                    <button type="button"><span><em class="hidden">농협손해보험</em>바로가기</span></button>
+                </li>
+                <li>
+                    <img src="../../resources/images/logo/img_logo04.png" alt="나무증권">
+                    <button type="button" class="btn_use btn_layer">이용방법안내</button>
+                    <button type="button"><span><em class="hidden">나무증권</em>바로가기</span></button>
+                </li>
+                <li>
+                    <img src="../../resources/images/logo/img_logo08.png" alt="QV">
+                    <button type="button" class="btn_use btn_layer">이용방법안내</button>
+                    <button type="button"><span><em class="hidden">QV</em>바로가기</span></button>
+                </li>
+                <li>
+                    <img src="../../resources/images/logo/img_logo07.png" alt="NH농협캐피탈">
+                    <button type="button" class="btn_use btn_layer">이용방법안내</button>
+                    <button type="button"><span><em class="hidden">NH농협캐피탈</em>바로가기</span></button>
+                </li>
+                <li>
+                    <img src="../../resources/images/logo/img_logo11_02.png" alt="NH FIC Bank">
+                    <button type="button" class="btn_use btn_layer">이용방법안내</button>
+                    <button type="button"><span><em class="hidden">NH FIC Bank</em>바로가기</span></button>
+                </li>
+                <li>
+                    <img src="../../resources/images/logo/img_logo12.png" alt="NH멤버스">
+                    <button type="button" class="btn_use btn_layer">이용방법안내</button>
+                    <button type="button"><span><em class="hidden">NH멤버스</em>바로가기</span></button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 팟 이벤트 안내 팝업 -->
+    <div class="layer_pop type_full" id="event_pop01" role="dialog" aria-modal="true">
+        <div class="pop_inner info03_detail">
+            <div>
+                <img src="../../resources/images/upload/@open_event06_02.png" alt="NH멤버스팟 오픈런 이벤트 딱 한달만! 23.08.01~23.08.31">
+            </div>
+            <div class="wrap_action">
+                <button type="button" class="btn_action btn_close">닫기</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 계열사 이벤트 안내 팝업 -->
+    <div class="layer_pop type_full" id="event_pop02" role="dialog" aria-modal="true">
+        <ul class="pop_inner info03_detail">
+            <li>
+                <img src="../../resources/images/upload/@open_event11.png" alt="NH콕뱅크에서 멤버스팟 이동방법 안내">
+                <p class="info_txt">
+                    위 방법을 통해 NH멤버스팟으로<br>이동하면 <strong>이벤트에 참여할 수 있어요!!</strong>
+                </p>
+                <div class="wrap_action">
+                    <button type="button" class="btn_action ty01 btn_close">닫기</button>
+                    <button type="button" class="btn_action"><em class="hidden">NH콕뱅크</em>바로가기</button>
+                </div>
+            </li>
+            <li>
+                <img src="../../resources/images/upload/@open_event12.png" alt="농협몰에서 멤버스팟 이동방법 안내">
+                <p class="info_txt">
+                    위 방법을 통해 NH멤버스팟으로<br>이동하면 <strong>이벤트에 참여할 수 있어요!!</strong>
+                </p>
+                <div class="wrap_action">
+                    <button type="button" class="btn_action ty01 btn_close">닫기</button>
+                    <button type="button" class="btn_action"><em class="hidden">농협몰</em>바로가기</button>
+                </div>
+            </li>
+            <li>
+                <img src="../../resources/images/upload/@open_event13.png" alt="NH올원뱅크에서 멤버스팟 이동방법 안내">
+                <p class="info_txt">
+                    위 방법을 통해 NH멤버스팟으로<br>이동하면 <strong>이벤트에 참여할 수 있어요!!</strong>
+                </p>
+                <div class="wrap_action">
+                    <button type="button" class="btn_action ty01 btn_close">닫기</button>
+                    <button type="button" class="btn_action"><em class="hidden">NH올원뱅크</em>바로가기</button>
+                </div>
+            </li>
+            <li>
+                <img src="../../resources/images/upload/@open_event14.png" alt="NH스마트뱅킹에서 멤버스팟 이동방법 안내">
+                <p class="info_txt">
+                    위 방법을 통해 NH멤버스팟으로<br>이동하면 <strong>이벤트에 참여할 수 있어요!!</strong>
+                </p>
+                <div class="wrap_action">
+                    <button type="button" class="btn_action ty01 btn_close">닫기</button>
+                    <button type="button" class="btn_action"><em class="hidden">NH스마트뱅킹</em>바로가기</button>
+                </div>
+            </li>
+            <li>
+                <img src="../../resources/images/upload/@open_event15.png" alt="NH농협생명에서 멤버스팟 이동방법 안내">
+                <p class="info_txt">
+                    위 방법을 통해 NH멤버스팟으로<br>이동하면 <strong>이벤트에 참여할 수 있어요!!</strong>
+                </p>
+                <div class="wrap_action">
+                    <button type="button" class="btn_action ty01 btn_close">닫기</button>
+                    <button type="button" class="btn_action"><em class="hidden">NH농협생명</em>바로가기</button>
+                </div>
+            </li>
+            <li>
+                <img src="../../resources/images/upload/@open_event16.png" alt="NHpay에서 멤버스팟 이동방법 안내">
+                <p class="info_txt">
+                    위 방법을 통해 NH멤버스팟으로<br>이동하면 <strong>이벤트에 참여할 수 있어요!!</strong>
+                </p>
+                <div class="wrap_action">
+                    <button type="button" class="btn_action ty01 btn_close">닫기</button>
+                    <button type="button" class="btn_action"><em class="hidden">NHpay</em>바로가기</button>
+                </div>
+            </li>
+            <li>
+                <img src="../../resources/images/upload/@open_event17.png" alt="농협손해보험에서 멤버스팟 이동방법 안내">
+                <p class="info_txt">
+                    위 방법을 통해 NH멤버스팟으로<br>이동하면 <strong>이벤트에 참여할 수 있어요!!</strong>
+                </p>
+                <div class="wrap_action">
+                    <button type="button" class="btn_action ty01 btn_close">닫기</button>
+                    <button type="button" class="btn_action"><em class="hidden">농협손해보험</em>바로가기</button>
+                </div>
+            </li>
+            <li>
+                <img src="../../resources/images/upload/@open_event18.png" alt="나무증권에서 멤버스팟 이동방법 안내">
+                <p class="info_txt">
+                    위 방법을 통해 NH멤버스팟으로<br>이동하면 <strong>이벤트에 참여할 수 있어요!!</strong>
+                </p>
+                <div class="wrap_action">
+                    <button type="button" class="btn_action ty01 btn_close">닫기</button>
+                    <button type="button" class="btn_action"><em class="hidden">나무증권</em>바로가기</button>
+                </div>
+            </li>
+            <li>
+                <img src="../../resources/images/upload/@open_event19.png" alt="QV에서 멤버스팟 이동방법 안내">
+                <p class="info_txt">
+                    위 방법을 통해 NH멤버스팟으로<br>이동하면 <strong>이벤트에 참여할 수 있어요!!</strong>
+                </p>
+                <div class="wrap_action">
+                    <button type="button" class="btn_action ty01 btn_close">닫기</button>
+                    <button type="button" class="btn_action"><em class="hidden">QV</em>바로가기</button>
+                </div>
+            </li>
+            <li>
+                <img src="../../resources/images/upload/@open_event20.png" alt="NH캐피탈에서 멤버스팟 이동방법 안내">
+                <p class="info_txt">
+                    위 방법을 통해 NH멤버스팟으로<br>이동하면 <strong>이벤트에 참여할 수 있어요!!</strong>
+                </p>
+                <div class="wrap_action">
+                    <button type="button" class="btn_action ty01 btn_close">닫기</button>
+                    <button type="button" class="btn_action"><em class="hidden">NH캐피탈</em>바로가기</button>
+                </div>
+            </li>
+            <li>
+                <img src="../../resources/images/upload/@open_event21.png" alt="NH FIC Bank에서 멤버스팟 이동방법 안내">
+                <p class="info_txt">
+                    위 방법을 통해 NH멤버스팟으로<br>이동하면 <strong>이벤트에 참여할 수 있어요!!</strong>
+                </p>
+                <div class="wrap_action">
+                    <button type="button" class="btn_action ty01 btn_close">닫기</button>
+                    <button type="button" class="btn_action"><em class="hidden">NH FIC Bank</em>바로가기</button>
+                </div>
+            </li>
+            <li>
+                <img src="../../resources/images/upload/@open_event22.png" alt="NH멤버스에서 멤버스팟 이동방법 안내">
+                <p class="info_txt">
+                    위 방법을 통해 NH멤버스팟으로<br>이동하면 <strong>이벤트에 참여할 수 있어요!!</strong>
+                </p>
+                <div class="wrap_action">
+                    <button type="button" class="btn_action ty01 btn_close">닫기</button>
+                    <button type="button" class=
+                    "btn_action"><em class="hidden">NH멤버스</em>바로가기</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

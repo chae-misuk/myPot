@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+    <link rel="stylesheet" href="../../resources/css/nhm_newch_lottie.css"> <!-- 인터렉션 사용. 08.10 신규추가 -->
+    <script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<script type="text/javascript" src="../../resources/js/lottie.js"></script> <!-- 인터렉션 사용. 08.10 신규추가 -->
+    <title>퀴즈이벤트</title>
+</head>
+<body>
+    <a id="skipnavi" href="#contents" class="skipnav">컨텐츠바로가기</a>
+    <!-- wrap -->
+    <div id="wrap">
+        <button type="button" class="btn_sub1 btn_layer btn_quiz1" onclick="openlayer('quiz01');">퀴즈 인터렉션</button>
+    </div>
+    <!--// wrap -->
+
+    <!-- popup -->
+    <div class="layer_pop type_evt" id="quiz01" role="dialog" aria-modal="true" aria-label="퀴즈이벤트 참여" data-mode="allover"><!-- 05.18 수정. data-mode="allover" 추가 -->
+		<div class="pop_inner type04">
+			<div class="pop_con">
+				<!-- 05.18 수정 -->
+                <p>Wow 축하합니다!<br>딩동댕 정답입니다!<br>당신은 혹시 천재?</p>
+
+                <strong class="tip">이제 상품까지 가입하시면<br><span>10,000</span>포인트를 드려요!</strong>
+                <!--// 05.18 수정 -->
+			</div>
+            <div class="wrap_btn1">
+				<button type="button" class="btn_com1 ty01 btn_close">취소</button> <!-- 05.25 수정 -->  <!-- class="btn_close" 사용시 레이어 닫힘  -->
+				<button type="button" class="btn_com1 btn_close">확인</button> <!-- 05.18 수정 -->
+			</div>
+		</div>
+
+        <!-- 08.10 로티적용 추가 -->
+		<div id="motionArea_quiz"></div>
+		<!--// 08.10 로티적용 추가 -->
+	</div>
+    <script>
+        //08.10 로티적용 추가
+        function motion04() {
+            var animData4 = {
+                wrapper: document.getElementById('motionArea_quiz'),
+                renderer: 'svg',
+                animType: 'html',
+                loop: false,
+                prerender: true,
+                autoplay: true,
+                path: '../../resources/js/lottie/quiz.json'
+            };
+            var anim_quiz = bodymovin.loadAnimation(animData4);
+
+            $('#quiz01 .btn_close').on('click', function(){
+                anim_quiz.destroy();
+            })
+
+            $("body").on('click', '.overlay', function(){
+				if($('body').find('[data-mode="allover"]').length === 0) {
+					anim_quiz.destroy();
+				}
+			})
+        }
+
+		$(function(){
+			$('.btn_quiz1').on('click', function(){
+                motion04();
+            })
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<title>개인정보 제3자 제공동의 | 전환하기 | NH포인트</title>
+</head>
+<body>
+	<a href="#contents" class="skipnav">컨텐츠바로가기</a>
+
+	<!-- wrap -->
+	<div id="wrap">
+		<div id="sub_header">
+			<h1>NHmembers pot</h1>
+			<h2 class="hidden">NH포인트</h2>
+			<h3>전환하기</h3>
+			<a href="#none" class="btn_back">뒤로가기</a>
+		</div>
+
+		<!-- ####################################################### -->
+		<!-- [CONTENTS] NH포인트 : 전환하기 | 개인정보 제3자 제공동의 -->
+		<!-- ####################################################### -->
+		<div id="contents">
+			<div id="sub_content">
+				<p class="con_tit">제휴사 포인트 전환을 위해<br>아래 약관에 대한 고객님의 동의가 필요해요.</p>
+
+				<!-- ### 전체동의 ### -->
+				<div class="agree_all">
+					<input type="checkbox" id="uiAgreeAll" class="chk_all"><label for="uiAgreeAll">전체동의</label>
+				</div>
+
+				<!-- ### 약관항목 ### -->
+				<ul class="agree_list">
+					<li>
+						<!-- [접근성 관련]에러 발생시 input에 포커스 이동 및 다음 내용 추가. aria-invalid="true". 에러 후 재선택시 aria-invalid="false"로 전환 -->
+						<input type="checkbox" id="uiAgreeLi01" aria-errormessage="uiAgreeLi01_error"><label for="uiAgreeLi01">개인정보 제 3자 제공 동의 (NH멤버스팟 귀중)</label>
+						<button type="button" class="btn_more btn_layer">자세히 보기</button>
+						<p id="uiAgreeLi01_error" class="agree_alert" role="alert">약관에 동의해 주세요</p> <!-- [D] 약관 미동의 예외처리 문구 -->
+					</li>
+					<li>
+						<!-- [접근성 관련]에러 발생시 input에 포커스 이동 및 다음 내용 추가. aria-invalid="true". 에러 후 재선택시 aria-invalid="false"로 전환 -->
+						<input type="checkbox" id="uiAgreeLi02" aria-errormessage="uiAgreeLi02_error"><label for="uiAgreeLi02">개인정보 제 3자 제공 동의 (제휴사 귀중) </label>
+						<button type="button" class="btn_more btn_layer">자세히 보기</button>
+						 <!-- <p id="uiAgreeLi02_error" class="agree_alert" role="alert">약관에 동의해 주세요</p> [D] 약관 미동의 예외처리 문구 -->
+					</li>
+				</ul>
+				<!-- ### // ### -->
+			</div>
+
+			<div class="wrap_action">
+				<button type="button" class="btn_action">확인</button>
+			</div>
+		</div>
+		<!-- ####################################################### -->
+	</div>
+	<!--// wrap -->
+</body>
+</html>

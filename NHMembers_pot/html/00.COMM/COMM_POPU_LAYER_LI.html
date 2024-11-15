@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<link rel="stylesheet" href="../../resources/css/swiper-min.css"> <!-- 메인 공지 팝업 사용. 신규추가 -->
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<script type="text/javascript" src="../../resources/js/swiper-min.js"></script> <!-- 메인 공지 팝업 사용. 신규추가 -->
+	<title>팝업</title>
+	<script>
+        $(function(){
+            openlayer('mainpop01');
+
+			var swiper1 = new Swiper('.mySwiper1', {
+				// 08.16 삭제
+				// direction: 'vertical', 
+				slidesPerView: 1,
+				loop: 'true',
+				pagination: {
+					el: '.swiper-pagination',
+					type:'fraction',
+				},
+				a11y: {
+					slideLabelMessage: '총 {{slidesLength}} 개의 알림내용 중 {{index}}번 입니다.',
+				},
+			});
+        })
+    </script>
+</head>
+<body>
+	<div id="wrap">
+
+	</div>
+	<!-- popup -->
+    <div class="layer_pop type_btm" id="mainpop01" role="dialog" aria-modal="true" aria-labelledby="mainpop_tit">
+        <div class="pop_inner type_main">
+			<p id="mainpop_tit" class="pop_tit">메인 공지팝업</p>
+
+            <div class="pop_con">
+				<div class="swiper mySwiper1">
+					<!-- 08.16 수정. 텍스트 삭제 -->
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="#none">
+							<img src="../../resources/images/upload/@img_event_vw01.png" alt="NHpay">
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#none">
+							<img src="../../resources/images/upload/@img_event06.png" alt="NHpay">
+							</a>
+						</div>
+						
+						<div class="swiper-slide">
+							<a href="#none">
+							<img src="../../resources/images/upload/@img_pot06.png" alt="NHpay">
+							</a>
+						</div>
+						
+						<div class="swiper-slide">
+							<a href="#none">
+							<img src="../../resources/images/upload/@img_event04.jpg" alt="NHpay">
+							</a>
+						</div>
+						
+						<div class="swiper-slide">
+							<a href="#none">
+							<img src="../../resources/images/upload/@img_event04.png" alt="NHpay">
+							</a>
+						</div>
+					</div>
+					<!--// 08.16 수정. 텍스트 삭제 -->
+					<div class="swiper-pagination"></div>
+				</div>
+            </div>
+			<div class="wrap_action">
+				<button type="button" class="today_not">오늘은 그만 볼래요.</button>  <!-- 05.18 문구 수정 -->
+				<button type="button" class="btn_close">확인</button> <!-- 05.18 문구 수정 --> <!-- 06.08 위치이동 -->
+			</div>
+        </div>
+    </div>
+</body>
+</html>

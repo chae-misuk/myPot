@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<title>PUBLISHING GUIDE</title>
+	<link rel="stylesheet" href="../../resources/css/ui_publish.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/ui_publish.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+	<div class="guide-wrap" id="wrapper">
+		<!-- ####################################################### -->
+		<!-- ### [HEADER] ### -->
+		<!-- ####################################################### -->
+		<header class="guide-header">
+			<h1><span>NHmembers pot</span><strong>TIT/TXT GUIDE</strong></h1>
+			<nav>
+				<ul>
+					<li><a href="content_txt.html" aria-current="page">TXT</a></li>
+					<li><a href="content_btn.html">BTN</a></li>
+					<li><a href="content_tbl.html">TABLE</a></li>
+					<li><a href="content_list.html">LIST</a></li>
+					<li><a href="content_form.html">FORM</a></li>
+					<li><a href="content_info.html">INFO</a></li>
+					<li><a href="content_bbs.html">BOARD</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- ####################################################### -->
+		<!-- ### [CONTAINER] ### -->
+		<!-- ####################################################### -->
+		<div class="guide-container">
+			<!-- ### 텍스트 아이콘 ### -->
+			<section class="guide-section">
+				<h2 class="guide-tit1">텍스트형 아이콘</h2>
+
+				<!-- 유형1 -->
+				<h3 class="guide-tit2">라운드 박스형 : icon_txt1</h3>
+				<div class="guide-cont">
+					<h4 class="guide-tit4">기본</h4>
+					<i class="icon_txt1">D-00</i>
+
+					<h4 class="guide-tit4">상태 [data-state]</h4>
+					<i class="icon_txt1" data-state="ing">진행중</i>
+					<i class="icon_txt1" data-state="end">종료</i>
+
+					<h4 class="guide-tit4">뱃지 [style="color:#******"]</h4>
+					<p class="guide-txt">개발에서는 영문 대문자로 작업하였으나 <br>text-transform:lowercase로 소문자로 만들고 <br>text-transform:uppercase;로 첫글자만 대문자로 변경함</p>
+<pre><code class="html">&lt;!-- 텍스트 컬러 및 라인 색상은 style로 지정함(ARAM에서 관리함) --&gt;
+&lt;i class="icon_txt1" style="color:#FF456B"&gt;HOT&lt;/i&gt;
+&lt;i class="icon_txt1" style="color:#2970FF"&gt;POINT&lt;/i&gt;
+&lt;i class="icon_txt1" style="color:#844DFF"&gt;BEST&lt;/i&gt;
+&lt;i class="icon_txt1" style="color:#03A124"&gt;COUPON&lt;/i&gt;
+&lt;i class="icon_txt1" style="color:#008DF9"&gt;NEW&lt;/i&gt;
+&lt;i class="icon_txt1" style="color:#FD8B00"&gt;EVENT&lt;/i&gt;
+&lt;i class="icon_txt1" style="color:#FD00DB"&gt;OPEN&lt;/i&gt;
+&lt;i class="icon_txt1" style="color:#fb1504"&gt;SALE&lt;/i&gt;
+</code></pre>
+					<h4 class="guide-tit4">활용1</h4>
+					<div style="background-color:#081e43;padding:2.0rem;margin:0 -2.0rem 2.0rem;">
+						<i class="icon_txt1" style="color:#FF456B">HOT</i>
+						<i class="icon_txt1" style="color:#2970FF">POINT</i>
+						<i class="icon_txt1" style="color:#844DFF">BEST</i>
+						<i class="icon_txt1" style="color:#03A124">COUPON</i>
+						<i class="icon_txt1" style="color:#008DF9">NEW</i>
+						<i class="icon_txt1" style="color:#FD8B00">EVENT</i>
+						<i class="icon_txt1" style="color:#FD00DB">OPEN</i>
+						<i class="icon_txt1" style="color:#fb1504">SALE</i>
+					</div>
+
+					<h4 class="guide-tit4">활용2</h4>
+					<div style="background-color:#f7f8fa;padding:2.0rem;margin:0 -2.0rem 2.0rem;">
+						<i class="icon_txt1" style="color:#FF456B">HOT</i>
+						<i class="icon_txt1" style="color:#2970FF">POINT</i>
+						<i class="icon_txt1" style="color:#844DFF">BEST</i>
+						<i class="icon_txt1" style="color:#03A124">COUPON</i>
+						<i class="icon_txt1" style="color:#008DF9">NEW</i>
+						<i class="icon_txt1" style="color:#FD8B00">EVENT</i>
+						<i class="icon_txt1" style="color:#FD00DB">OPEN</i>
+						<i class="icon_txt1" style="color:#fb1504">SALE</i>
+					</div>
+
+					<h4 class="guide-tit4">활용3</h4>
+					<div style="background-color:#fff;padding:2.0rem;margin:0 -2.0rem 2.0rem;">
+						<i class="icon_txt1" style="color:#FF456B">HOT</i>
+						<i class="icon_txt1" style="color:#2970FF">POINT</i>
+						<i class="icon_txt1" style="color:#844DFF">BEST</i>
+						<i class="icon_txt1" style="color:#03A124">COUPON</i>
+						<i class="icon_txt1" style="color:#008DF9">NEW</i>
+						<i class="icon_txt1" style="color:#FD8B00">EVENT</i>
+						<i class="icon_txt1" style="color:#FD00DB">OPEN</i>
+						<i class="icon_txt1" style="color:#fb1504">SALE</i>
+					</div>
+				</div>
+
+				<!-- 유형2 -->
+				<h3 class="guide-tit2">원형 박스형 : .icon_txt2</h3>
+				<div class="guide-cont">
+					<i class="icon_txt2">사용완료</i>
+					<i class="icon_txt2">기간만료</i>
+				</div>
+
+				<!-- 유형3 -->
+				<h3 class="guide-tit2">등급 : .icon_txt3 + grade**</h3>
+				<div class="guide-cont">
+					<i class="icon_txt3 grade1">안심</i>
+					<i class="icon_txt3 grade2">다소안심</i>
+					<i class="icon_txt3 grade3">보통</i>
+					<i class="icon_txt3 grade4">신중</i>
+					<i class="icon_txt3 grade5">주의</i>
+				</div>
+				<!-- // -->
+			</section>
+
+			<!-- ### 타이틀 ### -->
+			<section class="guide-section">
+				<h2 class="guide-tit1">타이틀</h2>
+
+				<h3 class="guide-tit2">기본(1Depth) : .con_tit <span class="sub">F:16px</span></h3>
+				<div class="guide-cont">
+					<div class="guide-table1">
+						<table>
+							<caption>타이틀</caption>
+							<colgroup>
+								<col style="width:30%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">구분</th>
+									<th scope="col">내용</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">타이틀형</th>
+									<td><h4 class="con_tit">타이틀</h4></td>
+								</tr>
+								<tr>
+									<th scope="row">문구형</th>
+									<td>
+										<p class="con_tit"><span class="thin">부가설명(.thin)</span><br>타이틀</p>
+										<p class="con_tit">강조문구 <span class="thin">문구(.thin)</span></p>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">컨텐츠형</th>
+									<td>
+										<div class="con_tit">
+											<h4>타이틀</h4>
+											<p>부가설명<span>부가설명</span></p>
+											<div class="side"><a href="#none" class="link_t2">버튼명</a></div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">툴팁</th>
+									<td>
+										<div class="con_tit">
+											<h4>타이틀 <button type="button" data-label="tooltip" class="btn_txt1 ic2 btn_layer" aria-controls="tooltip01">타이틀 안내</button></h4>
+											<div id="tooltip01" class="tooltip" role="tooltip">
+												<button type="button" class="close">툴팁닫기</button>
+												<p>툴팁내용</p>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<h3 class="guide-tit2">서브(2Depth) : .con_tit2 <span class="sub">F:13px</span></h3>
+				<div class="guide-cont">
+					<div class="guide-table1">
+						<table>
+							<caption>타이틀</caption>
+							<colgroup>
+								<col style="width:30%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">구분</th>
+									<th scope="col">내용</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">타이틀형</th>
+									<td><h4 class="con_tit2">타이틀</h4></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!-- // -->
+			</section>
+
+			<!-- ### 메세지 ### -->
+			<section class="guide-section">
+				<h2 class="guide-tit1">메세지</h2>
+
+				<!-- 결과메세지 -->
+				<h3 class="guide-tit2">데이터 없음 : .mes_result1</h3>
+				<div class="guide-cont">
+					<div class="guide-table1">
+						<table>
+							<caption>데이터 없음</caption>
+							<colgroup>
+								<col style="width:30%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">구분</th>
+									<th scope="col">내용</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">이벤트/쿠폰/상품</th>
+									<td>
+										<div class="mes_result1">
+											<p>메세지 노출 영역</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">NH포인트<br>[+ .t1]</th>
+									<td>
+										<div class="mes_result1 t1">
+											<p>메세지 노출 영역</p>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- 완료메세지 -->
+				<h3 class="guide-tit2">완료 메세지 : .mes_result2</h3>
+				<div class="guide-cont">
+					<div class="guide-table1">
+						<table>
+							<caption>완료메세지</caption>
+							<colgroup>
+								<col style="width:30%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">구분</th>
+									<th scope="col">내용</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">유형1<br>[+ .ic1]</th>
+									<td>
+										<div class="mes_result2 ic1">
+											<p>
+												<span class="data_num1">
+													<strong>000,000</strong>
+													<span>P</span>
+												</span>
+												<span>전환완료</span>
+											</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">유형2<br>[+ .ic2]</th>
+									<td>
+										<div class="mes_result2 ic2">
+											<p>
+												<span class="data_num1">
+													<strong>000,000</strong>
+													<span>P</span>
+												</span>
+												<span>캐시백처리완료</span>
+											</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">유형3<br>[+ .ic3]</th>
+									<td>
+										<div class="mes_result2 ic3">
+											<p>
+												<strong>강조문구</strong>
+												<span>기부완료</span>
+											</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">유형4<br>[+ .ic4]</th>
+									<td>
+										<div class="mes_result2 ic4">
+											<p>
+												<strong>회원가입완료</strong>
+											</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">유형5<br>[+ .ic5]</th>
+									<td>
+										<div class="mes_result2 ic5">
+											<p>
+												<strong>일치회원없음</strong>
+											</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">유형6<br>[+ .ic6]</th>
+									<td>
+										<div class="mes_result2 ic6">
+											<p>
+												<strong>비밀번호설정완료</strong>
+											</p>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- 기타유형 -->
+				<h3 class="guide-tit2">기타유형 : .mes_t1</h3>
+				<div class="guide-cont">
+					<p class="mes_t1">남은 인증 유효시간<strong>01:46</strong></p>
+				</div>
+				<!-- // -->
+			</section>
+
+			<!-- ### 텍스트 ### -->
+			<section class="guide-section">
+				<h2 class="guide-tit1">텍스트</h2>
+
+				<!-- 단순 문구 유형 -->
+				<h3 class="guide-tit2">단순 문구 유형 </h3>
+				<div class="guide-cont">
+					<div class="guide-table1">
+						<table>
+							<caption>단순 문구 유형</caption>
+							<colgroup>
+								<col style="width:30%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">구분</th>
+									<th scope="col">내용</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">유형1(F:14px)<br>[.txt_t1]</th>
+									<td>
+										<p class="txt_t1">메세지 노출 영역</p>
+										<hr class="guide-line1">
+										<div class="txt_t1">
+											<dl>
+												<dt>항목명</dt>
+												<dd>내용</dd>
+											</dl>
+											<dl>
+												<dt>항목명</dt>
+												<dd>내용</dd>
+											</dl>
+										</div>
+										<hr class="guide-line1">
+										<div class="txt_t1">
+											<p>메세지 노출 영역</p>
+											<dl>
+												<dt>항목명</dt>
+												<dd>내용</dd>
+											</dl>
+											<dl>
+												<dt>항목명</dt>
+												<dd>내용</dd>
+											</dl>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">유형2(F:13px)<br>[.txt_t2]</th>
+									<td>
+										<p class="txt_t2">메세지 노출 영역</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+
+				<!-- 블릿 유형 -->
+				<h3 class="guide-tit2">블릿 유형</h3>
+				<div class="guide-cont">
+					<div class="guide-table1">
+						<table>
+							<caption>블릿 유형</caption>
+							<colgroup>
+								<col style="width:30%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">구분</th>
+									<th scope="col">내용</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">도트유형<br>[.txt_bul1]</th>
+									<td>
+										<p class="txt_bul1">메세지 노출 영역</p>
+										<ul class="txt_bul1">
+											<li>메세지 노출 영역</li>
+											<li>메세지 노출 영역</li>
+										</ul>
+										<dl class="txt_bul1">
+											<dt>항목명</dt>
+											<dd>메세지 노출 영역</dd>
+											<dd>메세지 노출 영역</dd>
+											<dd>메세지 노출 영역</dd>
+										</dl>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">기호유형<br>[.txt_mark1]</th>
+									<td>
+										<p class="txt_mark1">내용이 노출됩니다.</p>
+										<hr class="guide-line1">
+										<ul class="txt_mark1">
+											<li>내용이 노출됩니다.</li>
+											<li>내용이 노출됩니다.</li>
+											<li>내용이 노출됩니다.</li>
+										</ul>
+										<hr class="guide-line1">
+										<dl class="txt_mark1">
+											<dt>제목</dt>
+											<dd>내용이 노출됩니다.</dd>
+											<dd>내용이 노출됩니다.</dd>
+											<dd>내용이 노출됩니다.</dd>
+										</dl>
+										<hr class="guide-line1">
+										<p class="txt_mark1 t1">내용이 노출됩니다.</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</section>
+			<!-- ### // ### -->
+		</div>
+		<!-- ####################################################### -->
+	</div>
+</body>
+</html>

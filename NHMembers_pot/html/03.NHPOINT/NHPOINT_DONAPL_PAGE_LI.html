@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<title>상세 | 기부하기 | NH포인트</title>
+</head>
+<body>
+	<a href="#contents" class="skipnav">컨텐츠바로가기</a>
+
+	<!-- wrap -->
+	<div id="wrap">
+		<div id="sub_header">
+			<h1>NHmembers pot</h1>
+			<h2 class="hidden">NH포인트</h2>
+			<h3>기부하기</h3>
+			<a href="#none" class="btn_back">뒤로가기</a>
+		</div>
+
+		<!-- ####################################################### -->
+		<!-- [CONTENTS] NH포인트 : 기부하기 -->
+		<!-- ####################################################### -->
+		<div id="contents">
+			<div id="sub_content">
+				<!-- ------------------------------- -->
+				<!-- [입력영역] -->
+				<!-- ------------------------------- -->
+				<div class="form_wrap">
+					<fieldset>
+						<legend>기부포인트 입력(모든항목 필수입력)</legend>
+
+						<!-- 항목하나 -->
+						<dl class="form">
+							<dt>기부처</dt>
+							<dd><button type="button" class="selectbox  btn_layer" title="기부처 선택">도농상생국민운동본부</button></dd> <!-- [D] 기부처 선택 : 00.COMM/COMM_POPUP_LAYER01.html 참고 -->
+						</dl>
+
+						<!-- 항목하나 -->
+						<dl class="form2">
+							<dt>기부방법</dt>
+							<dd>
+								<div class="inp_btn2">
+									<label>
+										<input type="radio" name="formRadio" aria-label="기부방법(일시)" aria-controls="uiSubTabCon1">
+										<span aria-hidden="true">일시</span>
+									</label>
+									<label>
+										<input type="radio" name="formRadio" aria-label="기부방법(정기(매월))" aria-controls="uiSubTabCon2" checked>
+										<span aria-hidden="true">정기(매월)</span>
+									</label>
+								</div>
+							</dd>
+						</dl>
+
+						<!-- 항목하나 -->
+						<dl class="form"><!-- [D] 오류 발생 시 : data-mode="invalid" 추가 : 하단 스크립트 샘플 확인 -->
+							<dt>기부포인트</dt>
+
+							<!-- [CASE] 기부방법(일시) -->
+							<dd id="uiSubTabCon1" class="none">
+								<div class="btn_set2 area" data-order="2">
+									<button type="button" title="기부포인트">전체 기부</button>
+									<button type="button" title="기부포인트">1,000P</button>
+									<button type="button" title="기부포인트">10,000P</button>
+									<button type="button" title="기부포인트">50,000P</button>
+								</div>
+								<div class="inp_txt">
+									<input type="tel" aria-label="기부포인트(직접입력)" placeholder="기부할 포인트를 입력해 주세요"> <!-- [D] 오류 발생 시 : aria-invalid="true" 추가 -->
+									<span class="util">P</span>
+								</div>
+							</dd>
+
+							<!-- [CASE] 기부방법(정기(매월)) -->
+							<dd id="uiSubTabCon2">
+								<div class="mes" aria-live="polite">매월 기부할 포인트 금액을 선택해 주세요</div> <!-- [D] 포인트 선택 시 텍스트 변경 : 매월 <em>3,000P</em>를 정기적으로 기부합니다. -->
+								<div class="inp_btn">
+									<label>
+										<input type="radio" name="formRadio2" value="1,000" aria-label="정기기부포인트(1,000P)">  <!-- [D] 오류 발생 시 : aria-invalid="true" 추가 -->
+										<span aria-hidden="true">1,000P</span>
+									</label>
+									<label>
+										<input type="radio" name="formRadio2" value="2,000" aria-label="정기기부포인트(2,000P)">
+										<span aria-hidden="true">2,000P</span>
+									</label>
+									<label>
+										<input type="radio" name="formRadio2" value="3,000" aria-label="정기기부포인트(3,000P)">
+										<span aria-hidden="true">3,000P</span>
+									</label>
+									<label>
+										<input type="radio" name="formRadio2" value="5,000" aria-label="정기기부포인트(5,000P)">
+										<span aria-hidden="true">5,000P</span>
+									</label>
+								</div>
+
+								<!-- [M 2023-06-14] 월 정기기부일 경우 비활성화 샘플 -->
+								<div class="mes">이미 정기기부 중입니다.<br>증액 신청이나 정기기부 취소를 원하신다면 기부하기 목록에서 취소 후 이용해 주세요.</div> <!-- [M 2023-06-19] 월 정기기부일 경우 안내문구 -->
+								<div class="inp_btn">
+									<label>
+										<input type="radio" name="formRadio2" value="1,000" aria-label="정기기부포인트(1,000P)" disabled>  <!-- [D] 오류 발생 시 : aria-invalid="true" 추가 -->
+										<span aria-hidden="true">1,000P</span>
+									</label>
+									<label>
+										<input type="radio" name="formRadio2" value="2,000" aria-label="정기기부포인트(2,000P)" disabled>
+										<span aria-hidden="true">2,000P</span>
+									</label>
+									<label>
+										<input type="radio" name="formRadio2" value="3,000" aria-label="정기기부포인트(3,000P)" disabled>
+										<span aria-hidden="true">3,000P</span>
+									</label>
+									<label>
+										<input type="radio" name="formRadio2" value="5,000" aria-label="정기기부포인트(5,000P)" disabled>
+										<span aria-hidden="true">5,000P</span>
+									</label>
+								</div>
+								<!-- // [M 2023-06-14] 월 정기기부일 경우 비활성화 샘플 -->
+							</dd>
+
+							<!-- 나의포인트 -->
+							<dd class="area_info3">
+								<dl>
+									<dt>나의 보유포인트</dt>
+									<dd class="data_num1"><strong>100</strong><span>P</span></dd>
+								</dl>
+							</dd>
+
+							<!-- 08.16 삭제 -->
+							<!-- <div class="txt_mark1 mg10">NH멤버스는 개인정보보호법(제24조의 2)에 의거, 주민등록 번호 수집이 제한되므로 연말정산용 기부영수증 발급이 불가능합니다.</div> -->
+							<!--// 08.16 삭제 -->
+
+							<!-- 오류메세지 -->
+							<dd class="validation" aria-live="assertive" role="alert">기부할 가능 포인트가 부족합니다.</dd>
+						</dl>
+						<!-- // -->
+					</fieldset>
+				</div>
+
+				<!-- 08.16 삭제 -->
+				<!-- <div class="wrap_btn3"><button type="button" class="btn_txt1 ic1 btn_layer">유의사항</button></div> -->
+
+				<!-- 08.16 추가 -->
+				<div class="info_area">
+					<article class="con_t3">
+						<!-- ### 기부처 정보 ### -->
+						<header>
+							<!-- <span class="img"><img src="../../resources/images/upload/@img_bi01.png" alt=""></span> -->
+							<h1 id="uiNOTICECCON01TIT">도농상생국민운동본부</h1>
+							<p>농촌과 도시의 도농교류 활성화를 통해 농업인과 도시민의 삶의 질을 함께 높여가는 범국민 도농상생운동 단체입니다.</p>
+						</header>
+
+						<!-- ### 기부처 정보 ### -->
+						<div class="box">
+							<!-- [ARAM 등록 영역] -->
+							<h4 class="h4_titlety mt25">기부하기 유의사항</h4>
+							<div class="con_area01">
+								<ul class="dot_list">
+									<li><strong>NH멤버스는 개인정보보호법(제24조의 2)에 의거, 주민등록 번호 수집이 제한되므로 연말정산용 기부영수증 발급이 불가능합니다.</strong></li>
+									<li>최소 기부 가능 포인트 단위는 1포인트이며 기부한도 제한은 없습니다.</li>
+									<li>기부된 포인트는 매월 또는 매년 해당 기부처로 기부됩니다.</li>
+									<li>기부취소는 기부한 당일에만 가능하며, 그 이후에는 취소가 불가능합니다.</li>
+									<li>월 정기기부는 매월 20일에 기부되며, 잔여포인트가 설정된 기부 포인트 기준 미만인 경우 잔여포인트만 기부됩니다.</li>
+									<li>월 정기기부 취소는 해당 기부처 목록에서 가능합니다.</li>
+								</ul>
+							</div>
+							<!-- // -->
+						</div>
+						<!-- ### // ### -->
+					</article>
+				</div>
+				<!--// 08.16 추가 -->
+				<!-- ------------------------------- -->
+			</div>
+
+            <div class="wrap_action">
+                <button type="button" class="btn_action" disabled>기부신청</button> <!-- 08.16 수정 --> <!-- [M 2023-06-14] 월 정기기부일 경우 : 정기(매월) 선택 시 비활성화(disabled) -->
+            </div>
+		</div>
+		<!-- ####################################################### -->
+	</div>
+	<!--// wrap -->
+
+	<script>
+		//샘플 : 기부방법 선택
+		$('[name="formRadio"]').on('change',function(){
+			var _cont = null;
+			if($(this).prop('checked')) _cont = "#" + $(this).attr('aria-controls');
+			$('[id^="uiSubTabCon"]').addClass('none');
+			$(_cont).removeClass('none');
+			if($('[aria-controls="uiSubTabCon1"]').prop('checked')) $('.btn_action').removeAttr('disabled');
+			else $('.btn_action').attr('disabled',true);
+		});
+
+		//샘플 : 기부포인트 선택 시 문구 변경
+		$('[name="formRadio2"]').on('change',function(){
+			var _value = null;
+			if($(this).prop('checked')) _value = "매월 <em>" + $(this).val() + "P</em>를 정기적으로 기부합니다.";
+			$(this).parents('.inp_btn').prev().html(_value);
+		});
+
+		//샘플 : [확인] 클릭 시 오류 발생 경우 텍스트 노출
+		$('.btn_action').on('click',function(){
+			var _myPoint = $('.area_info3 .data_num1 > strong').text();
+			if($('[name="formRadio"]').prop('checked') == true) { // 기부방법 : 일시일 경우
+				if(_myPoint < $('.inp_txt > input').val()) { // 나의 보유포인트 보다 입력한 포인트가 클 경우
+					$('.inp_txt > input').attr('aria-invalid','true')
+					$('.form_wrap .form:last-child').attr('data-mode','invalid');
+				}
+			}
+		});
+	</script>
+</body>
+</html>

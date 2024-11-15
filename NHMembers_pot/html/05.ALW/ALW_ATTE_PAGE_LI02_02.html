@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+    <script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+    <title>출석체크이벤트</title>
+    <style>
+		.layer_pop.type_pit .pop_inner:before {content:'';display:block;position:absolute;top:-7.0rem;left:0;right:0;height:13.5rem;background:url('../../resources/images/img_point.png') no-repeat 50% 0;background-size:auto 100%;}
+	</style>
+</head>
+<body>
+    <a id="skipnavi" href="#contents" class="skipnav">컨텐츠바로가기</a>
+    <!-- wrap -->
+    <div id="wrap">
+    </div>
+    <!--// wrap -->
+
+    <!-- popup -->
+    <div class="layer_pop type_pit" id="uiPOPUPPOINT01" role="dialog" aria-modal="true" aria-label="출석체크 완료">
+		<div class="pop_inner">
+			<div class="pop_con">
+				<p class="data_num1"><strong>2</strong><span>P</span></p>
+				<dl>
+					<dt>출석체크 완료</dt>
+					<dd>오늘도 출첵한 당신,<br>참 잘했어요~!<br>2포인트를 적립해 드렸어요!</dd>
+				</dl>
+
+                <div class="event_link">
+                    <a href="#none" class="comp" title="출석체크 이벤트 상세페이지 이동"> <!-- 이벤트 참여한 경우 class="comp" -->
+                        출석체크
+                        <span>완료</span> <!-- 이벤트 참여한 경우 텍스트 '완료'로 변경 -->
+                    </a>
+                    <a href="#none" class="" title="더드림 퀴즈 상세페이지 이동"> <!-- 이벤트 참여한 경우 class="comp" -->
+                        더드림 퀴즈
+                        <span>참여하기</span> <!-- 이벤트 참여한 경우 텍스트 '완료'로 변경 -->
+                    </a>
+                </div>
+
+                <div class="banner_box">
+                    <a href="#none" title="농협상호금융 새창열림" target="_blank"><img src="../../resources/images/upload/@Banner03.png" alt=""></a><!-- 이벤트 관계사명 title명으로 적용. -->
+                </div>
+			</div>
+
+			<div class="wrap_btn1">
+				<button type="button" class="btn_com1 btn_close">확인</button> <!-- class="btn_close" 사용시 레이어 닫힘  -->
+			</div>
+		</div>
+	</div>
+    <script>
+		$(function(){
+			openlayer('uiPOPUPPOINT01');
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<title>공통팝업 : 포인트 전환</title>
+	<style>
+		.layer_pop.type_pit .pop_inner:before {content:'';display:block;position:absolute;top:-7.0rem;left:0;right:0;height:13.5rem;background:url('../../resources/images/img_point.png') no-repeat 50% 0;background-size:auto 100%;}
+	</style>
+</head>
+<body>
+	<!-- [바닥페이지] -->
+	<div id="wrap">
+		<div class="wrap_action">
+			<button type="button" class="btn_action btn_layer" aria-controls="uiPOPUPPOINT01">전환하기</button> <!-- [D] 레이어팝업 호출 버튼 샘플 -->
+		</div>
+	</div>
+	<!--// -->
+
+	<!-- ####################################################### -->
+	<!-- [POPUP] 공통팝업 : 포인트 전환 -->
+	<!-- ####################################################### -->
+	<div class="layer_pop type_pit" id="uiPOPUPPOINT01" role="dialog" aria-modal="true" aria-label="포인트 전환 완료">
+		<div class="pop_inner">
+			<!-- ------------------------------- -->
+			<!-- [POPUP CONTENTS] -->
+			<!-- ------------------------------- -->
+			<div class="pop_con">
+				<p class="data_num1"><strong>000,000</strong><span>P</span></p>
+				<dl>
+					<dt>포인트 전환 완료!</dt>
+					<dd>포인트 전환 내역은 포인트 적립/사용<br>내역을 통해 확인 할 수 있습니다.</dd>
+				</dl>
+			</div>
+
+			<!-- ------------------------------- -->
+			<!-- [POPUP FOOTER BTN] -->
+			<!-- ------------------------------- -->
+			<div class="wrap_btn1">
+				<button type="button" class="btn_com1 ty01 btn_close">취소</button> <!-- class="btn_close" 사용시 레이어 닫힘  --> <!-- 05.18 문구 수정 -->
+				<button type="button" class="btn_com1">내역 보기</button> <!-- [M 2023-05-19] 띄어쓰기 변경 -->
+			</div>
+			<!-- ------------------------------- -->
+		</div>
+	</div>
+	<!-- ####################################################### -->
+
+	<script>
+		$(function(){
+			openlayer('uiPOPUPPOINT01'); //레이어팝업 호출 샘플
+
+			$('[aria-controls]').on('click',function(){
+				openlayer($(this).attr('aria-controls'));
+			});
+		})
+	</script>
+</body>
+</html>

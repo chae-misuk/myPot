@@ -1,0 +1,144 @@
+@charset "UTF-8";
+@import url(common.css);
+
+:root {
+	--path-close : 34.55% 29.01%, 34.27% 28.78%, 34.00% 28.57%, 33.65% 28.36%, 33.26% 28.19%, 32.86% 28.06%, 32.47% 27.97%, 32.07% 27.93%, 31.66% 27.92%, 31.29% 27.96%, 30.93% 28.02%, 30.61% 28.11%, 30.29% 28.23%, 29.96% 28.39%, 29.68% 28.57%, 29.37% 28.78%, 29.05% 29.07%, 28.84% 29.31%, 28.65% 29.55%, 28.51% 29.78%, 28.36% 30.02%, 28.23% 30.31%, 28.11% 30.60%, 28.02% 30.93%, 27.96% 31.20%, 27.92% 31.59%, 27.91% 31.96%, 27.95% 32.37%, 28.01% 32.64%, 28.09% 32.97%, 28.19% 33.29%, 28.35% 33.63%, 28.55% 33.97%, 28.80% 34.31%, 29.05% 34.59%, 44.46% 50.01%, 29.23% 65.24%, 28.93% 65.54%, 28.67% 65.85%, 28.43% 66.22%, 28.26% 66.56%, 28.15% 66.87%, 28.04% 67.18%, 27.98% 67.48%, 27.93% 67.75%, 27.92% 68.18%, 27.93% 68.50%, 27.98% 68.90%, 28.05% 69.17%, 28.17% 69.56%, 28.35% 69.98%, 28.62% 70.41%, 28.85% 70.71%, 29.05% 70.92%, 29.31% 71.17%, 29.64% 71.42%, 29.98% 71.62%, 30.28% 71.77%, 30.64% 71.90%, 30.95% 71.99%, 31.31% 72.05%, 31.66% 72.08%, 32.06% 72.08%, 32.46% 72.03%, 32.85% 71.95%, 33.25% 71.83%, 33.62% 71.66%, 33.89% 71.51%, 34.20% 71.29%, 34.57% 70.97%, 50.00% 55.56%, 65.57% 71.11%, 66.08% 71.49%, 66.39% 71.65%, 66.62% 71.76%, 67.00% 71.91%, 67.36% 72.00%, 67.76% 72.06%, 68.19% 72.09%, 68.61% 72.06%, 68.94% 72.01%, 69.26% 71.94%, 69.58% 71.83%, 69.90% 71.69%, 70.25% 71.49%, 70.54% 71.29%, 70.79% 71.08%, 70.98% 70.89%, 71.19% 70.67%, 71.48% 70.27%, 71.65% 69.95%, 71.78% 69.70%, 71.96% 69.16%, 72.04% 68.77%, 72.08% 68.42%, 72.09% 68.12%, 72.07% 67.75%, 72.02% 67.45%, 71.95% 67.14%, 71.84% 66.81%, 71.73% 66.54%, 71.63% 66.35%, 71.51% 66.14%, 71.35% 65.89%, 71.26% 65.78%, 71.17% 65.66%, 71.01% 65.49%, 70.89% 65.35%, 70.78% 65.25%, 55.53% 50.00%, 70.80% 34.74%, 71.00% 34.54%, 71.30% 34.19%, 71.53% 33.85%, 71.68% 33.57%, 71.91% 33.02%, 72.00% 32.63%, 72.07% 32.11%, 72.08% 31.71%, 72.05% 31.33%, 72.02% 31.14%, 71.93% 30.75%, 71.79% 30.34%, 71.65% 30.02%, 71.51% 29.78%, 71.31% 29.49%, 71.03% 29.16%, 70.79% 28.92%, 70.40% 28.62%, 70.11% 28.43%, 69.70% 28.22%, 69.40% 28.11%, 68.99% 28.00%, 68.58% 27.94%, 68.19% 27.91%, 67.93% 27.92%, 67.60% 27.95%, 67.19% 28.04%, 66.77% 28.17%, 66.35% 28.37%, 66.05% 28.55%, 65.83% 28.70%, 65.58% 28.91%, 50.00% 44.47%, 34.55% 29.01%;
+}
+
+body {-webkit-user-select:auto;user-select:auto;}
+code {padding:0.5rem;font-size:1.1rem;background-color:#e1f8f3;}
+
+/* -----------------------------------------------
+	[GUIDE] 레이아웃
+------------------------------------------------- */
+.guide-wrap .guide-header {display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:4;padding:0.2rem 2.0rem 1.2rem;background:#fff;border-bottom:1px solid #ebebeb;}
+.guide-wrap .guide-header > h1 {display:flex;flex-wrap:wrap;align-items:center;margin:1.0rem 0;}
+.guide-wrap .guide-header > h1 > span {overflow:hidden;display:block;padding-top:3.8rem;margin-right:0.8rem;width:16.0rem;height:0;background:url('../images/logo.png') no-repeat 0 50%;background-size:100% auto;color:transparent;}
+.guide-wrap .guide-header > h1 > strong {font-size:2.0rem;color:#06b5b9;font-weight:500;}
+.guide-wrap .guide-header > nav ul {display:flex;flex-wrap:wrap;}
+.guide-wrap .guide-header > nav ul > li {margin-right:0.4rem;}
+.guide-wrap .guide-header > nav ul > li > a {display:block;margin:0.4rem 0;padding:0 1.5rem;background-color:#f1f1f1;border-radius:2.0rem;line-height:2.8rem;font-size:1.3rem;}
+.guide-wrap .guide-header > nav ul > li > a[aria-current="page"] {background-color:#111;color:#fff;}
+
+.guide-container {padding-bottom:2.0rem;}
+.guide-section + .guide-section {margin-top:4.0rem;}
+.guide-cont {margin:2.0rem;}
+
+/* -----------------------------------------------
+	[GUIDE] 팝업
+------------------------------------------------- */
+.pop_modal1 {visibility:hidden;position:fixed;top:0;left:0;right:0;bottom:0;z-index:-1;padding:2.0rem;background-color:rgba(0, 0, 0, 0);transition:background-color 0.4s;}
+.pop_modal1 > article {opacity:0;overflow-x:hidden;overflow-y:auto;position:absolute;top:2.0rem;left:2.0rem;right:2.0rem;bottom:2.0rem;margin:auto;height:fit-content;max-width:48.0rem;max-height:calc(100% - 4.0rem);background:#fff;border-radius:1.0rem;transform:translate(0, 50%);transition:transform 0.4s cubic-bezier(0.39, 0.58, 0.57, 1), opacity 0.4s cubic-bezier(0.39, 0.58, 0.57, 1);}
+.pop_modal1 > article > header {position:sticky;top:0;padding:2.0rem;display:flex;justify-content:space-between;align-items:center;background:#fff;}
+.pop_modal1 > article > header > h1 {font-size:1.7rem;line-height:2.8rem;}
+.pop_modal1 > article > header > [data-btn="close"] {overflow:hidden;position:relative;width:2.4rem;height:2.4rem;background:#f7f7f7;border-radius:50%;color:transparent;font-size:1px;}
+.pop_modal1 > article > header > [data-btn="close"]:before {content:'';display:block;position:absolute;top:50%;left:50%;margin:-1.0rem;width:2.0rem;height:2.0rem;background-color:#666;clip-path:polygon(var(--path-close));}
+.pop_modal1 > article > .pop_cont {padding:0 2.0rem 2.0rem;}
+.pop_modal1.open {visibility:visible;background-color:rgba(0, 0, 0, 0.8);z-index:1000;}
+.pop_modal1.open > article {opacity:1;transform:translate(0, 0%);}
+.pop_modal1.prev,
+.pop_modal1.close {visibility:visible;background-color:rgba(0, 0, 0, 0);z-index:1000;}
+.pop_modal1.prev > article,
+.pop_modal1.close > article {opacity:0;transform:translate(0, 50%);}
+
+/* -----------------------------------------------
+	[GUIDE] 컨텐츠
+------------------------------------------------- */
+/* 타이틀 */
+.guide-tit1, .guide-tit2, .guide-tit3 {display:flex;justify-content:space-between;padding:0.6rem 2.0rem;background-color:#666;color:#fff;}
+.guide-tit1 h1, .guide-tit1 h2, .guide-tit1 h3, .guide-tit1 h4, .guide-tit1 h5, .guide-tit1 h6,
+.guide-tit1,
+.guide-tit2 h1, .guide-tit2 h2, .guide-tit2 h3, .guide-tit2 h4, .guide-tit2 h5, .guide-tit2 h6,
+.guide-tit2,
+.guide-tit3 h1, .guide-tit3 h2, .guide-tit3 h3, .guide-tit3 h4, .guide-tit3 h5, .guide-tit3 h6,
+.guide-tit3 {font-size:1.3rem;font-weight:500;}
+.guide-tit2 {background-color:#ededed;color:#111}
+.guide-tit3 {background-color:#fafafa;border-top:1px solid #ebebeb;border-bottom:1px solid #ebebeb;color:#06b5b9}
+.guide-tit4 {margin-bottom:1.2rem;font-size:1.4rem;}
+.guide-tit4:not(:first-child) {margin-top:2.0rem;}
+
+/* 테이블 */
+.guide-table1 {overflow-x:auto;border:1px solid #666;}
+.guide-table1 table {width:100%;}
+.guide-table1 th, .guide-table1 td {border:1px solid #ebebeb;padding:0.5rem 0.6rem;white-space:nowrap;font-size:1.1rem;}
+.guide-table1 th {background-color:#f7f7f7;font-weight:400;}
+.guide-table1 tbody th {background-color:#fefefe;}
+.guide-table1 .wait > td {background-color:#fcf6d7;}
+.guide-table1 .ing > td {background-color:#e1f8f3;}
+.guide-table1 td.pub, .guide-table1 td.end, .guide-table1 td.modify {text-align:center;}
+.guide-table1 tr:not([class]) > td > a:not([class*="btn_"]):not([class*="link_"]) {text-decoration:underline;color:#06b5b9}
+.guide-table1 tbody + tbody {border-top:0.2rem solid #111}
+.guide-table1 .guide-table2 {display:none;}
+.guide-table1[data-sort] td:first-child {width:4.0rem;text-align:center;}
+.guide-tit2 + .guide-table1 {border-top:1px solid #999}
+.guide-table2 table {width:100%;}
+.guide-table2 th, .guide-table2 td {border:1px solid #ebebeb;padding:0.5rem 0.6rem;white-space:normal;font-size:1.1rem;line-height:2.0rem;}
+.guide-table2 th {background-color:#f7f7f7;font-weight:400;}
+.guide-table2 td:last-child {width:8.0rem;text-align:center;}
+
+/* 진행상태 */
+.guide-state {display:flex;overflow-x:auto;padding:1.2rem 2.0rem;}
+.guide-state > dl {display:flex;align-items:center;font-size:1.2rem;white-space:nowrap;}
+.guide-state > dl + dl {margin-left:1.2rem;}
+.guide-state > dl:before {content:'';display:block;margin-right:0.4rem;width:0.5rem;height:0.5rem;border-radius:50%;background-color:#ccc;}
+.guide-state > dl > dd:before {content:':';display:inline-block;margin:0 0.2rem;}
+.guide-state > [data-state="wait"]:before {background-color:#f7d62a;}
+.guide-state > [data-state="ing"]:before {background-color:#29bd9d;}
+.guide-state > [data-state="end"] {color:#06b5b9;text-decoration:underline;text-underline-offset:2px;}
+.guide-state > [data-state="end"] strong {margin-left:0.4rem;color:#ff456b}
+
+/* 라인 */
+.guide-line1 {margin:0.5rem 0;height:0;border:0;border-top:1px dashed #ebebeb;}
+.guide-line2 {margin:2.0rem 0;height:0;border:0;}
+
+/* 텍스트 */
+.guide-txt {margin:2.0rem;background:var(--bg1);padding:1.5rem;border:1px dashed var(--line1);border-radius:0.5rem;}
+.guide-txt:not(ul, dl), .guide-txt > li, .guide-txt > dd {position:relative;padding-left:1.0rem;font-size:1.2rem;line-height:2.0rem;color:var(--color1);}
+.guide-txt:not(ul, dl):before, .guide-txt > li:before, .txtguide-txt_bul1 > dd:before {content:'';display:block;position:absolute;top:0.9rem;left:0;width:0.3rem;height:0.3rem;border-radius:50%;background-color:var(--color1);}
+.guide-txt:not(ul, dl) {padding-left:2.4rem;}
+.guide-txt:not(ul, dl):before {top:2.4rem;left:1.5rem;}
+.guide-txt > li + li, .guide-txt > dd + dd {margin-top:0.5rem;}
+.guide-txt > dt {margin-bottom:0.5rem;font-weight:700;}
+.guide-txt code {background-color:#CE9178;color:#fff;}
+.guide-cont .guide-txt {margin-left:0;margin-right:0;}
+.guide-var:before {content:'';display:inline-block;margin-right:0.4rem;width:1.0rem;height:1.0rem;background-color:var(--el);}
+.guide-font {font:var(--el-font);}
+
+/* 아이콘 */
+.guide-icon {overflow:hidden;display:block;position:relative;margin:0 auto;width:2.4rem;height:2.4rem;color:transparent;}
+.guide-icon:before {content:'';display:block;position:absolute;top:0;right:0;bottom:0;left:0;margin:auto;width:2.4rem;height:2.4rem;background-color:var(--color1);clip-path:polygon(var(--el-path));}
+.guide-icon.on:before {transform:rotate(-180deg);}
+.guide-icon.t1:before {background-color:var(--color3);width:2.0rem;height:2.0rem;}
+.guide-icon.t1:after {content:'';display:block;position:absolute;top:0;left:0;z-index:-1;width:2.4rem;height:2.4rem;background-color:#f7f7f7;border-radius:50%;}
+
+/* -----------------------------------------------
+	[PLUGIN] Highlight
+------------------------------------------------- */
+pre code.hljs{display:block;overflow-x:auto;padding:1em;font-family:"Dotum";}
+code.hljs{padding:3px 5px}
+.hljs{margin:0;background-color:#1F1F1F;color:#CCCCCC;font-size:1.2rem;}
+.hljs-comment{color:#697070}
+.hljs-punctuation,.hljs-tag{color:#444a}
+.hljs-deletion, .hljs-quote,.hljs-selector-class,.hljs-selector-id,.hljs-string,.hljs-template-tag,.hljs-type{color:#800}
+.hljs-section,.hljs-title{color:#800;font-weight:700}
+.hljs-link,.hljs-operator,.hljs-regexp,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-symbol,.hljs-template-variable,.hljs-variable{color:#ab5656}
+.hljs-literal{color:#695}
+.hljs-addition,.hljs-bullet,.hljs-code{color:#397300}
+.hljs-meta{color:#1f7199}
+.hljs-meta .hljs-string{color:#38a}
+.hljs-emphasis{font-style:italic}
+.hljs-strong{font-weight:700}
+.hljs-ln-n {padding-right:0.8rem;margin-right:0.8rem;border-right:1px solid #e1e1e1;text-align:center;color:#c5c8c6;}
+.hljs-tag .hljs-name {color:#509FE8}
+.hljs-tag .hljs-attr {color:#9CDCFE}
+.hljs-title, .hljs-name {color:#e99b04;}
+.hljs-selector-tag, .hljs-bullet, .hljs-tag {color:#808080;}
+.hljs-string, .hljs-doctag, .hljs-addition, .hljs-regexp, .hljs-selector-attr, .hljs-selector-pseudo {color:#CE9178;}
+.hljs-comment, .hljs-meta, .hljs-meta .hljs-keyword {color:#5E9955;}
+.hljs-keyword {color:#DA70CA}
+.hljs-attribute {color:#9CDCFE;}
+.hljs-number {color:#a5d98a;}
+.hljs-built_in {color:#DCDCAA;}
+.language-css .hljs-selector-tag {color:#D7BA7D;}
+
+pre + .guide-area1 {margin-top:4.0rem;}

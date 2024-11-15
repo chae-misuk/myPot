@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch_lottie.css"> <!-- 인터렉션 사용. 08.10 신규추가 -->
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<script type="text/javascript" src="../../resources/js/lottie.js"></script> <!-- 인터렉션 사용. 08.10 신규추가 -->
+	<title>나의포인트 | NH포인트</title>
+</head>
+<body>
+	<a href="#contents" class="skipnav">컨텐츠바로가기</a>
+	<div id="wrap">
+		<header id="header">
+			<div class="top">
+				<a href="#none" class="ico" title="참여사"><img src="../../resources/images/logo/ci_logo13.png" alt="NHpay"></a>
+				<h1><a href="#none" class="logo" title="홈으로">NHmembers pot</a></h1>
+			</div>
+			<div class="gnb">
+				<a href="#none">혜택</a>
+				<a href="#none">추천</a>
+				<button type="button" aria-label="전체메뉴 열기" id="btn_menu" class="btn_menu" aria-haspopup="true">메뉴</button>
+			</div>
+		</header>
+
+		<!-- ####################################################### -->
+		<!-- [CONTENTS] NH포인트 | 나의포인트 -->
+		<!-- ####################################################### -->
+		<div id="contents">
+			<div id="content">
+				<h2 class="hidden">NH포인트</h2>
+				<h3 class="hidden">나의포인트</h3>
+
+				<!-- ------------------------------- -->
+				<!-- [SECTION] 보유 포인트 -->
+				<!-- ------------------------------- -->
+				<div class="info_summary3">
+					<dl>
+						<dt>보유 포인트</dt>
+						<dd class="data_num1"><strong data-mode="count">123,456,789</strong><span>P</span></dd> <!-- 06.29 수정. data-mode="count" 추가 -->
+					</dl>
+					<div class="wrap_btn1">
+						<a href="#none" class="btn_com1">기부</a>
+						<a href="#none" class="btn_com1 ty03">전환</a>
+						<!-- <a href="#none" class="btn_com1 ty02">캐시백</a> -->
+					</div>
+				</div>
+
+				<!-- ------------------------------- -->
+				<!-- [SECTION] 보유 포인트 적립률 -->
+				<!-- ------------------------------- -->
+				<!-- [CASE] 적립률 : 0 -->
+				<div class="con_t2 ic1">
+					<p>아직 적립된 포인트가 없어요.<br>멤버스팟 서비스를 이용하고 포인트를 모아보세요!</p>
+				</div>
+
+				<!-- [CASE] 적립률 : 연령대 기준 같은 경우 -->
+				<div class="con_t2 ic2">
+					<p>내 또래들과 포인트 적립률이 같아요!</p>
+				</div>
+
+				<!-- [CASE] 적립률 : 연령대 기준 낮은 경우
+					 --el-value:(나의포인트/연령대평균*100)%;
+				-->
+				<div class="con_t2" style="--el-value:50%;">
+					<p>내 또래들보다 포인트가<br><strong>16,000</strong>포인트 적어요!</p> <!-- [M 2023-06-29] 기획 v1.7 : 문구수정 -->
+					<dl>
+						<dt>N월 나의 적립 포인트</dt>
+						<dd class="data_num1"><strong>16,000</strong><span>P</span></dd>
+						<dt>N월 30대 평균</dt>
+						<dd class="data_num1"><strong>32,000</strong><span>P</span></dd>
+					</dl>
+				</div>
+
+				<!-- [CASE] 적립률 : 연령대 기준 큰 경우
+					 --el-value:100%;
+				-->
+				<div class="con_t2" style="--el-value:100%;">
+					<p>내 또래들보다 포인트가<br><strong>16,000</strong>포인트 많아요! </p> <!-- [M 2023-06-29] 기획 v1.7 : 문구수정 -->
+					<dl>
+						<dt>N월 나의 적립 포인트</dt>
+						<dd class="data_num1"><strong>32,000</strong><span>P</span></dd>
+						<dt>N월 30대 평균</dt>
+						<dd class="data_num1"><strong>16,000</strong><span>P</span></dd>
+					</dl>
+                    <div id="motionArea_star"></div>
+				</div>
+
+				<!-- ------------------------------- -->
+				<!-- [SECTION] 포인트 사용 백서 -->
+				<!-- ------------------------------- -->
+				<h3 class="con_tit">포인트 사용 백서</h3>
+				<div class="list_t2">
+					<ul>
+						<li class="ic1"><a href="#none">적립/사용 내역 조회</a></li>
+						<li class="ic2"><a href="#none">적립방법 알아보기</a></li>
+						<li class="ic3"><a href="#none">사용방법 알아보기</a></li>
+						<li class="ic5"><a href="#none">더 많은 서비스 이용하기</a></li>
+					</ul>
+				</div>
+				<!-- ------------------------------- -->
+			</div>
+		</div>
+		<!-- ####################################################### -->
+
+		<a href="#wrap" title="맨위로" id="btnTop"></a>
+
+        <!-- 08.10 로티적용 추가 -->
+		<script>		
+			// 인터렉션 - 별
+			var animData7 = {
+				wrapper: document.getElementById('motionArea_star'),
+				renderer: 'svg',
+				animType: 'html',
+				loop: false,
+				prerender: true,
+				autoplay: false,
+				path: '../../resources/js/lottie/star.json'
+	
+			};
+			var anim_star = bodymovin.loadAnimation(animData7);
+
+            // 하단 내용은 테스트를 위한 개발 소스 샘플 입니다. lottie 표시된 내용만 개발소스 내 해당 위치에 반영 부탁 드립니다.    
+            $(function(){
+                var mPnt = 0;	// 내 적립 포인트
+                var pPnt = 0;	// 피어그룹 적립 포인트
+                
+                mPnt = 5000;		// 내 적립 포인트
+                pPnt = 4339.5;	// 피어그룹 적립 포인트
+
+                console.log("mPnt >> "+mPnt+", pPnt >> "+pPnt);
+                
+                var comVal = 0;
+                var grpMyRvgRt = 0;
+                
+                if(mPnt > pPnt){
+                    comVal = mPnt - pPnt;
+                    grpMyRvgRt = 100;
+
+                    ///////////////// lottie //////////////////////
+                    ///// 개발소스 내 해당 위치에 반영 부탁드립니다./////
+                    setTimeout(function(){
+                        anim_star.play();
+                    }, 2000);
+                    ///// 개발소스 내 해당 위치에 반영 부탁드립니다. end /////
+                    ///////////////// lottie //////////////////////
+                    
+                } else if(mPnt < pPnt){
+                    comVal = pPnt - mPnt;
+                    grpMyRvgRt = (mPnt / pPnt) * 100;
+                }
+                
+            });	
+		</script>
+		<!--// 08.10 로티적용 추가 -->
+	</div>
+	<!-- ####################################################### -->
+</body>
+</html>

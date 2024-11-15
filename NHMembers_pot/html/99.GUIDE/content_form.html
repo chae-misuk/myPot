@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<title>PUBLISHING GUIDE</title>
+	<link rel="stylesheet" href="../../resources/css/ui_publish.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/ui_publish.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+	<div class="guide-wrap" id="wrapper">
+		<!-- ####################################################### -->
+		<!-- ### [HEADER] ### -->
+		<!-- ####################################################### -->
+		<header class="guide-header">
+			<h1><span>NHmembers pot</span><strong>FORM GUIDE</strong></h1>
+			<nav>
+				<ul>
+					<li><a href="content_txt.html">TXT</a></li>
+					<li><a href="content_btn.html">BTN</a></li>
+					<li><a href="content_tbl.html">TABLE</a></li>
+					<li><a href="content_list.html">LIST</a></li>
+					<li><a href="content_form.html" aria-current="page">FORM</a></li>
+					<li><a href="content_info.html">INFO</a></li>
+					<li><a href="content_bbs.html">BOARD</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- ####################################################### -->
+		<!-- ### [CONTAINER] ### -->
+		<!-- ####################################################### -->
+		<div class="guide-container">
+			<!-- ### 폼 객체 ### -->
+			<section class="guide-section">
+				<h2 class="guide-tit1">폼 객체</h2>
+
+				<!-- 입력서식 -->
+				<h3 class="guide-tit2">입력서식</h3>
+				<div class="guide-cont">
+					<div class="guide-table1">
+						<table>
+							<caption>입력서식 목록</caption>
+							<colgroup>
+								<col style="width:20%">
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">구분</th>
+									<th scope="col">내용</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>기본</td>
+									<td><input type="text" aria-label="대체텍스트" placeholder="DEFAULT"></td>
+								</tr>
+								<tr>
+									<td>입력</td>
+									<td><input type="tel" aria-label="대체텍스트" placeholder="DEFAULT" value="123"></td>
+								</tr>
+								<tr>
+									<td>비활성화 : disabled</td>
+									<td><input type="text" aria-label="대체텍스트" placeholder="DEFAULT" value="DISABLED" disabled></td>
+								</tr>
+								<tr>
+									<td>오류 : [aria-invalid="true"]</td>
+									<td><input type="text" aria-label="대체텍스트" placeholder="DEFAULT" value="INVALID" aria-invalid="true"></td>
+								</tr>
+								<tr>
+									<td>날짜선택 : [type="date"]</td>
+									<td><input type="date" aria-label="대체텍스트" placeholder="DEFAULT"></td>
+								</tr>
+								<tr>
+									<td>data 태그</td>
+									<td>
+<pre><code class="html">&lt;!-- data 태그 --&gt;
+  &lt;data class="inp_txt" data-label="설명문구" value=""&gt;&lt;/data&gt;
+  &lt;data class="inp_txt" data-label="설명문구" value="입력"&gt;입력&lt;/data&gt;</code></pre>
+  										<div class="guide-txt">입력이 되지 않는 단순 데이터 노출 형식에 사용됨. ex) 은행선택</div>
+										<data class="inp_txt" data-label="DATA태그 : 설명문구" value=""></data>
+										<hr class="guide-line1">
+										<data class="inp_txt" data-label="DATA태그 : 설명문구" value="입력">DATA태그 : 입력내용적용</data>
+									</td>
+								</tr>
+								<tr>
+									<td>.inp_txt &gt; input + **</td>
+									<td>
+<pre><code class="html">&lt;!-- 입력 + 텍스트 --&gt;
+&lt;div class="inp_txt"&gt;
+  &lt;input type="tel" title="대체텍스트" placeholder="DEFAULT"&gt;
+  &lt;span class="util"&gt;P&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- 입력 + 삭제버튼 --&gt;
+&lt;div class="inp_txt"&gt;
+  &lt;input type="text" title="대체텍스트" placeholder="DEFAULT"&gt;
+  &lt;button type="button" class="btn_del"&gt;입력내용삭제&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+										<div class="guide-txt">텍스트 및 버튼과 함께 노출되는 경우 사용됨.</div>
+										<div class="inp_txt">
+											<input type="tel" aria-label="대체텍스트" placeholder="DEFAULT" value="123,000">
+											<span class="util">P</span>
+										</div>
+										<hr class="guide-line1">
+										<div class="inp_txt">
+											<input type="text" aria-label="대체텍스트" placeholder="DEFAULT" value="내용이 있을 경우">
+											<button type="button" class="btn_del">입력내용삭제</button>
+										</div>
+										<hr class="guide-line1">
+										<div class="inp_txt">
+											<input type="text" aria-label="대체텍스트" placeholder="DEFAULT" value="내용이 있을 경우">
+											<span class="util2">03:00</span>
+											<button type="button" class="link_t1">버튼</button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- 셀렉트박스 -->
+				<h3 class="guide-tit2">셀렉트박스</h3>
+				<ul class="guide-txt">
+					<li>현재 사용된 셀렉트박스는 모두 버튼형태임.</li>
+					<li>기본 높이는 45px이며, 목록페이지 정보영역(.area_info1)에 한해서 높이가 변경이 됨</li>
+					<li>전체적인 color값은 입력서식과 동일하게 변경함.</li>
+				</ul>
+				<div class="guide-cont">
+					<div class="guide-table1">
+						<table>
+							<caption>셀렉트박스 목록</caption>
+							<colgroup>
+								<col style="width:30%">
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">구분</th>
+									<th scope="col">내용</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>유형1(기본)<br>.selectbox</td>
+									<td>
+										<select class="selectbox">
+											<option>SELECT</option>
+											<option>항목명</option>
+										</select>
+										<hr class="guide-line1">
+										<button type="button" class="selectbox">BUTTON</button>
+									</td>
+								</tr>
+								<tr>
+									<td>유형2<br>.selectbox2</td>
+									<td>
+										<select class="selectbox2">
+											<option>SELECT</option>
+											<option>항목명</option>
+										</select>
+										<hr class="guide-line1">
+										<button type="button" class="selectbox2">BUTTON</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- 체크박스 -->
+				<h3 class="guide-tit2">체크박스</h3>
+<pre><code class="html">&lt;!--
+  ### [필수사항] ###
+  input의 ID와 label의 for값은 일치 하여야 한다.
+--&gt;
+&lt;input type="checkbox" id="ID"&gt;&lt;label for="ID"&gt;항목명&lt;/label&gt;
+</code></pre>
+				<div class="guide-cont">
+					<div class="guide-table1">
+						<table>
+							<caption>체크박스 목록</caption>
+							<colgroup>
+								<col style="width:30%">
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">구분</th>
+									<th scope="col">내용</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>유형1<br>input[type="checkbox"]</td>
+									<td>
+										<input type="checkbox" id="uiFormChk01"><label for="uiFormChk01">DEFAULT</label>
+										<hr class="guide-line1">
+										<input type="checkbox" id="uiFormChk02" checked><label for="uiFormChk02">CHECKED</label>
+										<hr class="guide-line1">
+										<input type="checkbox" id="uiFormChk03" disabled><label for="uiFormChk03">DISABLED</label>
+									</td>
+								</tr>
+								<tr>
+									<td>유형2<br>span.inp_chk</td>
+									<td>
+										<span class="inp_chk"><input type="checkbox" id="uiFormChk04"><label for="uiFormChk04">DEFAULT</label></span>
+										<hr class="guide-line1">
+										<span class="inp_chk"><input type="checkbox" id="uiFormChk05" checked><label for="uiFormChk05">CHECKED</label></span>
+										<hr class="guide-line1">
+										<span class="inp_chk"><input type="checkbox" id="uiFormChk06" disabled><label for="uiFormChk06">DISABLED</label></span>
+									</td>
+								</tr>
+								<tr>
+									<td>유형3<br>span.inp_chk2</td>
+									<td>
+										<span class="inp_chk2"><input type="checkbox" id="uiFormChk07"><label for="uiFormChk07">DEFAULT</label></span>
+										<hr class="guide-line1">
+										<span class="inp_chk2"><input type="checkbox" id="uiFormChk08" checked><label for="uiFormChk08">CHECKED</label></span>
+										<hr class="guide-line1">
+										<span class="inp_chk2"><input type="checkbox" id="uiFormChk09" disabled><label for="uiFormChk09">DISABLED</label></span>
+									</td>
+								</tr>
+								<tr>
+									<td>유형4<br>span.inp_chk3</td>
+									<td>
+										<span class="inp_chk3"><input type="checkbox" id="uiFormChkAll"  class="chk_all" checked><label for="uiFormChkAll">ALL</label></span>
+										<span class="inp_chk3"><input type="checkbox" id="uiFormChk10"><label for="uiFormChk10">DEFAULT</label></span>
+										<span class="inp_chk3"><input type="checkbox" id="uiFormChk11" checked><label for="uiFormChk11">CHECKED</label></span>
+										<span class="inp_chk3"><input type="checkbox" id="uiFormChk12" disabled><label for="uiFormChk12">DISABLED</label></span>
+									</td>
+								</tr>
+								<tr>
+									<td>전체동의<br>[input.chk_all]</td>
+									<td>
+										<input type="checkbox" id="uiAgreeAll" class="chk_all"><label for="uiAgreeAll">DEFAULT</label>
+										<hr class="guide-line1">
+										<input type="checkbox" id="uiAgreeAll2" class="chk_all" checked><label for="uiAgreeAll2">CHECKED</label>
+										<hr class="guide-line1">
+										<input type="checkbox" id="uiAgreeAll3" class="chk_all" disabled><label for="uiAgreeAll3">DISABLED</label>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- 라디오버튼 -->
+				<h3 class="guide-tit2">라디오버튼</h3>
+<pre><code class="html">&lt;!--
+### [필수사항] ###
+input의 ID와 label의 for값은 일치 하여야 한다.
+--&gt;
+&lt;!-- [유형1:기본구조] --&gt;
+&lt;input type="radio" id="ID"&gt;&lt;label for="ID"&gt;항목명&lt;/label&gt;
+
+&lt;!-- [유형2] --&gt;
+&lt;span class="inp_rad"&gt;
+  &lt;label for="ID"&gt;항목명&lt;/label&gt;&lt;input type="radio" id="ID"&gt;
+&lt;/span&gt;
+</code></pre>
+				<div class="guide-cont">
+					<div class="guide-table1">
+						<table>
+							<caption>라디오버튼 목록</caption>
+							<colgroup>
+								<col style="width:30%">
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">구분</th>
+									<th scope="col">내용</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>유형1<br>input[type="radio"]</td>
+									<td>
+										<input type="radio" id="uiFormRad0001"><label for="uiFormRad0001">DEFAULT</label>
+										<hr class="guide-line1">
+										<input type="radio" id="uiFormRad0002" checked><label for="uiFormRad0002">CHECKED</label>
+										<hr class="guide-line1">
+										<input type="radio" id="uiFormRad0003" disabled><label for="uiFormRad0003">DISABLED</label>
+									</td>
+								</tr>
+								<tr>
+									<td>유형2<br>span.inp_rad</td>
+									<td>
+										<span class="inp_rad"><label for="uiFormRad01">DEFAULT</label><input type="radio" name="uiFormRad" id="uiFormRad01"></span>
+										<span class="inp_rad"><label for="uiFormRad02">CHECKED</label><input type="radio" name="uiFormRad" id="uiFormRad02" checked></span>
+										<span class="inp_rad"><label for="uiFormRad03">DISABLED</label><input type="radio" name="uiFormRad" id="uiFormRad03" disabled></span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- 버튼형 -->
+				<h3 class="guide-tit2">버튼형</h3>
+<pre><code class="html">&lt;!--
+### [암시적 연결 방식] ###
+input의 ID와 label의 for값 연결 하지 않더라도 암묵적으로 연결하는 방식
+--&gt;
+&lt;div class="inp_btn"&gt;
+  &lt;label&gt;
+    &lt;input type="radio" aria-label="대체텍스트"&gt;
+    &lt;span aria-hidden="true"&gt;DEFAULT&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+				<h4 class="guide-tit3">유형1 : div.inp_btn</h4>
+				<ul class="guide-txt">
+					<li>버튼유형(.btn_set2)와 동일한 UI이지만 기능으로 분리함</li>
+					<li>필수 선택 사항으로 단일 선택에 적합함 (ex: 성별)</li>
+					<li>4개 이상일 경우 width:25%로 고정되어 개행됨</li>
+					<li>data-col="{숫자}"로 고정된 width값을 가질 수 있음</li>
+				</ul>
+				<div class="guide-cont">
+					<h5 class="guide-tit4">가변[max-width:25%]</h5>
+					<div class="inp_btn">
+						<label>
+							<input type="radio" name="formRadio1" aria-label="대체텍스트(항목명)">
+							<span aria-hidden="true">항목명</span>
+						</label>
+						<label>
+							<input type="radio" name="formRadio1" aria-label="대체텍스트(항목명)" checked>
+							<span aria-hidden="true">항목명</span>
+						</label>
+						<label>
+							<input type="radio" name="formRadio1" aria-label="대체텍스트(항목명)" disabled>
+							<span aria-hidden="true">항목명</span>
+						</label>
+					</div>
+					<hr class="guide-line1">
+					<div class="inp_btn">
+						<label>
+							<input type="radio" name="formRadio2" aria-label="대체텍스트(DEFAULT)" checked>
+							<span aria-hidden="true">항목명</span>
+						</label>
+						<label>
+							<input type="radio" name="formRadio2" aria-label="대체텍스트(CHECKED)" disabled>
+							<span aria-hidden="true">항목명</span>
+						</label>
+						<label>
+							<input type="radio" name="formRadio2" aria-label="대체텍스트(DISABLED)">
+							<span aria-hidden="true">항목명</span>
+						</label>
+						<label>
+							<input type="radio" name="formRadio2" aria-label="대체텍스트(DISABLED)">
+							<span aria-hidden="true">항목명</span>
+						</label>
+					</div>
+					<hr class="guide-line2">
+					<h5 class="guide-tit4">고정[3단] : data-col="3"</h5>
+					<div class="inp_btn" data-col="3">
+						<label>
+							<input type="radio" name="formRadio2" aria-label="대체텍스트(DEFAULT)">
+							<span aria-hidden="true">항목명</span>
+						</label>
+						<label>
+							<input type="radio" name="formRadio2" aria-label="대체텍스트(CHECKED)" checked>
+							<span aria-hidden="true">항목명</span>
+						</label>
+						<label>
+							<input type="radio" name="formRadio2" aria-label="대체텍스트(DISABLED)" disabled>
+							<span aria-hidden="true">항목명</span>
+						</label>
+						<label>
+							<input type="radio" name="formRadio2" aria-label="대체텍스트(DISABLED)">
+							<span aria-hidden="true">항목명</span>
+						</label>
+					</div>
+					<hr class="guide-line2">
+					<h5 class="guide-tit4">고정[2단] : data-col="2"</h5>
+					<div class="inp_btn" data-col="2">
+						<label>
+							<input type="radio" name="formRadio3" aria-label="대체텍스트(DEFAULT)">
+							<span aria-hidden="true">항목명</span>
+						</label>
+						<label>
+							<input type="radio" name="formRadio3" aria-label="대체텍스트(CHECKED)">
+							<span aria-hidden="true">항목명</span>
+						</label>
+						<label>
+							<input type="radio" name="formRadio3" aria-label="대체텍스트(DISABLED)" checked>
+							<span aria-hidden="true">항목명</span>
+						</label>
+						<label>
+							<input type="radio" name="formRadio3" aria-label="대체텍스트(DISABLED)" disabled>
+							<span aria-hidden="true">항목명</span>
+						</label>
+					</div>
+				</div>
+
+				<h4 class="guide-tit3">유형2 : div.inp_btn2</h4>
+				<div class="guide-cont">
+					<div class="inp_btn2">
+						<label>
+							<input type="radio" name="formRadio4" aria-label="대체텍스트(DEFAULT)" checked>
+							<span aria-hidden="true">항목명</span>
+						</label>
+						<label>
+							<input type="radio" name="formRadio4" aria-label="대체텍스트(CHECKED)">
+							<span aria-hidden="true">항목명</span>
+						</label>
+					</div>
+				</div>
+
+				<!-- 폼객체유형 -->
+				<h3 class="guide-tit2">폼객체유형</h3>
+				<h4 class="guide-tit3">폼객체(가변) + 버튼/텍스트(고정) : .inp_area</h4>
+				<div class="guide-cont">
+					<div class="inp_area">
+						<input type="text" aria-label="대체텍스트" placeholder="설명문구">
+						<button type="button" class="btn_sub1">버튼명</button>
+					</div>
+					<hr class="guide-line1">
+					<div class="inp_area">
+						<data class="inp_txt" data-label="설명문구" value="입력">입력</data>
+						<button type="button" class="btn_sub1">버튼명</button>
+					</div>
+					<hr class="guide-line1">
+					<div class="inp_area">
+						<div class="inp_txt">
+							<input type="tel" aria-label="대체텍스트" placeholder="000">
+							<span class="util">원</span>
+						</div>
+						<button type="button" class="btn_sub1">버튼명</button>
+					</div>
+					<hr class="guide-line1">
+					<div class="inp_area">
+						<input type="date" aria-label="대체텍스트">
+						<span class="util">~</span>
+						<input type="date" aria-label="대체텍스트">
+					</div>
+					<hr class="guide-line1">
+					<div class="inp_area">
+						<button type="button" class="selectbox">010</button>
+						<input type="tel" aria-label="대체텍스트" placeholder="000">
+					</div>
+				</div>
+				<!-- // -->
+			</section>
+
+			<!-- ### 폼영역 ### -->
+			<section class="guide-section">
+				<h2 class="guide-tit1">검색 영역</h2>
+
+				<!-- 조회기간 -->
+				<h3 class="guide-tit2">유형1 : .form_search</h3>
+				<div class="guide-cont">
+					<fieldset class="form_search">
+						<legend>조회기간검색</legend>
+
+						<div class="btn_set2 area">
+							<button type="button" class="active" title="선택됨">1주일</button>
+							<button type="button">1개월</button>
+							<button type="button">3개월</button>
+							<button type="button">1년</button>
+						</div>
+
+						<div class="inp_area area">
+							<input type="date" aria-label="대체텍스트" value="2023-05-09">
+							<span class="util">~</span>
+							<input type="date" aria-label="대체텍스트" value="2023-05-16">
+						</div>
+					</fieldset>
+				</div>
+
+				<!-- 조회기간2 -->
+				<h3 class="guide-tit2">유형2 : .form_search2</h3>
+				<div class="guide-cont">
+					<fieldset class="form_search2">
+						<legend>주소(도로명, 건물명, 지번) 입력</legend>
+
+						<dl class="form">
+							<dt>주소검색</dt>
+							<dd>
+								<div class="inp_area">
+									<div class="inp_txt">
+										<input type="tel" aria-label="주소(도로명, 건물명, 지번)" placeholder="주소를 검색해 주세요.">
+										<button type="button" class="btn_del">입력 내용 삭제</button>
+									</div>
+									<button type="button" class="btn_sub1">검색하기</button>
+								</div>
+							</dd>
+						</dl>
+					</fieldset>
+
+				</div>
+			</section>
+
+			<!-- ### 약관동의 ### -->
+			<section class="guide-section">
+				<h2 class="guide-tit1">약관동의 영역</h2>
+
+				<!-- 유형1 -->
+				<h3 class="guide-tit2">유형1 : .agree_all, .agree_list</h3>
+				<div class="guide-cont">
+					<div class="agree_all">
+						<input type="checkbox" id="uiAgreeAll02" class="chk_all"><label for="uiAgreeAll02">전체동의</label>
+					</div>
+					<ul class="agree_list">
+						<li>
+							<input type="checkbox" id="uiAgreeLi01"><label for="uiAgreeLi01">[필수] 항목명</label>
+							<button type="button" class="btn_more">자세히 보기</button>
+							<p class="agree_alert" role="alert">약관에 동의해 주세요</p>
+						</li>
+						<li>
+							<input type="checkbox" id="uiAgreeLi02"><label for="uiAgreeLi02">[필수] 항목명</label>
+							<button type="button" class="btn_more">자세히 보기</button>
+						</li>
+						<li>
+							<input type="checkbox" id="uiAgreeLi03"><label for="uiAgreeLi03">[필수] 항목명</label>
+							<button type="button" class="btn_more">자세히 보기</button>
+						</li>
+						<li>
+							<input type="checkbox" id="uiAgreeLi04"><label for="uiAgreeLi04">[선택] 항목명</label>
+							<button type="button" class="btn_more">자세히 보기</button>
+
+							<!-- [수신항목] -->
+							<div class="sub">
+								<span class="inp_chk"><input type="checkbox" id="uiAgreeLiSub01"><label for="uiAgreeLiSub01">E-mail</label></span>
+								<span class="inp_chk"><input type="checkbox" id="uiAgreeLiSub02"><label for="uiAgreeLiSub02">PUSH</label></span>
+								<span class="inp_chk"><input type="checkbox" id="uiAgreeLiSub03"><label for="uiAgreeLiSub03">SMS</label></span>
+								<span class="inp_chk"><input type="checkbox" id="uiAgreeLiSub04"><label for="uiAgreeLiSub04">TM</label></span>
+								<span class="inp_chk"><input type="checkbox" id="uiAgreeLiSub05"><label for="uiAgreeLiSub05">DM</label></span>
+							</div>
+							<!-- //-->
+						</li>
+					</ul>
+				</div>
+			</section>
+
+
+			<!-- ### 폼영역 ### -->
+			<section class="guide-section">
+				<h2 class="guide-tit1">폼 영역</h2>
+
+				<!--  -->
+				<h3 class="guide-tit2">유형1 : .form_wrap</h3>
+				<div class="guide-cont">
+					<div class="form_wrap">
+						<fieldset>
+							<legend>폼 타이틀</legend>
+
+							<dl class="form">
+								<dt>항목명 : 입력서식(기본)</dt>
+								<dd><input type="text" aria-label="대체텍스트" placeholder="설명문구"></dd>
+							</dl>
+
+							<dl class="form">
+								<dt>항목명 : 입력서식 + 삭제버튼</dt>
+								<dd>
+									<div class="inp_txt">
+										<input type="tel" aria-label="대체텍스트" placeholder="설명문구" value="123">
+										<button type="button" class="btn_del">입력내용삭제</button>
+									</div>
+								</dd>
+							</dl>
+
+							<dl class="form">
+								<dt>항목명 : 입력서식 + 텍스트</dt>
+								<dd>
+									<div class="inp_txt">
+										<input type="tel" aria-label="대체텍스트" placeholder="설명문구" value="123">
+										<span class="util">P</span>
+									</div>
+								</dd>
+							</dl>
+
+							<dl class="form">
+								<dt>항목명 : 셀렉트박스</dt>
+								<dd>
+									<select class="selectbox">
+										<option>SELECT</option>
+										<option>항목명</option>
+									</select>
+								</dd>
+								<dd><button type="button" class="selectbox">BUTTON</button></dd>
+							</dl>
+
+							<dl class="form">
+								<dt>항목명 : 체크박스</dt>
+								<dd>
+									<div class="agree_all">
+										<input type="checkbox" id="uiAgreeAll03" class="chk_all"><label for="uiAgreeAll03">전체동의</label>
+									</div>
+									<div class="agree_sub">
+										<span class="inp_chk"><input type="checkbox" id="chk04_01" checked><label for="chk04_01">E-mail</label></span>
+										<span class="inp_chk"><input type="checkbox" id="chk04_02" checked><label for="chk04_02">SMS</label></span>
+										<span class="inp_chk"><input type="checkbox" id="chk05_03" checked><label for="chk05_03">TM</label></span>
+										<span class="inp_chk"><input type="checkbox" id="chk05_04" checked><label for="chk05_04">DM</label></span>
+									</div>
+								</dd>
+							</dl>
+
+							<dl class="form">
+								<dt>항목명 : 라디오버튼 (버튼형)</dt>
+								<dd>
+									<div class="inp_btn">
+										<label>
+											<input type="radio" name="formRadio7" aria-label="종류(항목명)" checked>
+											<span aria-hidden="true">항목명</span>
+										</label>
+										<label>
+											<input type="radio" name="formRadio7" aria-label="종류(항목명)">
+											<span aria-hidden="true">항목명</span>
+										</label>
+									</div>
+								</dd>
+							</dl>
+
+							<dl class="form">
+								<dt>항목명 : 설명문구추가</dt>
+								<dd><input type="text" aria-label="대체텍스트" placeholder="설명문구"></dd>
+								<dd class="mes">부가설명문구가 노출됩니다.</dd>
+							</dl>
+
+							<dl class="form" data-mode="invalid">
+								<dt>항목명 : 오류발생</dt>
+								<dd>
+									<input type="text" aria-label="대체텍스트" placeholder="설명문구" aria-invalid="true">
+									<div class="validation" aria-live="assertive" role="alert">오류문구노출</div>
+								</dd>
+								<dd class="mes">부가설명문구가 노출됩니다.</dd>
+							</dl>
+
+							<dl class="form">
+								<dt>활용 : 은행선택</dt>
+								<dd>
+									<!-- 은행선택전 -->
+									<div class="inp_area">
+										<data class="inp_txt" data-label="은행선택"></data>
+										<button type="button" class="btn_sub1">은행선택</button>
+									</div>
+
+									<!-- 은행선택후 -->
+									<div class="inp_area">
+										<data class="inp_txt" data-label="은행선택" value="KB국민은행">KB국민은행</data>
+										<button type="button" class="btn_sub1">은행선택</button>
+									</div>
+								</dd>
+							</dl>
+
+							<dl class="form">
+								<dt>활용 : 계좌번호</dt>
+								<dd>
+									<div class="inp_area">
+										<input type="tel" aria-label="계좌번호" placeholder="계좌번호를 입력해 주세요">
+										<button type="button" class="btn_sub1">계좌인증</button>
+									</div>
+								</dd>
+								<dd class="mes">입력된 정보는 본인 확인을 위한 정보이며 저장되지 않습니다.</dd>
+							</dl>
+
+							<div class="area_info3">
+								<dl>
+									<dt>항목명</dt>
+									<dd class="data_num1"><strong>000,000</strong><span>P</span></dd>
+								</dl>
+								<dl>
+									<dt>항목명</dt>
+									<dd class="data_num1"><strong>000,000</strong><span>P</span></dd>
+								</dl>
+							</div>
+
+							<dl class="form">
+								<dt>활용 : 포인트</dt>
+								<dd>
+									<div class="inp_txt">
+										<input type="tel" aria-label="전환신청포인트(직접입력)" placeholder="전환 신청 포인트를 입력해 주세요">
+										<span class="util">P</span>
+									</div>
+									<div class="btn_set2">
+										<button type="button" title="전환신청포인트">전체사용</button>
+										<button type="button" title="전환신청포인트">1,000P</button>
+										<button type="button" title="전환신청포인트">5,000P</button>
+										<button type="button" title="전환신청포인트">10,000P</button>
+									</div>
+									<div class="mes">일일 전환 가능 포인트는 50,000P 이내로 가능합니다.</div>
+								</dd>
+								<dd class="area_info3">
+									<dl>
+										<dt>항목명</dt>
+										<dd class="data_num1"><strong>000,000</strong><span>P</span></dd>
+									</dl>
+								</dd>
+							</dl>
+
+							<dl class="form">
+								<dt>활용 : 휴대폰 번호</dt>
+								<dd>
+									<div class="inp_btn" data-col="3">
+										<label>
+											<input type="radio" name="formRadio6" aria-label="통신사(SKT)">
+											<span aria-hidden="true">SKT</span>
+										</label>
+										<label>
+											<input type="radio" name="formRadio6" aria-label="통신사(KT)">
+											<span aria-hidden="true">KT</span>
+										</label>
+										<label>
+											<input type="radio" name="formRadio6" aria-label="통신사(LG U+)">
+											<span aria-hidden="true">LG U+</span>
+										</label>
+										<label>
+											<input type="radio" name="formRadio6" aria-label="통신사(SKT 알뜰폰)">
+											<span aria-hidden="true">SKT 알뜰폰</span>
+										</label>
+										<label>
+											<input type="radio" name="formRadio6" aria-label="통신사(KT 알뜰폰)">
+											<span aria-hidden="true">KT 알뜰폰</span>
+										</label>
+										<label>
+											<input type="radio" name="formRadio6" aria-label="통신사(LG U+ 알뜰폰)">
+											<span aria-hidden="true">LG U+ 알뜰폰</span>
+										</label>
+									</div>
+									<div class="inp_area">
+										<button type="button" class="selectbox">010</button>
+										<input type="tel" aria-label="대체텍스트" placeholder="000">
+									</div>
+								</dd>
+							</dl>
+
+							<dl class="form">
+								<dt>활용 : 인증번호</dt>
+								<dd>
+									<div class="inp_txt">
+										<input type="tel" aria-label="인증번호" placeholder="인증번호를 입력해 주세요.">
+										<span class="util2">03:00</span>
+										<button type="button" class="link_t1">재전송</button>
+									</div>
+								</dd>
+								<dd class="mes">3분 이내에 인증번호를 입력해 주세요.</dd>
+								<dd class="mes">입력시간 초과 시 재전송 버튼을 눌러주세요.</dd>
+							</dl>
+
+							<dl class="form">
+								<dt>활용 : 이메일</dt>
+								<dd>
+									<div class="inp_email">
+										<div class="inp_txt">
+											<input type="email" aria-label="이메일 앞자리" placeholder="이메일 앞자리">
+											<button type="button" class="btn_del">입력 내용 삭제</button>
+										</div>
+										<span class="util">@</span>
+										<select class="selectbox" title="이메일 뒷자리">
+											<option value="">직접입력</option>
+											<option value="naver.com">naver.com</option>
+											<option value="hanmail.net">hanmail.net</option>
+											<option value="daum.net">daum.net</option>
+											<option value="gmail.com">gmail.com</option>
+											<option value="nate.com">nate.com</option>
+											<option value="nonghyup.com">nonghyup.com</option>
+										</select>
+										<div class="inp_txt">
+											<input type="email" aria-label="이메일 뒷자리 직접입력" placeholder="이메일 뒷자리를 입력해 주세요.">
+											<button type="button" class="btn_del">입력 내용 삭제</button>
+										</div>
+									</div>
+								</dd>
+							</dl>
+
+							<dl class="form">
+								<dt>활용 : 주소</dt>
+								<dd>
+									<div class="inp_area">
+										<input type="tel" aria-label="우편번호" placeholder="우편번호를 검색해 주세요." readonly>
+										<button type="button" class="btn_sub1" title="우편번호검색">검색하기</button>
+									</div>
+									<input type="text" aria-label="주소(시/군/구)" placeholder="우편번호 검색을 통해 주소를 입력해 주세요." readonly>
+									<div class="inp_txt">
+										<input type="text" aria-label="상세주소" placeholder="상세 주소를 입력해 주세요.">
+										<button type="button" class="btn_del">입력 내용 삭제</button>
+									</div>
+								</dd>
+							</dl>
+
+							<dl class="form2">
+								<dt>배치변경(가로형) : .form2</dt>
+								<dd>
+									<div class="inp_btn2">
+										<label>
+											<input type="radio" name="formRadio5" aria-label="대체텍스트" checked>
+											<span aria-hidden="true">항목명</span>
+										</label>
+										<label>
+											<input type="radio" name="formRadio5" aria-label="대체텍스트">
+											<span aria-hidden="true">항목명</span>
+										</label>
+									</div>
+								</dd>
+							</dl>
+
+							<dl class="form2">
+								<dt>배치변경(가로형) : .form2</dt>
+								<dd><input type="tel" aria-label="전환신청포인트(직접입력)" placeholder="전환 신청 포인트를 입력해 주세요"></dd>
+							</dl>
+						</fieldset>
+
+						<fieldset>
+							<legend class="tit">타이틀</legend>
+							<dl class="form">
+								<dt>항목명 : 입력서식(기본)</dt>
+								<dd><input type="text" aria-label="대체텍스트" placeholder="설명문구"></dd>
+							</dl>
+						</fieldset>
+
+						<fieldset>
+							<legend class="tit2">타이틀2</legend>
+							<dl class="form">
+								<dt>항목명 : 입력서식(기본)</dt>
+								<dd><input type="text" aria-label="대체텍스트" placeholder="설명문구"></dd>
+							</dl>
+						</fieldset>
+					</div>
+				</div>
+
+			</section>
+			<!-- ### // ### -->
+		</div>
+		<!-- ####################################################### -->
+	</div>
+</body>
+</html>

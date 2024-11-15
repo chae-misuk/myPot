@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<title>[P] 회원가입 </title>
+</head>
+<body>
+	<!-- [바닥페이지] -->
+	<div id="wrap"></div>
+	<!--// -->
+
+	<!-- ####################################################### -->
+	<!-- [POPUP] 회원가입 -->
+	<!-- ####################################################### -->
+	<div class="layer_pop type_full" id="uiIDIS04" role="dialog" aria-modal="true" aria-labelledby="uiIDIS04TIT">
+		<div class="pop_inner">
+			<!-- ------------------------------- -->
+			<!-- [POPUP HEADER] -->
+			<!-- ------------------------------- -->
+			<div class="pop_header">
+				<button type="button" class="btn_back">뒤로가기</button>
+			</div>
+			<p class="pop_tit top" id="uiIDIS04TIT">회원가입</p>
+
+			<!-- ------------------------------- -->
+			<!-- [POPUP CONTENTS] -->
+			<!-- ------------------------------- -->
+			<div class="pop_con">
+				<p class="con_tit">NHOnePASS 인증, NH농협카드 인증,<br>아이핀 인증을 통한 본인인증 시 휴대폰번호 확인이 필요합니다.<br>휴대폰 번호 입력 후 인증을 진행해 주세요.</p>
+                <div class="form_wrap">
+					<!-- 기본정보 -->
+					<p class="tit">기본정보</p>
+					<div class="info_con3">
+						<dl>
+							<dt>이름</dt>
+							<dd>홍길동</dd>
+						</dl>
+						<dl>
+							<dt>성별</dt>
+							<dd>남성</dd>
+						</dl>
+						<dl>
+							<dt>생년월일</dt>
+							<dd>1992.02.17</dd>
+						</dl>
+						<dl>
+							<dt>휴대폰 번호</dt>
+							<dd>010-1234-1422</dd>
+						</dl>
+					</div>
+
+                    <fieldset>
+						<legend>휴대폰 인증</legend>
+
+                        <dl class="form">
+							<dt>휴대폰 번호 확인</dt>
+							<dd>
+								<div class="inp_txt">
+									<input type="tel" id="fullNo" aria-label="휴대폰 번호(숫자만입력)"  placeholder="‘-’없이 입력해 주세요." maxlength="11">
+									<button type="button" class="btn_del">입력 내용 삭제</button>
+								</div>
+								<div class="validation" aria-live="assertive" role="alert">휴대폰 번호를 입력해 주세요.</div>
+							</dd>
+						</dl>
+
+						<dl class="form">
+							<dt>인증번호 입력</dt>
+							<dd>
+								<div class="inp_txt">
+									<input type="tel" aria-label="인증번호" placeholder="인증번호를 입력해 주세요.">
+									<span class="util2">03:00</span>
+									<button type="button" class="link_t1">재전송</button>
+								</div>
+							</dd>
+							<dd class="mes">3분 이내에 인증번호를 입력해 주세요.</dd>
+							<dd class="mes">입력시간 초과 시 ‘재전송’버튼을 눌러주세요.</dd>
+						</dl>
+					</fieldset>
+				</div>
+
+				<div class="wrap_action">
+					<button type="button" class="btn_action">인증요청</button>
+					<!-- <button type="button" class="btn_action">인증완료</button> -->
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		$(function(){
+			openlayer('uiIDIS04'); //풀팝업 호출
+		})
+	</script>
+</body>
+</html>

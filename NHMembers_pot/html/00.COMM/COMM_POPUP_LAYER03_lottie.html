@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch_lottie.css"> <!-- 인터렉션 사용. 08.10 신규추가 -->
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<script type="text/javascript" src="../../resources/js/lottie.js"></script> <!-- 인터렉션 사용. 08.10 신규추가 -->
+	<title>공통팝업 : 포인트 적립</title>
+</head>
+<body>
+	<!-- [바닥페이지] -->
+	<div id="wrap">
+		<button type="button" class="btn_sub1 btn_layer btn_coin01" onclick="openlayer('uiPOPUPPOINT01');">코인 인터렉션</button>
+	</div>
+	<!--// -->
+
+	<!-- ####################################################### -->
+	<!-- [POPUP] 공통팝업 : 포인트 적립 -->
+	<!-- ####################################################### -->
+	<div class="layer_pop type_pit" id="uiPOPUPPOINT01" role="dialog" aria-modal="true" aria-label="포인트 적립 완료">
+		<div class="pop_inner">
+			<!-- ------------------------------- -->
+			<!-- [POPUP CONTENTS] -->
+			<!-- ------------------------------- -->
+			<div class="pop_con">
+				<p class="data_num1"><strong>000,000</strong><span>P</span></p>
+				<dl>
+					<dt>포인트 적립 완료!</dt>
+					<dd>풍성하고 넘치는 혜택을<br>지금 바로 확인해보세요!</dd>
+				</dl>
+			</div>
+
+			<!-- ------------------------------- -->
+			<!-- [POPUP FOOTER BTN] -->
+			<!-- ------------------------------- -->
+			<div class="wrap_btn1">
+				<button type="button" class="btn_com1 btn_close">확인</button> <!-- class="btn_close" 사용시 레이어 닫힘  -->
+			</div>
+			<!-- ------------------------------- -->
+		</div>
+
+		<!-- 08.10 로티적용 추가 -->
+		<div id="motionArea_coin"></div>
+		<!--// 08.10 로티적용 추가 -->
+	</div>
+	<!-- ####################################################### -->
+	<script>
+        //08.10 로티적용 추가
+        function motion01() {
+            var animData = {
+				wrapper: document.getElementById('motionArea_coin'),
+				renderer: 'svg',
+				animType: 'html',
+				loop: false,
+				prerender: true,
+				autoplay: true,
+				path: '../../resources/js/lottie/coin.json'
+			};
+			var anim_coin = bodymovin.loadAnimation(animData);
+
+            $('#uiPOPUPPOINT01 .btn_close').on('click', function(){
+                anim_coin.destroy();
+            })
+			$("body").on('click', '.overlay', function(){
+				if($('body').find('[data-mode="allover"]').length === 0) {
+					anim_coin.destroy();
+				}
+			})
+        }
+
+		$(function(){
+			$('.btn_coin01').on('click', function(){
+                motion01();
+            })
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+    <link rel="stylesheet" href="../../resources/css/nhm_newch_lottie.css"> <!-- 인터렉션 사용. 08.10 신규추가 -->
+    <script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<script type="text/javascript" src="../../resources/js/lottie.js"></script> <!-- 인터렉션 사용. 08.10 신규추가 -->
+    <title>풍선이벤트</title>
+</head>
+<body>
+    <a id="skipnavi" href="#contents" class="skipnav">컨텐츠바로가기</a>
+    <!-- wrap -->
+    <div id="wrap">
+        <button type="button" class="btn_sub1 btn_layer btn_box" onclick="openlayer('box01');">선물 인터렉션</button>
+    </div>
+    <!--// wrap -->
+
+    <!-- popup -->
+    <div class="layer_pop type_evt" id="box01" role="dialog" aria-modal="true" aria-label="풍선찾기 이벤트 참여 완료">
+		<div class="pop_inner type02">
+			<div class="pop_con">
+                <dl>
+					<dt>NH멤버스팟 로고찾기 경품 안내</dt>
+					<dd>NH멤버스팟 로고를 많이 찾을수록<br>경품 당첨 확률이 높아져요!</dd> <!-- 05.18 수정 -->
+				</dl>
+
+                <span class="sub_tip">* 팟로고는 하루에 3개까지 찾을 수 있어요.</span>
+
+                <strong class="tip">지금까지 팟로고를 <span>N</span>개 찾았어요!</strong> <!-- 06.12 수정 -->
+			</div>
+            <div class="wrap_btn1">
+				<button type="button" class="btn_com1 btn_close">확인</button> <!-- class="btn_close" 사용시 레이어 닫힘  -->
+			</div>
+		</div>
+
+		<!-- 08.10 로티적용 추가 -->
+		<div id="motionArea_box"></div>
+		<!--// 08.10 로티적용 추가 -->
+	</div>
+    <script>
+        //08.10 로티적용 추가
+        function motion03() {
+            var animData3 = {
+                wrapper: document.getElementById('motionArea_box'),
+                renderer: 'svg',
+                animType: 'html',
+                loop: false,
+                prerender: true,
+                autoplay: true,
+                path: '../../resources/js/lottie/box.json'
+            };
+            var anim_box = bodymovin.loadAnimation(animData3);
+
+            $('#box01 .btn_close').on('click', function(){
+                anim_box.destroy();
+            })
+
+            $("body").on('click', '.overlay', function(){
+				if($('body').find('[data-mode="allover"]').length === 0) {
+					anim_box.destroy();
+				}
+			})
+        }
+
+		$(function(){
+			$('.btn_box').on('click', function(){
+                motion03();
+            })
+		})
+	</script>
+</body>
+</html>

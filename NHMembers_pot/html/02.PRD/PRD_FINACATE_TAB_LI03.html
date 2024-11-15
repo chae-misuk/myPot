@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+    <script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+    <title>추천</title>
+</head>
+<body>
+    <a id="skipnavi" href="#contents" class="skipnav">컨텐츠바로가기</a>
+    <!-- wrap -->
+    <div id="wrap">
+    </div>
+    <!--// wrap -->
+
+    <!-- popup -->
+    <div class="layer_pop type_btm" id="layer01_02" role="dialog" aria-modal="true" aria-labelledby="pop_tit01_02">
+        <div class="pop_inner">
+            <button type="button" class="btn_back">뒤로가기</button>
+            <p id="pop_tit01_02" class="pop_tit">여행레저</p>
+            <button type="button" class="pop_close">팝업닫기</button>
+
+            <div class="pop_con type02">
+                <ul class="product_list">
+                    <li>
+                        <div class="badge">
+                            <em>손해보험</em>
+                            <!-- 23.05.18 수정. 뱃지 형식 변경. -->
+                            <i class="icon_txt1" style="color:#FF456B">HOT</i>
+                            <i class="icon_txt1" style="color:#2970FF">POINT</i>
+                            <i class="icon_txt1" style="color:#844DFF">BEST</i>
+                            <i class="icon_txt1" style="color:#03A124">COUPON</i>
+                            <i class="icon_txt1" style="color:#008DF9">NEW</i>
+                            <i class="icon_txt1" style="color:#FD8B00">EVENT</i>
+                            <i class="icon_txt1" style="color:#FD00DB">OPEN</i>
+                            <!--// 23.05.18 수정. 뱃지 형식 변경. -->
+                        </div>
+                        <a href="#none" target="_blank" title="상품 참여사 상세페이지 새창 열림"><!-- 23.05.18 수정. 상품 참여사명 title에 반영필요. -->
+                            <strong>계좌개설</strong>
+                        </a>
+                    </li>
+                    <li>
+                        <div class="badge">
+                            <em>손해보험</em>
+                        </div>
+                        <a href="#none" target="_blank" title="상품 참여사 상세페이지 새창 열림"><!-- 23.05.18 수정. 상품 참여사명 title에 반영필요. -->
+                            <strong>적금가입</strong>
+                        </a>
+                    </li>
+                    <li>
+                        <div class="badge">
+                            <em>손해보험</em>
+                        </div>
+                        <a href="#none" target="_blank" title="상품 참여사 상세페이지 새창 열림"><!-- 23.05.18 수정. 상품 참여사명 title에 반영필요. -->
+                            <strong>예금가입</strong>
+                        </a>
+                    </li>
+                    <li>
+                        <div class="badge">
+                            <em>손해보험</em>
+                            <i class="icon_txt1" style="color:#FD8B00">EVENT</i>
+                        </div>
+                        <a href="#none" target="_blank" title="상품 참여사 상세페이지 새창 열림"><!-- 23.05.18 수정. 상품 참여사명 title에 반영필요. -->
+                            <strong>카드신청</strong>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+		$(function(){
+			openlayer('layer01_02');
+		})
+	</script>
+</body>
+</html>

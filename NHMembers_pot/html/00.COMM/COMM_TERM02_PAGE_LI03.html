@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<title>[L] 마케팅 선택 약관 동의</title>
+</head>
+<body>
+	<!-- [바닥페이지] -->
+	<div id="wrap"></div>
+	<!--// -->
+
+	<!-- ####################################################### -->
+	<!-- [POPUP] 마케팅 선택 약관 동의 -->
+	<!-- ####################################################### -->
+	<div class="layer_pop type_btm" id="uiCOMMTERM02L02" role="dialog" aria-modal="true" aria-labelledby="uiCOMMTERM02L02TIT">
+		<div class="pop_inner">
+			<!-- ------------------------------- -->
+			<!-- [POPUP HEADER] -->
+			<!-- ------------------------------- -->
+			<p class="pop_tit02" id="uiCOMMTERM02L02TIT">더 많은 혜택을 위해<br>선택 약관에 대한 동의가 필요해요.</p> <!-- 05.18 문구 수정 -->
+			<!-- <button type="button" class="pop_close">팝업닫기</button> --> <!-- 05.18 삭제 -->
+
+			<!-- ------------------------------- -->
+			<!-- [POPUP CONTENTS] -->
+			<!-- ------------------------------- -->
+			<div class="pop_con">
+				<!-- ### 약관항목 ### -->
+				<ul class="agree_list">
+					<li>
+						<input type="checkbox" id="uiAgreeLi01"><label for="uiAgreeLi01">[선택] 개인(신용)정보 수집&middot;이용&middot;제공 동의서</label>
+						<button type="button" class="btn_more btn_layer">자세히 보기</button>
+
+						<!-- [수신항목] -->
+						<div class="sub">
+							<!-- 06.16 수정 -->
+							<span class="inp_chk"><input type="checkbox" id="uiAgreeLiSub01"><label for="uiAgreeLiSub01">E-mail</label></span>
+							<span class="inp_chk"><input type="checkbox" id="uiAgreeLiSub02"><label for="uiAgreeLiSub02">SMS</label></span>
+							<span class="inp_chk"><input type="checkbox" id="uiAgreeLiSub03"><label for="uiAgreeLiSub03">TM</label></span>
+							<span class="inp_chk"><input type="checkbox" id="uiAgreeLiSub04"><label for="uiAgreeLiSub04">DM</label></span>
+							<span class="inp_chk"><input type="checkbox" id="uiAgreeLiSub05"><label for="uiAgreeLiSub05">PUSH</label></span> <!-- 06.30 수정 -->
+							<!--// 06.16 수정 -->
+						</div>
+						<!-- //-->
+					</li>
+				</ul>
+
+				<!-- ### 안내문구 ### -->
+				<!-- 05.18 문구 수정 -->
+				<ul class="txt_bul1">
+					<li>NH멤버스팟의 다양한 혜택 제공을 위해 고객님의 개인정보를 일부 수집하고 있습니다.</li>
+					<li>선택 약관에 동의하지 않으실 경우, 혜택 제공에 제한이 있을 수 있습니다.</li>
+				</ul>
+				<!--// 05.18 문구 수정 -->
+				<!-- ### // ### -->
+			</div>
+
+			<!-- ------------------------------- -->
+			<!-- [POPUP FOOTER BTN] -->
+			<!-- ------------------------------- -->
+			<div class="wrap_action">
+				<button type="button" class="btn_action ty01 btn_close">거부</button><!-- class="btn_close" 사용시 레이어 닫힘  --> <!-- 07.04 수정 -->
+				<button type="button" class="btn_action">확인</button> <!-- 05.18 문구 수정 -->
+			</div>
+			<!-- ------------------------------- -->
+		</div>
+	</div>
+	<!-- ####################################################### -->
+
+	<script>
+		$(function(){
+			openlayer('uiCOMMTERM02L02'); //레이어팝업 호출 샘플
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<title>[P] 가입 결과 안내</title>
+</head>
+<body>
+	<!-- [바닥페이지] -->
+	<div id="wrap"></div>
+	<!--// -->
+
+	<!-- ####################################################### -->
+	<!-- [POPUP] 가입 결과 안내 -->
+	<!-- ####################################################### -->
+	<div class="layer_pop type_full" id="uiNHMEMJOIN06" role="dialog" aria-modal="true" aria-labelledby="uiNHMEMJOIN06TIT">
+		<div class="pop_inner">
+			<!-- ------------------------------- -->
+			<!-- [POPUP HEADER] -->
+			<!-- ------------------------------- -->
+			<div class="pop_header">
+				<button type="button" class="btn_back">뒤로가기</button>
+			</div>
+			<p class="pop_tit top" id="uiNHMEMJOIN06TIT">가입 결과 안내</p>
+
+			<!-- ------------------------------- -->
+			<!-- [POPUP CONTENTS] -->
+			<!-- ------------------------------- -->
+			<div class="pop_con">
+				<p class="con_tit">NH멤버스 회원가입이 완료되었어요.</p>
+
+				<div class="info_con3">
+					<p>회원님의 통합 포인트는<br> <strong>5P</strong> 입니다</p>
+				</div>
+
+				<dl class="txt_bul1 t1">
+					<dt>마케팅정보 수신 동의 결과 <span>(2023년06월20일)</span></dt>
+					<dd>E-mail : <span>동의</span></dd>
+					<dd>PUSH : <span>동의</span></dd>
+					<dd>SMS : <span>동의</span></dd>
+					<dd>TM : <span>동의</span></dd>
+					<dd>DM : <span>동의</span></dd>
+				</dl>
+
+				<p class="txt_t3">정보수정은 NHmembers 홈페이지 &gt; 나의NH &gt; 회원정보수정 메뉴와, APP &gt; 설정 &gt; 회원정보 변경 메뉴에서 하실 수 있습니다.</p>
+			</div>
+
+			<!-- ------------------------------- -->
+			<!-- [POPUP FOOTER BTN] -->
+			<!-- ------------------------------- -->
+			<div class="wrap_action">
+				<a href="#none" class="btn_action">NH멤버스팟 이용하기</a>
+			</div>
+			<!-- ------------------------------- -->
+		</div>
+	</div>
+	<!-- ####################################################### -->
+
+	<script>
+		$(function(){
+			openlayer('uiNHMEMJOIN06'); //풀팝업 호출
+		})
+	</script>
+</body>
+</html>

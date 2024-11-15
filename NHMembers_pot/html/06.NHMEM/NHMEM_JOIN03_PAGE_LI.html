@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<title>[P] 회원가입 | 약관동의</title>
+</head>
+<body>
+	<!-- [바닥페이지] -->
+	<div id="wrap"></div>
+	<!--// -->
+
+	<!-- ####################################################### -->
+	<!-- [POPUP] 회원가입 | 약관동의 -->
+	<!-- ####################################################### -->
+	<div class="layer_pop type_full" id="uiNHMEMJOIN03" role="dialog" aria-modal="true" aria-labelledby="uiNHMEMJOIN03TIT">
+		<div class="pop_inner">
+			<!-- ------------------------------- -->
+			<!-- [POPUP HEADER] -->
+			<!-- ------------------------------- -->
+			<div class="pop_header">
+				<button type="button" class="btn_back">뒤로가기</button>
+			</div>
+			<p class="pop_tit top" id="uiNHMEMJOIN03TIT">약관동의</p>
+
+			<!-- ------------------------------- -->
+			<!-- [POPUP CONTENTS] -->
+			<!-- ------------------------------- -->
+			<div class="pop_con">
+				<!-- ### [STEP] ### -->
+				<div class="info_step1">
+					<ol>
+						<li><span>Step1.</span><strong>본인인증</strong></li>
+						<li aria-current="step"><span>Step2.</span><strong>약관동의</strong></li>
+						<li><span>Step3.</span><strong>정보입력</strong></li>
+					</ol>
+				</div>
+
+				<!-- ### [안내문구] ### -->
+				<p class="con_tit">이용약관 및 개인정보 수집/이용에 대한<br>내용을 확인하고 동의합니다.</p>
+
+				<!-- ### [약관동의] ### -->
+				<div class="agree_wr">
+					<div class="agree_all">
+						<input type="checkbox" id="chkall" class="chk_all"><label for="chkall">전체동의</label>
+					</div>
+					<ul class="agree_list">
+						<li>
+							<!-- [접근성 관련]에러 발생시 input에 포커스 이동 및 다음 내용 추가. aria-invalid="true". 에러 후 재선택시 aria-invalid="false"로 전환 -->
+							<input type="checkbox" id="chk01" aria-errormessage="chk_error01"><label for="chk01">[필수] NH멤버스 회원약관</label>
+							<button type="button" class="btn_more btn_layer">자세히 보기</button>
+							<p id="chk_error01" role="alert" class="agree_alert">약관에 동의해 주세요.</p>
+						</li>
+						<li>
+							<!-- [접근성 관련]에러 발생시 input에 포커스 이동 및 다음 내용 추가. aria-invalid="true". 에러 후 재선택시 aria-invalid="false"로 전환 -->
+							<input type="checkbox" id="chk02" aria-errormessage="chk_error02"><label for="chk02">[필수] 개인(신용)정보의 필수적 수집 이용</label>
+							<button type="button" class="btn_more btn_layer">자세히 보기</button>
+							<p id="chk_error02" role="alert" class="agree_alert">약관에 동의해 주세요.</p>
+						</li>
+						<li>
+							<!-- [접근성 관련]에러 발생시 input에 포커스 이동 및 다음 내용 추가. aria-invalid="true". 에러 후 재선택시 aria-invalid="false"로 전환 -->
+							<input type="checkbox" id="chk03" aria-errormessage="chk_error03"><label for="chk03">[필수] 개인(신용)정보의 필수적 제공</label>
+							<button type="button" class="btn_more btn_layer">자세히 보기</button>
+							<p id="chk_error03" role="alert" class="agree_alert">약관에 동의해 주세요.</p>
+						</li>
+						<li>
+							<input type="checkbox" id="chk04"><label for="chk04">[선택] 개인(신용)정보의 선택적 수집&middot;이용에 관한 사항 <i class="icon_txt3 grade2">다소안심</i></label>
+							<button type="button" class="btn_more btn_layer">자세히 보기</button>
+							<div class="sub">
+								<span class="inp_chk"><input type="checkbox" id="chk04_00"><label for="chk04_00">전체</label></span>
+								<span class="inp_chk"><input type="checkbox" id="chk04_01"><label for="chk04_01">E-mail</label></span>
+								<span class="inp_chk"><input type="checkbox" id="chk04_02"><label for="chk04_02">SMS</label></span>
+								<span class="inp_chk"><input type="checkbox" id="chk04_03"><label for="chk04_03">TM</label></span>
+								<span class="inp_chk"><input type="checkbox" id="chk04_04"><label for="chk04_04">DM</label></span>
+							</div>
+							<div class="txt_bul1">마케팅 정보 수신에 동의하시면 다양한 혜택을 받으실 수 있어요.</div>
+						</li>
+						<li>
+							<input type="checkbox" id="chk05"><label for="chk05">[선택] 개인(신용)정보의 선택적 제공에 관한 사항 <i class="icon_txt3 grade1">안심</i></label>
+							<button type="button" class="btn_more btn_layer">자세히 보기</button>
+						</li>
+					</ul>
+				</div>
+				<!-- ### // ### -->
+			</div>
+
+			<!-- ------------------------------- -->
+			<!-- [POPUP FOOTER BTN] -->
+			<!-- ------------------------------- -->
+			<div class="wrap_action">
+				<button type="button" class="btn_action">약관동의</button>
+			</div>
+			<!-- ------------------------------- -->
+		</div>
+	</div>
+	<!-- ####################################################### -->
+
+	<script>
+		$(function(){
+			openlayer('uiNHMEMJOIN03'); //풀팝업 호출
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<title>PUBLISHING GUIDE</title>
+	<link rel="stylesheet" href="../../resources/css/ui_publish.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/ui_publish.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+	<div class="guide-wrap" id="wrapper">
+		<!-- ####################################################### -->
+		<!-- ### [HEADER] ### -->
+		<!-- ####################################################### -->
+		<header class="guide-header">
+			<h1><span>NHmembers pot</span><strong>INFO GUIDE</strong></h1>
+			<nav>
+				<ul>
+					<li><a href="content_txt.html">TXT</a></li>
+					<li><a href="content_btn.html">BTN</a></li>
+					<li><a href="content_tbl.html">TABLE</a></li>
+					<li><a href="content_list.html">LIST</a></li>
+					<li><a href="content_form.html">FORM</a></li>
+					<li><a href="content_info.html" aria-current="page">INFO</a></li>
+					<li><a href="content_bbs.html">BOARD</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- ####################################################### -->
+		<!-- ### [CONTAINER] ### -->
+		<!-- ####################################################### -->
+		<div class="guide-container">
+			<!-- ### 데이터유형 ### -->
+			<section class="guide-section">
+				<h2 class="guide-tit1">데이터유형</h2>
+
+				<!-- 숫자 -->
+				<h3 class="guide-tit2">숫자 : .data_num1</h3>
+				<ul class="guide-txt">
+					<li>금액 및 포인트를 표현할 경우 사용</li>
+					<li>세부적인 스타일은 상위 클래스에 따라 정의됨</li>
+				</ul>
+				<div class="guide-cont">
+					<div class="guide-table1">
+						<table>
+							<caption>숫자 유형</caption>
+							<colgroup>
+								<col style="width:30%">
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">구분</th>
+									<th scope="col">내용</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>기본</td>
+									<td><span class="data_num1"><strong>000,000,000</strong><span>P</span></span></td>
+								</tr>
+								<tr>
+									<td>dl 구조</td>
+									<td>
+										<dl class="data_num1">
+											<dt>제목</dt>
+											<dd><strong>000,000,000</strong><span>P</span></dd>
+										</dl>
+									</td>
+								</tr>
+								<tr>
+									<td>스타일 변경 : + .t1</td>
+									<td>
+										<p class="data_num1 t1"><strong>000,000</strong><span>P</span></p>
+										<dl class="data_num1 t1">
+											<dt>제목</dt>
+											<dd><strong>000,000,000</strong><span>P</span></dd>
+										</dl>
+									</td>
+								</tr>
+								<tr>
+									<td>숫자 카운팅<br> [data-mode="count"]</td>
+									<td><p class="data_num1 t1"><strong data-mode="count">123,456,789</strong><span>P</span></p></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!-- // -->
+			</section>
+
+			<!-- ### 정보영역 ### -->
+			<section class="guide-section">
+				<h2 class="guide-tit1">정보영역</h2>
+
+				<!-- 유형1 -->
+				<h3 class="guide-tit2">유형1 : .area_info1</h3>
+				<div class="guide-cont">
+					<div class="guide-table1">
+						<table>
+							<caption>정보영역 유형1 </caption>
+							<colgroup>
+								<col style="width:30%">
+								<col>
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">구분</th>
+									<th scope="col">내용</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>기본</td>
+									<td>
+										<div class="area_info1">
+											<p>총 <strong>00</strong>건</p>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>총건수 + 셀렉트</td>
+									<td>
+										<div class="area_info1">
+											<p>총 <strong>00</strong>건</p>
+											<div class="side">
+												<button type="button" class="selectbox">버튼형</button>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>셀렉트박스 full <br> [.w100]</td>
+									<td>
+										<div class="area_info1">
+											<button type="button" class="selectbox w100">버튼형</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>셀렉트박스 2개</td>
+									<td>
+										<div class="area_info1">
+											<button type="button" class="selectbox">버튼형</button>
+											<button type="button" class="selectbox w100">버튼형</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>셀렉트박스 2개 + side</td>
+									<td>
+										<div class="area_info1">
+											<button type="button" class="selectbox">버튼형</button>
+											<button type="button" class="selectbox">버튼형</button>
+											<div class="side">side</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>셀렉트박스 2개 이상 <br> div.area</td>
+									<td>
+										<div class="area_info1">
+											<div class="area">
+												<button type="button" class="selectbox">버튼형</button>
+											</div>
+											<div class="area">
+												<button type="button" class="selectbox">버튼형</button>
+												<button type="button" class="selectbox">버튼형</button>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>기타</td>
+									<td>
+										<div class="area_info1">
+											<span class="inp_chk2"><input type="checkbox" id="uiFormChk01"><label for="uiFormChk01">이벤트</label></span>
+											<span class="inp_chk2"><input type="checkbox" id="uiFormChk02" checked><label for="uiFormChk02">쿠폰</label></span>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!-- 유형2 -->
+				<h3 class="guide-tit2">유형2 : .area_info2</h3>
+				<div class="guide-cont">
+					<div class="area_info2">
+						<dl>
+							<dt>항목명</dt>
+							<dd class="data_num1"><strong>0000-0000-0000</strong></dd>
+						</dl>
+						<div class="side"><button type="button" class="btn_sub2">버튼명</button></div>
+					</div>
+
+					<div class="area_info2">
+						<dl>
+							<dt>항목명</dt>
+							<dd class="data_num1"><strong>0000-0000-0000</strong></dd>
+						</dl>
+						<div class="side"><button type="button" class="btn_sub2">버튼명</button></div>
+						<div class="info load" role="alert" aria-live="assertive"><p>텍스트</p></div>
+					</div>
+				</div>
+
+				<!-- 유형3 -->
+				<h3 class="guide-tit2">유형3 : .area_info3</h3>
+				<div class="guide-cont">
+					<div class="area_info3">
+						<dl>
+							<dt>항목명</dt>
+							<dd class="data_num1"><strong>000,000</strong><span>캐시</span></dd>
+						</dl>
+					</div>
+
+					<div class="area_info3">
+						<dl>
+							<dt>항목명</dt>
+							<dd class="data_num1"><strong>000,000</strong><span>캐시</span></dd>
+						</dl>
+						<dl>
+							<dt>항목명</dt>
+							<dd class="data_num1"><strong>000,000</strong><span>P</span></dd>
+						</dl>
+					</div>
+
+					<div class="area_info3 t1">
+						<dl>
+							<dt>항목명</dt>
+							<dd class="data_num1"><strong>000,000</strong><span>P</span></dd>
+						</dl>
+					</div>
+				</div>
+				<!-- // -->
+			</section>
+
+			<!-- ### 요약정보 ### -->
+			<section class="guide-section">
+				<h2 class="guide-tit1">요약정보</h2>
+
+				<!-- 유형1 -->
+				<h3 class="guide-tit2">유형1(혜택메인나의포인트) : .info_summary1</h3>
+				<div class="guide-cont" >
+					<h4 class="guide-tit4">CASE) 회원</h4>
+					<div class="info_summary1">
+						<h4 class="tit">항목명</h4>
+						<p class="data_num1"><strong>000,000,000</strong><span>P</span></p>
+						<button type="button" class="link">{항목명} 바로가기</button>
+					</div>
+
+					<h4 class="guide-tit4">CASE) 비회원</h4>
+					<div class="info_summary1">
+						<p><span>문구노출</span><strong>강조문구</strong></p>
+						<button type="button" class="link">바로가기</button>
+					</div>
+				</div>
+
+				<!-- 유형2 -->
+				<h3 class="guide-tit2">유형2(쿠폰상세) : .info_summary2</h3>
+				<div class="guide-cont">
+					<div class="info_summary2">
+						<dl>
+							<dt>
+								<span>참여사명</span>
+								<strong>제목</strong>
+							</dt>
+							<dd class="data_num1"><strong>000,000</strong><span>P</span></dd>
+							<dd class="sub">
+								<time>0000.00.00</time>
+								<span>까지 사용 가능</span>
+							</dd>
+						</dl>
+					</div>
+					<hr class="guide-line2">
+					<div class="info_summary2">
+						<dl>
+							<dt>
+								<span>참여사명</span>
+								<strong>제목이 길어질 경우 개행됩니다. 개행됩니다. 개행됩니다.</strong>
+							</dt>
+							<dd class="data_num1"><strong>00%</strong><span>할인</span></dd>
+							<dd class="sub">
+								<span>만료일</span>
+								<time>0000.00.00</time>
+							</dd>
+						</dl>
+					</div>
+					<hr class="guide-line2">
+					<div class="info_summary2">
+						<dl>
+							<dt>
+								<span>참여사명</span>
+								<strong>제목</strong>
+							</dt>
+							<dd class="data_num1"><strong>00%</strong><span>할인</span></dd>
+							<dd class="sub">
+								<strong class="state">기간만료</strong>
+								<span>만료일</span>
+								<time>0000.00.00</time>
+							</dd>
+						</dl>
+					</div>
+				</div>
+
+				<!-- 유형3 -->
+				<h3 class="guide-tit2">유형3(포인트) : .info_summary3</h3>
+				<div class="guide-cont">
+					<h4 class="guide-tit4">기본구성</h4>
+					<div class="info_summary3">
+						<dl>
+							<dt>항목명</dt>
+							<dd class="data_num1"><strong>000,000</strong><span>P</span></dd>
+						</dl>
+						<dl>
+							<dt>항목명</dt>
+							<dd class="data_num1"><strong>000,000</strong><span>P</span></dd>
+						</dl>
+						<dl>
+							<dt>항목명</dt>
+							<dd class="data_num1">
+								<button type="button" class="btn_txt1 ic2">안내</button>
+								<strong>000,000</strong><span>P</span>
+							</dd>
+						</dl>
+					</div>
+					<hr class="guide-line1">
+					<div class="info_summary3">
+						<dl>
+							<dt>항목명</dt>
+							<dd class="data_num1"><strong>000,000</strong><span>P</span></dd>
+						</dl>
+					</div>
+					<hr class="guide-line1">
+					<h4 class="guide-tit4">버튼추가</h4>
+					<div class="info_summary3">
+						<dl>
+							<dt>항목명<br>항목명</dt>
+							<dd class="data_num1"><strong>000,000</strong><span>P</span></dd>
+						</dl>
+						<div class="wrap_btn1">
+							<button type="button" class="btn_com1">버튼명</button>
+							<button type="button" class="btn_com1 ty03">버튼명</button>
+							<button type="button" class="btn_com1 ty02">버튼명</button>
+						</div>
+					</div>
+
+					<hr class="guide-line1">
+					<h4 class="guide-tit4">타이틀 추가</h4>
+					<div class="info_summary3">
+						<h4 class="tit">
+							<span class="img">
+								<img src="../../resources/images/logo/bi_f_payco.png" alt="PAYCO에서 NHpoint로 전환">
+							</span>
+						</h4>
+						<dl>
+							<dt>항목명</dt>
+							<dd class="data_num1"><strong>000,000</strong><span>P</span></dd>
+						</dl>
+						<dl class="data1">
+							<dt>항목명</dt>
+							<dd class="data_num1"><strong>000,000</strong><span>P</span></dd>
+						</dl>
+						<dl>
+							<dt>항목명</dt>
+							<dd class="data_num1">
+								<button type="button" class="btn_txt1 ic2">안내</button>
+								<strong>000,000</strong><span>P</span>
+							</dd>
+						</dl>
+					</div>
+
+					<hr class="guide-line1">
+					<h4 class="guide-tit4">합계 및 최종 포인트 : [+ .t1]</h4>
+					<div class="info_summary3 t1">
+						<dl>
+							<dt>항목명</dt>
+							<dd class="data_num1"><strong>000,000</strong><span>P</span></dd>
+						</dl>
+						<dl>
+							<dt>항목명</dt>
+							<dd class="data_num1"><strong>000,000</strong><span>P</span></dd>
+						</dl>
+						<dl>
+							<dt>항목명</dt>
+							<dd class="data_num1"><strong>000,000</strong><span>P</span></dd>
+						</dl>
+					</div>
+
+					<hr class="guide-line1">
+					<h4 class="guide-tit4">상하배치 : [+ .t2]</h4>
+					<div class="info_summary3 t2">
+						<dl>
+							<dt>항목명</dt>
+							<dd class="data_num1"><strong>000,000</strong><span>P</span></dd>
+						</dl>
+					</div>
+
+					<hr class="guide-line1">
+					<h4 class="guide-tit4">타이틀 BG없음 : [+ .t3]</h4>
+					<p class="guide-txt">기존 NH 멤버스와 동일한 이미지를 사용하기 위해 통이미지로 작업</p>
+					<div class="info_summary3 t3">
+						<h5 class="tit">
+							<span class="img"><img src="../../resources/images/logo/bi_moneycon02.png" alt="머니콘 NH포인트 교환권 에서 NHpoint 로 전환"></span>
+						</h5>
+					</div>
+				</div>
+
+				<!-- 유형4 -->
+				<h3 class="guide-tit2">유형4(사용처) : .info_summary4</h3>
+				<div class="guide-cont">
+					<div class="info_summary4">
+						<h4 class="tit">
+							<span class="img"><img src="../../resources/images/upload/@ico_co_logo01.png" alt=""></span>
+							<span>사용처명</span>
+						</h4>
+						<div class="btn">
+							<a href="#none" class="btn_com1">APP</a>
+							<a href="#none" class="btn_com1 ty03">사업장 찾기</a>
+						</div>
+					</div>
+				</div>
+				<!-- // -->
+			</section>
+
+			<!-- ### 정보형 컨텐츠 ### -->
+			<section class="guide-section">
+				<h2 class="guide-tit1">정보형 컨텐츠</h2>
+
+				<!-- 가로형 -->
+				<h3 class="guide-tit2">가로형 : .info_con1</h3>
+				<ul class="guide-txt">
+					<li>좌우 배치인 컨텐츠에 사용됨</li>
+					<li>컨텐츠에 따라 dl 또는 ul로 사용함</li>
+					<li>폰트 사이즈 : 14px</li>
+				</ul>
+				<div class="guide-cont">
+					<h4 class="guide-tit4">DL 구조</h4>
+					<div class="info_con1">
+						<dl>
+							<dt>제목</dt>
+							<dd>내용</dd>
+						</dl>
+						<dl>
+							<dt>제목</dt>
+							<dd>내용</dd>
+						</dl>
+						<dl>
+							<dt>제목</dt>
+							<dd>내용</dd>
+						</dl>
+					</div>
+
+					<hr class="guide-line1">
+					<h4 class="guide-tit4">UL 구조</h4>
+					<div class="info_con1">
+						<ul>
+							<li>
+								<div>제목</div>
+								<div>내용</div>
+							</li>
+							<li>
+								<div>제목</div>
+								<div>내용</div>
+							</li>
+							<li>
+								<div>제목</div>
+								<div>내용</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- 세로형 -->
+				<h3 class="guide-tit2">세로형 : .info_con2</h3>
+				<ul class="guide-txt">
+					<li>상하배치인 컨텐츠에 사용됨 (현재 이벤트 및 쿠폰상세 페이지에 사용됨)</li>
+					<li>컨텐츠에 따라 dl 또는 ul로 사용함</li>
+					<li>폰트 사이즈 : 14px</li>
+				</ul>
+				<div class="guide-cont">
+					<h4 class="guide-tit4">DL 구조</h4>
+					<div class="info_con2">
+						<dl>
+							<dt>제목</dt>
+							<dd>내용</dd>
+						</dl>
+						<dl>
+							<dt>제목</dt>
+							<dd>내용</dd>
+						</dl>
+						<dl class="data1">
+							<dt>제목 [.data1]</dt>
+							<dd>내용</dd>
+							<dd>내용</dd>
+							<dd>내용</dd>
+							<dd>내용</dd>
+						</dl>
+						<dl class="data2">
+							<dt>제목 [.data2 ol] 순서가 있는 내용 (ex:사용방법)</dt>
+							<dd>
+								<ol>
+									<li>내용</li>
+									<li>내용</li>
+									<li>내용</li>
+									<li>내용</li>
+									<li>내용</li>
+								</ol>
+							</dd>
+							<dt>제목 [.data2 ul] 숫자가 블릿 대신 사용할 경우 (ex: 유의사항)</dt>
+							<dd>
+								<ul>
+									<li>내용</li>
+									<li>내용</li>
+									<li>내용</li>
+									<li>내용</li>
+									<li>내용</li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+					<hr class="guide-line1">
+					<h4 class="guide-tit4">UL 구조</h4>
+					<div class="info_con2">
+						<ul>
+							<li>
+								<div>제목</div>
+								<div>내용</div>
+							</li>
+							<li>
+								<div>제목</div>
+								<div>내용</div>
+							</li>
+							<li>
+								<div>제목</div>
+								<div>내용</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- 박스형 -->
+				<h3 class="guide-tit2">박스형(항목명 비노출) : .info_con3</h3>
+				<div class="guide-cont">
+					<h4 class="guide-tit4">기본</h4>
+					<div class="info_con3">
+						<dl>
+							<dt>항목명</dt>
+							<dd>내용</dd>
+						</dl>
+						<dl>
+							<dt>항목명</dt>
+							<dd>내용</dd>
+						</dl>
+						<dl>
+							<dt>항목명</dt>
+							<dd>내용</dd>
+						</dl>
+					</div>
+
+					<h4 class="guide-tit4">강조문구</h4>
+					<div class="info_con3">
+						<dl>
+							<dt>항목명</dt>
+							<dd>
+								<strong>ASV***</strong>
+								<span>내용</span>
+							</dd>
+							<dd>부가설명</dd>
+						</dl>
+					</div>
+
+					<div class="info_con3">
+						<p>문구형입니다.<br><strong>00P</strong>강조된 문구는 Roboto 입니다.</p>
+					</div>
+				</div>
+
+				<!-- // -->
+			</section>
+
+			<!-- ### STEP 정보 ### -->
+			<section class="guide-section">
+				<h2 class="guide-tit1">STEP 정보</h2>
+
+				<h3 class="guide-tit2">유형1 : .info_step1</h3>
+				<div class="guide-cont">
+					<div class="info_step1">
+						<ol>
+							<li aria-current="step"><span>Step1.</span><strong>본인인증</strong></li>
+							<li><span>Step2.</span><strong>약관동의</strong></li>
+							<li><span>Step3.</span><strong>정보입력</strong></li>
+						</ol>
+					</div>
+
+					<div class="info_step1">
+						<ol>
+							<li><span>Step1.</span><strong>본인인증</strong></li>
+							<li aria-current="step"><span>Step2.</span><strong>약관동의</strong></li>
+							<li><span>Step3.</span><strong>정보입력</strong></li>
+						</ol>
+					</div>
+
+					<div class="info_step1">
+						<ol>
+							<li><span>Step1.</span><strong>본인인증</strong></li>
+							<li><span>Step2.</span><strong>약관동의</strong></li>
+							<li aria-current="step"><span>Step3.</span><strong>정보입력</strong></li>
+						</ol>
+					</div>
+				</div>
+
+				<h3 class="guide-tit2">유형2 : .info_step2</h3>
+				<div class="guide-cont">
+					<div class="info_step2 img_set1">
+						<ol>
+							<li>NH스마트뱅킹 앱에서<br>인증메시지 확인</li>
+							<li>NHOnePASS로<br>간편인증 진행</li>
+							<li>인증완료 후,<br>하단의 인증완료 클릭</li>
+						</ol>
+					</div>
+				</div>
+			</section>
+
+			<!-- ### 토글 컨텐츠 ### -->
+			<section class="guide-section">
+				<h2 class="guide-tit1">토글 컨텐츠</h2>
+
+				<!-- 유형1 -->
+				<h3 class="guide-tit2">유형1 : .area_toggle1</h3>
+<pre><code class="html">&lt;!-- [DL] 구조 --&gt;
+&lt;div class="area_toggle1"&gt;
+  &lt;dl class="active"&gt;&lt;!-- 활성화시 [class="active"] 추가 --&gt;
+    &lt;dt class="tit"&gt;
+      &lt;span&gt;제목&lt;/span&gt;
+      &lt;button type="button" data-toggle="btn"&gt;제목&lt;/button&gt;
+    &lt;/dt&gt;
+    &lt;dd data-toggle="cont"&gt;내용&lt;/dd&gt;
+  &lt;/dl&gt;
+&lt;/div&gt;
+
+&lt;!-- [UL] 구조 --&gt;
+&lt;div class="area_toggle1"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;!-- 활성화시 [class="active"] 추가 --&gt;
+      &lt;div class="tit"&gt;
+        &lt;strong&gt;제목&lt;/strong&gt;
+        &lt;button type="button" data-toggle="btn"&gt;제목&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div data-toggle="cont"&gt;내용&lt;/div&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+				<div class="guide-cont">
+					<h4 class="guide-tit4">DL 구조</h4>
+					<div class="area_toggle1">
+						<dl class="active">
+							<dt class="tit">
+								<span>제목</span>
+								<button type="button" data-toggle="btn">자세히보기</button>
+							</dt>
+							<dd data-toggle="cont">내용</dd>
+						</dl>
+						<dl>
+							<dt class="tit">
+								<span>제목</span>
+								<button type="button" data-toggle="btn">자세히보기</button>
+							</dt>
+							<dd data-toggle="cont">내용</dd>
+						</dl>
+					</div>
+					<hr class="guide-line1">
+					<h4 class="guide-tit4">UL 구조</h4>
+					<div class="area_toggle1">
+						<ul>
+							<li class="active">
+								<div class="tit">
+									<strong>제목</strong>
+									<button type="button" data-toggle="btn">자세히보기</button>
+								</div>
+								<div data-toggle="cont">내용</div>
+							</li>
+							<li>
+								<div class="tit">
+									<strong>제목</strong>
+									<button type="button" data-toggle="btn">자세히보기</button>
+								</div>
+								<div data-toggle="cont">내용</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- // -->
+			</section>
+
+			<!-- ### 배너 컨텐츠 ### -->
+			<section class="guide-section">
+				<h2 class="guide-tit1">배너 컨텐츠</h2>
+
+				<!-- 유형1 -->
+				<h3 class="guide-tit2">유형1 : .area_ban1</h3>
+				<p class="guide-txt">메인 혜택에 사용중이며, <br>아이콘은 전경이미지로 작업됨 (개발요청)</p>
+				<div class="guide-cont">
+					<div class="area_ban1">
+						<p>
+							<span>내용이 노출되며 <strong>000,000</strong>포인트</span>
+							<span>강조되는 내용입니다.</span>
+						</p>
+					</div>
+					<hr class="guide-line1">
+					<div class="area_ban1">
+						<p>
+							<span>오늘 최대 <strong>000,000,000,000</strong> 포인트</span>
+							<span>혜택을 받으실 수 있어요!</span>
+						</p>
+						<span class="img"><img src="../../resources/images/img_banner01.png" alt=""></span>
+					</div>
+				</div>
+
+				<!-- 유형2 -->
+				<h3 class="guide-tit2">유형2 : .area_ban2</h3>
+				<p class="guide-txt">메인 혜택 및 전체메뉴에서 사용중이며, <br>아이콘은 전경이미지로 작업됨 (개발요청)</p>
+				<div class="guide-cont">
+					<h4 class="guide-tit4">타이틀이 있는 경우</h4>
+					<div class="area_ban2">
+						<h5 class="tit">타이틀</h5>
+						<ul>
+							<li>
+								<span class="img"><img src="../../resources/images/icon_point01.png" alt=""></span>
+								<span>제목</span>
+								<span>링크가 없는 경우</span>
+							</li>
+							<li>
+								<a href="#none">
+									<span class="img"><img src="../../resources/images/icon_point02.png" alt=""></span>
+									<span>제목</span>
+									<span>링크가 있는 경우<strong>{00}</strong></span>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<hr class="guide-line2">
+
+					<h4 class="guide-tit4">타이틀이 없는 경우</h4>
+					<div class="area_ban2">
+						<ul>
+							<li>
+								<span class="img"><img src="../../resources/images/icon_point03.png" alt=""></span>
+								<span>제목</span>
+								<span>링크가 없는 경우</span>
+							</li>
+							<li>
+								<a href="#none">
+									<span class="img"><img src="../../resources/images/icon_point04.png" alt=""></span>
+									<span>제목</span>
+									<span>링크가 있는 경우<strong>{00}</strong></span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<!-- ### 기타 컨텐츠 ### -->
+			<section class="guide-section">
+				<h2 class="guide-tit1">기타 컨텐츠</h2>
+
+				<!-- 컨텐츠:바코드 -->
+				<h3 class="guide-tit2">컨텐츠(바코드) : .con_t1</h3>
+				<div class="guide-cont">
+					<div class="con_t1">
+						<div class="img"><img src="../../resources/images/upload/@img_barcode.png" alt=""></div>
+						<p class="data_num1"><strong>0000 0000 0000 0000</strong></p>
+					</div>
+				</div>
+
+				<!-- 컨텐츠:비율 -->
+				<h3 class="guide-tit2">컨텐츠(비율) : .con_t2</h3>
+				<div class="guide-cont">
+					<!--
+						[계산법]
+						--el-value : (나의포인트/연령대평균*100)%;
+					-->
+					<div class="con_t2" style="--el-value:50%;">
+						<p>연령대 기준 약 <strong>50%</strong> 포인트 <br>적립률이 <span>낮아요!</span></p>
+						<dl>
+							<dt>나의 포인트</dt>
+							<dd class="data_num1"><strong>160,000,000</strong><span>P</span></dd>
+							<dt>30대 평균</dt>
+							<dd class="data_num1"><strong>320,000,000</strong><span>P</span></dd>
+						</dl>
+					</div>
+					<div class="con_t2" style="--el-value:100%;">
+						<p>연령대 기준 약 <strong>200%</strong> 포인트 <br>적립률이 <span>높아요!</span></p>
+						<dl>
+							<dt>나의 포인트</dt>
+							<dd class="data_num1"><strong>320,000,000</strong><span>P</span></dd>
+							<dt>30대 평균</dt>
+							<dd class="data_num1"><strong>160,000,000</strong><span>P</span></dd>
+						</dl>
+					</div>
+					<div class="con_t2 ic1">
+						<p>아직 적립된 포인트가 없네요.<br>멤버스팟 서비스를 이용하고 포인트를 모아보세요!</p>
+					</div>
+					<div class="con_t2 ic2">
+						<p>포인트 적립률이 연령대 기준과 같네요.<br>멤버스팟 서비스를 이용하고 포인트를 더 모아보세요!</p>
+					</div>
+				</div>
+
+				<!-- 컨텐츠:유의사항 -->
+				<h3 class="guide-tit2">컨텐츠(유의사항) : .con_t3</h3>
+				<div class="guide-cont">
+					<article class="con_t3">
+						<h1 class="tit">꼭 확인해 주세요.</h1>
+						<ul>
+							<li>내용이 노출됩니다.</li>
+							<li><strong>강조문구</strong>노출됩니다.</li>
+							<li>내용이 노출됩니다.</li>
+							<li>내용이 노출됩니다.</li>
+							<li>내용이 노출됩니다.</li>
+							<li>내용이 노출됩니다.</li>
+							<li>내용이 노출됩니다.</li>
+							<li>내용이 노출됩니다.</li>
+							<li>내용이 노출됩니다.</li>
+						</ul>
+					</article>
+					<hr class="guide-line1">
+					<article class="con_t3">
+						<header>
+							<span class="img"><img src="../../resources/images/upload/@img_bi01.png" alt=""></span>
+							<h1>도농상생국민운동본부</h1>
+							<p>농촌과 도시의 도농교류 활성화를 통해 농업인과 도시민의 삶의 질을 함께 높여가는 범국민 도농상생운동 단체입니다.</p>
+						</header>
+						<div class="box">
+							<!-- [관리자 등록 영역] -->
+							<h4 class="h4_titlety mt25">이용안내</h4>
+							<div class="con_area01">
+								<ul class="dot_list">
+									<li><span class="fcolor01">강조문구</span>내용이 노출됩니다.</li>
+									<li>내용이 노출됩니다.</li>
+									<li>내용이 노출됩니다.</li>
+								</ul>
+							</div>
+							<!-- // -->
+						</div>
+					</article>
+				</div>
+
+				<!-- 컨텐츠:사용방법 -->
+				<h3 class="guide-tit2">컨텐츠(사용방법) : .con_t4</h3>
+				<div class="guide-cont">
+					<div class="con_t4">
+						<header>
+							<h4>타이틀</h4>
+							<p>부가설명</p>
+						</header>
+						<ol>
+							<li>
+								<i>Step 1</i>
+								<strong>강조문구</strong>
+								<span>부가설명</span>
+								<span class="img"><img src="../../resources/images/nhpoint/img_attendance_step01.png" alt="" aria-hidden="true"></span>
+							</li>
+							<li>
+								<i>Step 2</i>
+								<strong>강조문구</strong>
+								<span>부가설명</span>
+								<span class="img"><img src="../../resources/images/nhpoint/img_attendance_step02.png" alt="" aria-hidden="true"></span>
+							</li>
+						</ol>
+					</div>
+				</div>
+
+				<!-- 컨텐츠:약관내용 -->
+				<h3 class="guide-tit2">컨텐츠(약관내용) : .con_terms</h3>
+				<div class="guide-cont">
+					<div class="con_terms">
+						<p class="txt">농협은행주식회사(이하 “은행”이라 함)는 NH멤버스 서비스를 제공함에 있어 개인정보 보호법, 정보통신망 이용촉진 및 정보보호 등에 관한 법률 등 관련 법령상의 개인정보 보호규정을 준수합니다. 은행은 NH멤버스 회원(이하 “회원”이라 함)의 개인정보 보호를 가장 중요시하며, 회원의 권익을 보호하고 개인정보와 관련한 회원의 고충을 원활하게 처리할 수 있도록 다음과 같이 개인정보 처리방침을 두고 공개합니다.</p>
+						<dl>
+							<dt>제1조(개인정보의 처리 목적)</dt>
+							<dd>
+								<div>① 은행은 다음 각 호의 목적을 위해 필요한 최소한의 개인정보를 처리합니다. 수집한 개인정보는 다음의 목적 이외의 용도로는 사용되지 않으며 이용 목적이 변경될 경우에는 별도의 동의를 받는 등 필요한 조치를 구할 예정입니다. </div>
+								<ul>
+									<li>회원가입 및 관리 : 회원 가입의사 확인, 회원제 서비스 제공에 따른 본인 식별&middot;인증, 회원자격 유지&middot;관리, 서비스 부정이용 방지 및 비인가 사용방지, 만 14세 미만 개인정보 수집 시 법정대리인 동의 여부 확인, 사고조사, 분쟁해결, 민원처리, 고지사항 전달 등</li>
+									<li>NH멤버스 서비스 제공에 관한 계약 이행 및 정산 : 포인트 적립&middot;사용에 대한 승인 및 정산, 카드 발급 및 관리, 각종 편의 서비스 및 혜택 제공, 고객센터 운영, 법령상 의무이행 등</li>
+									<li>마케팅 및 광고에의 활용 : 최신 정보 및 맞춤 서비스 제공, 이벤트 정보 제공 및 참여기회 제공, 중복 마케팅 방지 등</li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+				</div>
+
+				<!-- 이미지영역 -->
+				<h3 class="guide-tit2">이미지영역 : .area_img</h3>
+				<div class="guide-cont">
+					<div class="area_img"><img src="../../resources/images/upload/@img_event_vw01.png" alt=""></div>
+				</div>
+
+				<!-- [ASIS] 사용처 상세 -->
+				<h3 class="guide-tit2">[ASIS] 사용처 상세 : .co_benefit</h3>
+				<p class="guide-txt">기존 마크업 유지 및 CSS 네이밍 유지</p>
+				<div class="guide-cont">
+					<div class="co_benefit">
+						<div class="detail">
+							<h5 class="tit">타이틀</h5>
+							<div class="desc">
+								<dl>
+									<dt>항목명</dt>
+									<dd>내용</dd>
+									<dd>내용</dd>
+
+									<dt>항목명</dt>
+									<dd>내용</dd>
+									<dd>내용</dd>
+								</dl>
+								<p class="desc__notice">부가내용</p>
+							</div>
+						</div>
+
+						<div class="detail">
+							<h5 class="tit">타이틀</h5>
+							<div class="desc">
+								<dl>
+									<dt>제목</dt>
+									<dd>
+										내용
+										<p class="desc__notice">부가내용</p>
+									</dd>
+									<dd>
+										<p class="desc__tit">서브항목</p>
+										<ul class="desc__ul">
+											<li>내용</li>
+											<li>내용
+												<p class="desc__sub-tit">서브항목2</p>
+												<ol class="desc__ol">
+													<li>내용</li>
+													<li>내용</li>
+													<li>내용</li>
+												</ol>
+												<p class="desc__notice">부가내용</p>
+												<p class="desc__notice">부가내용</p>
+											</li>
+											<li>내용
+												<ul class="desc__ul desc__ul--dot">
+													<li>내용</li>
+													<li>내용</li>
+													<li>내용</li>
+												</ul>
+												<p class="desc__notice">부가내용</p>
+											</li>
+										</ul>
+									</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ### // ### -->
+		</div>
+		<!-- ####################################################### -->
+	</div>
+</body>
+</html>

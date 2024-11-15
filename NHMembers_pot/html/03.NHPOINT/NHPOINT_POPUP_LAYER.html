@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<title>[L] 유의사항 선택</title>
+</head>
+<body>
+	<!-- [바닥페이지] -->
+	<div id="wrap">
+		<div class="wrap_btn3"><button type="button" class="btn_txt1 ic1 btn_layer" aria-controls="uiNOTICESELECT">유의사항</button></div><!-- [D] 팝업호출 샘플 -->
+	</div>
+	<!--// -->
+
+	<!-- ####################################################### -->
+	<!-- [POPUP] 유의사항 선택 -->
+	<!-- ####################################################### -->
+	<div class="layer_pop type_btm" id="uiNOTICESELECT" role="dialog" aria-modal="true" aria-label="유의사항 선택">
+		<div class="pop_inner">
+			<!-- ------------------------------- -->
+			<!-- [POPUP CONTENTS] -->
+			<!-- ------------------------------- -->
+			<div class="pop_con">
+				<span class="inp_rad"><label for="uiFormRad0101">세부 유의사항</label><input type="radio" name="uiFormRad" id="uiFormRad0101" checked></span>
+				<span class="inp_rad"><label for="uiFormRad0102">전환 유의사항</label><input type="radio" name="uiFormRad" id="uiFormRad0102"></span>
+			</div>
+
+			<!-- ------------------------------- -->
+			<!-- [POPUP FOOTER BTN] -->
+			<!-- ------------------------------- -->
+			<div class="wrap_action">
+				<button type="button" class="btn_action btn_close">확인</button> <!-- class="btn_close" 사용시 레이어 닫힘  -->
+			</div>
+			<!-- ------------------------------- -->
+		</div>
+	</div>
+	<!-- ####################################################### -->
+
+	<script>
+		$(function(){
+			openlayer('uiNOTICESELECT') //레이어팝업 호출 샘플
+
+			$('[aria-controls]').on('click',function(){
+				var _btn = $(this).attr('aria-controls');
+				openlayer(_btn) //레이어팝업 호출 샘플
+			});
+		})
+	</script>
+</body>
+</html>

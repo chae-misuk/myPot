@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<title>[P] NHonePASS 인증</title>
+</head>
+<body>
+	<!-- [바닥페이지] -->
+	<div id="wrap"></div>
+	<!--// -->
+
+	<!-- ####################################################### -->
+	<!-- [POPUP] NHonePASS 인증 -->
+	<!-- ####################################################### -->
+	<div class="layer_pop type_full" id="uiNHMEMCERTONE01" role="dialog" aria-modal="true" aria-labelledby="uiNHMEMCERTONE01TIT">
+		<div class="pop_inner">
+			<!-- ------------------------------- -->
+			<!-- [POPUP HEADER] -->
+			<!-- ------------------------------- -->
+			<div class="pop_header">
+				<button type="button" class="btn_back">뒤로가기</button>
+			</div>
+			<p class="pop_tit top" id="uiNHMEMCERTONE01TIT">NHonePASS 인증</p>
+
+			<!-- ------------------------------- -->
+			<!-- [POPUP CONTENTS] -->
+			<!-- ------------------------------- -->
+			<div class="pop_con">
+				<p class="con_tit">입력하신 휴대폰으로 인증 요청 메시지를 보냈습니다. NH스마트뱅킹 인증을 진행해 주세요.</p>
+
+				<!-- ### [정보영역] ### -->
+				<div class="info_step2 img_set1">
+					<ol>
+						<li>NH스마트뱅킹 앱에서<br>인증메시지 확인</li>
+						<li>NHOnePASS로<br>간편인증 진행</li>
+						<li>인증완료 후,<br>하단의 인증완료 클릭</li>
+					</ol>
+				</div>
+
+				<!-- ### [인증유효시간] ### -->
+				<p class="mes_t1">남은 인증 유효시간<strong>01:46</strong></p>
+
+				<!-- ### [버튼영역] ### -->
+				<div class="wrap_btn1"><a href="#none" class="btn_com1">NH스마트뱅킹 앱 바로가기</a></div>
+
+				<div class="wrap_btn2">
+					<button type="button" data-label="tooltip" class="btn_txt1 ic1 btn_layer" aria-controls="tooltip01">인증요청(Push알림)이 휴대폰으로 오지 않나요?</button>
+					<div id="tooltip01" class="tooltip" role="tooltip">
+						<button type="button" class="close">툴팁닫기</button>
+						<dl>
+							<dt>NH스마트뱅킹 앱 Push알림 허용</dt>
+							<dd>NH스마트뱅킹 앱 로그인 &gt; 전체메뉴 &gt; 고객센터 &gt; 환경설정 &gt; Push 알림 허용</dd>
+							<dt>안드로이드, iOs 디바이스 별 Push알림 허용</dt>
+							<dd>설정 &gt; 알림 &gt; NH스마트뱅킹 앱 선택 &gt; Push 알림 허용</dd>
+						</dl>
+						<p>※ 문제가 계속된다면 고객행복센터 : 1588-2100/1544-2100, 929번으로 연락해 주세요.</p>
+					</div>
+				</div>
+				<!-- ### // ### -->
+			</div>
+
+			<!-- ------------------------------- -->
+			<!-- [POPUP FOOTER BTN] -->
+			<!-- ------------------------------- -->
+			<div class="wrap_action">
+				<button type="button" class="btn_action">인증완료</button>
+			</div>
+			<!-- ------------------------------- -->
+		</div>
+	</div>
+	<!-- ####################################################### -->
+
+	<script>
+		$(function(){
+			openlayer('uiNHMEMCERTONE01'); //풀팝업 호출
+		})
+	</script>
+</body>
+</html>

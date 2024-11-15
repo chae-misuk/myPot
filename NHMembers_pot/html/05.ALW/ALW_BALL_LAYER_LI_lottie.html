@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+    <link rel="stylesheet" href="../../resources/css/nhm_newch_lottie.css"> <!-- 인터렉션 사용. 08.10 신규추가 -->
+    <script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+    <script type="text/javascript" src="../../resources/js/lottie.js"></script> <!-- 인터렉션 사용. 08.10 신규추가 -->
+    <title>풍선이벤트</title>
+</head>
+<body>
+    <a id="skipnavi" href="#contents" class="skipnav">컨텐츠바로가기</a>
+    <!-- wrap -->
+    <div id="wrap">
+      <div id="header"></div>
+    </div>
+    <!--// wrap -->
+
+    <!-- 풍선 -->
+  <div class="balloons">
+    <a href="#none" role="button" class="type01 btn_layer">
+      풍선이벤트 참여
+      <span>참여 횟수</span><span class="num">누적 3개</span>
+      <div id="motionArea_ball"></div>
+    </a>
+  </div>
+  <div class="balloons">
+    <a href="#none" role="button" class="type02 btn_layer">풍선이벤트 참여
+      <span>참여 횟수</span><span class="num">누적 3개</span>
+      <div id="motionArea_ball2"></div>
+    </a>
+  </div>
+  <div class="balloons">
+    <a href="#none" role="button" class="type03 btn_layer">풍선이벤트 참여
+      <span>참여 횟수</span><span class="num">누적 3개</span>
+      <div id="motionArea_ball3"></div>
+    </a>
+  </div>
+    <script>
+      $(".balloons a").each(function () {
+        var vheight = $(window).height() - 130;
+        $(this).css({
+          left: Math.random() * ($(window).width() - $(this).width()),
+          top: 130 + Math.random() * (vheight - $(this).height() * 2)
+        });
+        
+        var vheight2 = $(this).offset().top * 15;
+        var AniProperties = {
+            duration: vheight2,
+            specialEasing: {
+            top: "linear"
+            },
+            complete: function() {
+              $(this).addClass('mov_balloons');
+            }
+          }
+        if($('#header').is(':visible')){
+          $(this).delay(3000).animate({
+            top : 130
+          }, AniProperties);
+        } else if($('#sub_header').is(':visible')){
+          $(this).delay(3000).animate({
+            top : 80
+          }, AniProperties);
+        }
+      });
+
+      // 08.10 로티적용 추가
+      var animData6 = {
+          wrapper: document.getElementById('motionArea_ball'),
+          renderer: 'svg',
+          animType: 'html',
+          loop: false,
+          prerender: true,
+          autoplay: false,
+          path: '../../resources/js/lottie/balloons.json'
+
+      };
+      var anim_ball = bodymovin.loadAnimation(animData6);
+
+      var animData6_2 = {
+          wrapper: document.getElementById('motionArea_ball2'),
+          renderer: 'svg',
+          animType: 'html',
+          loop: false,
+          prerender: true,
+          autoplay: false,
+          path: '../../resources/js/lottie/balloons2.json'
+
+      };
+      var anim_ball2 = bodymovin.loadAnimation(animData6_2);
+
+      var animData6_3 = {
+          wrapper: document.getElementById('motionArea_ball3'),
+          renderer: 'svg',
+          animType: 'html',
+          loop: false,
+          prerender: true,
+          autoplay: false,
+          path: '../../resources/js/lottie/balloons3.json'
+
+      };
+      var anim_ball3 = bodymovin.loadAnimation(animData6_3);
+      
+      $(".balloons a").on('click', function(){
+        $(this).animate().stop();
+        $(this).children("span").addClass('mov_balloons');
+        
+        if($(this).is('.type01')) {
+          anim_ball.play();
+          setTimeout(function(){
+            $(".balloons a.type01").hide();
+          }, 4100);
+        } else if ($(this).is('.type02')){
+          anim_ball2.play();
+          setTimeout(function(){
+            $(".balloons a.type02").hide();
+          }, 4100);
+        } else if ($(this).is('.type03')){
+          anim_ball3.play();
+          setTimeout(function(){
+            $(".balloons a.type03").hide();
+          }, 4100);
+        }
+      })
+      // 08.10 로티적용 추가
+      </script>
+</body>
+</html>

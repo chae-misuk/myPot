@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<title>[P] 개인정보 제3자 제공 동의</title>
+</head>
+<body>
+	<!-- [바닥페이지] -->
+	<div id="wrap"></div>
+	<!--// -->
+
+	<!-- ####################################################### -->
+	<!-- [POPUP] 개인정보 제3자 제공 동의 약관 -->
+	<!-- ####################################################### -->
+	<div class="layer_pop type_full" id="uiCOMMTERM02P04" role="dialog" aria-modal="true" aria-labelledby="uiCOMMTERM02P04TIT">
+		<div class="pop_inner">
+			<!-- ------------------------------- -->
+			<!-- [POPUP HEADER] -->
+			<!-- ------------------------------- -->
+			<div class="pop_header">
+				<button type="button" class="btn_back">뒤로가기</button>
+			</div>
+			<p class="pop_tit" id="uiCOMMTERM02P04TIT">개인정보 제3자 제공 동의</p>
+
+			<!-- ------------------------------- -->
+			<!-- [POPUP CONTENTS] -->
+			<!-- ------------------------------- -->
+			<div class="pop_con">
+				<div class="con_terms">
+					<!-- [ARAM에서 내용 수정 및 관리] -->
+					<div class="agree_nbox">
+						<ul class="dot_list">
+							<li></li>
+							<li>① 제공에 관한 사항
+								<ul>
+									<li>제공받는 자 : <em style="font-size:20px">엔에이치앤페이코㈜</em></li>
+									<li>제공받는 자의 이용 목적 : <em style="font-size:20px">NH멤버스 회원 여부 확인, 포인트 잔액 조회 및 전환</em></li>
+									<li>제공하는 개인정보 항목 : 개인식별정보(CI), 전환신청포인트</li>
+									<li>보유ㆍ이용 기간 : <em style="font-size:20px">고객의 포인트 전환 처리 완료 시 까지</em></li>
+								</ul>
+							</li>
+							<li>② 동의를 거부할 권리 및 동의를 거부할 경우의 불이익
+								<ul>
+									<li>위 개인정보의 제공 및 이용에 대한 동의를 거부할 수 있습니다. 다만, 동의하지 않는 경우 포인트 전환 서비스를 제공받을 수 없습니다.</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					<!-- // -->
+				</div>
+			</div>
+
+			<!-- ------------------------------- -->
+			<!-- [POPUP FOOTER BTN] -->
+			<!-- ------------------------------- -->
+			<div class="wrap_action">
+				<button type="button" class="btn_action ty01 btn_close">취소</button><!-- class="btn_close" 사용시 레이어 닫힘  -->
+				<button type="button" class="btn_action">약관동의</button>
+			</div>
+			<!-- ------------------------------- -->
+		</div>
+	</div>
+	<!-- ####################################################### -->
+
+	<script>
+		$(function(){
+			openlayer('uiCOMMTERM02P04'); //풀팝업 호출
+		})
+	</script>
+</body>
+</html>

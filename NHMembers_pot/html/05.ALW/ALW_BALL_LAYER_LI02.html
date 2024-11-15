@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+    <script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+    <title>풍선이벤트</title>
+</head>
+<body>
+    <a id="skipnavi" href="#contents" class="skipnav">컨텐츠바로가기</a>
+    <!-- wrap -->
+    <div id="wrap">
+    </div>
+    <!--// wrap -->
+
+    <!-- popup -->
+    <div class="layer_pop type_ctr" id="layer01" role="dialog" aria-modal="true" aria-label="풍선이벤트 참여">
+		<div class="pop_inner">
+			<p id="pop_tit01" class="pop_tit">이벤트 참여</p>
+            <div class="pop_con">
+				<!-- 05.18 수정 -->
+                <p>풍선찾기 이벤트에 참여하시면<br>포인트 지급과 경품 추첨에 자동<br>응모된다는 건 팩트!<br>이벤트에 참여하시겠어요?</p>
+
+                <button type="button" class="today_not">오늘은 그만 볼래요.</button>
+                <!--// 05.18 수정 -->
+			</div>
+            <div class="wrap_btn1">
+				<button type="button" class="btn_com1 ty01 btn_close">취소</button> <!-- class="btn_close" 사용시 레이어 닫힘  -->
+				<button type="button" class="btn_com1 btn_layer" onclick="openlayer('layer02')">확인</button> <!-- class="btn_close" 사용시 레이어 닫힘  -->
+			</div>
+		</div>
+	</div>
+    <script>
+		$(function(){
+			openlayer('layer01');
+		})
+	</script>
+</body>
+</html>

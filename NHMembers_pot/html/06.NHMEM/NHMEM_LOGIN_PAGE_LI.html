@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<link rel="stylesheet" href="../../resources/css/swiper-min.css"> <!-- 메인 공지 팝업 사용. 신규추가 -->
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<script type="text/javascript" src="../../resources/js/swiper-min.js"></script> <!-- 메인 공지 팝업 사용. 신규추가 -->
+	<title>로그인</title>
+</head>
+<body>
+	<a href="#contents" class="skipnav">컨텐츠바로가기</a>
+
+	<!-- wrap -->
+	<div id="wrap">
+		<div id="sub_header">
+			<h1>NHmembers pot</h1>
+			<h2 class="hidden">회원</h2>
+			<h3>로그인</h3>
+			<a href="#none" class="btn_back">뒤로가기</a>
+		</div>
+
+		<!-- ####################################################### -->
+		<!-- [CONTENTS] 로그인 -->
+		<!-- ####################################################### -->
+		<div id="contents">
+			<div id="sub_content">
+				<p class="con_tit">내가 받을 수 있는 오늘의 혜택!<br>"NH멤버스 계정"으로 로그인 후 만나보세요</p> <!-- 07.14 수정. -->
+
+				<!-- ------------------------------- -->
+				<!-- [입력영역] -->
+				<!-- ------------------------------- -->
+				<div class="form_wrap">
+					<fieldset>
+						<legend>아이디/비밀번호 입력</legend>
+
+						<!-- 아이디 : 오류 샘플 : data-mode="invalid" /  aria-invalid="true" -->
+						<dl class="form" data-mode="invalid">
+							<dt>아이디</dt>
+							<dd>
+								<div class="inp_txt">
+									<input type="text" placeholder="아이디를 입력해 주세요." aria-label="아이디" aria-invalid="true">
+									<button type="button" class="btn_del">입력 내용 삭제</button>
+								</div>
+								<div class="validation" aria-live="assertive" role="alert">아이디를 입력해 주세요.</div>
+							</dd>
+						</dl>
+
+						<!-- 비밀번호 -->
+						<dl class="form">
+							<dt>비밀번호</dt>
+							<dd>
+								<div class="inp_txt">
+									<input type="password" placeholder="비밀번호를 입력해 주세요." aria-label="비밀번호">
+									<button type="button" class="btn_del">입력 내용 삭제</button>
+								</div>
+								<div class="validation" aria-live="assertive" role="alert">비밀번호를 입력해 주세요.</div>
+							</dd>
+						</dl>
+
+						<!-- 아이디 저장 -->
+						<div class="form">
+							<input type="checkbox" id="idSave" class="chk_all"><label for="idSave">아이디 저장</label>
+						</div>
+
+						<!-- [CASE] [M 2023-06-30] : 내용추가 : 비밀번호 5회 이상 틀린 경우 노출 -->
+						<div class="form inp_captcha">
+							<div class="area">
+								<div class="img"><img id="captchaImage" alt="보안문자" src="https://www.nhmembers.co.kr/nhmem/login/viewCaptcha/243/58.nh?191"></div>
+								<button type="button" class="btn_refresh">다른 보안문자로 변경</button>
+								<button type="button" class="btn_listen">보안문자 듣기</button>
+							</div>
+							<div class="inp_txt">
+								<input type="text" id="captchaCode" name="CAPTCHA_CODE" aria-label="보안문자" placeholder="보안문자를 입력해 주세요.">
+								<button type="button" class="btn_del">입력 내용 삭제</button>
+							</div>
+						</div>
+						<!-- // [M 2023-06-30] : 내용추가 -->
+
+						<!-- 로그인 버튼 -->
+						<div class="wrap_btn1"><button type="button" class="btn_com1 ty02">로그인</button></div>
+						<!-- // -->
+					</fieldset>
+				</div>
+
+				<!-- ------------------------------- -->
+				<!-- [링크영역] 회원가입 -->
+				<!-- ------------------------------- -->
+				<div class="wrap_btn2">
+					<a href="#none" class="link_t1">아이디 찾기</a>
+					<a href="#none" class="link_t1">비밀번호 찾기</a>
+					<a href="#none" class="link_t1">회원가입</a>
+				</div>
+
+				<!-- ------------------------------- -->
+				<!-- [링크영역] 간편로그인 -->
+				<!-- ------------------------------- -->
+				<div class="btn_set1 t1">
+					<button type="button" class="ic1">카카오톡</button>
+					<button type="button" class="ic4">네이버</button>
+					<button type="button" class="ic5">페이스북</button>
+					<div class="ic6">
+						<button type="button">OnePASS</button>
+						<button type="button" data-label="tooltip" class="btn_txt1 ic2 btn_layer" aria-controls="tooltip01">OnePASS 안내</button>
+						<div id="tooltip01" class="tooltip" role="tooltip">
+							<button type="button" class="close">툴팁닫기</button>
+							<p>NH스마트뱅킹에 등록한 간편비밀번호, 지문(FaceId), 인증서를 통해 편리하게 본인인증 및 로그인 할 수 있는 서비스</p>
+							<p>* NH스마트뱅킹 앱이 설치된 디바이스에서만 이용가능</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- ------------------------------- -->
+				<!-- [링크영역] 채움회원 -->
+				<!-- ------------------------------- -->
+				<div class="wrap_btn1 t1">
+					<button type="button" class="btn_com1">채움회원 전환가입</button>
+				</div>
+				<!-- ------------------------------- -->
+			</div>
+		</div>
+		<!-- ####################################################### -->
+	</div>
+	<!--// wrap -->
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<title>[L] 기부하기</title>
+</head>
+<body>
+	<!-- 바닥페이지 -->
+	<div id="wrap"></div>
+	<!-- // -->
+
+	<!-- ####################################################### -->
+	<!-- [POPUP] 기부하기 -->
+	<!-- ####################################################### -->
+	<div class="layer_pop type_ctr02" id="uiNHPOINTDONAPL01" role="dialog" aria-modal="true" aria-labelledby="uiNHPOINTDONAPL01TIT">
+		<div class="pop_inner">
+			<p id="uiNHPOINTDONAPL01TIT" class="pop_tit">기부하기</p>
+			<div class="pop_con">
+				<!-- [CASE] 일시 기부 -->
+				<p><strong>초록우산어린이재단</strong>(으)로<br><strong>1,000</strong> 포인트를 기부하시겠어요?</p>
+				<!-- [CASE] 정기 기부 -->
+				<p><strong>초록우산어린이재단</strong>(으)로<br><strong>1,000</strong> 포인트를 정기기부 하시겠어요?</p>
+				<!-- // -->
+
+				<p>포인트 기부 시 개인정보보호법(제24조의 2) 주민등록번호 수집이 제한되므로 연말정산용 기부영수증 발급이 불가능합니다.</p>
+			</div>
+			<div class="wrap_btn1">
+				<button type="button" class="btn_com1 ty01 btn_close">취소</button> <!-- class="btn_close" 사용시 레이어 닫힘  -->
+				<button type="button" class="btn_com1 btn_close">확인</button> <!-- class="btn_close" 사용시 레이어 닫힘  -->
+			</div>
+		</div>
+	</div>
+	<!-- ####################################################### -->
+
+	<script>
+		$(function(){
+			openlayer('uiNHPOINTDONAPL01');
+		})
+	</script>
+</body>
+</html>

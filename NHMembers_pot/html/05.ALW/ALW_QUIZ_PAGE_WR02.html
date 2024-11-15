@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+    <script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+    <title>퀴즈이벤트</title>
+</head>
+<body>
+    <a id="skipnavi" href="#contents" class="skipnav">컨텐츠바로가기</a>
+    <!-- wrap -->
+    <div id="wrap">
+    </div>
+    <!--// wrap -->
+
+    <!-- popup -->
+    <div class="layer_pop type_evt" id="layer01" role="dialog" aria-modal="true" aria-labelledby="pop_tit01">
+		<div class="pop_inner type05">
+			<p id="pop_tit01" class="pop_tit">천기누설 힌트</p> <!-- 05.18 수정 -->
+			<div class="pop_con">
+				<!-- 상품 관계사명 title명으로 적용. -->
+                <div>NH투자증권 홈페이지<br> (<a href="http://www.nhqv.com/" target="_blank" title="NH투자증권 홈페이지 새창열림">http://www.nhqv.com/</a>)에 <br> 접속해보세요!<br><br></div>
+                <div>(홈페이지 접속 &gt; 고객센터 &gt; 고객공지 &gt; 이벤트 &gt; 진행중인 이벤트 &gt; 24시간 멈추지 않는 해외주식, 논스톱 챌린지 &gt; QV가 드리는 해외주식 서비스)</div>
+			</div>
+			<div class="wrap_btn1">
+				<button type="button" class="btn_com1 btn_close">확인</button> <!-- class="btn_close" 사용시 레이어 닫힘  --> <!-- 05.18 수정 -->
+			</div>
+		</div>
+	</div>
+    <script>
+		$(function(){
+			openlayer('layer01');
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+/* 인터렉션 - 로티 */
+#motionArea_dot {position:absolute;top:50%;left:50%;width:30rem;height:15rem;margin-left:-15.2rem;margin-top:-2rem;}
+#header .top #motionArea_logo {position:fixed;top:-4.4rem;right:-6rem;width:32rem;height:14rem;z-index:6;display:block;-webkit-tap-highlight-color:transparent;font-size:0;color:transparent;} 
+#motionArea_coin {position:absolute;top:50%;left:50%;width:40rem;height:40rem;margin-top:-30rem;margin-left:-20rem;z-index:12;}
+#motionArea_coin2 {position:absolute;top:50%;left:50%;width:40rem;height:40rem;margin-top:-27rem;margin-left:-20rem;z-index:12;}
+#motionArea_box {position:absolute;top:50%;left:50%;width:30rem;height:30rem;margin-top:-25.3rem;margin-left:-15rem;z-index:12;}
+#motionArea_quiz {position:absolute;top:50%;left:50%;width:15rem;height:15rem;margin-top:-18.5rem;margin-left:-7.5rem;z-index:12;}
+#motionArea_quiz2 {position:absolute;top:50%;left:50%;width:15rem;height:15rem;margin-top:-19rem;margin-left:-7.5rem;z-index:12;}
+#motionArea_ball {position:absolute;top:0;left:0;width:12.4rem;height:12.4rem;margin-top:-3.7rem;margin-left:-3.2rem;z-index:5;}
+#motionArea_ball2 {position:absolute;top:0;left:0;width:12.4rem;height:12.4rem;margin-top:-3.7rem;margin-left:-3.2rem;z-index:5;}
+#motionArea_ball3 {position:absolute;top:0;left:0;width:12.4rem;height:12.4rem;margin-top:-3.7rem;margin-left:-3.2rem;z-index:5;}
+#motionArea_star {position:absolute;bottom:7.7rem;right:1.1rem;width:5rem;height:5rem;z-index:5;}
+
+#header .gnb,
+#header .gnb button {z-index:7;}
+
+.layer_pop[class*="type_pit"] {overflow:visible;}
+.layer_pop.type_pit .pop_inner,
+.layer_pop.type_pit02 .pop_inner {box-shadow:none;}
+
+.layer_pop.type_pit .pop_inner:before,
+.layer_pop.type_pit02 .pop_inner:before, 
+.layer_pop.type_evt .pop_inner.type02:before,
+.layer_pop.type_evt .pop_inner.type03:before,
+.layer_pop.type_evt .pop_inner.type04:before,
+.con_t2[style*="--el-value:100%"] dl > dd:nth-child(2):after {display:none;}
+
+.balloons .type01,
+.balloons .type02,
+.balloons .type03 {background:none;}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<title>[L] 알림 : 오류메세지</title>
+</head>
+<body>
+	<!-- [바닥페이지] -->
+	<div id="wrap"></div>
+	<!--// -->
+
+	<!-- ####################################################### -->
+	<!-- [POPUP] 오류메세지 -->
+	<!-- ####################################################### -->
+	<div class="layer_pop type_ctr" id="uiPOPUPALERT02" role="dialog" aria-modal="true" aria-label="알림">
+		<div class="pop_inner">
+			<!-- ------------------------------- -->
+			<!-- [POPUP CONTENTS] -->
+			<!-- ------------------------------- -->
+			<!-- [M 2023-05-18] 윤문작업 (전체문구) -->
+			<div class="pop_con">
+				<!-- [CASE] 쿠폰저장실패 -->
+				<p>쿠폰을 저장하지 못했습니다.<br>다시 한번 시도해 주세요.</p>
+				<!-- [CASE] 사용처리실패 -->
+				<p>쿠폰이 사용 처리되지 않았습니다.<br>다시 한번 시도해 주세요.</p>
+				<!-- [CASE] 포인트전환실패 -->
+				<p>포인트를 전환하지 못했습니다.<br>다시 한번 시도해 주세요.</p>
+				<!-- [CASE] 포인트환불실패 -->
+				<p>포인트를 환불하지 못했습니다.<br>다시 한번 시도해 주세요.</p>
+				<!-- // -->
+
+				<p>계속해서 문제가 발생한다면<br>NH멤버스팟<strong>고객센터(1644-7226)</strong>로 문의해 주세요.</p>
+			</div>
+			<!-- // [M 2023-05-18] -->
+
+			<!-- ------------------------------- -->
+			<!-- [POPUP FOOTER BTN] -->
+			<!-- ------------------------------- -->
+			<div class="wrap_btn1">
+				<button type="button" class="btn_com1 btn_close">확인</button> <!-- class="btn_close" 사용시 레이어 닫힘  -->
+			</div>
+			<!-- ------------------------------- -->
+		</div>
+	</div>
+	<!-- ####################################################### -->
+
+	<script>
+		$(function(){
+			//레이어팝업 호출 샘플
+			openlayer('uiPOPUPALERT02');
+		})
+	</script>
+</body>
+</html>

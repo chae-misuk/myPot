@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<title>[L] 세부유의사항</title>
+</head>
+<body>
+	<!-- [바닥페이지] -->
+	<div id="wrap"></div>
+	<!--// -->
+
+	<!-- ####################################################### -->
+	<!-- [POPUP] 세부유의사항 -->
+	<!-- ####################################################### -->
+	<div class="layer_pop type_btm" id="uiNOTICECONT01" role="dialog" aria-modal="true" aria-label="세부유의사항">
+		<div class="pop_inner">
+			<!-- ------------------------------- -->
+			<!-- [POPUP CONTENTS] -->
+			<!-- ------------------------------- -->
+			<div class="pop_con">
+				<article class="con_t3">
+					<h1 class="tit">꼭 확인해 주세요.</h1>
+					<ul>
+						<!-- [D] ARAM에서 내용 관리 -->
+						<li>NH포인트 → 해피포인트 전환 시 1:1 비율로 전환됩니다.</li>
+						<li>100포인트 단위로 전환되며, 월 최대 10만 포인트까지 전환 가능합니다.</li>
+						<li>전환된 포인트는 취소가 불가능 합니다.</li>
+						<li>전환된 <span class="fcolor01">해피포인트</span>는 현금 인출 및 타 제휴사 포인트로의 재전환이 불가합니다.</li>
+						<li>신용카드 충전, 동전 적립, 상품권 전환, 타사 포인트에서 전환된 <span class="fcolor02">NH포인트</span>는 <span class="fcolor01">해피포인트</span>로 재전환이 불가합니다.
+						(총 보유 포인트와 전환 가능 포인트는 상이할 수 있습니다.)</li>
+						<li>제휴사 정책에 따라 전환 포인트의 사용처가 변동될 수 있습니다.</li>
+						<li>전환 내역은 포인트 내역에서 확인하실 수 있습니다.</li>
+						<li>전환된 포인트는 현금영수증 발행 대상이 아닙니다.</li>
+						<!-- // -->
+					</ul>
+				</article>
+			</div>
+
+			<!-- ------------------------------- -->
+			<!-- [POPUP FOOTER BTN] -->
+			<!-- ------------------------------- -->
+			<div class="wrap_action">
+				<button type="button" class="btn_action btn_close">확인</button> <!-- class="btn_close" 사용시 레이어 닫힘  -->
+			</div>
+			<!-- ------------------------------- -->
+		</div>
+	</div>
+	<!-- ####################################################### -->
+
+	<script>
+		$(function(){
+			openlayer('uiNOTICECONT01') //레이어팝업 호출 샘플
+
+			$('[aria-controls]').on('click',function(){
+				var _btn = $(this).attr('aria-controls');
+				openlayer(_btn) //레이어팝업 호출 샘플
+			});
+		})
+	</script>
+</body>
+</html>

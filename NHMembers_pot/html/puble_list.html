@@ -1,0 +1,4970 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<link rel="stylesheet" href="../resources/css/ui_publish.css">
+	<script type="text/javascript" src="../resources/js/ui_publish.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-3.6.4.min.js"></script>
+	<title>NH멤버스[ POT ] Publishing List</title>
+	<style>
+		a {
+			font-size: 1.3rem;
+			color: #06b5b9;
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: #06a1a3;
+		}
+
+		a:visited,
+		a:focus,
+		a:active {
+			color: #06b5b9;
+		}
+
+		/* iframe-view */
+		.unit {
+			position: relative;
+		}
+
+		.unit.on {
+			background-color: #b0e9b0
+		}
+
+		.unit:hover {
+			background-color: #effeef
+		}
+
+		.unit.line-check {
+			border-top: 1px solid #333
+		}
+
+		.unit.line-check:first-child {
+			border-top: 1px solid var(--listBorderLine)
+		}
+
+		.iframe-view {
+			position: fixed;
+			left: 270px;
+			top: 50%;
+			z-index: 30;
+			transform: translateY(-50%);
+			width: 380px;
+			height: 720px;
+			border: 1px solid #000;
+			background-color: #fff
+		}
+
+		.modify:hover {
+			text-decoration: underline;
+		}
+
+		.modify>a {
+			position: relative;
+			display: block;
+		}
+
+		.modify>a::after {
+			content: '>';
+			display: block;
+			position: absolute;
+			top: 0;
+			right: -0.3rem;
+		}
+	</style>
+
+	<script>
+		$(function () {
+			$.each($("td.url > a"), function (i, v) {
+				$(v).text($(v).attr("href"));
+			});
+
+
+			// 포커스 시 스타일 변경
+			$('.page a').focus(function () {
+				$('.page a').closest('.unit').removeClass('on');
+				$(this).closest('.unit').addClass('on');
+			});
+			// 아이프레임 식 미리보기 뷰
+			$('.unit .page').off().on('mouseenter', function () {
+				let linkHref = $(this).find('a').attr('href');
+				if ($(this).closest('.unit').hasClass('del')) {
+					return false;
+				} else {
+					$(this).append('<iframe class="iframe-view" src="' + linkHref + '"></iframe>')
+				}
+			}).on('mouseleave', function () {
+				$('.iframe-view').remove();
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div class="guide-wrap" id="wrapper">
+		<!-- ####################################################### -->
+		<!-- ### [HEADER] ### -->
+		<!-- ####################################################### -->
+		<header class="guide-header">
+			<h1><span>NHmembers pot</span><strong>PUBLISHING LIST</strong></h1>
+			<nav>
+				<ul>
+					<li><a href="puble_list.html" aria-current="page">작업목록</a></li>
+					<li><a href="puble_list02.html">작업가이드</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- ####################################################### -->
+		<!-- ### [CONTAINER] ### -->
+		<!-- ####################################################### -->
+		<div class="guide-container">
+			<!-- ### 진행상태 ### -->
+			<div class="guide-state">
+				<dl data-state="all">
+					<dt>전체</dt>
+					<dd><span>0</span></dd>
+				</dl>
+				<dl data-state="wait">
+					<dt>대기(차주일정)</dt>
+					<dd><span>0</span></dd>
+				</dl>
+				<dl data-state="ing">
+					<dt>진행(금주일정)</dt>
+					<dd><span>0</span></dd>
+				</dl>
+				<dl data-state="end">
+					<dt>완료</dt>
+					<dd><span>0</span><strong>(00%)</strong></dd>
+				</dl>
+			</div>
+
+			<!-- 서비스 공통 -->
+			<section class="guide-section">
+				<div class="guide-tit1">
+					<h2>서비스 공통</h2>
+					<div class="sub">/00.COMM/</div>
+				</div>
+				<div class="guide-table1" data-sort="true">
+					<table>
+						<caption>서비스 공통 목록</caption>
+						<colgroup>
+							<col style="width:40px">
+							<col span="3" style="width:200px">
+							<col style="width:200px">
+							<col style="width:60px">
+							<col style="width:60px">
+							<col style="width:90px">
+							<col>
+						</colgroup>
+						<thead>
+							<tr class="unit">
+								<th scope="col">NO</th>
+								<th scope="col">1Depth</th>
+								<th scope="col">2Depth</th>
+								<th scope="col">3Depth</th>
+								<th scope="col">파일명</th>
+								<th scope="col">작업자</th>
+								<th scope="col">완료일</th>
+								<th scope="col">수정일</th>
+								<th scope="col">비고</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="unit">
+								<td></td>
+								<td>LMS 랜딩</td>
+								<td></td>
+								<td></td>
+								<td class="url page"><a href="./00.COMM/open_event.html" target="_blank">open_event</a>
+								</td>
+								<td class="pub">최민규</td>
+								<td class="end">08.10</td>
+								<td class="modify">
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>오픈 사전안내</td>
+								<td></td>
+								<td></td>
+								<td class="url page"><a href="./00.COMM/open_info.html" target="_blank">open_info</a>
+								</td>
+								<td class="pub">최민규</td>
+								<td class="end">07.25</td>
+								<td class="modify">
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>에러페이지</td>
+								<td></td>
+								<td></td>
+								<td class="url page"><a href="./00.COMM/COMM_ERRO_PAGE_LI.html"
+										target="_blank">COMM_ERRO_PAGE_LI</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">04.28</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>윤문작업 - 문구 수정</td>
+													<td>05.18</td>
+												</tr>
+												<tr class="unit">
+													<td>문구 수정</td>
+													<td>05.09</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>에러페이지2</td>
+								<td></td>
+								<td></td>
+								<td class="url page"><a href="./00.COMM/COMM_ERRO_PAGE_LI02.html"
+										target="_blank">COMM_ERRO_PAGE_LI02</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">05.18</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>에러페이지3</td>
+								<td></td>
+								<td></td>
+								<td class="url page"><a href="./00.COMM/COMM_ERRO_PAGE_LI03.html"
+										target="_blank">COMM_ERRO_PAGE_LI03</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">05.18</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>로딩페이지</td>
+								<td></td>
+								<td></td>
+								<td class="url page"><a href="./00.COMM/COMM_LOAD_ZERO_LI.html"
+										target="_blank">COMM_LOAD_ZERO_LI</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">04.28</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>호출방식 변경</td>
+													<td>05.02</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>팝업</td>
+								<td></td>
+								<td></td>
+								<td class="url page"><a href="./00.COMM/COMM_POPU_LAYER_LI.html"
+										target="_blank">COMM_POPU_LAYER_LI</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">04.28</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>잔여업무 수정 및 추가사항 반영</td>
+													<td>08.16</td>
+												</tr>
+												<tr class="unit">
+													<td>확인버튼 위치변경 및 script 추가</td>
+													<td>06.08</td>
+												</tr>
+												<tr class="unit">
+													<td>윤문작업 - 문구 수정</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>데이터끊김</td>
+								<td></td>
+								<td></td>
+								<td class="url page"><a href="./00.COMM/COMM_DATA_PAGE_LI.html"
+										target="_blank">COMM_DATA_PAGE_LI</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">04.28</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>윤문작업 - 문구 수정</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>시스템점검중</td>
+								<td></td>
+								<td></td>
+								<td class="url page"><a href="./00.COMM/COMM_SYST_PAGE_LI.html"
+										target="_blank">COMM_SYST_PAGE_LI</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">04.28</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>윤문작업 - 문구 수정</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>세션종료</td>
+								<td></td>
+								<td></td>
+								<td class="url page"><a href="./00.COMM/COMM_ENDSESSION_LAYER_LI.html"
+										target="_blank">COMM_ENDSESSION_LAYER_LI</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">06.05</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>참여사 이동고지</td>
+								<td></td>
+								<td></td>
+								<td class="url page"><a href="./00.COMM/COMM_LAND_PAGE_LI.html"
+										target="_blank">COMM_LAND_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">04.25</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>이미지명 및 경로 변경, 참여사 이미지 추가</td>
+													<td>06.14</td>
+												</tr>
+												<tr class="unit">
+													<td>버튼삭제</td>
+													<td>04.27</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td class="url page"><a href="./00.COMM/COMM_LAND_PAGE_LI_lottie.html"
+										target="_blank">COMM_LAND_PAGE_LI_lottie</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">08.10</td>
+								<td class="modify"></td>
+								<td>[D] 인터렉션 반영 파일</td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>신채널 이동고지</td>
+								<td></td>
+								<td></td>
+								<td class="url page"><a href="./00.COMM/COMM_MLAND_PAGE_LI.html"
+										target="_blank">COMM_MLAND_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">04.25</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>윤문작업 - 문구 수정</td>
+													<td>05.23</td>
+												</tr>
+												<tr class="unit">
+													<td>윤문작업 - 문구 수정</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>Layout</td>
+								<td></td>
+								<td></td>
+								<td class="url page"><a href="./99.GUIDE/layout.html" target="_blank">layout</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">04.28</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td class="url page"><a href="./99.GUIDE/layout_lottie.html"
+										target="_blank">layout_lottie</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">08.10</td>
+								<td class="modify"></td>
+								<td>[D] 인터렉션 반영 파일</td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>GNB</td>
+								<td></td>
+								<td></td>
+								<td class="url page"><a href="./00.COMM/GNB.html" target="_blank">GNB</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">05.03</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>상품 - 추천으로 문구 수정 </td>
+													<td>07.14</td>
+												</tr>
+												<tr class="unit">
+													<td>바코드 추가 </td>
+													<td>06.22</td>
+												</tr>
+												<tr class="unit">
+													<td>사용처안내 삭제 </td>
+													<td>06.08</td>
+												</tr>
+												<tr class="unit">
+													<td>개발팀 수정요청 - 이미지 수정 </td>
+													<td>05.23</td>
+												</tr>
+												<tr class="unit">
+													<td>윤문작업 - 문구 수정</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>바코드</td>
+								<td></td>
+								<td class="url page"><a href="./00.COMM/BAR_ALL_PAGE.html"
+										target="_blank">BAR_ALL_PAGE</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">06.22</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>Footer</td>
+								<td>이용약관</td>
+								<td>회원약관</td>
+								<td class="url page"><a href="./00.COMM/FOOTER_TERM_PAGE_LI01.html"
+										target="_blank">FOOTER_TERM_PAGE_LI01</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">06.21</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>현업요청사항 반영</td>
+													<td>07.27</td>
+												</tr>
+												<tr class="unit">
+													<td>레이아웃 수정 - 풀팝업에서 페이지형태로 변경</td>
+													<td>06.22</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>휴대폰본인인증 이용약관</td>
+								<td class="url page"><a href="./00.COMM/FOOTER_TERM_PAGE_LI01_02.html"
+										target="_blank">FOOTER_TERM_PAGE_LI01_02</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">07.27</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>개인정보처리방침</td>
+								<td></td>
+								<td class="url page"><a href="./00.COMM/FOOTER_TERM_PAGE_LI02.html"
+										target="_blank">FOOTER_TERM_PAGE_LI02</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">06.21</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>현업요청사항 반영</td>
+													<td>07.27</td>
+												</tr>
+												<tr class="unit">
+													<td>레이아웃 수정 - 풀팝업에서 페이지형태로 변경</td>
+													<td>06.22</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>기가입자 약관동의</td>
+								<td>개인정보 제3자 제공동의 서비스</td>
+								<td>동의</td>
+								<td class="url page"><a href="./00.COMM/COMM_TERM02_PAGE_LI.html"
+										target="_blank">COMM_TERM02_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">04.28</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														1) 닫기버튼 삭제<br>
+														2) 윤문작업 - 문구 수정
+													</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>상세</td>
+								<td class="url page"><a href="./00.COMM/COMM_TERM02_PAGE_LI02.html"
+										target="_blank">COMM_TERM02_PAGE_LI02</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">04.28</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														하단버튼 문구 수정
+													</td>
+													<td>05.18</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														상단 뒤로가기 버튼 클래스 삭제 : btn_close
+													</td>
+													<td>05.03</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>선택(마케팅) 미동의 회원</td>
+								<td>동의</td>
+								<td class="url page"><a href="./00.COMM/COMM_TERM02_PAGE_LI03.html"
+										target="_blank">COMM_TERM02_PAGE_LI03</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">04.28</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														하단 취소버튼 거부로 문구 수정
+													</td>
+													<td>07.04</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														기획변경 v1.7 - 개인정보 동의서 PUSH 추가
+													</td>
+													<td>06.30</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														기획변경 - 마케팅동의영역 수정
+													</td>
+													<td>06.16</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														1) 닫기버튼 삭제<br>
+														2) 윤문작업 - 문구 수정
+													</td>
+													<td>05.18</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														안내문구 수정<br>
+													</td>
+													<td>05.08</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>상세</td>
+								<td class="url page"><a href="./00.COMM/COMM_TERM02_PAGE_LI04.html"
+										target="_blank">COMM_TERM02_PAGE_LI04</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">04.28</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														하단버튼 문구 수정
+													</td>
+													<td>05.18</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														상단 뒤로가기 버튼 클래스 삭제 : btn_close
+													</td>
+													<td>05.03</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>완료</td>
+								<td class="url page"><a href="./00.COMM/COMM_TERM02_PAGE_LI05.html"
+										target="_blank">COMM_TERM02_PAGE_LI05</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">04.28</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														1) 닫기버튼 삭제<br>
+														2) 윤문작업 - 문구 수정
+													</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>회원약관 변경 사전 안내</td>
+								<td></td>
+								<td class="url page"><a href="./00.COMM/COMM_TERM02_PAGE_LI06.html"
+										target="_blank">COMM_TERM02_PAGE_LI06</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">04.28</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														1) 닫기버튼 삭제<br>
+														2) 윤문작업 - 문구 수정
+													</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>애드팟 약관</td>
+								<td>애드팟 서비스 이용약관</td>
+								<td>상세</td>
+								<td class="url page"><a href="./00.COMM/COMM_TERM03_adPot_01.html "
+										target="_blank">COMM_TERM02_PAGE_LI07</a></td>
+								<td class="pub">채미숙</td>
+								<td class="end">2024-03-27</td>
+								<td class="modify"> </td>
+								<td></td>
+							</tr>
+
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>애드팟 이용 등을 위한 개인정보 수집이용 동의 (필수동의)</td>
+								<td>상세</td>
+								<td class="url page"><a href="./00.COMM/COMM_TERM03_adPot_02.html "
+										target="_blank">COMM_TERM02_PAGE_LI07</a></td>
+								<td class="pub">채미숙</td>
+								<td class="end">2024-03-27</td>
+								<td class="modify"> </td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>애드팟 이용 등을 위한 개인정보 제3자 제공 동의 (필수 동의)</td>
+								<td>상세</td>
+								<td class="url page"><a href="./00.COMM/COMM_TERM03_adPot_03.html "
+										target="_blank">COMM_TERM02_PAGE_LI07</a></td>
+								<td class="pub">채미숙</td>
+								<td class="end">2024-03-27</td>
+								<td class="modify"> </td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>애드팟 이용 등을 위한 농협은행 주식회사 개인정보 제3자 제공 동의</td>
+								<td>상세</td>
+								<td class="url page"><a href="./00.COMM/COMM_TERM03_adPot_04.html "
+										target="_blank">COMM_TERM02_PAGE_LI07</a></td>
+								<td class="pub">채미숙</td>
+								<td class="end">2024-03-27</td>
+								<td class="modify"> </td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>약관업데이트 재동의</td>
+								<td>동의</td>
+								<td class="url page"><a href="./00.COMM/COMM_TERM02_PAGE_LI07.html"
+										target="_blank">COMM_TERM02_PAGE_LI07</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">04.28</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>윤문작업 - 문구 수정</td>
+													<td>05.18</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														x 버튼 삭제<br>
+													</td>
+													<td>05.08</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>최초접근시</td>
+								<td>회원가입 안내</td>
+								<td></td>
+								<td class="url page"><a href="./00.COMM/COMM_NON-MEMBER_ALERT.html"
+										target="_blank">COMM_NON-MEMBER_ALERT</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">04.28</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														1) 닫기버튼 삭제<br>
+														2) 윤문작업 - 문구 수정
+													</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>회원가입</td>
+								<td>약관동의 및 인증</td>
+								<td></td>
+								<td class="url page"><a href="./00.COMM/COMM_TERM_PAGE_LI.html"
+										target="_blank">COMM_TERM_PAGE_LI</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">04.28</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														기획변경 v1.7 - 개인정보 동의서 PUSH 추가
+													</td>
+													<td>06.30</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														기획변경 - 마케팅동의영역 수정
+													</td>
+													<td>06.16</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														NH ONE PASS 인증 버튼 삭제
+													</td>
+													<td>06.14</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														윤문작업 - 문구 수정
+													</td>
+													<td>05.18</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														안내문구 수정<br>
+													</td>
+													<td>05.08</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														1) 상단 닫기 버튼 삭제<br>
+														2) 상단 뒤로가기 버튼 클래스 삭제 : btn_close
+													</td>
+													<td>05.03</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														1) 하단버튼 클래스명 변경 : btn_sub2 ty02 &#10140; btn_com1<br>
+														2) 하단문구 추가<br>
+													</td>
+													<td>05.02</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>상세</td>
+								<td class="url page"><a href="./00.COMM/COMM_TERM_PAGE_LI02.html"
+										target="_blank">COMM_TERM_PAGE_LI02</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">04.28</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														윤문작업 - 문구 수정
+													</td>
+													<td>05.18</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														1) 하단버튼 변경<br>
+														2) 상단 닫기 버튼 삭제<br>
+														3) 상단 뒤로가기 버튼 클래스 삭제 : btn_close
+													</td>
+													<td>05.03</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<!--
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>완료</td>
+								<td class="url page"><a href="./00.COMM/COMM_TERM_PAGE_LI03.html" target="_blank">COMM_TERM_PAGE_LI03</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">04.28</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														기획변경 - 마케팅동의영역 수정
+													</td>
+													<td>06.16</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														하단 버튼 클래스 추가
+													</td>
+													<td>05.23</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														윤문작업 - 문구 수정
+													</td>
+													<td>05.18</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														1) 안내문구 수정<br>
+													</td>
+													<td>05.08</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														1) 상단 닫기 버튼 삭제<br>
+														2) 상단 뒤로가기 버튼 클래스 삭제 : btn_close
+													</td>
+													<td>05.03</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							-->
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>가입완료</td>
+								<td></td>
+								<td class="url page"><a href="./00.COMM/COMM_MEMBERJOIN_LAYER_LI.html"
+										target="_blank">COMM_MEMBERJOIN_LAYER_LI</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">05.23</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>공통 팝업</td>
+								<td>셀렉트박스</td>
+								<td></td>
+								<td class="url page"><a href="./00.COMM/COMM_POPUP_LAYER01.html"
+										target="_blank">COMM_POPUP_LAYER01</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.04</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>공유하기</td>
+								<td></td>
+								<td class="url page"><a href="./00.COMM/COMM_POPUP_LAYER02.html"
+										target="_blank">COMM_POPUP_LAYER02</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.04</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														1) 하단버튼 수정 class 추가. ty01<br>
+														2) 윤문작업 - 문구 수정
+													</td>
+													<td>05.18</td>
+												</tr>
+												<tr class="unit">
+													<td>링크복사 버튼 추가</td>
+													<td>05.10</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>포인트적립</td>
+								<td>유형1</td>
+								<td class="url page"><a href="./00.COMM/COMM_POPUP_LAYER03.html"
+										target="_blank">COMM_POPUP_LAYER03</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.04</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td class="url page"><a href="./00.COMM/COMM_POPUP_LAYER03_lottie.html"
+										target="_blank">COMM_POPUP_LAYER03_lottie</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">08.10</td>
+								<td class="modify"></td>
+								<td>[D] 인터렉션 반영 파일</td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>유형2</td>
+								<td class="url page"><a href="./00.COMM/COMM_POPUP_LAYER04.html"
+										target="_blank">COMM_POPUP_LAYER04</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.04</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>유형2</td>
+								<td class="url page"><a href="./00.COMM/COMM_POPUP_LAYER04_lottie.html"
+										target="_blank">COMM_POPUP_LAYER04_lottie</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">08.10</td>
+								<td class="modify"></td>
+								<td>[D] 인터렉션 반영 파일</td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>포인트전환</td>
+								<td></td>
+								<td class="url page"><a href="./00.COMM/COMM_POPUP_LAYER05.html"
+										target="_blank">COMM_POPUP_LAYER05</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.04</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>윤문작업 - 문구 수정</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td>[D] 인터렉션 - COMM_POPUP_LAYER03_lottie 동일</td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>유형선택</td>
+								<td></td>
+								<td class="url page"><a href="./00.COMM/COMM_POPUP_LAYER06.html"
+										target="_blank">COMM_POPUP_LAYER06</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.19</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>조회기간</td>
+								<td></td>
+								<td class="url page"><a href="./00.COMM/COMM_POPUP_LAYER07.html"
+										target="_blank">COMM_POPUP_LAYER07</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.19</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>은행선택</td>
+								<td></td>
+								<td class="url page"><a href="./00.COMM/COMM_POPUP_LAYER10.html"
+										target="_blank">COMM_POPUP_LAYER10</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.19</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>알림</td>
+								<td>실패</td>
+								<td class="url page"><a href="./00.COMM/COMM_POPUP_LAYER11.html"
+										target="_blank">COMM_POPUP_LAYER11</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.04</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+			<!--// 서비스 공통 -->
+
+			<!-- 회원 -->
+			<section class="guide-section">
+				<div class="guide-tit1">
+					<h2>회원</h2>
+					<div class="sub">/06.NHMEM/</div>
+				</div>
+				<div class="guide-table1" data-sort="true">
+					<table>
+						<caption>회원 목록</caption>
+						<colgroup>
+							<col style="width:40px">
+							<col span="3" style="width:200px">
+							<col style="width:200px">
+							<col style="width:60px">
+							<col style="width:60px">
+							<col style="width:90px">
+							<col>
+						</colgroup>
+						<thead>
+							<tr class="unit">
+								<th scope="col">NO</th>
+								<th scope="col">1Depth</th>
+								<th scope="col">2Depth</th>
+								<th scope="col">3Depth</th>
+								<th scope="col">파일명</th>
+								<th scope="col">작업자</th>
+								<th scope="col">완료일</th>
+								<th scope="col">수정일</th>
+								<th scope="col">비고</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="unit">
+								<td></td>
+								<td>콕뱅/스뱅용 가입</td>
+								<td>회원가입</td>
+								<td></td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_IDIS01_PAGE_LI.html"
+										target="_blank">NHMEM_IDIS01_PAGE_LI</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">07.17</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>아이디 등록</td>
+								<td></td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_IDIS02_PAGE_LI.html"
+										target="_blank">NHMEM_IDIS02_PAGE_LI</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">07.17</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>완료</td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_IDIS03_PAGE_LI.html"
+										target="_blank">NHMEM_IDIS03_PAGE_LI</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">07.17</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>로그인</td>
+								<td></td>
+								<td></td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_LOGIN_PAGE_LI.html"
+										target="_blank">NHMEM_LOGIN_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">06.21</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>상단문구 수정</td>
+													<td>07.14</td>
+												</tr>
+												<tr class="unit">
+													<td>1) 보안문자영역 추가</td>
+													<td>06.30</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>아이디 찾기</td>
+								<td>정보입력</td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_IDSE01_PAGE_LI.html"
+										target="_blank">NHMEM_IDSE01_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">06.21</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>결과(아이디있음)</td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_IDSE02_PAGE_LI.html"
+										target="_blank">NHMEM_IDSE02_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">06.21</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>결과(아이디없음)</td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_IDSE03_PAGE_LI.html"
+										target="_blank">NHMEM_IDSE03_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">06.21</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>비밀번호 찾기</td>
+								<td>아이디 입력</td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_PWSE01_PAGE_LI.html"
+										target="_blank">NHMEM_PWSE01_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">06.21</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>가입인증</td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_PWSE02_PAGE_LI.html"
+										target="_blank">NHMEM_PWSE02_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">06.21</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>비밀번호 찾기 문제해결</td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_PWSE02_PAGE_LI02.html"
+										target="_blank">NHMEM_PWSE02_PAGE_LI02</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">06.21</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>비밀번호 재설정</td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_PWSE03_PAGE_LI.html"
+										target="_blank">NHMEM_PWSE03_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">06.21</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>비밀번호 변경안내</td>
+								<td class="url page"><a href="./06.NHMEM/COMM_PW-CHANGE_PAGE_LI.html"
+										target="_blank">COMM_PW-CHANGE_PAGE_LI</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">07.28</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>다음에 변경하기 버튼 추가</td>
+													<td>07.28</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>비밀번호 재설정 완료</td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_PWSE04_PAGE_LI.html"
+										target="_blank">NHMEM_PWSE04_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">06.21</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>SNS 계정 등록</td>
+								<td></td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_IDIS05_PAGE_LI.html"
+										target="_blank">NHMEM_IDIS05_PAGE_LI</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">07.27</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>회원가입</td>
+								<td>[STEP1] 본인인증</td>
+								<td>인증선택</td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_JOIN01_PAGE_LI.html"
+										target="_blank">NHMEM_JOIN01_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">06.22</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>인증확인 - 휴대폰</td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_IDIS04_PAGE_LI.html"
+										target="_blank">NHMEM_IDIS04_PAGE_LI</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">07.26</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>NHonePASS 인증</td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_CERTONE01_PAGE_LI.html"
+										target="_blank">NHMEM_CERTONE01_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">06.22</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>NHonePASS 인증완료</td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_CERTONE02_PAGE_LI.html"
+										target="_blank">NHMEM_CERTONE02_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">06.23</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>통신사 인증</td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_CERTCOM01_PAGE_LI.html"
+										target="_blank">NHMEM_CERTCOM01_PAGE_LI</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">06.16</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>카드사 인증</td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_CERTCOM01_PAGE_LI_nhCard_Certif.html"
+										target="_blank">NHMEM_CERTCOM01_PAGE_LI</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">06.16</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>개인정보 취급동의</td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_CERTCOM01_PAGE_LI02.html"
+										target="_blank">NHMEM_CERTCOM01_PAGE_LI02</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">06.28</td>
+								<td class="modify"></td>
+								<td>[D] 약관 샘플</td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>본인확인 서비스 이용약관</td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_CERTCOM01_PAGE_LI03.html"
+										target="_blank">NHMEM_CERTCOM01_PAGE_LI03</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">06.28</td>
+								<td class="modify"></td>
+								<td>[D] 약관 샘플</td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>고유식별 정보처리</td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_CERTCOM01_PAGE_LI04.html"
+										target="_blank">NHMEM_CERTCOM01_PAGE_LI04</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">06.28</td>
+								<td class="modify"></td>
+								<td>[D] 약관 샘플</td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>개인정보 취급동의</td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_CERTCOM01_PAGE_LI05.html"
+										target="_blank">NHMEM_CERTCOM01_PAGE_LI05</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">06.28</td>
+								<td class="modify"></td>
+								<td>[D] 약관 샘플</td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>14세미만일 경우</td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_JOIN02_PAGE_LI.html"
+										target="_blank">NHMEM_JOIN02_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">06.22</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>[STEP2] 약관동의</td>
+								<td>동의</td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_JOIN03_PAGE_LI.html"
+										target="_blank">NHMEM_JOIN03_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">06.22</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>NH멤버스 회원약관</td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_JOIN03_PAGE_LI02.html"
+										target="_blank">NHMEM_JOIN03_PAGE_LI02</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">06.28</td>
+								<td class="modify"></td>
+								<td>[D] 약관 샘플</td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>개인(신용)정보의 필수적 수집 이용</td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_JOIN03_PAGE_LI03.html"
+										target="_blank">NHMEM_JOIN03_PAGE_LI03</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">06.28</td>
+								<td class="modify"></td>
+								<td>[D] 약관 샘플</td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>개인(신용)정보의 필수적 제공</td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_JOIN03_PAGE_LI04.html"
+										target="_blank">NHMEM_JOIN03_PAGE_LI04</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">06.28</td>
+								<td class="modify"></td>
+								<td>[D] 약관 샘플</td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>개인(신용)정보의 선택적 수집 이용에 관한 사항</td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_JOIN03_PAGE_LI05.html"
+										target="_blank">NHMEM_JOIN03_PAGE_LI05</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">06.28</td>
+								<td class="modify"></td>
+								<td>[D] 약관 샘플</td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>개인(신용)정보의 선택적 제공에 관한 사항</td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_JOIN03_PAGE_LI06.html"
+										target="_blank">NHMEM_JOIN03_PAGE_LI06</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">06.28</td>
+								<td class="modify"></td>
+								<td>[D] 약관 샘플</td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>[STEP3] 정보입력</td>
+								<td></td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_JOIN04_PAGE_LI.html"
+										target="_blank">NHMEM_JOIN04_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">06.27</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>비밀번호 하단 텍스트 추가</td>
+													<td>07.17</td>
+												</tr>
+												<tr class="unit">
+													<td>아이디 중복확인 버튼 class="btn_layer" 추가</td>
+													<td>07.14</td>
+												</tr>
+												<tr class="unit">
+													<td>개발팀 요청사항 반영 - 국적 선택 추가</td>
+													<td>07.10</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>시너지검색</td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_SN_LAYER_LI.html"
+										target="_blank">NHMEM_SN_LAYER_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">06.27</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>검색버튼 class="btn_layer" 추가</td>
+													<td>07.14</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>주소검색</td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_ADDR_LAYER_LI.html"
+										target="_blank">NHMEM_ADDR_LAYER_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">06.22</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>검색버튼 class="btn_layer" 추가</td>
+													<td>07.14</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>완료</td>
+								<td>기가입자</td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_JOIN05_PAGE_LI.html"
+										target="_blank">NHMEM_JOIN05_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">06.22</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>가입결과안내</td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_JOIN06_PAGE_LI.html"
+										target="_blank">NHMEM_JOIN06_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">06.27</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>재가입</td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_IDIS06_PAGE_LI.html"
+										target="_blank">NHMEM_IDIS06_PAGE_LI</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">07.28</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>가입정보인증</td>
+								<td></td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_JOIN07_PAGE_LI.html"
+										target="_blank">NHMEM_JOIN07_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">06.22</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>다른 인증 방식</td>
+								<td class="url page"><a href="./06.NHMEM/NHMEM_JOIN07_PAGE_LI02.html"
+										target="_blank">NHMEM_JOIN07_PAGE_LI02</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">06.22</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+			<!--// 회원 -->
+
+			<!-- 혜택 -->
+			<section class="guide-section">
+				<div class="guide-tit1">
+					<h2>혜택</h2>
+					<div class="sub">/01.OFFER/</div>
+				</div>
+				<div class="guide-table1" data-sort="true">
+					<table>
+						<caption>혜택 목록</caption>
+						<colgroup>
+							<col style="width:40px">
+							<col span="3" style="width:200px">
+							<col style="width:200px">
+							<col style="width:60px">
+							<col style="width:60px">
+							<col style="width:90px">
+							<col>
+						</colgroup>
+						<thead>
+							<tr class="unit">
+								<th scope="col">NO</th>
+								<th scope="col">1Depth</th>
+								<th scope="col">2Depth</th>
+								<th scope="col">3Depth</th>
+								<th scope="col">파일명</th>
+								<th scope="col">작업자</th>
+								<th scope="col">완료일</th>
+								<th scope="col">수정일</th>
+								<th scope="col">비고</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="unit">
+								<td></td>
+								<td>메인</td>
+								<td></td>
+								<td></td>
+								<td class="url page"><a href="./01.OFFER/OFFER_ALL_PAGE.html"
+										target="_blank">OFFER_ALL_PAGE</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">04.28</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>잔여업무 수정 및 추가사항 반영</td>
+													<td>08.16</td>
+												</tr>
+												<tr class="unit">
+													<td>현업요청사항 반영 - 로그인 버튼 추가</td>
+													<td>08.10</td>
+												</tr>
+												<tr class="unit">
+													<td>현업요청사항 반영 - 필터링 기능 추가</td>
+													<td>06.28</td>
+												</tr>
+												<tr class="unit">
+													<td>비회원인경우 문구수정</td>
+													<td>06.14</td>
+												</tr>
+												<tr class="unit">
+													<td>기획 v1.4 : 문구 수정</td>
+													<td>06.07</td>
+												</tr>
+												<tr class="unit">
+													<td>기획 v1.3 : 준법심의필 영역 추가</td>
+													<td>05.31</td>
+												</tr>
+												<tr class="unit">
+													<td>1) 상시이벤트 위치변경 및 문구 수정<br>
+														2) 상단 나의 포인트 수정
+													</td>
+													<td>05.25</td>
+												</tr>
+												<tr class="unit">
+													<td>개발팀 수정요청 - 이미지 수정 </td>
+													<td>05.23</td>
+												</tr>
+												<tr class="unit">
+													<td>나의포인트 영역 수정 : 비회원일 경우 추가 </td>
+													<td>05.02</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>혜택 선택 팝업</td>
+								<td></td>
+								<td class="url page"><a href="./01.OFFER/OFFER_ALL_PAGE02.html"
+										target="_blank">OFFER_ALL_PAGE02</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">06.28</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>현업요청사항 반영 - 문구수정</td>
+													<td>07.26</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>제휴사 선택 팝업</td>
+								<td></td>
+								<td class="url page"><a href="./01.OFFER/OFFER_ALL_PAGE03.html"
+										target="_blank">OFFER_ALL_PAGE03</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">06.28</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>현업요청사항 반영 - 문구수정</td>
+													<td>07.26</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>정렬 선택 팝업</td>
+								<td></td>
+								<td class="url page"><a href="./01.OFFER/OFFER_ALL_PAGE04.html"
+										target="_blank">OFFER_ALL_PAGE04</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">06.28</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>현업요청사항 반영 - 문구수정</td>
+													<td>07.26</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>이벤트</td>
+								<td>진행중</td>
+								<td></td>
+								<td class="url page"><a href="./01.OFFER/OFFER_EVENTING_TAB_LI.html"
+										target="_blank">OFFER_EVENTING_TAB_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.04</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>현업요청사항 반영</td>
+													<td>06.28</td>
+												</tr>
+												<tr class="unit">
+													<td>기획 v1.3 : 준법심의필 영역 추가</td>
+													<td>05.31</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														윤문작업 - 문구 수정
+													</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>상세</td>
+								<td class="url page"><a href="./01.OFFER/OFFER_EVENTING_PAGE_VW.html"
+										target="_blank">OFFER_EVENTING_PAGE_VW</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.04</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>기획 v1.3 : 준법심의필 영역 추가</td>
+													<td>06.02</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														윤문작업 - 문구 수정
+													</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>상세-연회비 캐시백 대상 카드사 정보</td>
+								<td class="url page"><a href="./01.OFFER/OFFER_EVENTING_PAGE_CARD_VW.html"
+										target="_blank">OFFER_EVENTING_PAGE_CARD_VW</a></td>
+								<td class="pub">채미숙</td>
+								<td class="end">2023-09-15</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>카드사 다중 링크-스크립트 포함</td>
+													<td>2023-10-05</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>참여</td>
+								<td></td>
+								<td class="url page"><a href="./01.OFFER/OFFER_EVENTPART_TAB_LI.html"
+										target="_blank">OFFER_EVENTPART_TAB_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.04</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														윤문작업 - 문구 수정
+													</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>상세</td>
+								<td class="url page"><a href="./01.OFFER/OFFER_EVENTPART_PAGE_VW.html"
+										target="_blank">OFFER_EVENTPART_PAGE_VW</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.04</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														윤문작업 - 문구 수정
+													</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>당첨자발표</td>
+								<td></td>
+								<td class="url page"><a href="./01.OFFER/OFFER_EVENTPRES_TAB_LI.html"
+										target="_blank">OFFER_EVENTPRES_TAB_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.04</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														기간선택 추가
+													</td>
+													<td>06.16</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														윤문작업 - 문구 수정
+													</td>
+													<td>05.18</td>
+												</tr>
+												<tr class="unit">
+													<td>기호"[]" 삭제 : CSS처리 </td>
+													<td>05.08</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>상세</td>
+								<td class="url page"><a href="./01.OFFER/OFFER_EVENTPRES_PAGE_VW.html"
+										target="_blank">OFFER_EVENTPRES_PAGE_VW</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.04</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														윤문작업 - 문구 수정
+													</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>종료</td>
+								<td></td>
+								<td class="url page"><a href="./01.OFFER/OFFER_EVENTEND_TAB_LI.html"
+										target="_blank">OFFER_EVENTEND_TAB_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.04</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														윤문작업 - 문구 수정
+													</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>쿠폰함</td>
+								<td>목록</td>
+								<td>보유쿠폰</td>
+								<td class="url page"><a href="./01.OFFER/OFFER_MYCOUPON_TAB_LI.html"
+										target="_blank">OFFER_MYCOUPON_TAB_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.04</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>사용완료처리 버튼 클래스명 변경<br>
+														- btn_com1 &#10140; btn
+													</td>
+													<td>05.10</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>사용/종료</td>
+								<td class="url page"><a href="./01.OFFER/OFFER_MYCOUPON_TAB_LI02.html"
+										target="_blank">OFFER_MYCOUPON_TAB_LI02</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.04</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>탭컨텐츠용</td>
+								<td class="url page"><a href="./01.OFFER/OFFER_MYCOUPON_TAB_LI_00.html"
+										target="_blank">OFFER_MYCOUPON_TAB_LI_00</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">07.12</td>
+								<td class="modify"></td>
+								<td>[D] 개발 참고용</td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>상세</td>
+								<td></td>
+								<td class="url page"><a href="./01.OFFER/OFFER_MYCOUPON_TAB_LI03.html"
+										target="_blank">OFFER_MYCOUPON_TAB_LI03</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.04</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														하단 버튼명 수정
+													</td>
+													<td>07.19</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														윤문작업 - 문구 수정
+													</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>[하단버튼 2개]</td>
+								<td class="url page"><a href="./01.OFFER/OFFER_MYCOUPON_TAB_LI03_01.html"
+										target="_blank">OFFER_MYCOUPON_TAB_LI03_01</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">07.19</td>
+								<td class="modify">
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>기타 팝업</td>
+								<td>쿠폰 비밀번호</td>
+								<td class="url page"><a href="./01.OFFER/OFFER_MYCOUPON_TAB_LI04.html"
+										target="_blank">OFFER_MYCOUPON_TAB_LI04</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.04</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>포인트 전환</td>
+								<td class="url page"><a href="./00.COMM/COMM_POPUP_LAYER05.html"
+										target="_blank">공통팝업참고</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.04</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>쿠폰 저장</td>
+								<td class="url page"><a href="./01.OFFER/OFFER_MYCOUPON_TAB_LI05.html"
+										target="_blank">OFFER_MYCOUPON_TAB_LI05</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.04</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														윤문작업 - 문구 수정
+													</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>바코드</td>
+								<td class="url page"><a href="./01.OFFER/OFFER_MYCOUPON_TAB_LI06.html"
+										target="_blank">OFFER_MYCOUPON_TAB_LI06</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.04</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														1) 윤문작업 - 문구 수정<br>
+														2) 하단버튼 class 추가. ty01
+													</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>오류</td>
+								<td class="url page"><a href="./00.COMM/COMM_POPUP_LAYER11.html"
+										target="_blank">공통팝업참고</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.04</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>윤문작업 - 문구 수정</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+			<!--// 혜택 -->
+
+			<!-- 상품 -->
+			<section class="guide-section">
+				<div class="guide-tit1">
+					<h2>상품</h2>
+					<div class="sub">/02.PRD/</div>
+				</div>
+				<div class="guide-table1" data-sort="true">
+					<table>
+						<caption>상품 목록</caption>
+						<colgroup>
+							<col style="width:40px">
+							<col span="3" style="width:200px">
+							<col style="width:200px">
+							<col style="width:60px">
+							<col style="width:60px">
+							<col style="width:90px">
+							<col>
+						</colgroup>
+						<thead>
+							<tr class="unit">
+								<th scope="col">NO</th>
+								<th scope="col">1Depth</th>
+								<th scope="col">2Depth</th>
+								<th scope="col">3Depth</th>
+								<th scope="col">파일명</th>
+								<th scope="col">작업자</th>
+								<th scope="col">완료일</th>
+								<th scope="col">수정일</th>
+								<th scope="col">비고</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="unit">
+								<td></td>
+								<td>메인</td>
+								<td>추천상품</td>
+								<td></td>
+								<td class="url page"><a href="./02.PRD/PRD_RECOCATE_TAB_LI.html"
+										target="_blank">PRD_RECOCATE_TAB_LI</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">05.09</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>현업요청사항 반영 - 이미지추가 및 문구 수정</td>
+													<td>07.28</td>
+												</tr>
+												<tr class="unit">
+													<td>현업요청사항 반영 - 문구수정</td>
+													<td>07.26</td>
+												</tr>
+												<tr class="unit">
+													<td>탭버튼의 aria-current="page" 삭제</td>
+													<td>05.30</td>
+												</tr>
+												<tr class="unit">
+													<td>개발팀요청 : 탭이동으로 변경 (페이지 이동 아님)</td>
+													<td>05.26</td>
+												</tr>
+												<tr class="unit">
+													<td>data-fixed="top" 추가</td>
+													<td>05.25</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														1) 뱃지타입 수정<br>
+														2) a태그 수정<br>
+														3) 윤문작업 - 문구 수정
+													</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>금융상품</td>
+								<td></td>
+								<td class="url page"><a href="./02.PRD/PRD_FINACATE_TAB_LI.html"
+										target="_blank">PRD_FINACATE_TAB_LI</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">05.09</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														상품 상세 서브 타이틀 추가.
+													</td>
+													<td>07.14</td>
+												</tr>
+												<tr class="unit">
+													<td>data-fixed="top" 추가</td>
+													<td>05.25</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														1) 뱃지타입 수정<br>
+														2) 팝업 내 a태그 title 추가.
+													</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>상세 팝업1</td>
+								<td class="url page"><a href="./02.PRD/PRD_FINACATE_TAB_LI02.html"
+										target="_blank">PRD_FINACATE_TAB_LI02</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">05.09</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														잔여업무 수정 및 추가사항 반영
+													</td>
+													<td>08.16</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														상품 상세 서브 타이틀 추가.
+													</td>
+													<td>07.14</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														1) 뱃지타입 수정<br>
+													</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>상세 팝업2</td>
+								<td class="url page"><a href="./02.PRD/PRD_FINACATE_TAB_LI03.html"
+										target="_blank">PRD_FINACATE_TAB_LI03</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">05.09</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														1) 뱃지타입 수정<br>
+														2) 팝업 내 a태그 title 추가.
+													</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>쇼핑몰</td>
+								<td></td>
+								<td class="url page"><a href="./02.PRD/PRD_NHMALLCATE_TAB_LI.html"
+										target="_blank">PRD_NHMALLCATE_TAB_LI</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">05.09</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>data-fixed="top" 추가</td>
+													<td>05.25</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														1) 뱃지타입 수정<br>
+														2) a태그 수정
+													</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+			<!--// 상품 -->
+
+			<!-- NH라운지 -->
+			<section class="guide-section">
+				<div class="guide-tit1">
+					<h2>NH라운지</h2>
+					<div class="sub">/04.LEAR/</div>
+				</div>
+				<div class="guide-table1" data-sort="true">
+					<table>
+						<caption>NH라운지 목록</caption>
+						<colgroup>
+							<col style="width:40px">
+							<col span="3" style="width:200px">
+							<col style="width:200px">
+							<col style="width:60px">
+							<col style="width:60px">
+							<col style="width:90px">
+							<col>
+						</colgroup>
+						<thead>
+							<tr class="unit">
+								<th scope="col">NO</th>
+								<th scope="col">1Depth</th>
+								<th scope="col">2Depth</th>
+								<th scope="col">3Depth</th>
+								<th scope="col">파일명</th>
+								<th scope="col">작업자</th>
+								<th scope="col">완료일</th>
+								<th scope="col">수정일</th>
+								<th scope="col">비고</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="unit">
+								<td></td>
+								<td>공지사항</td>
+								<td>목록</td>
+								<td></td>
+								<td class="url page"><a href="./04.LEAR/LEAR_NOT_PAGE_LI.html"
+										target="_blank">LEAR_NOT_PAGE_LI</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">04.25</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														윤문작업 - 문구 수정
+													</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>상세</td>
+								<td></td>
+								<td class="url page"><a href="./04.LEAR/LEAR_NOT_PAGE_VW.html"
+										target="_blank">LEAR_NOT_PAGE_VW</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">04.25</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														윤문작업 - 문구 수정
+													</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>자주묻는질문</td>
+								<td></td>
+								<td></td>
+								<td class="url page"><a href="./04.LEAR/LEAR_FAQ_PAGE_LI.html"
+										target="_blank">LEAR_FAQ_PAGE_LI</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">04.25</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														하단 배너 링크 삭제
+													</td>
+													<td>06.28</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														윤문작업 - 문구 수정
+													</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>팟로그</td>
+								<td>목록</td>
+								<td></td>
+								<td class="url page"><a href="./04.LEAR/LEAR_COMSE_PAGE_LI.html"
+										target="_blank">LEAR_COMSE_PAGE_LI</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">05.22</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														소팅영역 수정
+													</td>
+													<td>07.06</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														소팅영역 마크업 변경
+													</td>
+													<td>05.30</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>상세</td>
+								<td></td>
+								<td class="url page"><a href="./04.LEAR/LEAR_COMSE_PAGE_VW.html"
+										target="_blank">LEAR_COMSE_PAGE_VW</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">05.22</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														버튼 영역 추가
+													</td>
+													<td>07.13</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														하단 버튼문구 수정
+													</td>
+													<td>06.16</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+			<!--// NH라운지 -->
+
+			<!-- 기타 이벤트 -->
+			<section class="guide-section">
+				<div class="guide-tit1">
+					<h2>기타 이벤트</h2>
+					<div class="sub">/05.ALW/</div>
+				</div>
+				<div class="guide-table1" data-sort="true">
+					<table>
+						<caption>기타 이벤트 목록</caption>
+						<colgroup>
+							<col style="width:40px">
+							<col span="3" style="width:200px">
+							<col style="width:200px">
+							<col style="width:60px">
+							<col style="width:60px">
+							<col style="width:90px">
+							<col>
+						</colgroup>
+						<thead>
+							<tr class="unit">
+								<th scope="col">NO</th>
+								<th scope="col">1Depth</th>
+								<th scope="col">2Depth</th>
+								<th scope="col">3Depth</th>
+								<th scope="col">파일명</th>
+								<th scope="col">작업자</th>
+								<th scope="col">완료일</th>
+								<th scope="col">수정일</th>
+								<th scope="col">비고</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="unit">
+								<td></td>
+								<td>출석체크</td>
+								<td></td>
+								<td></td>
+								<td class="url page"><a href="./05.ALW/ALW_ATTE_PAGE_LI.html"
+										target="_blank">ALW_ATTE_PAGE_LI</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">05.15</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														출석완료 버튼 클래스명 삭제 후 disabled 추가<br>
+														ty04 &#10140; disabled
+													</td>
+													<td>05.26</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														참여 안내 영역 div 삭제 후 dl 클래스명 변경<br>
+														dl.data1 &#10140; dl.txt_bul1
+													</td>
+													<td>05.25</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														윤문작업 - 문구 수정
+													</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>미션형</td>
+								<td></td>
+								<td class="url page"><a href="./05.ALW/ALW_ATTE_PAGE_LI_02.html"
+										target="_blank">ALW_ATTE_PAGE_LI_02</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">05.18</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														출석완료 버튼 클래스명 삭제 후 disabled 추가<br>
+														ty04 &#10140; disabled
+													</td>
+													<td>05.26</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														참여 안내 영역 div 삭제 후 dl 클래스명 변경<br>
+														dl.data1 &#10140; dl.txt_bul1
+													</td>
+													<td>05.25</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>공유하기 팝업</td>
+								<td></td>
+								<td class="url page"><a href="./00.COMM/COMM_POPUP_LAYER02.html"
+										target="_blank">공통팝업참고</a></td>
+								<td class="pub">-</td>
+								<td class="end">-</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<!-- <tr class="unit">
+								<td></td>
+								<td></td>
+								<td>출석완료 팝업</td>
+								<td></td>
+								<td class="url page"><a href="./05.ALW/ALW_ATTE_PAGE_LI02.html" target="_blank">ALW_ATTE_PAGE_LI02</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">05.15</td>
+								<td class="modify"></td>
+								<td>[D] 인터렉션은 추후 작업 예정</td>
+							</tr> -->
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>출석완료 팝업2</td>
+								<td></td>
+								<td class="url page"><a href="./05.ALW/ALW_ATTE_PAGE_LI02_02.html"
+										target="_blank">ALW_ATTE_PAGE_LI02_02</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">05.18</td>
+								<td class="modify"></td>
+								<td>[D] 인터렉션 - COMM_POPUP_LAYER03_lottie 동일</td>
+							</tr>
+							<!-- <tr class="unit">
+								<td></td>
+								<td></td>
+								<td>추가이벤트 참여 팝업</td>
+								<td></td>
+								<td class="url page"><a href="./05.ALW/ALW_ATTE_PAGE_LI03.html" target="_blank">ALW_ATTE_PAGE_LI03</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">05.15</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr> -->
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>참여완료 팝업</td>
+								<td></td>
+								<td class="url page"><a href="./05.ALW/ALW_ATTE_PAGE_LI04.html"
+										target="_blank">ALW_ATTE_PAGE_LI04</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">05.18</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<!-- <tr class="unit">
+								<td></td>
+								<td></td>
+								<td>미션완료</td>
+								<td></td>
+								<td class="url page"><a href="./05.ALW/ALW_ATSU_LAYER_LI.html" target="_blank">ALW_ATSU_LAYER_LI</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">05.15</td>
+								<td class="modify"></td>
+								<td>[D] 인터렉션은 추후 작업 예정</td>
+							</tr> -->
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>미션완료2</td>
+								<td></td>
+								<td class="url page"><a href="./05.ALW/ALW_ATSU_LAYER_LI02.html"
+										target="_blank">ALW_ATSU_LAYER_LI02</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">05.18</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														레이어팝업 클래스 변경
+													</td>
+													<td>06.08</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														레이어팝업 클래스 변경
+													</td>
+													<td>05.25</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td>[D] 인터렉션 - COMM_POPUP_LAYER03_lottie 동일</td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>퀴즈이벤트</td>
+								<td></td>
+								<td></td>
+								<td class="url page"><a href="./05.ALW/ALW_QUIZ_PAGE_LI.html"
+										target="_blank">ALW_QUIZ_PAGE_LI</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">05.15</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														참여 안내 영역 div 삭제 후 dl 클래스명 변경<br>
+														dl.data1 &#10140; dl.txt_bul1
+													</td>
+													<td>05.25</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														윤문작업 - 문구 수정
+													</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>마케팅동의 팝업</td>
+								<td></td>
+								<td class="url page"><a href="./00.COMM/COMM_TERM02_PAGE_LI03.html"
+										target="_blank">공통팝업참고</a></td>
+								<td class="pub">-</td>
+								<td class="end">-</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>마케팅동의 상세 팝업</td>
+								<td></td>
+								<td class="url page"><a href="./00.COMM/COMM_TERM02_PAGE_LI04.html"
+										target="_blank">공통팝업참고</a></td>
+								<td class="pub">-</td>
+								<td class="end">-</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>마케팅동의 완료 팝업</td>
+								<td></td>
+								<td class="url page"><a href="./00.COMM/COMM_TERM02_PAGE_LI05.html"
+										target="_blank">공통팝업참고</a></td>
+								<td class="pub">-</td>
+								<td class="end">-</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>퀴즈이벤트 상세</td>
+								<td></td>
+								<td></td>
+								<td class="url page"><a href="./05.ALW/ALW_QUIZ_PAGE_WR.html"
+										target="_blank">ALW_QUIZ_PAGE_WR</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">05.15</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														참여완료 버튼 클래스명 삭제 후 disabled 추가<br>
+														ty05 &#10140; disabled
+													</td>
+													<td>05.26</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														참여 안내 영역 div 삭제 후 dl 클래스명 변경<br>
+														dl.data1 &#10140; dl.txt_bul1
+													</td>
+													<td>05.25</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														1) 윤문작업 - 문구 수정<br>
+														2) 버튼 클래스 수정 및 추가
+													</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>힌트보기 팝업</td>
+								<td></td>
+								<td class="url page"><a href="./05.ALW/ALW_QUIZ_PAGE_WR02.html"
+										target="_blank">ALW_QUIZ_PAGE_WR02</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">05.15</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														윤문작업 - 문구 수정
+													</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>오답 팝업</td>
+								<td></td>
+								<td class="url page"><a href="./05.ALW/ALW_QUIZ_PAGE_WR03.html"
+										target="_blank">ALW_QUIZ_PAGE_WR03</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">05.15</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														윤문작업 - 문구 수정
+													</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td class="url page"><a href="./05.ALW/ALW_QUIZ_PAGE_WR03_lottie.html"
+										target="_blank">ALW_QUIZ_PAGE_WR03_lottie</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">08.10</td>
+								<td class="modify"></td>
+								<td>[D] 인터렉션 반영 파일</td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>퀴즈완료</td>
+								<td></td>
+								<td></td>
+								<td class="url page"><a href="./05.ALW/ALW_QUSU_PAGE_LI.html"
+										target="_blank">ALW_QUSU_PAGE_LI</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">05.15</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														1) 취소버튼 추가<br>
+														2) 참여 안내 영역 div 삭제 후 dl 클래스명 변경<br>
+														- dl.data1 &#10140; dl.txt_bul1
+													</td>
+													<td>05.25</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														윤문작업 - 문구 수정
+													</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td class="url page"><a href="./05.ALW/ALW_QUSU_PAGE_LI_lottie.html"
+										target="_blank">ALW_QUSU_PAGE_LI_lottie</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">08.10</td>
+								<td class="modify"></td>
+								<td>[D] 인터렉션 반영 파일</td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>추천상품 팝업</td>
+								<td></td>
+								<td class="url page"><a href="./05.ALW/ALW_QUSU_PAGE_LI02.html"
+										target="_blank">ALW_QUSU_PAGE_LI02</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">05.15</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														팝업x버튼 추가
+													</td>
+													<td>06.07</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														참여 안내 영역 div 삭제 후 dl 클래스명 변경<br>
+														dl.data1 &#10140; dl.txt_bul1
+													</td>
+													<td>05.25</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														윤문작업 - 문구 수정
+													</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>풍선이벤트</td>
+								<td>풍선노출</td>
+								<td></td>
+								<td class="url page"><a href="./05.ALW/ALW_BALL_LAYER_LI.html"
+										target="_blank">ALW_BALL_LAYER_LI</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">05.15</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														[현업요청]풍선위치 이동 처리
+													</td>
+													<td>07.07</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														풍선위치 랜덤 처리
+													</td>
+													<td>06.08</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td class="url page"><a href="./05.ALW/ALW_BALL_LAYER_LI_lottie.html"
+										target="_blank">ALW_BALL_LAYER_LI_lottie</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">08.10</td>
+								<td class="modify"></td>
+								<td>[D] 인터렉션 반영 파일</td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>참여하기 팝업</td>
+								<td class="url page"><a href="./05.ALW/ALW_BALL_LAYER_LI02.html"
+										target="_blank">ALW_BALL_LAYER_LI02</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">05.15</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														윤문작업 - 문구 수정
+													</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>참여하기 팝업 - 횟수만료</td>
+								<td class="url page"><a href="./05.ALW/ALW_BALL_LAYER_LI02_02.html"
+										target="_blank">ALW_BALL_LAYER_LI02_02</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">07.26</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>참여완료 팝업</td>
+								<td class="url page"><a href="./05.ALW/ALW_BALL_LAYER_LI03.html"
+										target="_blank">ALW_BALL_LAYER_LI03</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">05.15</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														문구 수정
+													</td>
+													<td>06.12</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														윤문작업 - 문구 수정
+													</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td class="url page"><a href="./05.ALW/ALW_BALL_LAYER_LI03_lottie.html"
+										target="_blank">ALW_BALL_LAYER_LI03_lottie</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">08.10</td>
+								<td class="modify"></td>
+								<td>[D] 인터렉션 반영 파일</td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>풍선이벤트안내</td>
+								<td></td>
+								<td></td>
+								<td class="url page"><a href="./05.ALW/ALW_BALL_PAGE_LI.html"
+										target="_blank">ALW_BALL_PAGE_LI</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">05.15</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														문구 수정
+													</td>
+													<td>06.12</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														참여 안내 영역 div 삭제 후 dl 클래스명 변경<br>
+														dl.data1 &#10140; dl.txt_bul1
+													</td>
+													<td>05.25</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														윤문작업 - 문구 수정
+													</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>터치애드 안내</td>
+								<td></td>
+								<td></td>
+								<td class="url page"><a href="./05.ALW/ALW_TOUCH_PAGE_LI.html"
+										target="_blank">ALW_TOUCH_PAGE_LI</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">05.15</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														윤문작업 - 문구 수정
+													</td>
+													<td>05.18</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>애드팟 랜딩</td>
+								<td></td>
+								<td></td>
+								<td class="url page"><a href="./05.ALW/ALW_ADPOT_MAIN.html"
+										target="_blank">ALW_ADPOT_MAIN</a></td>
+								<td class="pub">채미숙</td>
+								<td class="end">2021-03-12</td>
+								<td class="modify"></td>
+								<td>전체동의 포함(script처리 완료)</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+			<!--// 기타이벤트 -->
+
+			<!-- NH포인트 -->
+			<section class="guide-section">
+				<div class="guide-tit1">
+					<h2>NH포인트</h2>
+					<div class="sub">/03.NHPOINT/</div>
+				</div>
+				<div class="guide-table1" data-sort="true">
+					<table>
+						<caption>NH포인트 목록</caption>
+						<colgroup>
+							<col style="width:40px">
+							<col span="3" style="width:200px">
+							<col style="width:200px">
+							<col style="width:60px">
+							<col style="width:60px">
+							<col style="width:90px">
+							<col>
+						</colgroup>
+						<thead>
+							<tr class="unit">
+								<th scope="col">NO</th>
+								<th scope="col">1Depth</th>
+								<th scope="col">2Depth</th>
+								<th scope="col">3Depth</th>
+								<th scope="col">파일명</th>
+								<th scope="col">작업자</th>
+								<th scope="col">완료일</th>
+								<th scope="col">수정일</th>
+								<th scope="col">비고</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="unit">
+								<td></td>
+								<td>공통팝업</td>
+								<td>[L] 유형선택</td>
+								<td></td>
+								<td class="url page"><a href="./00.COMM/COMM_POPUP_LAYER06.html"
+										target="_blank">공통팝업참고</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.19</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>[L] 조회기간</td>
+								<td></td>
+								<td class="url page"><a href="./00.COMM/COMM_POPUP_LAYER07.html"
+										target="_blank">공통팝업참고</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.19</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>[L] 은행선택</td>
+								<td></td>
+								<td class="url page"><a href="./00.COMM/COMM_POPUP_LAYER10.html"
+										target="_blank">공통팝업참고</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.19</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>[L]유의사항</td>
+								<td>유의사항 선택</td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_POPUP_LAYER.html"
+										target="_blank">NHPOINT_POPUP_LAYER</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.19</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>세부유의사항</td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_POPUP_LAYER02.html"
+										target="_blank">NHPOINT_POPUP_LAYER02</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.19</td>
+								<td class="modify"></td>
+								<td>[D] ARAM에서 내용 관리</td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>전환유의사항</td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_POPUP_LAYER03.html"
+										target="_blank">NHPOINT_POPUP_LAYER03</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.19</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>모바일상품권유의사항</td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_POPUP_LAYER04.html"
+										target="_blank">NHPOINT_POPUP_LAYER04</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.19</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>환불유의사항</td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_POPUP_LAYER08.html"
+										target="_blank">NHPOINT_POPUP_LAYER08</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.25</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>캐시백유의사항</td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_POPUP_LAYER10.html"
+										target="_blank">NHPOINT_POPUP_LAYER10</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.25</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>[L] 전환포인트</td>
+								<td></td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_POPUP_LAYER05.html"
+										target="_blank">NHPOINT_POPUP_LAYER05</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.19</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>[L] 알림 (alert)</td>
+								<td>제휴사 비회원 안내</td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_POPUP_LAYER06.html"
+										target="_blank">NHPOINT_POPUP_LAYER06</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.25</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>전환 포인트 초과 안내</td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_POPUP_LAYER07.html"
+										target="_blank">NHPOINT_POPUP_LAYER07</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.25</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>전환/기부 실패</td>
+								<td class="url page"><a href="./00.COMM/COMM_POPUP_LAYER11.html"
+										target="_blank">공통팝업참고</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.04</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>기부 취소</td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_POPUP_LAYER09.html"
+										target="_blank">NHPOINT_POPUP_LAYER09</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.25</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>나의포인트</td>
+								<td></td>
+								<td></td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_PAGE_LI.html"
+										target="_blank">NHPOINT_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.19</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>
+														1) 기획 v1.7 : 보유 포인트 적립률(BAR)영역 문구 수정<br>
+														2) 숫자 카운팅 효과 적용
+													</td>
+													<td>06.29</td>
+												</tr>
+												<tr class="unit">
+													<td>기획 v1.4 : [사용처 알아보기] 메뉴삭제</td>
+													<td>06.08</td>
+												</tr>
+												<tr class="unit">
+													<td>기획 v1.4 : [더 많은 서비스 이용하기] 메뉴추가</td>
+													<td>06.02</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_PAGE_LI_lottie.html"
+										target="_blank">NHPOINT_PAGE_LI_lottie</a></td>
+								<td class="pub">최민규</td>
+								<td class="end">08.10</td>
+								<td class="modify"></td>
+								<td>[D] 인터렉션 반영 파일</td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>적립/사용 내역</td>
+								<td></td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_HIS_UPAGE_LI.html"
+										target="_blank">NHPOINT_HIS_UPAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.19</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>받은선물과 보낸선물 구분</td>
+													<td>07.14</td>
+												</tr>
+												<tr class="unit">
+													<td>숫자 카운팅 효과 적용</td>
+													<td>06.29</td>
+												</tr>
+												<tr class="unit">
+													<td>툴팁버튼에 class="btn_layer" 추가</td>
+													<td>06.22</td>
+												</tr>
+												<tr class="unit">
+													<td>기획 v1.4 수정 : 툴팁 [닫기]버튼 추가</td>
+													<td>06.12</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>전환하기</td>
+								<td>제휴사 포인트 전환</td>
+								<td>[T] NH포인트로 전환</td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_TRANS_PAGE_LI.html"
+										target="_blank">NHPOINT_TRANS_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.19</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>잔여업무 수정 및 추가사항 반영</td>
+													<td>08.16</td>
+												</tr>
+												<tr class="unit">
+													<td>모바일 상품권 전환 영역 클래스 추가</td>
+													<td>07.07</td>
+												</tr>
+												<tr class="unit">
+													<td>유의사항 버튼 추가</td>
+													<td>06.28</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>[T] 제휴사로 전환</td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_ALLINH_PAGE_LI.html"
+										target="_blank">NHPOINT_ALLINH_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.25</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>잔여업무 수정 및 추가사항 반영</td>
+													<td>08.16</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>전환 상세(단건)</td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_ALL_PAGE_LI.html"
+										target="_blank">NHPOINT_ALL_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.25</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>잔여업무 수정 및 추가사항 반영</td>
+													<td>08.16</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														금액버튼 재배열
+													</td>
+													<td>07.26</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														<strong>현업 요청</strong><br>
+														상단영역 재수정
+													</td>
+													<td>07.25</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														<strong>개발팀 요청</strong><br>
+														상단영역 이미지 하나로 변경
+													</td>
+													<td>07.17</td>
+												</tr>
+												<tr class="unit">
+													<td>기획 v1.4 : 포인트 영역 내용 추가 및 문구 변경</td>
+													<td>06.02</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>전환 상세(다건)</td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_ALL_PAGE_LI02.html"
+										target="_blank">NHPOINT_ALL_PAGE_LI02</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.26</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>잔여업무 수정 및 추가사항 반영</td>
+													<td>08.16</td>
+												</tr>
+												<tr class="unit">
+													<td>기획 v1.7 : 포인트 영역 내용 추가</td>
+													<td>06.29</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td>[D] 전체 또는 1개 이상 선택 시 노출되는 상세 화면</td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>전환완료</td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_ALLISU_PAGE_LI.html"
+										target="_blank">NHPOINT_ALLISU_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.25</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>전환내역</td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_ALLIHIS_PAGE_LI.html"
+										target="_blank">NHPOINT_ALLIHIS_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.25</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>숫자 카운팅 효과 적용</td>
+													<td>06.29</td>
+												</tr>
+												<tr class="unit">
+													<td>기획 v1.4 수정 : 툴팁 [닫기]버튼 추가</td>
+													<td>06.12</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>모바일 상품권 전환</td>
+								<td></td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_MOB_PAGE_LI.html"
+										target="_blank">NHPOINT_MOB_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.19</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>잔여업무 수정 및 추가사항 반영</td>
+													<td>08.16</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														금액버튼 재배열
+													</td>
+													<td>07.26</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														<strong>개발팀 요청</strong><br>
+														1) 전환 수수료 영역 변경
+													</td>
+													<td>07.19</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														<strong>개발팀 요청</strong><br>
+														1) 상단영역 이미지 하나로 변경
+													</td>
+													<td>07.03</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														<strong>기획 v1.7</strong><br>
+														1) 모바일 상품권 선택 영역 삭제<br>
+														2) 모바일 상품권 전환 상단 영역 추가
+													</td>
+													<td>06.30</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														1) 확인버튼 추가
+													</td>
+													<td>06.14</td>
+												</tr>
+												<tr class="unit">
+													<td>
+														<strong>기획 v1.4</strong><br>
+														1) 문구 수정<br>
+														2) 전환 신청 포인트 영역 변경<br>
+														3) 전환 수수료 영역 추가
+													</td>
+													<td>06.02</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>전환완료</td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_MOBSU_PAGE_LI.html"
+										target="_blank">NHPOINT_MOBSU_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.19</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>전환내역</td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_MOBHIS_PAGE_LI.html"
+										target="_blank">NHPOINT_MOBHIS_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.19</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>숫자 카운팅 효과 적용</td>
+													<td>06.29</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>환불신청</td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_MOBHIS_PAGE_LI02.html"
+										target="_blank">NHPOINT_MOBHIS_PAGE_LI02</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.19</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>[L] 환불 신청하기</td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_MOBHIS_PAGE_LI04.html"
+										target="_blank">NHPOINT_MOBHIS_PAGE_LI04</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">06.07</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>환불신청완료</td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_MOBHIS_PAGE_LI03.html"
+										target="_blank">NHPOINT_MOBHIS_PAGE_LI03</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.19</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>개인정보 제3자 제공동의</td>
+								<td></td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_TRANS_PAGE_LI02.html"
+										target="_blank">NHPOINT_TRANS_PAGE_LI02</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.19</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>[P] 약관내용 _ 다건</td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_TRANS_PAGE_LI03.html"
+										target="_blank">NHPOINT_TRANS_PAGE_LI03</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.19</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>[P] 약관내용 _ 단건</td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_TRANS_PAGE_LI04.html"
+										target="_blank">NHPOINT_TRANS_PAGE_LI04</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">06.28</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>개인정보제공동의철회</td>
+								<td></td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_TRANSREV_PAGE_LI.html"
+										target="_blank">NHPOINT_TRANSREV_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.19</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>[L] 동의 철회 안내</td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_TRANSREV_PAGE_LI02.html"
+										target="_blank">NHPOINT_TRANSREV_PAGE_LI02</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.19</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>기부하기</td>
+								<td>[T] 기부하기</td>
+								<td></td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_DONALI_PAGE_LI.html"
+										target="_blank">NHPOINT_DONALI_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.25</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>기획 v1.5 수정 : 정기기부 취소 버튼 추가</td>
+													<td>06.14</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>상세</td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_DONAPL_PAGE_LI.html"
+										target="_blank">NHPOINT_DONAPL_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.25</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>잔여업무 수정 및 추가사항 반영</td>
+													<td>08.16</td>
+												</tr>
+												<tr class="unit">
+													<td>안내문구 추가</td>
+													<td>07.27</td>
+												</tr>
+												<tr class="unit">
+													<td>월 정기기부일 경우 안내문구 추가</td>
+													<td>06.19</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>[L] 기부처 공지창</td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_DONAPL_PAGE_LI02.html"
+										target="_blank">NHPOINT_DONAPL_PAGE_LI02</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.25</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>안내문구 추가</td>
+													<td>07.27</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>[L] 기부하기</td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_DONAPL_PAGE_LI03.html"
+										target="_blank">NHPOINT_DONAPL_PAGE_LI03</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.25</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>완료</td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_DONASU_PAGE_LI.html"
+										target="_blank">NHPOINT_DONASU_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.25</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>[T] 나의 기부내역</td>
+								<td></td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_DONAHIS_PAGE_LI.html"
+										target="_blank">NHPOINT_DONAHIS_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.25</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>취소완료 시 금액표시 변경</td>
+													<td>07.20</td>
+												</tr>
+												<tr class="unit">
+													<td>숫자 카운팅 효과 적용</td>
+													<td>06.29</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>캐시백</td>
+								<td>상세</td>
+								<td></td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_CASHBACK_PAGE_LI.html"
+										target="_blank">NHPOINT_CASHBACK_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.25</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>잔여업무 수정 및 추가사항 반영</td>
+													<td>08.16</td>
+												</tr>
+												<tr class="unit">
+													<td>숫자 카운팅 효과 적용</td>
+													<td>06.29</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>[L] 캐시백 신청하기</td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_CASHBACK_PAGE_LI02.html"
+										target="_blank">NHPOINT_CASHBACK_PAGE_LI02</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">06.07</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>완료</td>
+								<td></td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_CASHBACKSU_PAGE_LI.html"
+										target="_blank">NHPOINT_CASHBACKSU_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.25</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>내역</td>
+								<td></td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_CASHBACKHIS_PAGE_LI.html"
+										target="_blank">NHPOINT_CASHBACKHIS_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.25</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>숫자 카운팅 효과 적용</td>
+													<td>06.29</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>적립방법 알아보기</td>
+								<td></td>
+								<td></td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_ACCUCON_PAGE_LI.html"
+										target="_blank">NHPOINT_ACCUCON_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.25</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>쿠폰관련 삭제</td>
+													<td>07.20</td>
+												</tr>
+												<tr class="unit">
+													<td>미사용 이미지 삭제</td>
+													<td>07.10</td>
+												</tr>
+												<tr class="unit">
+													<td>문구 수정 및 인터렉션 추가</td>
+													<td>06.28</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>사용방법 알아보기</td>
+								<td></td>
+								<td></td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_USECON_PAGE_LI.html"
+										target="_blank">NHPOINT_USECON_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.25</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>쿠폰관련 삭제</td>
+													<td>07.20</td>
+												</tr>
+												<tr class="unit">
+													<td>문구 수정 및 인터렉션 추가</td>
+													<td>06.28</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>더 많은 서비스 이용하기</td>
+								<td></td>
+								<td></td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_USEAPP_PAGE_LI.html"
+										target="_blank">NHPOINT_USEAPP_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">06.07</td>
+								<td class="modify">
+									<div class="guide-table2">
+										<table>
+											<caption>수정내역</caption>
+											<thead>
+												<tr class="unit">
+													<th scope="col">내용</th>
+													<th scope="col">날짜</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="unit">
+													<td>1) 윤문작업 - 문구 수정</td>
+													<td>06.28</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td>사용처</td>
+								<td>목록</td>
+								<td></td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_AFFLI_PAGE_LI.html"
+										target="_blank">NHPOINT_AFFLI_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.25</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+							<tr class="unit">
+								<td></td>
+								<td></td>
+								<td>상세</td>
+								<td></td>
+								<td class="url page"><a href="./03.NHPOINT/NHPOINT_AFFPL_PAGE_LI.html"
+										target="_blank">NHPOINT_AFFPL_PAGE_LI</a></td>
+								<td class="pub">이현정</td>
+								<td class="end">05.25</td>
+								<td class="modify"></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+			<!--// NH포인트 -->
+		</div>
+		<!-- ####################################################### -->
+	</div>
+</body>
+
+</html>

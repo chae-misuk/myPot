@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<title>[L] 기부 취소</title>
+</head>
+<body>
+	<!-- 바닥페이지 -->
+	<div id="wrap"></div>
+	<!-- // -->
+
+	<!-- ####################################################### -->
+	<!-- [POPUP] 기부 취소 -->
+	<!-- ####################################################### -->
+	<div class="layer_pop type_ctr" id="uiPOPUPALERT09" role="dialog" aria-modal="true" aria-labelledby="uiPOPUPALERT09TIT">
+		<div class="pop_inner">
+			<p id="uiPOPUPALERT02TIT" class="pop_tit">기부 취소</p>
+			<div class="pop_con">
+				<!-- [CASE1] -->
+				<p>선택한 기부 내역을 취소하시겠어요?</p>
+
+				<!-- [CASE2] -->
+				<p>해당 기부처에 대한 <br>정기기부를 취소하시겠습니까?</p>
+			</div>
+			<div class="wrap_btn1">
+				<button type="button" class="btn_com1 ty01 btn_close">취소</button> <!-- class="btn_close" 사용시 레이어 닫힘  -->
+				<button type="button" class="btn_com1 btn_close">확인</button> <!-- class="btn_close" 사용시 레이어 닫힘  -->
+			</div>
+		</div>
+	</div>
+	<!-- ####################################################### -->
+
+	<script>
+		$(function(){
+			openlayer('uiPOPUPALERT09');
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+    <script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+    <title>퀴즈이벤트</title>
+</head>
+<body>
+    <a id="skipnavi" href="#contents" class="skipnav">컨텐츠바로가기</a>
+    <!-- wrap -->
+    <div id="wrap">
+    </div>
+    <!--// wrap -->
+
+    <!-- popup -->
+    <div class="layer_pop type_evt" id="layer03" role="dialog" aria-modal="true" aria-label="퀴즈이벤트 참여" data-mode="allover"><!-- 05.18 수정. data-mode="allover" 추가 -->
+		<div class="pop_inner type04">
+			<div class="pop_con">
+				<!-- 05.18 수정 -->
+                <p>Wow 축하합니다!<br>딩동댕 정답입니다!<br>당신은 혹시 천재?</p>
+
+                <strong class="tip">이제 상품까지 가입하시면<br><span>10,000</span>포인트를 드려요!</strong>
+                <!--// 05.18 수정 -->
+			</div>
+            <div class="wrap_btn1">
+				<button type="button" class="btn_com1 ty01 btn_close">취소</button> <!-- 05.25 수정 -->  <!-- class="btn_close" 사용시 레이어 닫힘  -->
+				<button type="button" class="btn_com1 btn_layer" onclick="openlayer('layer04')">확인</button> <!-- 05.18 수정 -->
+			</div>
+		</div>
+	</div>
+    <!-- popup -->
+    <div class="layer_pop type_evt" id="layer04" role="dialog" aria-modal="true" aria-label="추천 상품 가입 안내">
+		<div class="pop_inner type05">
+			<p id="pop_tit01" class="pop_tit">추천 상품 가입하시고<br>10,000 포인트 받아보세요~!</p> <!-- 05.18 수정 -->
+            <div class="pop_con">
+                <div class="list_data1">
+                    <ul>
+                        <li>
+                            <a href="#none" target="_blank" title="농협상호금융 홈페이지 새창열림"><!-- 상품 관계사명 title명으로 적용. -->
+                                <em class="icon_link">농협상호금융</em>
+                                <strong>주머니(money)통장</strong>
+                                <div class="data1">은행 거래실적에 따라 우대금리</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- [M 2023-05-25] div태그 삭제 및 클래스명 변경 -->
+                <dl class="txt_bul1">
+                    <dt>유의 사항</dt>
+                    <dd>상품가입확인후 다음달 15일 이내 추가 포인트가 지급됩니다.</dd>
+                    <dd>타 이벤트내 동일상품가입시 포인트는 중복지급 되지 않습니다.</dd>
+                    <dd>상품 가입 전 해당 상품의 약관 및 상품 설명서를 자세히 확인하시기 바랍니다.</dd>
+                </dl>
+                <!-- // [M 2023-05-25] -->
+			</div>
+
+            <div class="wrap_btn1">
+				<button type="button" class="btn_com1 btn_close">확인</button> <!-- class="btn_close" 사용시 레이어 닫힘  -->
+			</div>
+		</div>
+	</div>
+    <script>
+		$(function(){
+			openlayer('layer03');
+		})
+	</script>
+</body>
+</html>

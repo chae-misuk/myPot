@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="../../resources/css/common.css">
+	<link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+	<script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+	<title>혜택</title>
+</head>
+<body>
+	<a href="#contents" class="skipnav">컨텐츠바로가기</a>
+	<div id="wrap">
+		<header id="header">
+			<div class="top">
+				<a href="#none" class="ico" title="참여사 이동"><img src="../../resources/images/logo/ci_logo13.png" alt="NHpay"></a>
+				<h1><a href="#none" class="logo" title="홈으로">NHmembers pot</a></h1>
+			</div>
+			<div class="gnb">
+				<a href="#none" class="on">혜택</a>
+				<a href="#none">추천</a>
+				<button type="button" aria-label="전체메뉴 열기" id="btn_menu" class="btn_menu" aria-haspopup="true">메뉴</button>
+			</div>
+		</header>
+
+		<!-- ####################################################### -->
+		<!-- [CONTENTS] 혜택 -->
+		<!-- ####################################################### -->
+		<div id="contents">
+			<div id="content">
+				<h2 class="hidden">혜택</h2>
+
+				<!-- ------------------------------- -->
+				<!-- [SECTION] 나의포인트 -->
+				<!-- ------------------------------- -->
+				<!-- [CASE1] 회원 -->
+				<div class="info_summary1">
+					<h3 class="tit">나의포인트</h3>
+					<p class="data_num1"><strong data-mode="count">123,456,789</strong> <span>P</span></p> <!-- 05.25 수정. <span>P</span> 추가. -->
+					<button type="button" class="link">나의포인트 자세히보기</button>
+				</div>
+
+				<!-- [CASE2] 비회원 -->
+				<div class="info_summary1">
+					<p><span>NH멤버스 회원이 되시면</span><strong>다양한 혜택을 누리실 수 있어요.</strong></p> <!-- 06.14 수정 -->
+					<!-- 08.10 추가. -->
+					<a href="#none" class="login">로그인</a>
+					<!--// 08.10 추가. -->
+					<button type="button" class="link">회원가입하기</button>
+				</div>
+
+				<!-- ------------------------------- -->
+				<!-- [SECTION] 받을 수 있는 오늘의 혜택 : 혜택없을 시 미노출 -->
+				<!-- ------------------------------- -->
+				<div class="area_ban1">
+					<!-- 08.01 수정 -->
+					<p>
+						<span>지금 최대 <strong>205,000</strong>원 상당의</span>
+						<span>혜택을 받으실 수 있어요!</span>
+						<span>푸짐한 경품 이벤트도 놓치지 마세요~ </span>
+
+						<!-- 08.16 추가 -->
+						<button type="button" data-label="tooltip" class="main_tip btn_layer tar_focus" aria-controls="tooltip_main">혜택 상세안내</button>
+						<!--// 08.16 추가 -->
+					</p>
+
+					<!-- 08.16 추가 -->
+					<div id="tooltip_main" class="tooltip type02" role="tooltip" style="top:75px;">
+						<button type="button" class="close">툴팁닫기</button>
+						<ul class="txt_mark1">
+							<li>혜택 총 금액은 제공 조건 및 기준에 따라 다를 수 있으며, 추첨의 경우 1등 경품 소비자 가격으로 산정됩니다.</li>
+						</ul>
+					</div>
+					<!--// 08.16 추가 -->
+
+					<!--// 08.01 수정 -->
+					<span class="img"><img src="../../resources/images/img_banner01.png" alt=""></span> <!-- 05.23 수정 -->
+				</div>
+
+				<!-- 06.28 수정 -->
+				<div class="area_info1">
+					<div class="select">
+						<button type="button" class="selectbox2 btn_layer">혜택 전체</button>
+						<button type="button" class="selectbox2 btn_layer">제휴사 전체</button>
+					</div>
+					<div class="side">
+						<button type="button" class="btn_sort btn_layer">최신순</button>
+					</div>
+				</div>
+				<!--// 06.28 수정 -->
+
+				<!-- ------------------------------- -->
+				<!-- [SECTION] 이벤트 -->
+				<!-- ------------------------------- -->
+				<div class="list_data1">
+					<h3 class="hidden">이벤트</h3>
+					<ul>
+						<!-- [CASE] 기본구조
+							* data-mode="load" : 카드 애니메이션 적용
+							* style="background-color:색상지정;" : 관리자에서 색상 지정할 경우
+						-->
+						<li data-mode="load" style="background-color:#dbf3ff;">
+							<a href="#none">
+								<!-- 이미지 -->
+								<span class="img"><img src="../../resources/images/upload/@img_event01.png" alt=""></span>
+								<!-- 뱃지 -->
+								<div class="label">
+									<i class="icon_txt1" style="color:#008df9">NEW</i>
+									<i class="icon_txt1" style="color:#fd8b00">EVENT</i>
+									<i class="icon_txt1" style="color:#fb1504">SALE</i>
+								</div>
+								<!-- 참여사 -->
+								<em>참여사명</em>
+								<!-- 이벤트 제목 -->
+								<strong>이벤트 제목</strong>
+								<!-- 혜택(포인트 / 할인 / 원)
+									포인트 : <div class="data_num1"><span>+</span><strong>000,000</strong><span>P</span></div>
+									할인 : <div class="data_num1"><strong>00%</strong><span>할인</span></div>
+									원 : <div class="data_num1"><strong>120,000</strong><span>원</span></div>
+								-->
+								<div class="data_num1"><span>+</span><strong>000,000</strong><span>P</span></div>
+								<!-- 서브타이틀 및 부가설명 -->
+								<div class="data1">서브타이틀 및 부가설명</div>
+								<!-- 이벤트 기간 -->
+								<div class="data2">
+									<time>0000.00.00 ~ 0000.00.00</time>
+									<i class="icon_txt1">D-00</i> <!-- [D] 이벤트 종료 기간이 설정된 경우 : 종료 10일전 노출 -->
+								</div>
+								<!-- [M 2023-05-31] 기획 v1.3 : 준법심의필 영역 추가  -->
+								<div class="data3">준법심의필 준법202305-029(2023.05.01 ~ 2023.12.31)</div>
+								<!-- // [M 2023-05-31] -->
+							</a>
+						</li>
+						<!-- [CASE] 이미지 없음 -->
+						<li data-mode="load" style="background-color:#fffddd;">
+							<a href="#none">
+								<div class="label">
+									<i class="icon_txt1" style="color:#008df9">NEW</i>
+									<i class="icon_txt1" style="color:#fd8b00">EVENT</i>
+									<i class="icon_txt1" style="color:#fb1504">SALE</i>
+								</div>
+								<em>농협스마트뱅킹</em>
+								<strong>NH고향사랑기부예금</strong>
+								<div class="data_num1"><span>+</span><strong>120,000</strong><span>P</span></div>
+								<div class="data1">0.7% NH포인트 적립, 최대 이용 영역 3배 추가 적립</div>
+								<div class="data2">
+									<time>2023.04.05 ~ 2023.06.06</time>
+									<i class="icon_txt1">D-2</i>
+								</div>
+							</a>
+						</li>
+						<!-- [CASE] BG설정없음 -->
+						<li data-mode="load">
+							<a href="#none">
+								<em>NH 농협식품</em>
+								<strong>봄에는 전 상품 할인해</strong>
+								<div class="data_num1"><span>+</span><strong>120,000</strong><span>P</span></div>
+								<div class="data1">국산 식품은 농협식품에서 구매하자</div>
+								<div class="data2">
+									<time>2023.04.05 ~ 2023.06.06</time>
+									<i class="icon_txt1">D-2</i>
+								</div>
+							</a>
+						</li>
+						<!-- [CASE] BG가 #ffffff으로 지정이 될 경우 -->
+						<li data-mode="load" style="background-color:#ffffff;">
+							<a href="#none">
+								<div class="label">
+									<i class="icon_txt1" style="color:#008df9">NEW</i>
+									<i class="icon_txt1" style="color:#fd8b00">EVENT</i>
+									<i class="icon_txt1" style="color:#fb1504">SALE</i>
+								</div>
+								<em>NH 농협손해보험</em>
+								<strong>보장자산 무료진단 이벤트</strong>
+								<div class="data_num1"><span>+</span><strong>0,000,000,000</strong><span>P</span></div>
+								<div class="data1">상담완료 시 3,000 NH포인트 지급<br>계약체결 시 1회차 보험료의 100% NH포인트적립(최대 30,000포인트)</div>
+								<div class="data2">
+									<time>2023.04.05 ~ 2023.06.06</time>
+									<i class="icon_txt1">D-2</i>
+								</div>
+							</a>
+						</li>
+						<!-- // -->
+						<li data-mode="load" style="background-color:#fee8e7;">
+							<a href="#none">
+								<span class="img"><img src="../../resources/images/upload/@img_event02.png" alt="sale happy spring"></span>
+								<em>NH 농협식품</em>
+								<strong>봄에는 전상품 할인해</strong>
+								<div class="data_num1"><strong>00%</strong><span>할인</span></div>
+								<div class="data1">국산식품은 농협식품에서 구매하자</div>
+								<div class="data2">
+									<time>2023.04.05 ~ 2023.06.06</time>
+									<i class="icon_txt1">D-2</i>
+								</div>
+							</a>
+						</li>
+						<!-- // -->
+						<li data-mode="load" style="background-color:#eefbe8;">
+							<a href="#none">
+								<span class="img"><img src="../../resources/images/upload/@img_event03.png" alt=""></span>
+								<em>NH 경제지주</em>
+								<strong>안성팜랜드 봄!봄!봄! 냉이쏙쏙</strong>
+								<div class="data_num1"><strong>120,000</strong><span>원</span></div>
+								<div class="data1">0.7% NH포인트 적립, 최대 이용 영역 3배 추가 적립</div>
+							</a>
+						</li>
+						<!-- // -->
+						<li data-mode="load">
+							<a href="#none">
+								<span class="img"><img src="../../resources/images/upload/@img_event04.jpg" alt="유채꽃의 성지 농협 안성팜랜드노랑노랑 황금유채보러올랭?유채꽃주간4월-5월"></span>
+								<em>NH 경제지주</em>
+								<strong>안성팜랜드로 노랑노랑 유채 보러올랭?</strong>
+								<div class="data2">
+									<time>2023.04.05 ~ 2023.06.06</time>
+								</div>
+							</a>
+						</li>
+						<!-- // -->
+						<li data-mode="load" style="background-color:#eefbe8;">
+							<a href="#none">
+								<span class="img"><img src="../../resources/images/upload/@img_event04.png" alt="내 보험 점검하고 3,000 NH포인트 받아가자! 계약체결시 최대30,000포인트 적립까지!"></span>
+								<em>NH 농협손해보험</em>
+								<strong>보장자산 무료진단 이벤트</strong>
+								<div class="data_num1"><span>+</span><strong>0,000,000,000</strong><span>P</span></div>
+								<div class="data1">상담완료 시 3,000 NH포인트 지급<br>계약체결 시 1회차 보험료의 100% NH포인트적립(최대 30,000포인트)</div>
+								<div class="data2">
+									<time>2023.04.05 ~ 2023.06.06</time>
+									<i class="icon_txt1">D-2</i>
+								</div>
+							</a>
+						</li>
+						<!-- // -->
+						<li data-mode="load" style="background-color:#eefbe8;">
+							<a href="#none">
+								<span class="img"><img src="../../resources/images/upload/@img_event06.png" alt="농협과일맛선 첫 만남이 반가워 준비한 혜택"></span>
+								<em>NH 농협경제지주</em>
+								<strong>농협과일맛선 첫 만남이 반가워 준비한 혜택</strong>
+								<div class="data_num1"><strong>29,900</strong><span>원</span></div>
+								<div class="data2">
+									<time>2023.04.05 ~ 2023.06.06</time>
+								</div>
+							</a>
+						</li>
+						<!-- // -->
+					</ul>
+				</div>
+
+				<!-- ------------------------------- -->
+				<!-- [SECTION] 쿠폰 -->
+				<!-- ------------------------------- -->
+				<div class="list_data1">
+					<h3 class="hidden">쿠폰</h3>
+					<ul>
+						<!-- // -->
+						<li data-mode="load" class="coupon">
+							<a href="#none">
+								<em>참여사명</em>
+								<strong>타이틀</strong>
+								<div class="data_num1"><strong>000,000</strong><span>P</span></div>
+								<div class="data1">서브타이틀</div>
+								<div class="data2">
+									<time>0000.00.00</time>
+									<span>까지 사용 가능</span>
+								</div>
+							</a>
+						</li>
+						<!-- // -->
+						<li data-mode="load" class="coupon">
+							<a href="#none">
+								<em>하나로마트</em>
+								<strong>하나로마트 10할인 쿠폰</strong>
+								<div class="data_num1"><strong>00%</strong><span>할인</span></div>
+								<div class="data1">은행 거래실적에 따라 우대금리, 수수료 면제 등 서비스를 제공하는 상품</div>
+								<div class="data2">
+									<time>2023.01.01</time>
+									<span>까지 사용 가능</span>
+								</div>
+							</a>
+						</li>
+						<!-- // -->
+						<li data-mode="load" class="coupon">
+							<a href="#none">
+								<em>NH멤버스</em>
+								<strong>우수회원 감사 포인트 쿠폰</strong>
+								<div class="data_num1"><strong>5,000</strong><span>P</span></div>
+								<div class="data1">우수회원 5,000P 전환 쿠폰 지급</div>
+								<div class="data2">
+									<time>2023.01.01</time>
+									<span>까지 사용 가능</span>
+								</div>
+							</a>
+						</li>
+						<!-- // -->
+					</ul>
+				</div>
+				<!-- ------------------------------- -->
+
+				<!-- ------------------------------- -->
+				<!-- [SECTION] 상시이벤트 --> <!-- 05.25 수정. 위치변경 및 문구 수정 -->
+				<!-- ------------------------------- -->
+				<div class="area_ban2" data-mode="load">
+					<h3 class="tit">차곡차곡 포인트 리워드</h3>
+					<ul>
+						<li>
+							<a href="#none">
+								<span class="img"><img src="../../resources/images/icon_point01.png" alt=""></span> <!-- 05.23 수정 -->
+								<span>매일매일</span>
+                                <span>출.석.체.크.</span>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<span class="img"><img src="../../resources/images/icon_point02.png" alt=""></span> <!-- 05.23 수정 -->
+								<span>도전!</span>
+                                <span>포인트 퀴즈</span>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<span class="img"><img src="../../resources/images/icon_point03.png" alt=""></span> <!-- 05.23 수정 -->
+								<span>풍선 찾 Go!</span>
+                                <span>포인트 받 Go!</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- ####################################################### -->
+
+		<footer id="footer">
+			<a href="#none">이용약관</a>
+			<a href="#none">개인정보처리방침</a>
+
+			<button type="button" aria-expanded="true" aria-controls="address">NH멤버스팟</button>
+			<div id="address">
+				<address>서울시 중구 통일로 120(중구 충정로 1가)</address>
+				<p>사업자등록번호 : 104-86-39742</p>
+			</div>
+		</footer>
+
+		<a href="#wrap" title="맨위로" id="btnTop"></a>
+	</div>
+	<script>
+		// 08.16 수정 및 추가
+		$('.area_ban1').on('click', function(e){
+			if(!$(e.target).is('.main_tip, #tooltip_main, #tooltip_main .close, #tooltip_main li')){
+				var Topset2 = $(this).siblings('.area_info1').offset().top;
+				$('html, body').animate({scrollTop : Topset2 - 130}, 400);
+			}
+			
+		});
+		$('#wrap').on('click', function(e){
+			if(!$(e.target).is('#tooltip_main, #tooltip_main li, .main_tip')){
+				$('#tooltip_main').addClass('vis').hide();
+				$('[data-label="tooltip"]').removeClass('tar_focus');
+			}
+		});
+		$('.main_tip').on('click', function(){
+			if($('.main_tip').is('.tar_focus')){
+				if($('#tooltip_main').is('.vis')){
+					setTimeout(function(){
+						$('#tooltip_main').removeClass('vis').show();
+						$('[data-label="tooltip"]').addClass('tar_focus');
+					}, 1);
+				} else {
+					setTimeout(function(){
+						$('#tooltip_main').addClass('vis').hide();
+						$('[data-label="tooltip"]').removeClass('tar_focus');
+					}, 1);
+				}
+			} else {
+				$('#tooltip_main').removeClass('vis').show();
+				$('[data-label="tooltip"]').addClass('tar_focus');
+			}
+		});
+		$(window).scroll(function(){
+			$('#tooltip_main').addClass('vis').hide();
+			$('[data-label="tooltip"]').removeClass('tar_focus');
+		})
+		$(window).on('load', function(){
+			$('#tooltip_main').prepend('<div class="tool_atr" tabindex="0" style="visibility:hidden;text-indent:-9999em;font-size:0;height:0;">툴팁은 4초후에 자동으로 사라집니다. 스크롤 시 팝업이 자동으로 사라집니다.</div>')
+			setTimeout(function(){
+				$('#tooltip_main').addClass('vis').hide();
+				$('[data-label="tooltip"]').removeClass('tar_focus');
+				$('.tool_atr').remove();
+			}, 4100);
+		})
+		// 08.16 수정 및 추가 end
+	</script>
+</body>
+</html>

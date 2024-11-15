@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../../resources/css/common.css">
+    <link rel="stylesheet" href="../../resources/css/nhm_newch.css">
+    <script type="text/javascript" src="../../resources/js/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="../../resources/js/nhm_newch.js"></script>
+    <title>회원가입</title>
+    <script>
+        $(function(){
+            openlayer('layer01');
+        })
+    </script>
+</head>
+<body>
+    <!-- wrap -->
+    <div id="wrap">
+    </div>
+    <!--// wrap -->
+
+    <!-- popup -->
+    <div class="layer_pop type_btm" id="layer01" role="dialog" aria-modal="true" aria-labelledby="pop_tit">
+        <div class="pop_inner">
+            <p id="pop_tit" class="pop_tit02">NH멤버스팟에<br>오신 걸 환영합니다!</p> <!-- 05.18 문구 수정 -->
+            <!-- <button type="button" class="pop_close">팝업닫기</button> --> <!-- 05.18 삭제 -->
+
+            <div class="pop_con">
+                <p class="txt_t2">NH멤버스팟 간편 회원가입으로 풍성한 혜택과<br>서비스를 누려보세요~!</p><!-- 05.18 문구 수정 -->
+            </div>
+            <div class="wrap_action">
+                <button type="button" class="btn_action ty01 btn_close">취소</button> <!-- class="btn_close" 사용시 레이어 닫힘  -->
+                <button type="button" class="btn_action btn_layer">확인</button> <!-- 05.18 문구 수정 -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
