@@ -1,0 +1,588 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+      
+        <title>🎊</title>
+      
+   
+    <link rel="stylesheet" href="style.css">
+    <!-- <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script> -->
+        <script>
+          // this page is a demo that is not built, so fudge the module.exports support
+          // define a global `module` so that the actual source file can use it
+          window.module = {};
+        </script>
+        <script src="./confetti.js"></script>
+        <script>
+          // define the `module.exports` as the `confetti` global, the way that the
+          // cdn distributed file would
+          window.confetti = module.exports;
+        </script>
+      
+        <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.3.0/ace.js"></script>
+        <script defer="" src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.7.5/beautify.min.js"></script>
+     
+      
+    
+    </head>
+<body auto-theme="true" data-theme="light" screen_capture_injected="true">
+
+
+  <header>
+    <button id="themeToggle" title="Switch Theme" class="theme"></button>
+    <a class="github-icon" title="Visit on GitHub" href="https://github.com/catdad/canvas-confetti" aria-label="View source on Github">
+      <svg class="icon"><use xlink:href="#octo"></use></svg>
+    </a>
+  </header>
+
+  <h1>Canvas Confetti</h1>
+
+  <div class="container">
+    <div class="group" data-name="cannon">
+      <div class="flex-rows">
+        <div class="left">
+          <h2><a href="#basic" id="basic" class="anchor">Basic Cannon</a></h2>
+          <button class="run">
+            Run-test
+            <span class="icon">
+              <svg class="icon"><use xlink:href="#run"></use></svg>
+            </span>
+          </button>
+        </div>
+        <div class="description">
+          <p>
+            The default mode... just your regular basic average blast of confetti. But it's still
+            a little cool, right?
+          </p>
+        </div>
+      </div>
+      <div class="editor ace_editor ace-xcode" style="min-height: 71px; height: 5rem;"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; height: 14.3906px; width: 6.59766px; left: 44px; top: 0px;"></textarea><div class="ace_gutter" aria-hidden="true"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px; height: 108.781px; width: 40px;"><div class="ace_gutter-cell " style="height: 14.3906px;">1<span class="ace_fold-widget ace_start ace_open" style="height: 14.3906px;"></span></div><div class="ace_gutter-cell " style="height: 14.3906px;">2</div><div class="ace_gutter-cell " style="height: 14.3906px;">3</div><div class="ace_gutter-cell " style="height: 14.3906px;">4</div><div class="ace_gutter-cell " style="height: 14.3906px;">5</div></div><div class="ace_gutter-active-line" style="top: 0px; height: 14.3906px;"></div></div><div class="ace_scroller" style="left: 40px; right: 0px; bottom: 0px;"><div class="ace_content" style="margin-top: 0px; width: 570px; height: 108.781px; margin-left: 0px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 532px; visibility: visible;"></div></div><div class="ace_layer ace_marker-layer"><div class="ace_active-line" style="height:14.390625px;top:0px;left:0;right:0;"></div></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"><div class="ace_line" style="height:14.390625px"><span class="ace_identifier">confetti</span><span class="ace_paren ace_lparen">({</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">particleCount</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">100</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">spread</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">70</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">origin</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_paren ace_lparen">{</span> <span class="ace_identifier">y</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">0.6</span> <span class="ace_paren ace_rparen">}</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_paren ace_rparen">})</span><span class="ace_punctuation ace_operator">;</span></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors"><div class="ace_cursor" style="left: 4px; top: 0px; width: 6.59766px; height: 14.3906px;"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="display: none; width: 22px; bottom: 0px;"><div class="ace_scrollbar-inner" style="width: 22px; height: 71.9531px;"></div></div><div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 22px; left: 40px; right: 0px;"><div class="ace_scrollbar-inner" style="height: 22px; width: 570px;"></div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;"></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-optical-sizing: inherit; font-kerning: inherit; font-feature-settings: inherit; font-variation-settings: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="group" data-name="random">
+      <div class="flex-rows">
+        <div class="left">
+          <h2><a href="#random" id="random" class="anchor">Random Direction</a></h2>
+          <button class="run">
+            Run
+            <span class="icon">
+              <svg class="icon"><use xlink:href="#run"></use></svg>
+            </span>
+          </button>
+        </div>
+        <div class="description">
+          <p>
+            Go crazy with some randomness. Shoot a random amount of confetti in random directions.
+            (Go ahead... you know you want to click that button more than once.)
+          </p>
+        </div>
+      </div>
+      <div class="editor ace_editor ace-xcode" style="min-height: 141px; height: 10rem;"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; height: 14.3906px; width: 6.59766px; left: 51px; top: 0px;"></textarea><div class="ace_gutter" aria-hidden="true"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px; height: 188.781px; width: 47px;"><div class="ace_gutter-cell " style="height: 14.3906px;">1<span class="ace_fold-widget ace_start ace_open" style="height: 14.3906px;"></span></div><div class="ace_gutter-cell " style="height: 14.3906px;">2</div><div class="ace_gutter-cell " style="height: 14.3906px;">3</div><div class="ace_gutter-cell " style="height: 14.3906px;">4</div><div class="ace_gutter-cell " style="height: 14.3906px;">5<span class="ace_fold-widget ace_start ace_open" style="height: 14.3906px;"></span></div><div class="ace_gutter-cell " style="height: 14.3906px;">6</div><div class="ace_gutter-cell " style="height: 14.3906px;">7</div><div class="ace_gutter-cell " style="height: 14.3906px;">8</div><div class="ace_gutter-cell " style="height: 14.3906px;">9</div><div class="ace_gutter-cell " style="height: 14.3906px;">10</div></div><div class="ace_gutter-active-line" style="top: 0px; height: 14.3906px;"></div></div><div class="ace_scroller" style="left: 47px; right: 0px; bottom: 0px;"><div class="ace_content" style="margin-top: 0px; width: 563px; height: 188.781px; margin-left: 0px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 532px; visibility: visible;"></div></div><div class="ace_layer ace_marker-layer"><div class="ace_active-line" style="height:14.390625px;top:0px;left:0;right:0;"></div></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"><div class="ace_line" style="height:14.390625px"><span class="ace_storage ace_type">function</span> <span class="ace_entity ace_name ace_function">randomInRange</span><span class="ace_paren ace_lparen">(</span><span class="ace_variable ace_parameter">min</span><span class="ace_punctuation ace_operator">, </span><span class="ace_variable ace_parameter">max</span><span class="ace_paren ace_rparen">)</span> <span class="ace_paren ace_lparen">{</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_keyword">return</span> <span class="ace_variable ace_language">Math</span><span class="ace_punctuation ace_operator">.</span><span class="ace_support ace_function">random</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span> <span class="ace_keyword ace_operator">*</span> <span class="ace_paren ace_lparen">(</span><span class="ace_identifier">max</span> <span class="ace_keyword ace_operator">-</span> <span class="ace_identifier">min</span><span class="ace_paren ace_rparen">)</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_identifier">min</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_paren ace_rparen">}</span></div><div class="ace_line" style="height:14.390625px"></div><div class="ace_line" style="height:14.390625px"><span class="ace_identifier">confetti</span><span class="ace_paren ace_lparen">({</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">angle</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_identifier">randomInRange</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">55</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_constant ace_numeric">125</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">spread</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_identifier">randomInRange</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">50</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_constant ace_numeric">70</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">particleCount</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_identifier">randomInRange</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">50</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_constant ace_numeric">100</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">origin</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_paren ace_lparen">{</span> <span class="ace_identifier">y</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">0.6</span> <span class="ace_paren ace_rparen">}</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_paren ace_rparen">})</span><span class="ace_punctuation ace_operator">;</span></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors"><div class="ace_cursor" style="left: 4px; top: 0px; width: 6.59766px; height: 14.3906px;"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="display: none; width: 22px; bottom: 0px;"><div class="ace_scrollbar-inner" style="width: 22px; height: 143.906px;"></div></div><div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 22px; left: 47px; right: 0px;"><div class="ace_scrollbar-inner" style="height: 22px; width: 563px;"></div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;"></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-optical-sizing: inherit; font-kerning: inherit; font-feature-settings: inherit; font-variation-settings: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="group" data-name="realistic">
+      <div class="flex-rows">
+        <div class="left">
+          <h2><a href="#realistic" id="realistic" class="anchor">Realistic Look</a></h2>
+          <button class="run">
+            Run
+            <span class="icon">
+              <svg class="icon"><use xlink:href="#run"></use></svg>
+            </span>
+          </button>
+        </div>
+        <div class="description">
+          <p>
+            If you happened to get curious and changed the particle count to 400 or so, you saw
+            something disappointing. An even "flattened cone" look to the confetti, making it look
+            way too perfect and ruining the illusion. We can fix that by mixing a few effects together.
+          </p>
+        </div>
+      </div>
+      <div class="editor ace_editor ace-xcode" style="min-height: 463px; height: 33rem;"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; height: 14.3906px; width: 6.59766px; left: 51px; top: 0px;"></textarea><div class="ace_gutter" aria-hidden="true"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px; height: 556.781px; width: 47px;"><div class="ace_gutter-cell " style="height: 14.3906px;">1</div><div class="ace_gutter-cell " style="height: 14.3906px;">2<span class="ace_fold-widget ace_start ace_open" style="height: 14.3906px;"></span></div><div class="ace_gutter-cell " style="height: 14.3906px;">3</div><div class="ace_gutter-cell " style="height: 14.3906px;">4</div><div class="ace_gutter-cell " style="height: 14.3906px;">5</div><div class="ace_gutter-cell " style="height: 14.3906px;">6<span class="ace_fold-widget ace_start ace_open" style="height: 14.3906px;"></span></div><div class="ace_gutter-cell " style="height: 14.3906px;">7<span class="ace_fold-widget ace_start ace_open" style="height: 14.3906px;"></span></div><div class="ace_gutter-cell " style="height: 14.3906px;">8</div><div class="ace_gutter-cell " style="height: 14.3906px;">9</div><div class="ace_gutter-cell " style="height: 14.3906px;">10</div><div class="ace_gutter-cell " style="height: 14.3906px;">11</div><div class="ace_gutter-cell " style="height: 14.3906px;">12<span class="ace_fold-widget ace_start ace_open" style="height: 14.3906px;"></span></div><div class="ace_gutter-cell " style="height: 14.3906px;">13</div><div class="ace_gutter-cell " style="height: 14.3906px;">14</div><div class="ace_gutter-cell " style="height: 14.3906px;">15</div><div class="ace_gutter-cell " style="height: 14.3906px;">16<span class="ace_fold-widget ace_start ace_open" style="height: 14.3906px;"></span></div><div class="ace_gutter-cell " style="height: 14.3906px;">17</div><div class="ace_gutter-cell " style="height: 14.3906px;">18</div><div class="ace_gutter-cell " style="height: 14.3906px;">19<span class="ace_fold-widget ace_start ace_open" style="height: 14.3906px;"></span></div><div class="ace_gutter-cell " style="height: 14.3906px;">20</div><div class="ace_gutter-cell " style="height: 14.3906px;">21</div><div class="ace_gutter-cell " style="height: 14.3906px;">22</div><div class="ace_gutter-cell " style="height: 14.3906px;">23</div><div class="ace_gutter-cell " style="height: 14.3906px;">24<span class="ace_fold-widget ace_start ace_open" style="height: 14.3906px;"></span></div><div class="ace_gutter-cell " style="height: 14.3906px;">25</div><div class="ace_gutter-cell " style="height: 14.3906px;">26</div><div class="ace_gutter-cell " style="height: 14.3906px;">27</div><div class="ace_gutter-cell " style="height: 14.3906px;">28</div><div class="ace_gutter-cell " style="height: 14.3906px;">29</div><div class="ace_gutter-cell " style="height: 14.3906px;">30<span class="ace_fold-widget ace_start ace_open" style="height: 14.3906px;"></span></div><div class="ace_gutter-cell " style="height: 14.3906px;">31</div><div class="ace_gutter-cell " style="height: 14.3906px;">32</div><div class="ace_gutter-cell " style="height: 14.3906px;">33</div></div><div class="ace_gutter-active-line" style="top: 0px; height: 14.3906px;"></div></div><div class="ace_scroller" style="left: 47px; right: 0px; bottom: 0px;"><div class="ace_content" style="margin-top: 0px; width: 563px; height: 556.781px; margin-left: 0px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 532px; visibility: visible;"></div></div><div class="ace_layer ace_marker-layer"><div class="ace_active-line" style="height:14.390625px;top:0px;left:0;right:0;"></div></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"><div class="ace_line" style="height:14.390625px"><span class="ace_storage ace_type">var</span> <span class="ace_identifier">count</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">200</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_storage ace_type">var</span> <span class="ace_identifier">defaults</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_paren ace_lparen">{</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">origin</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_paren ace_lparen">{</span> <span class="ace_identifier">y</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">0.7</span> <span class="ace_paren ace_rparen">}</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_paren ace_rparen">}</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px"></div><div class="ace_line" style="height:14.390625px"><span class="ace_storage ace_type">function</span> <span class="ace_entity ace_name ace_function">fire</span><span class="ace_paren ace_lparen">(</span><span class="ace_variable ace_parameter">particleRatio</span><span class="ace_punctuation ace_operator">, </span><span class="ace_variable ace_parameter">opts</span><span class="ace_paren ace_rparen">)</span> <span class="ace_paren ace_lparen">{</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">confetti</span><span class="ace_paren ace_lparen">(</span><span class="ace_variable ace_language">Object</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">assign</span><span class="ace_paren ace_lparen">({</span><span class="ace_paren ace_rparen">}</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">defaults</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">opts</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_paren ace_lparen">{</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">particleCount</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_variable ace_language">Math</span><span class="ace_punctuation ace_operator">.</span><span class="ace_support ace_function">floor</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">count</span> <span class="ace_keyword ace_operator">*</span> <span class="ace_identifier">particleRatio</span><span class="ace_paren ace_rparen">)</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_paren ace_rparen">}))</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_paren ace_rparen">}</span></div><div class="ace_line" style="height:14.390625px"></div><div class="ace_line" style="height:14.390625px"><span class="ace_identifier">fire</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">0.25</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_paren ace_lparen">{</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">spread</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">26</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">startVelocity</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">55</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_paren ace_rparen">})</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_identifier">fire</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">0.2</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_paren ace_lparen">{</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">spread</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">60</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_paren ace_rparen">})</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_identifier">fire</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">0.35</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_paren ace_lparen">{</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">spread</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">100</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">decay</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">0.91</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">scalar</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">0.8</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_paren ace_rparen">})</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_identifier">fire</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">0.1</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_paren ace_lparen">{</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">spread</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">120</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">startVelocity</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">25</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">decay</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">0.92</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">scalar</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">1.2</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_paren ace_rparen">})</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_identifier">fire</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">0.1</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_paren ace_lparen">{</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">spread</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">120</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">startVelocity</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">45</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_paren ace_rparen">})</span><span class="ace_punctuation ace_operator">;</span></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors"><div class="ace_cursor" style="left: 4px; top: 0px; width: 6.59766px; height: 14.3906px;"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="display: none; width: 22px; bottom: 0px;"><div class="ace_scrollbar-inner" style="width: 22px; height: 474.891px;"></div></div><div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 22px; left: 47px; right: 0px;"><div class="ace_scrollbar-inner" style="height: 22px; width: 563px;"></div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;"></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-optical-sizing: inherit; font-kerning: inherit; font-feature-settings: inherit; font-variation-settings: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="group" data-name="stars">
+      <div class="flex-rows">
+        <div class="left">
+          <h2><a href="#stars" id="stars" class="anchor">Stars</a></h2>
+          <button class="run">
+            Run
+            <span class="icon">
+              <svg class="icon"><use xlink:href="#run"></use></svg>
+            </span>
+          </button>
+        </div>
+        <div class="description">
+          <p>
+            You can combine multiple calls to confetti with any settings in order to create
+            a more complex effect. Go ahead, combine different shapes, sizes, etc. Stagger them
+            for an extra boost of excitement.
+          </p>
+          <p class="center">✨ Celebrate with a burst of stars! ✨</p>
+        </div>
+      </div>
+      <div class="editor ace_editor ace-xcode" style="min-height: 407px; height: 29rem;"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; height: 14.3906px; width: 6.59766px; left: 51px; top: 0px;"></textarea><div class="ace_gutter" aria-hidden="true"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px; height: 492.781px; width: 47px;"><div class="ace_gutter-cell " style="height: 14.3906px;">1<span class="ace_fold-widget ace_start ace_open" style="height: 14.3906px;"></span></div><div class="ace_gutter-cell " style="height: 14.3906px;">2</div><div class="ace_gutter-cell " style="height: 14.3906px;">3</div><div class="ace_gutter-cell " style="height: 14.3906px;">4</div><div class="ace_gutter-cell " style="height: 14.3906px;">5</div><div class="ace_gutter-cell " style="height: 14.3906px;">6</div><div class="ace_gutter-cell " style="height: 14.3906px;">7</div><div class="ace_gutter-cell " style="height: 14.3906px;">8</div><div class="ace_gutter-cell " style="height: 14.3906px;">9</div><div class="ace_gutter-cell " style="height: 14.3906px;">10</div><div class="ace_gutter-cell " style="height: 14.3906px;">11<span class="ace_fold-widget ace_start ace_open" style="height: 14.3906px;"></span></div><div class="ace_gutter-cell " style="height: 14.3906px;">12<span class="ace_fold-widget ace_start ace_open" style="height: 14.3906px;"></span></div><div class="ace_gutter-cell  ace_warning" style="height: 14.3906px;">13</div><div class="ace_gutter-cell  ace_warning" style="height: 14.3906px;">14</div><div class="ace_gutter-cell  ace_warning" style="height: 14.3906px;">15</div><div class="ace_gutter-cell " style="height: 14.3906px;">16</div><div class="ace_gutter-cell " style="height: 14.3906px;">17</div><div class="ace_gutter-cell " style="height: 14.3906px;">18</div><div class="ace_gutter-cell " style="height: 14.3906px;">19<span class="ace_fold-widget ace_start ace_open" style="height: 14.3906px;"></span></div><div class="ace_gutter-cell " style="height: 14.3906px;">20</div><div class="ace_gutter-cell " style="height: 14.3906px;">21</div><div class="ace_gutter-cell " style="height: 14.3906px;">22</div><div class="ace_gutter-cell " style="height: 14.3906px;">23</div><div class="ace_gutter-cell " style="height: 14.3906px;">24</div><div class="ace_gutter-cell " style="height: 14.3906px;">25</div><div class="ace_gutter-cell " style="height: 14.3906px;">26</div><div class="ace_gutter-cell " style="height: 14.3906px;">27</div><div class="ace_gutter-cell " style="height: 14.3906px;">28</div><div class="ace_gutter-cell " style="height: 14.3906px;">29</div></div><div class="ace_gutter-active-line" style="top: 0px; height: 14.3906px;"></div></div><div class="ace_scroller" style="left: 47px; right: 0px; bottom: 0px;"><div class="ace_content" style="margin-top: 0px; width: 563px; height: 492.781px; margin-left: 0px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 532px; visibility: visible;"></div></div><div class="ace_layer ace_marker-layer"><div class="ace_active-line" style="height:14.390625px;top:0px;left:0;right:0;"></div></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"><div class="ace_line" style="height:14.390625px"><span class="ace_storage ace_type">var</span> <span class="ace_identifier">defaults</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_paren ace_lparen">{</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">spread</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">360</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">ticks</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">50</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">gravity</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">0</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">decay</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">0.94</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">startVelocity</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">30</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">shapes</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_paren ace_lparen">[</span><span class="ace_string">'star'</span><span class="ace_paren ace_rparen">]</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">colors</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_paren ace_lparen">[</span><span class="ace_string">'FFE400'</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_string">'FFBD00'</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_string">'E89400'</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_string">'FFCA6C'</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_string">'FDFFB8'</span><span class="ace_paren ace_rparen">]</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_paren ace_rparen">}</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px"></div><div class="ace_line" style="height:14.390625px"><span class="ace_storage ace_type">function</span> <span class="ace_entity ace_name ace_function">shoot</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span> <span class="ace_paren ace_lparen">{</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">confetti</span><span class="ace_paren ace_lparen">({</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_indent-guide">  </span>  <span class="ace_keyword ace_operator">...</span><span class="ace_identifier">defaults</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">particleCount</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">40</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">scalar</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">1.2</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">shapes</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_paren ace_lparen">[</span><span class="ace_string">'star'</span><span class="ace_paren ace_rparen">]</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_paren ace_rparen">})</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px"></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">confetti</span><span class="ace_paren ace_lparen">({</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_indent-guide">  </span>  <span class="ace_keyword ace_operator">...</span><span class="ace_identifier">defaults</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">particleCount</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">10</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">scalar</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">0.75</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">shapes</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_paren ace_lparen">[</span><span class="ace_string">'circle'</span><span class="ace_paren ace_rparen">]</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_paren ace_rparen">})</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_paren ace_rparen">}</span></div><div class="ace_line" style="height:14.390625px"></div><div class="ace_line" style="height:14.390625px"><span class="ace_identifier">setTimeout</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">shoot</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_constant ace_numeric">0</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_identifier">setTimeout</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">shoot</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_constant ace_numeric">100</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_identifier">setTimeout</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">shoot</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_constant ace_numeric">200</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors"><div class="ace_cursor" style="left: 4px; top: 0px; width: 6.59766px; height: 14.3906px;"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="display: none; width: 22px; bottom: 0px;"><div class="ace_scrollbar-inner" style="width: 22px; height: 417.328px;"></div></div><div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 22px; left: 47px; right: 0px;"><div class="ace_scrollbar-inner" style="height: 22px; width: 563px;"></div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;"></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-optical-sizing: inherit; font-kerning: inherit; font-feature-settings: inherit; font-variation-settings: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="group" data-name="fireworks">
+      <div class="flex-rows">
+        <div class="left">
+          <h2><a href="#fireworks" id="fireworks" class="anchor">Fireworks</a></h2>
+          <button class="run">
+            Run
+            <span class="icon">
+              <svg class="icon"><use xlink:href="#run"></use></svg>
+            </span>
+          </button>
+        </div>
+        <div class="description">
+          <p>
+            Why click a button repeatedly when you can have code do it for you? Shoot some firework
+            of confetti from the sides of page so you can still read the content in the center.
+          </p>
+        </div>
+      </div>
+      <div class="editor ace_editor ace-xcode" style="min-height: 281px; height: 20rem;"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; height: 14.3906px; width: 6.59766px; left: 51px; top: 0px;"></textarea><div class="ace_gutter" aria-hidden="true"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px; height: 348.781px; width: 47px;"><div class="ace_gutter-cell " style="height: 14.3906px;">1</div><div class="ace_gutter-cell " style="height: 14.3906px;">2</div><div class="ace_gutter-cell " style="height: 14.3906px;">3</div><div class="ace_gutter-cell " style="height: 14.3906px;">4</div><div class="ace_gutter-cell " style="height: 14.3906px;">5<span class="ace_fold-widget ace_start ace_open" style="height: 14.3906px;"></span></div><div class="ace_gutter-cell " style="height: 14.3906px;">6</div><div class="ace_gutter-cell " style="height: 14.3906px;">7</div><div class="ace_gutter-cell " style="height: 14.3906px;">8</div><div class="ace_gutter-cell " style="height: 14.3906px;">9<span class="ace_fold-widget ace_start ace_open" style="height: 14.3906px;"></span></div><div class="ace_gutter-cell " style="height: 14.3906px;">10</div><div class="ace_gutter-cell " style="height: 14.3906px;">11</div><div class="ace_gutter-cell " style="height: 14.3906px;">12<span class="ace_fold-widget ace_start ace_open" style="height: 14.3906px;"></span></div><div class="ace_gutter-cell " style="height: 14.3906px;">13</div><div class="ace_gutter-cell " style="height: 14.3906px;">14</div><div class="ace_gutter-cell " style="height: 14.3906px;">15</div><div class="ace_gutter-cell " style="height: 14.3906px;">16</div><div class="ace_gutter-cell " style="height: 14.3906px;">17</div><div class="ace_gutter-cell " style="height: 14.3906px;">18</div><div class="ace_gutter-cell " style="height: 14.3906px;">19</div><div class="ace_gutter-cell " style="height: 14.3906px;">20</div></div><div class="ace_gutter-active-line" style="top: 0px; height: 14.3906px;"></div></div><div class="ace_scroller" style="left: 47px; right: 0px; bottom: 17px;"><div class="ace_content" style="margin-top: 0px; width: 820px; height: 348.781px; margin-left: 0px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 532px; visibility: visible;"></div></div><div class="ace_layer ace_marker-layer"><div class="ace_active-line" style="height:14.390625px;top:0px;left:0;right:0;"></div></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"><div class="ace_line" style="height:14.390625px"><span class="ace_storage ace_type">var</span> <span class="ace_identifier">duration</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">15</span> <span class="ace_keyword ace_operator">*</span> <span class="ace_constant ace_numeric">1000</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_storage ace_type">var</span> <span class="ace_identifier">animationEnd</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_variable ace_language">Date</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">now</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_identifier">duration</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_storage ace_type">var</span> <span class="ace_identifier">defaults</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_paren ace_lparen">{</span> <span class="ace_identifier">startVelocity</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">30</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">spread</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">360</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">ticks</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">60</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">zIndex</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">0</span> <span class="ace_paren ace_rparen">}</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px"></div><div class="ace_line" style="height:14.390625px"><span class="ace_storage ace_type">function</span> <span class="ace_entity ace_name ace_function">randomInRange</span><span class="ace_paren ace_lparen">(</span><span class="ace_variable ace_parameter">min</span><span class="ace_punctuation ace_operator">, </span><span class="ace_variable ace_parameter">max</span><span class="ace_paren ace_rparen">)</span> <span class="ace_paren ace_lparen">{</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_keyword">return</span> <span class="ace_variable ace_language">Math</span><span class="ace_punctuation ace_operator">.</span><span class="ace_support ace_function">random</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span> <span class="ace_keyword ace_operator">*</span> <span class="ace_paren ace_lparen">(</span><span class="ace_identifier">max</span> <span class="ace_keyword ace_operator">-</span> <span class="ace_identifier">min</span><span class="ace_paren ace_rparen">)</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_identifier">min</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_paren ace_rparen">}</span></div><div class="ace_line" style="height:14.390625px"></div><div class="ace_line" style="height:14.390625px"><span class="ace_storage ace_type">var</span> <span class="ace_identifier">interval</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">setInterval</span><span class="ace_paren ace_lparen">(</span><span class="ace_storage ace_type">function</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span> <span class="ace_paren ace_lparen">{</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_storage ace_type">var</span> <span class="ace_identifier">timeLeft</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">animationEnd</span> <span class="ace_keyword ace_operator">-</span> <span class="ace_variable ace_language">Date</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">now</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px"></div><div class="ace_line" style="height:14.390625px">  <span class="ace_keyword">if</span> <span class="ace_paren ace_lparen">(</span><span class="ace_identifier">timeLeft</span> <span class="ace_keyword ace_operator">&lt;=</span> <span class="ace_constant ace_numeric">0</span><span class="ace_paren ace_rparen">)</span> <span class="ace_paren ace_lparen">{</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_indent-guide">  </span>  <span class="ace_keyword">return</span> <span class="ace_identifier">clearInterval</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">interval</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_paren ace_rparen">}</span></div><div class="ace_line" style="height:14.390625px"></div><div class="ace_line" style="height:14.390625px">  <span class="ace_storage ace_type">var</span> <span class="ace_identifier">particleCount</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">50</span> <span class="ace_keyword ace_operator">*</span> <span class="ace_paren ace_lparen">(</span><span class="ace_identifier">timeLeft</span> <span class="ace_keyword ace_operator">/</span> <span class="ace_identifier">duration</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_comment">// since particles fall down, start a bit higher than random</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">confetti</span><span class="ace_paren ace_lparen">(</span><span class="ace_variable ace_language">Object</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">assign</span><span class="ace_paren ace_lparen">({</span><span class="ace_paren ace_rparen">}</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">defaults</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_paren ace_lparen">{</span> <span class="ace_identifier">particleCount</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">origin</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_paren ace_lparen">{</span> <span class="ace_identifier">x</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_identifier">randomInRange</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">0.1</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_constant ace_numeric">0.3</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">y</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_variable ace_language">Math</span><span class="ace_punctuation ace_operator">.</span><span class="ace_support ace_function">random</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span> <span class="ace_keyword ace_operator">-</span> <span class="ace_constant ace_numeric">0.2</span> <span class="ace_paren ace_rparen">}</span> <span class="ace_paren ace_rparen">}))</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">confetti</span><span class="ace_paren ace_lparen">(</span><span class="ace_variable ace_language">Object</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">assign</span><span class="ace_paren ace_lparen">({</span><span class="ace_paren ace_rparen">}</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">defaults</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_paren ace_lparen">{</span> <span class="ace_identifier">particleCount</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">origin</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_paren ace_lparen">{</span> <span class="ace_identifier">x</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_identifier">randomInRange</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">0.7</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_constant ace_numeric">0.9</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">y</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_variable ace_language">Math</span><span class="ace_punctuation ace_operator">.</span><span class="ace_support ace_function">random</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span> <span class="ace_keyword ace_operator">-</span> <span class="ace_constant ace_numeric">0.2</span> <span class="ace_paren ace_rparen">}</span> <span class="ace_paren ace_rparen">}))</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_paren ace_rparen">}</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_constant ace_numeric">250</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors"><div class="ace_cursor" style="left: 4px; top: 0px; width: 6.59766px; height: 14.3906px;"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="display: none; width: 22px; bottom: 17px;"><div class="ace_scrollbar-inner" style="width: 22px; height: 287.812px;"></div></div><div class="ace_scrollbar ace_scrollbar-h" style="height: 22px; left: 47px; right: 0px;"><div class="ace_scrollbar-inner" style="height: 22px; width: 953px;"></div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;"></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-optical-sizing: inherit; font-kerning: inherit; font-feature-settings: inherit; font-variation-settings: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="group" data-name="snow">
+      <div class="flex-rows">
+        <div class="left">
+          <h2><a href="#snow" id="snow" class="anchor">Snow</a></h2>
+          <button class="run">
+            Run
+            <span class="icon">
+              <svg class="icon"><use xlink:href="#run"></use></svg>
+            </span>
+          </button>
+        </div>
+        <div class="description">
+          <p>
+            The effect is not limited to crazy rapid fire of confetti though. You can create a
+            wintery mood with gently falling particles across the entire page.
+          </p>
+        </div>
+      </div>
+      <div class="editor ace_editor ace-xcode" style="min-height: 463px; height: 33rem;"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; height: 14.3906px; width: 6.59766px; left: 51px; top: 0px;"></textarea><div class="ace_gutter" aria-hidden="true"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px; height: 556.781px; width: 47px;"><div class="ace_gutter-cell " style="height: 14.3906px;">1</div><div class="ace_gutter-cell " style="height: 14.3906px;">2</div><div class="ace_gutter-cell " style="height: 14.3906px;">3</div><div class="ace_gutter-cell " style="height: 14.3906px;">4</div><div class="ace_gutter-cell " style="height: 14.3906px;">5<span class="ace_fold-widget ace_start ace_open" style="height: 14.3906px;"></span></div><div class="ace_gutter-cell " style="height: 14.3906px;">6</div><div class="ace_gutter-cell " style="height: 14.3906px;">7</div><div class="ace_gutter-cell " style="height: 14.3906px;">8</div><div class="ace_gutter-cell " style="height: 14.3906px;">9<span class="ace_fold-widget ace_start ace_open" style="height: 14.3906px;"></span></div><div class="ace_gutter-cell " style="height: 14.3906px;">10</div><div class="ace_gutter-cell " style="height: 14.3906px;">11</div><div class="ace_gutter-cell " style="height: 14.3906px;">12</div><div class="ace_gutter-cell " style="height: 14.3906px;">13</div><div class="ace_gutter-cell " style="height: 14.3906px;">14<span class="ace_fold-widget ace_start ace_open" style="height: 14.3906px;"></span></div><div class="ace_gutter-cell " style="height: 14.3906px;">15</div><div class="ace_gutter-cell " style="height: 14.3906px;">16</div><div class="ace_gutter-cell " style="height: 14.3906px;">17</div><div class="ace_gutter-cell " style="height: 14.3906px;">18<span class="ace_fold-widget ace_start ace_open" style="height: 14.3906px;"></span></div><div class="ace_gutter-cell " style="height: 14.3906px;">19</div><div class="ace_gutter-cell " style="height: 14.3906px;">20</div><div class="ace_gutter-cell " style="height: 14.3906px;">21</div><div class="ace_gutter-cell " style="height: 14.3906px;">22</div><div class="ace_gutter-cell " style="height: 14.3906px;">23</div><div class="ace_gutter-cell " style="height: 14.3906px;">24</div><div class="ace_gutter-cell " style="height: 14.3906px;">25</div><div class="ace_gutter-cell " style="height: 14.3906px;">26</div><div class="ace_gutter-cell " style="height: 14.3906px;">27</div><div class="ace_gutter-cell " style="height: 14.3906px;">28</div><div class="ace_gutter-cell " style="height: 14.3906px;">29</div><div class="ace_gutter-cell " style="height: 14.3906px;">30<span class="ace_fold-widget ace_start ace_open" style="height: 14.3906px;"></span></div><div class="ace_gutter-cell " style="height: 14.3906px;">31</div><div class="ace_gutter-cell " style="height: 14.3906px;">32</div><div class="ace_gutter-cell " style="height: 14.3906px;">33</div></div><div class="ace_gutter-active-line" style="top: 0px; height: 14.3906px;"></div></div><div class="ace_scroller" style="left: 47px; right: 0px; bottom: 0px;"><div class="ace_content" style="margin-top: 0px; width: 563px; height: 556.781px; margin-left: 0px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 532px; visibility: visible;"></div></div><div class="ace_layer ace_marker-layer"><div class="ace_active-line" style="height:14.390625px;top:0px;left:0;right:0;"></div></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"><div class="ace_line" style="height:14.390625px"><span class="ace_storage ace_type">var</span> <span class="ace_identifier">duration</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">15</span> <span class="ace_keyword ace_operator">*</span> <span class="ace_constant ace_numeric">1000</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_storage ace_type">var</span> <span class="ace_identifier">animationEnd</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_variable ace_language">Date</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">now</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_identifier">duration</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_storage ace_type">var</span> <span class="ace_identifier">skew</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">1</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px"></div><div class="ace_line" style="height:14.390625px"><span class="ace_storage ace_type">function</span> <span class="ace_entity ace_name ace_function">randomInRange</span><span class="ace_paren ace_lparen">(</span><span class="ace_variable ace_parameter">min</span><span class="ace_punctuation ace_operator">, </span><span class="ace_variable ace_parameter">max</span><span class="ace_paren ace_rparen">)</span> <span class="ace_paren ace_lparen">{</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_keyword">return</span> <span class="ace_variable ace_language">Math</span><span class="ace_punctuation ace_operator">.</span><span class="ace_support ace_function">random</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span> <span class="ace_keyword ace_operator">*</span> <span class="ace_paren ace_lparen">(</span><span class="ace_identifier">max</span> <span class="ace_keyword ace_operator">-</span> <span class="ace_identifier">min</span><span class="ace_paren ace_rparen">)</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_identifier">min</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_paren ace_rparen">}</span></div><div class="ace_line" style="height:14.390625px"></div><div class="ace_line" style="height:14.390625px"><span class="ace_paren ace_lparen">(</span><span class="ace_storage ace_type">function</span> <span class="ace_entity ace_name ace_function">frame</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span> <span class="ace_paren ace_lparen">{</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_storage ace_type">var</span> <span class="ace_identifier">timeLeft</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">animationEnd</span> <span class="ace_keyword ace_operator">-</span> <span class="ace_variable ace_language">Date</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">now</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_storage ace_type">var</span> <span class="ace_identifier">ticks</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_variable ace_language">Math</span><span class="ace_punctuation ace_operator">.</span><span class="ace_support ace_function">max</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">200</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_constant ace_numeric">500</span> <span class="ace_keyword ace_operator">*</span> <span class="ace_paren ace_lparen">(</span><span class="ace_identifier">timeLeft</span> <span class="ace_keyword ace_operator">/</span> <span class="ace_identifier">duration</span><span class="ace_paren ace_rparen">))</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">skew</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_variable ace_language">Math</span><span class="ace_punctuation ace_operator">.</span><span class="ace_support ace_function">max</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">0.8</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">skew</span> <span class="ace_keyword ace_operator">-</span> <span class="ace_constant ace_numeric">0.001</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px"></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">confetti</span><span class="ace_paren ace_lparen">({</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">particleCount</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">1</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">startVelocity</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">0</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">ticks</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_identifier">ticks</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">origin</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_paren ace_lparen">{</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span>  <span class="ace_identifier">x</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_variable ace_language">Math</span><span class="ace_punctuation ace_operator">.</span><span class="ace_support ace_function">random</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span>  <span class="ace_comment">// since particles fall down, skew start toward the top</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_indent-guide">  </span><span class="ace_indent-guide">  </span>  <span class="ace_identifier">y</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_paren ace_lparen">(</span><span class="ace_variable ace_language">Math</span><span class="ace_punctuation ace_operator">.</span><span class="ace_support ace_function">random</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span> <span class="ace_keyword ace_operator">*</span> <span class="ace_identifier">skew</span><span class="ace_paren ace_rparen">)</span> <span class="ace_keyword ace_operator">-</span> <span class="ace_constant ace_numeric">0.2</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_indent-guide">  </span>  <span class="ace_paren ace_rparen">}</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">colors</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_paren ace_lparen">[</span><span class="ace_string">'#ffffff'</span><span class="ace_paren ace_rparen">]</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">shapes</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_paren ace_lparen">[</span><span class="ace_string">'circle'</span><span class="ace_paren ace_rparen">]</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">gravity</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_identifier">randomInRange</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">0.4</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_constant ace_numeric">0.6</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">scalar</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_identifier">randomInRange</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">0.4</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_constant ace_numeric">1</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">drift</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_identifier">randomInRange</span><span class="ace_paren ace_lparen">(</span><span class="ace_keyword ace_operator">-</span><span class="ace_constant ace_numeric">0.4</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_constant ace_numeric">0.4</span><span class="ace_paren ace_rparen">)</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_paren ace_rparen">})</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px"></div><div class="ace_line" style="height:14.390625px">  <span class="ace_keyword">if</span> <span class="ace_paren ace_lparen">(</span><span class="ace_identifier">timeLeft</span> <span class="ace_keyword ace_operator">&gt;</span> <span class="ace_constant ace_numeric">0</span><span class="ace_paren ace_rparen">)</span> <span class="ace_paren ace_lparen">{</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">requestAnimationFrame</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">frame</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_paren ace_rparen">}</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_paren ace_rparen">}</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">))</span><span class="ace_punctuation ace_operator">;</span></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors"><div class="ace_cursor" style="left: 4px; top: 0px; width: 6.59766px; height: 14.3906px;"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="display: none; width: 22px; bottom: 0px;"><div class="ace_scrollbar-inner" style="width: 22px; height: 474.891px;"></div></div><div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 22px; left: 47px; right: 0px;"><div class="ace_scrollbar-inner" style="height: 22px; width: 563px;"></div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;"></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-optical-sizing: inherit; font-kerning: inherit; font-feature-settings: inherit; font-variation-settings: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="group" data-name="continuous">
+      <div class="flex-rows">
+        <div class="left">
+          <h2><a href="#continuous" id="continuous" class="anchor">School Pride</a></h2>
+          <button class="run">
+            Run
+            <span class="icon">
+              <svg class="icon"><use xlink:href="#run"></use></svg>
+            </span>
+          </button>
+        </div>
+        <div class="description">
+          <p>
+            But if you are into crazy rapid fire of confetti, what could be a better use than
+            to show everyone what you are all about? Tell people where you are from with two
+            confetti cannons from either side of the page.
+          </p>
+          <p class="center">🌰 Go Buckeyes! 🌰</p>
+        </div>
+      </div>
+      <div class="editor ace_editor ace-xcode" style="min-height: 351px; height: 25rem;"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; height: 14.3906px; width: 6.59766px; left: 51px; top: 0px;"></textarea><div class="ace_gutter" aria-hidden="true"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px; height: 428.781px; width: 47px;"><div class="ace_gutter-cell " style="height: 14.3906px;">1</div><div class="ace_gutter-cell " style="height: 14.3906px;">2</div><div class="ace_gutter-cell " style="height: 14.3906px;">3</div><div class="ace_gutter-cell " style="height: 14.3906px;">4</div><div class="ace_gutter-cell " style="height: 14.3906px;">5</div><div class="ace_gutter-cell " style="height: 14.3906px;">6<span class="ace_fold-widget ace_start ace_open" style="height: 14.3906px;"></span></div><div class="ace_gutter-cell " style="height: 14.3906px;">7<span class="ace_fold-widget ace_start ace_open" style="height: 14.3906px;"></span></div><div class="ace_gutter-cell " style="height: 14.3906px;">8</div><div class="ace_gutter-cell " style="height: 14.3906px;">9</div><div class="ace_gutter-cell " style="height: 14.3906px;">10</div><div class="ace_gutter-cell " style="height: 14.3906px;">11</div><div class="ace_gutter-cell " style="height: 14.3906px;">12</div><div class="ace_gutter-cell " style="height: 14.3906px;">13</div><div class="ace_gutter-cell " style="height: 14.3906px;">14<span class="ace_fold-widget ace_start ace_open" style="height: 14.3906px;"></span></div><div class="ace_gutter-cell " style="height: 14.3906px;">15</div><div class="ace_gutter-cell " style="height: 14.3906px;">16</div><div class="ace_gutter-cell " style="height: 14.3906px;">17</div><div class="ace_gutter-cell " style="height: 14.3906px;">18</div><div class="ace_gutter-cell " style="height: 14.3906px;">19</div><div class="ace_gutter-cell " style="height: 14.3906px;">20</div><div class="ace_gutter-cell " style="height: 14.3906px;">21</div><div class="ace_gutter-cell " style="height: 14.3906px;">22<span class="ace_fold-widget ace_start ace_open" style="height: 14.3906px;"></span></div><div class="ace_gutter-cell " style="height: 14.3906px;">23</div><div class="ace_gutter-cell " style="height: 14.3906px;">24</div><div class="ace_gutter-cell " style="height: 14.3906px;">25</div></div><div class="ace_gutter-active-line" style="top: 0px; height: 14.3906px;"></div></div><div class="ace_scroller" style="left: 47px; right: 0px; bottom: 0px;"><div class="ace_content" style="margin-top: 0px; width: 563px; height: 428.781px; margin-left: 0px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 532px; visibility: visible;"></div></div><div class="ace_layer ace_marker-layer"><div class="ace_active-line" style="height:14.390625px;top:0px;left:0;right:0;"></div></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"><div class="ace_line" style="height:14.390625px"><span class="ace_storage ace_type">var</span> <span class="ace_identifier">end</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_variable ace_language">Date</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">now</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span> <span class="ace_keyword ace_operator">+</span> <span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">15</span> <span class="ace_keyword ace_operator">*</span> <span class="ace_constant ace_numeric">1000</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px"></div><div class="ace_line" style="height:14.390625px"><span class="ace_comment">// go Buckeyes!</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_storage ace_type">var</span> <span class="ace_identifier">colors</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_paren ace_lparen">[</span><span class="ace_string">'#bb0000'</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_string">'#ffffff'</span><span class="ace_paren ace_rparen">]</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px"></div><div class="ace_line" style="height:14.390625px"><span class="ace_paren ace_lparen">(</span><span class="ace_storage ace_type">function</span> <span class="ace_entity ace_name ace_function">frame</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span> <span class="ace_paren ace_lparen">{</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">confetti</span><span class="ace_paren ace_lparen">({</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">particleCount</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">2</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">angle</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">60</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">spread</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">55</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">origin</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_paren ace_lparen">{</span> <span class="ace_identifier">x</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">0</span> <span class="ace_paren ace_rparen">}</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">colors</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_identifier">colors</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_paren ace_rparen">})</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">confetti</span><span class="ace_paren ace_lparen">({</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">particleCount</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">2</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">angle</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">120</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">spread</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">55</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">origin</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_paren ace_lparen">{</span> <span class="ace_identifier">x</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">1</span> <span class="ace_paren ace_rparen">}</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">colors</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_identifier">colors</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_paren ace_rparen">})</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px"></div><div class="ace_line" style="height:14.390625px">  <span class="ace_keyword">if</span> <span class="ace_paren ace_lparen">(</span><span class="ace_variable ace_language">Date</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">now</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span> <span class="ace_keyword ace_operator">&lt;</span> <span class="ace_identifier">end</span><span class="ace_paren ace_rparen">)</span> <span class="ace_paren ace_lparen">{</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">requestAnimationFrame</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">frame</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_paren ace_rparen">}</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_paren ace_rparen">}</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">))</span><span class="ace_punctuation ace_operator">;</span></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors"><div class="ace_cursor" style="left: 4px; top: 0px; width: 6.59766px; height: 14.3906px;"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="display: none; width: 22px; bottom: 0px;"><div class="ace_scrollbar-inner" style="width: 22px; height: 359.766px;"></div></div><div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 22px; left: 47px; right: 0px;"><div class="ace_scrollbar-inner" style="height: 22px; width: 563px;"></div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;"></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-optical-sizing: inherit; font-kerning: inherit; font-feature-settings: inherit; font-variation-settings: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="group" data-name="custom">
+      <div class="flex-rows">
+        <div class="left">
+          <h2><a href="#custom-canvas" id="custom-canvas" class="anchor">Custom Canvas</a></h2>
+          <button class="run">
+            Run
+            <span class="icon">
+              <svg class="icon"><use xlink:href="#run"></use></svg>
+            </span>
+          </button>
+        </div>
+        <div class="description">
+          <p>
+            But if you just hate confetti all over the place, there's something here for you
+            as well. You can limit where the confetti appear by providing your own canvas element.
+          </p>
+        </div>
+      </div>
+      <div class="editor ace_editor ace-xcode" style="min-height: 141px; height: 10rem;"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; height: 14.3906px; width: 6.59766px; left: 51px; top: 0px;"></textarea><div class="ace_gutter" aria-hidden="true"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px; height: 188.781px; width: 47px;"><div class="ace_gutter-cell " style="height: 14.3906px;">1</div><div class="ace_gutter-cell " style="height: 14.3906px;">2</div><div class="ace_gutter-cell " style="height: 14.3906px;">3</div><div class="ace_gutter-cell " style="height: 14.3906px;">4</div><div class="ace_gutter-cell " style="height: 14.3906px;">5</div><div class="ace_gutter-cell " style="height: 14.3906px;">6</div><div class="ace_gutter-cell " style="height: 14.3906px;">7<span class="ace_fold-widget ace_start ace_open" style="height: 14.3906px;"></span></div><div class="ace_gutter-cell " style="height: 14.3906px;">8</div><div class="ace_gutter-cell " style="height: 14.3906px;">9</div><div class="ace_gutter-cell " style="height: 14.3906px;">10</div></div><div class="ace_gutter-active-line" style="top: 0px; height: 14.3906px;"></div></div><div class="ace_scroller" style="left: 47px; right: 0px; bottom: 0px;"><div class="ace_content" style="margin-top: 0px; width: 563px; height: 188.781px; margin-left: 0px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 532px; visibility: visible;"></div></div><div class="ace_layer ace_marker-layer"><div class="ace_active-line" style="height:14.390625px;top:0px;left:0;right:0;"></div></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"><div class="ace_line" style="height:14.390625px"><span class="ace_storage ace_type">var</span> <span class="ace_identifier">canvas</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_variable ace_language">document</span><span class="ace_punctuation ace_operator">.</span><span class="ace_support ace_function ace_dom">getElementById</span><span class="ace_paren ace_lparen">(</span><span class="ace_string">'my-canvas'</span><span class="ace_paren ace_rparen">)</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px"></div><div class="ace_line" style="height:14.390625px"><span class="ace_comment">// you should  only initialize a canvas once, so save this function</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_comment">// we'll save it to the canvas itself for the purpose of this demo</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_identifier">canvas</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">confetti</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_identifier">canvas</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">confetti</span> <span class="ace_keyword ace_operator">||</span> <span class="ace_identifier">confetti</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">create</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">canvas</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_paren ace_lparen">{</span> <span class="ace_identifier">resize</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_language ace_boolean">true</span> <span class="ace_paren ace_rparen">})</span><span class="ace_punctuation ace_operator">;</span></div><div class="ace_line" style="height:14.390625px"></div><div class="ace_line" style="height:14.390625px"><span class="ace_identifier">canvas</span><span class="ace_punctuation ace_operator">.</span><span class="ace_identifier">confetti</span><span class="ace_paren ace_lparen">({</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">spread</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">70</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">origin</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_paren ace_lparen">{</span> <span class="ace_identifier">y</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">1.2</span> <span class="ace_paren ace_rparen">}</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_paren ace_rparen">})</span><span class="ace_punctuation ace_operator">;</span></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors"><div class="ace_cursor" style="left: 4px; top: 0px; width: 6.59766px; height: 14.3906px;"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="display: none; width: 22px; bottom: 0px;"><div class="ace_scrollbar-inner" style="width: 22px; height: 143.906px;"></div></div><div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 22px; left: 47px; right: 0px;"><div class="ace_scrollbar-inner" style="height: 22px; width: 563px;"></div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;"></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-optical-sizing: inherit; font-kerning: inherit; font-feature-settings: inherit; font-variation-settings: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div>
+      <div class="flex-rows">
+        <canvas id="my-canvas" class="custom-canvas" width="1000" height="380"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <a href="https://github.com/catdad">
+      <span class="icon">
+        <svg class="icon"><use xlink:href="#code"></use></svg>
+      </span>
+      <span> with </span>
+      <span class="icon">
+        <svg class="icon"><use xlink:href="#heart"></use></svg>
+      </span>
+      <span> by <b>catdad</b></span>
+    </a>
+  </footer>
+
+  <script>
+    var editors = [];
+    var activeTheme = 'dark';
+    var currentStep = parseInt(localStorage.getItem('canvas-confetti/theme'), 10) || 0;
+    var prefersLightTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)');
+    var themes = {
+      light: 'ace/theme/xcode',
+      dark: 'ace/theme/monokai'
+    };
+
+    var getPreferedTheme = function () {
+      return prefersLightTheme ? prefersLightTheme.matches ? 'light' : 'dark' : 'dark';
+    };
+
+    var setTheme = function (isAuto, theme) {
+      if (isAuto) {
+        document.body.setAttribute('auto-theme', true);
+        activeTheme = getPreferedTheme();
+      } else {
+        document.body.removeAttribute('auto-theme');
+        activeTheme = theme;
+      }
+
+      document.body.setAttribute('data-theme', activeTheme);
+
+      editors.forEach(function(editor) {
+        editor.setTheme(themes[activeTheme]);
+      });
+    };
+
+    var updateTheme = function (step) {
+      currentStep = step;
+
+      switch (step) {
+        case 0:
+          setTheme(true);
+          prefersLightTheme && prefersLightTheme.addEventListener('change', setTheme);
+          break;
+        case 1:
+        case 2:
+          setTheme(false, step === 1 ? 'dark' : 'light');
+          prefersLightTheme && prefersLightTheme.removeListener(setTheme);
+          break;
+      }
+
+      localStorage.setItem('canvas-confetti/theme', currentStep);
+    }
+
+    updateTheme(currentStep);
+
+    document.getElementById('themeToggle').addEventListener('click', function (event) {
+      updateTheme(++currentStep % 3);
+    });
+
+    var modes = {
+      cannon: function cannon() {
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { y: 0.6 }
+        });
+      },
+      random: function random() {
+        function randomInRange(min, max) {
+          return Math.random() * (max - min) + min;
+        }
+
+        confetti({
+          angle: randomInRange(55, 125),
+          spread: randomInRange(50, 70),
+          particleCount: randomInRange(50, 100),
+          origin: { y: 0.6 }
+        });
+      },
+      realistic: function realistic() {
+        var count = 200;
+        var defaults = {
+          origin: { y: 0.7 }
+        };
+
+        function fire(particleRatio, opts) {
+          confetti(Object.assign({}, defaults, opts, {
+            particleCount: Math.floor(count * particleRatio)
+          }));
+        }
+
+        fire(0.25, {
+          spread: 26,
+          startVelocity: 55,
+        });
+        fire(0.2, {
+          spread: 60,
+        });
+        fire(0.35, {
+          spread: 100,
+          decay: 0.91,
+          scalar: 0.8
+        });
+        fire(0.1, {
+          spread: 120,
+          startVelocity: 25,
+          decay: 0.92,
+          scalar: 1.2
+        });
+        fire(0.1, {
+          spread: 120,
+          startVelocity: 45,
+        });
+      },
+      fireworks: function fireworks() {
+        var duration = 15 * 1000;
+        var animationEnd = Date.now() + duration;
+        var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+        function randomInRange(min, max) {
+          return Math.random() * (max - min) + min;
+        }
+
+        var interval = setInterval(function () {
+          var timeLeft = animationEnd - Date.now();
+
+          if (timeLeft <= 0) {
+            return clearInterval(interval);
+          }
+
+          var particleCount = 50 * (timeLeft / duration);
+          // since particles fall down, start a bit higher than random
+          confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } }));
+          confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
+        }, 250);
+      },
+      snow: function snow() {
+        var duration = 15 * 1000;
+        var animationEnd = Date.now() + duration;
+        var skew = 1;
+
+        function randomInRange(min, max) {
+          return Math.random() * (max - min) + min;
+        }
+
+        (function frame() {
+          var timeLeft = animationEnd - Date.now();
+          var ticks = Math.max(200, 500 * (timeLeft / duration));
+          skew = Math.max(0.8, skew - 0.001);
+
+          confetti({
+            particleCount: 1,
+            startVelocity: 0,
+            ticks: ticks,
+            origin: {
+              x: Math.random(),
+              // since particles fall down, skew start toward the top
+              y: (Math.random() * skew) - 0.2
+            },
+            colors: ['#ffffff'],
+            shapes: ['circle'],
+            gravity: randomInRange(0.4, 0.6),
+            scalar: randomInRange(0.4, 1),
+            drift: randomInRange(-0.4, 0.4)
+          });
+
+          if (timeLeft > 0) {
+            requestAnimationFrame(frame);
+          }
+        }());
+      },
+      stars: function stars() {
+        var defaults = {
+          spread: 360,
+          ticks: 50,
+          gravity: 0,
+          decay: 0.94,
+          startVelocity: 30,
+          shapes: ['star'],
+          colors: ['FFE400', 'FFBD00', 'E89400', 'FFCA6C', 'FDFFB8']
+        };
+
+        function shoot() {
+          confetti({
+            ...defaults,
+            particleCount: 40,
+            scalar: 1.2,
+            shapes: ['star']
+          });
+
+          confetti({
+            ...defaults,
+            particleCount: 10,
+            scalar: 0.75,
+            shapes: ['circle']
+          });
+        }
+
+        setTimeout(shoot, 0);
+        setTimeout(shoot, 100);
+        setTimeout(shoot, 200);
+      },
+      continuous: function continuous() {
+        var end = Date.now() + (15 * 1000);
+
+        // go Buckeyes!
+        var colors = ['#bb0000', '#ffffff'];
+
+        (function frame() {
+          confetti({
+            particleCount: 2,
+            angle: 60,
+            spread: 55,
+            origin: { x: 0 },
+            colors: colors
+          });
+          confetti({
+            particleCount: 2,
+            angle: 120,
+            spread: 55,
+            origin: { x: 1 },
+            colors: colors
+          });
+
+          if (Date.now() < end) {
+            requestAnimationFrame(frame);
+          }
+        }());
+      },
+      custom: function() {
+        var canvas = document.getElementById('my-canvas');
+
+        // you should  only initialize a canvas once, so save this function
+        // we'll save it to the canvas itself for the purpose of this demo
+        canvas.confetti = canvas.confetti || confetti.create(canvas, { resize: true });
+
+        canvas.confetti({
+          spread: 70,
+          origin: { y: 1.2 }
+        });
+      }
+    };
+
+    function pretty(val) {
+      return js_beautify(val, { indent_size: 2, brace_style: 'preserve-inline', });
+    }
+
+    function getCode(name) {
+      // pretty-print the code, since we will use minified code in production
+      var code = pretty(modes[name].toString());
+      // take out the function wrapper, trim all whitespace
+      code = code.split('\n').slice(1).slice(0, -1).map(function (s) {
+        return s.trim();
+      }).join('\n');
+      // pretty-print again
+      return pretty(code);
+    }
+
+    window.onload = function () {
+      [].forEach.call(document.querySelectorAll('.group'), function (group) {
+        var name = group.getAttribute('data-name');
+        var button = group.querySelector('.run');
+        var codeElem = group.querySelector('.editor');
+
+        var editor = ace.edit(codeElem);
+        editor.setTheme(themes[activeTheme]);
+        editor.session.setMode('ace/mode/javascript');
+        editor.session.setUseSoftTabs(true);
+        editor.session.setTabSize(2);
+
+        editor.session.setValue(getCode(name));
+
+        var count = editor.session.getLength();
+
+        // set height so that all code is visible
+        codeElem.style.minHeight = (14 * count) + 1 + 'px';
+        codeElem.style.height = (count) + 'rem';
+
+        button.onclick = function (ev) {
+          // stop mobile browsers from zooming when clicking
+          // buttons repeatedly really fast
+          ev.preventDefault();
+
+          try {
+            eval(editor.getValue());
+          } catch (e) {
+            console.error(e);
+          }
+        };
+
+        editors.push(editor);
+      });
+    };
+  </script>
+
+  <script src="analytics.js" async=""></script><div id="goog-gt-" class="skiptranslate VIpgJd-yAWNEb-L7lbkb" dir="ltr"><div style="padding: 8px;"><div><div class="VIpgJd-yAWNEb-l4eHX"><img src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png" width="20" height="20" alt="Google 번역"></div></div></div><div style="padding: 8px; float: left; width: 100%;"><h1 class="VIpgJd-yAWNEb-r4nke VIpgJd-yAWNEb-mrxPge">원본 텍스트</h1></div><div style="padding: 8px;"><div class="VIpgJd-yAWNEb-nVMfcd-fmcmS"></div></div><div class="VIpgJd-yAWNEb-cGMI2b" style="padding: 8px;"><div class="VIpgJd-yAWNEb-Z0Arqf-PLDbbf"><span class="VIpgJd-yAWNEb-Z0Arqf-hSRGPd">번역 제안하기</span></div><div class="VIpgJd-yAWNEb-fw42Ze-Z0Arqf-haAclf"><hr style="color: #ccc; background-color: #ccc; height: 1px; border: none;"><div class="VIpgJd-yAWNEb-Z0Arqf-H9tDt"></div></div></div><div class="VIpgJd-yAWNEb-jOfkMb-Ne3sFf" style="display: none;"></div></div>
+
+
+</body>
+    <svg class="sprite" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <symbol id="code" viewBox="0 0 14 16">
+            <!-- Icon from GitHub Octicons - https://github.com/primer/octicons/ -->
+            <path d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3 9.5 3ZM4.5 3L0 8 4.5 13 6 11.5 2.5 8 6 4.5 4.5 3 4.5 3Z"></path>
+          </symbol>
+    
+          <symbol id="heart" viewBox="0 0 12 16">
+            <!-- Icon from GitHub Octicons - https://github.com/primer/octicons/ -->
+            <path d="M11.2 3C10.68 2.37 9.95 2.05 9 2 8.03 2 7.31 2.42 6.8 3 6.29 3.58 6.02 3.92 6 4 5.98 3.92 5.72 3.58 5.2 3 4.68 2.42 4.03 2 3 2 2.05 2.05 1.31 2.38 0.8 3 0.28 3.61 0.02 4.28 0 5 0 5.52 0.09 6.52 0.67 7.67 1.25 8.82 3.01 10.61 6 13 8.98 10.61 10.77 8.83 11.34 7.67 11.91 6.51 12 5.5 12 5 11.98 4.28 11.72 3.61 11.2 2.98L11.2 3Z"></path>
+          </symbol>
+    
+          <symbol id="run" viewBox="0 0 10 10">
+            <path d="M2 2L8 6L2 10"></path>
+          </symbol>
+    
+          <symbol id="octo" viewBox="0 0 16 16">
+            <!-- Icon from GitHub Octicons - https://github.com/primer/octicons/ -->
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+          </symbol>
+        </defs>
+      </svg>
+    <div class="container">
+        <div class="group" data-name="cannon">
+          <div class="flex-rows">
+            <div class="left">
+              <h2><a href="#basic" id="basic" class="anchor">Basic Cannon</a></h2>
+              <button class="run">
+                Run
+                <span class="icon">
+                  <svg class="icon"><use xlink:href="#run"></use></svg>
+                </span>
+              </button>
+            </div>
+            <div class="description">
+              <p>
+                The default mode... just your regular basic average blast of confetti. But it's still
+                a little cool, right?
+              </p>
+            </div>
+          </div>
+          <div class="editor ace_editor ace-xcode" style="min-height: 71px; height: 5rem;"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; height: 14.3906px; width: 6.59766px; left: 44px; top: 0px;"></textarea><div class="ace_gutter" aria-hidden="true"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px; height: 108.781px; width: 40px;"><div class="ace_gutter-cell " style="height: 14.3906px;">1<span class="ace_fold-widget ace_start ace_open" style="height: 14.3906px;"></span></div><div class="ace_gutter-cell " style="height: 14.3906px;">2</div><div class="ace_gutter-cell " style="height: 14.3906px;">3</div><div class="ace_gutter-cell " style="height: 14.3906px;">4</div><div class="ace_gutter-cell " style="height: 14.3906px;">5</div></div><div class="ace_gutter-active-line" style="top: 0px; height: 14.3906px;"></div></div><div class="ace_scroller" style="left: 40px; right: 0px; bottom: 0px;"><div class="ace_content" style="margin-top: 0px; width: 570px; height: 108.781px; margin-left: 0px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 532px; visibility: visible;"></div></div><div class="ace_layer ace_marker-layer"><div class="ace_active-line" style="height:14.390625px;top:0px;left:0;right:0;"></div></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"><div class="ace_line" style="height:14.390625px"><span class="ace_identifier">confetti</span><span class="ace_paren ace_lparen">({</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">particleCount</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">100</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">spread</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">70</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:14.390625px">  <span class="ace_identifier">origin</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_paren ace_lparen">{</span> <span class="ace_identifier">y</span><span class="ace_punctuation ace_operator">:</span> <span class="ace_constant ace_numeric">0.6</span> <span class="ace_paren ace_rparen">}</span></div><div class="ace_line" style="height:14.390625px"><span class="ace_paren ace_rparen">})</span><span class="ace_punctuation ace_operator">;</span></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors"><div class="ace_cursor" style="left: 4px; top: 0px; width: 6.59766px; height: 14.3906px;"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="display: none; width: 22px; bottom: 0px;"><div class="ace_scrollbar-inner" style="width: 22px; height: 71.9531px;"></div></div><div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 22px; left: 40px; right: 0px;"><div class="ace_scrollbar-inner" style="height: 22px; width: 570px;"></div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;"></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-optical-sizing: inherit; font-kerning: inherit; font-feature-settings: inherit; font-variation-settings: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div>
+        </div>
+      </div>
+</body>
+</html>

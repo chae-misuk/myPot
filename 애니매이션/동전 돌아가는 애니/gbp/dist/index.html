@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - GBP</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<style>
+  .purse {
+  height: 160px;
+  width: 160px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -80px;
+  margin-left: -80px;
+  -webkit-perspective: 1000;
+  -webkit-box-reflect: below 0 linear-gradient(hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, 0) 45%, hsla(0, 0%, 100%, 0.2));
+  -webkit-filter: saturate(1.45) hue-rotate(2deg);
+}
+.coin {
+  height: 160px;
+  width: 160px;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform-origin: 50%;
+  /* -webkit-animation: spin 2s infinite; */
+  -webkit-animation-timing-function: linear;
+  animation-name: spin;
+  animation-delay: 1s;
+  animation-iteration-count: 5;
+  animation-duration: 1s;
+  transform: rotateY(60deg);
+}
+.coin .front,
+.coin .back { position: absolute; height: 160px; width: 160px; border-radius: 50%; background-size: cover; }
+.coin .front { -webkit-transform: translateZ(8px); }
+.coin .back { -webkit-transform: translateZ(-8px) rotateY(180deg); }
+.coin .side { -webkit-transform: translateX(72px); -webkit-transform-style: preserve-3d; -webkit-backface-visibility: hidden; }
+.coin .side .spoke { height: 160px; width: 16px; position: absolute; -webkit-transform-style: preserve-3d; -webkit-backface-visibility: hidden; }
+.coin .side .spoke:before,
+.coin .side .spoke:after {
+  content: '';
+  display: block;
+  height: 15.68274245px;
+  width: 16px;
+  position: absolute;
+  -webkit-transform: rotateX(84.375deg);
+  background: #d8be83;
+  background: linear-gradient(to bottom, #e6cf99 0%, #e6cf99 74%, #c2a970 75%, #c2a970 100%);
+  background-size: 100% 3.48505388px;
+}
+.coin .side .spoke:before { -webkit-transform-origin: top center; }
+.coin .side .spoke:after { bottom: 0; -webkit-transform-origin: center bottom; }
+.coin .side .spoke:nth-child(16) { -webkit-transform: rotateY(90deg) rotateX(180deg); }
+.coin .side .spoke:nth-child(15) { -webkit-transform: rotateY(90deg) rotateX(168.75deg); }
+.coin .side .spoke:nth-child(14) { -webkit-transform: rotateY(90deg) rotateX(157.5deg); }
+.coin .side .spoke:nth-child(13) { -webkit-transform: rotateY(90deg) rotateX(146.25deg); }
+.coin .side .spoke:nth-child(12) { -webkit-transform: rotateY(90deg) rotateX(135deg); }
+.coin .side .spoke:nth-child(11) { -webkit-transform: rotateY(90deg) rotateX(123.75deg); }
+.coin .side .spoke:nth-child(10) { -webkit-transform: rotateY(90deg) rotateX(112.5deg); }
+.coin .side .spoke:nth-child(9) { -webkit-transform: rotateY(90deg) rotateX(101.25deg); }
+.coin .side .spoke:nth-child(8) { -webkit-transform: rotateY(90deg) rotateX(90deg); }
+.coin .side .spoke:nth-child(7) { -webkit-transform: rotateY(90deg) rotateX(78.75deg); }
+.coin .side .spoke:nth-child(6) { -webkit-transform: rotateY(90deg) rotateX(67.5deg); }
+.coin .side .spoke:nth-child(5) { -webkit-transform: rotateY(90deg) rotateX(56.25deg); }
+.coin .side .spoke:nth-child(4) { -webkit-transform: rotateY(90deg) rotateX(45deg); }
+.coin .side .spoke:nth-child(3) { -webkit-transform: rotateY(90deg) rotateX(33.75deg); }
+.coin .side .spoke:nth-child(2) { -webkit-transform: rotateY(90deg) rotateX(22.5deg); }
+.coin .side .spoke:nth-child(1) { -webkit-transform: rotateY(90deg) rotateX(11.25deg); }
+
+.coin.skeleton .front,
+.coin.skeleton .back { display: none; }
+.coin.skeleton .side,
+.coin.skeleton .side .spoke,
+.coin.skeleton .side .spoke:before,
+.coin.skeleton .side .spoke:after { -webkit-backface-visibility: visible; }
+.coin.skeleton .side .spoke { background: rgba(170, 170, 170, 0.1); }
+.coin.skeleton .side .spoke:before { background: rgba(255, 170, 170, 0.2); }
+.coin.skeleton .side .spoke:after { background: rgba(204, 204, 255, 0.2); }
+
+body { background-color: #000; position: absolute; top: 0; bottom: 0; left: 0; right: 0; }
+
+/* @-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotateY(60deg);
+  }
+  to {
+    -webkit-transform: rotateY(360deg);
+  }
+} */
+
+@keyframes spin {
+  from {
+    transform: rotateY(60deg);
+  }
+  to {
+    transform: rotateY(420deg);
+  }
+}
+
+.coin .front { background-image: url("./img/coin_f.png")}
+.coin .back { background-image: url("./img/coin_b.png")}
+
+</style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- The Coin -->
+<div class="purse">
+  <div class="coin">
+    <div class="front"></div>
+    <div class="back"></div>
+    <div class="side">
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+      <div class="spoke"></div>
+    </div>
+  </div>
+</div>
+
+
+<div style="width: 100px; height: 100px; position: absolute; left: 32%; top: 27%;">
+  <svg width="100" height="100">
+    <polygon points="50 22, 55 38, 69 44, 55 50, 49 65, 44 50, 30 43, 44 38"  fill="yellow">
+      <animate attributeName="r" from="10" to="30" dur="1.8s" repeatCount="3" />
+      <animate attributeName="fill-opacity" from="1" to="0" dur="1.5s" repeatCount="3" />
+    </polygon>
+  </svg>
+</div>
+
+
+
+
+
+<script>
+  var circle = document.getElementById("circle");
+  circle.addEventListener("click", function() {
+    circle.setAttribute("fill", "yellow");
+    circle.setAttribute("r", "20");
+    setTimeout(function() {
+      circle.setAttribute("fill", "red");
+      circle.setAttribute("r", "10");
+    }, 1000);
+  });
+</script>
+
+<!-- 
+<div>
+  <svg width="100" height="100">
+    <rect x="10" y="10" width="80" height="80" fill="blue">
+      <animate attributeName="x" from="10" to="50" dur="1s" repeatCount="indefinite"/>
+    </rect>
+  </svg>
+</div> -->
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script  src="./script.js"></script>
+
+</body>
+</html>

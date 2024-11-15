@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css " >
+    <style>
+        
+        :root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace
+}
+body { background: --gray;}
+
+*,::after,::before { box-sizing: border-box }
+
+html { font-family: sans-serif; line-height: 1.15; -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent }
+
+        .demo-wrapper { 
+
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            grid-template-rows: repeat(2, minmax(300px, auto)); 
+            grid-gap: 20px;
+	        gap: 20px;
+            width: 80%;
+            margin: 0 auto;
+            }
+        .demo-wrapper .demo-thumb { 
+            position: relative;
+            height: 550px;
+            background-position: top;
+            -webkit-transition: all 4s;
+            transition: all 4s;
+            background-size: cover;
+            border-radius: 5px;
+            -webkit-box-shadow: #EFF5FC 0px 8px 24px;
+                    box-shadow: #EFF5FC 0px 8px 24px;
+            } 
+
+            .demo-wrapper .demo-thumb:hover {
+                background-position: bottom;
+            }
+            .demo-thumb > a {
+                display: block;
+                overflow: hidden;
+                position: relative;
+                width: 100%;
+                height: 100%;
+            }
+            .demo-wrapper.darked .demo-thumb > a::before {
+                border: 1px solid #fff;
+                padding: 50px;
+                background: rgba(2, 2, 2, 0.5) !important;
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                -webkit-transition: 0.3s;
+                transition: 0.3s;
+                z-index: 1;
+                border-radius: 5px;
+            }
+            .demo-wrapper.darked .demo-thumb > a span {
+                background: rgb(0, 0, 0) !important;
+                color: #ffffff !important;
+            }
+            .demo-wrapper .demo-thumb > a span {
+                -webkit-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+                transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 100%;
+                visibility: hidden;
+                opacity: 0;
+                -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+                padding: 20px 40px;
+                background: rgb(255, 255, 255);
+                color: #086ad7;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                font-size: 14px;
+                font-weight: 500;
+                width: 215px;
+                right: 0;
+                margin: auto;
+                border-radius: 4px;
+                z-index: 5;
+            }
+            .demo-wrapper .demo-thumb:hover a span { opacity: 1; visibility: visible; }
+
+            .demo-wrapper.darked .new_tag { position: absolute; z-index: 5; top: -20px; right: -7px; }
+            .demo-wrapper.darked .new_tag img { width: 50px; height: auto; -o-object-fit: cover; object-fit: cover; }
+            .sample1 { background-image: url(./img/image_bg_01.png ); }
+            .sample2 { background-image: url(./img/image_bg_02.png ); }
+            .sample3 { background-image: url(./img/image_bg_03.png ); }
+            .sample4 { background-image: url(./img/image_bg_04.png ); }
+            .sample5 { background-image: url(./img/image_bg_05.png ); }
+            .sample6 { background-image: url(./img/image_bg_06.png ); }
+    </style>
+
+</head>
+<body>
+    <div class="wrapper">
+
+  
+        <h1>Sample List</h1>
+        <div class="demo-wrapper darked">
+            <div class="demo-thumb sample1">
+                <a href="https://rrdevs.net/demos/html/techex/index.html" target="_blank">
+                   <span>View Demo <img class="ml-2" src="./img/shap_02.svg" alt=""> </span>
+                </a>
+                <div class="demo-title">
+                    <h3>Home - 01 Dark</h3>
+                </div>
+                <div class="new_tag">
+                    <img src="./img/icon_new.gif" alt="">
+                </div>
+            </div>
+            <div class="demo-thumb sample2">
+                <a href="https://rrdevs.net/demos/html/techex/index.html" target="_blank">
+                   <span>View Demo <img class="ml-2" src="./img/shap_02.svg" alt=""> </span>
+                </a>
+            </div>
+            <div class="demo-thumb sample3">
+                <a href="https://rrdevs.net/demos/html/techex/index.html" target="_blank">
+                   <span>View Demo <img class="ml-2" src="./img/shap_02.svg" alt=""> </span>
+                </a>
+            </div>
+            <div class="demo-thumb sample4">
+                <a href="https://rrdevs.net/demos/html/techex/index.html" target="_blank">
+                   <span>View Demo <img class="ml-2" src="./img/shap_02.svg" alt=""> </span>
+                </a>
+            </div>
+            <div class="demo-thumb sample5">
+                <a href="https://rrdevs.net/demos/html/techex/index.html" target="_blank">
+                   <span>View Demo <img class="ml-2" src="./img/shap_02.svg" alt=""> </span>
+                </a>
+            </div>
+            <div class="demo-thumb sample6">
+                <a href="https://rrdevs.net/demos/html/techex/index.html" target="_blank">
+                   <span>View Demo <img class="ml-2" src="./img/shap_02.svg" alt=""> </span>
+                </a>
+            </div>
+        </div>
+
+
+
+    </div>
+</body>
+</html>
